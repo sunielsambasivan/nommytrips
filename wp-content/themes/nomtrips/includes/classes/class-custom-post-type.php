@@ -139,6 +139,7 @@ class Custom_Post_Type
   /* Method to attach the taxonomy to the post type */
   public function add_taxonomy( $name, $args = array(), $capabilities = array(), $labels = array() ) {
     if( ! empty( $name ) ) {
+      
       $post_type_name = $this->post_type_name;
       
       // Taxonomy properties
