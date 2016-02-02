@@ -18,7 +18,6 @@ $capabilities = array (
   'assign_terms' => 'edit_restaurant'
 );
 
-//Taxonomy: city
  $labels = array(
    'name'              => _x( 'Cities', 'cities' ),
    'singular_name'     => _x( 'City', 'city' ),
@@ -44,4 +43,66 @@ $args = array(
   'rewrite' => $rewrite,
 );
 
-$city = new Custom_Taxonomy( 'City', array('restaurant'), $args, $capabilities, $labels );
+$city = new Custom_Taxonomy( 'City', array('restaurant', 'post'), $args, $capabilities, $labels );
+
+/**
+Declare Cuisine Type
+*/
+
+ $labels = array(
+   'name'              => _x( 'Cuisines', 'cuisine' ),
+   'singular_name'     => _x( 'Cuisine', 'cuisine' ),
+   'search_items'      => __( 'Search Cuisines' ),
+   'all_items'         => __( 'All Cuisines' ),
+   'parent_item'       => __( 'Parent Cuisine' ),
+   'parent_item_colon' => __( 'Parent Cuisine:' ),
+   'edit_item'         => __( 'Edit Cuisine' ),
+   'update_item'       => __( 'Update Cuisine' ),
+   'add_new_item'      => __( 'Add New Cuisine' ),
+   'new_item_name'     => __( 'New Cuisine' ),
+   'menu_name'         => __( 'Cuisines' ),
+);
+
+$rewrite = array(
+  'slug' => 'cuisine',
+  'with_front' => 'false',
+  'hierarchical' => true,
+);
+
+$args = array(
+  'description' => 'Genre of food eg. Italian, Indian, Seafood, etc',
+  'rewrite' => $rewrite,
+);
+
+$cuisine = new Custom_Taxonomy( 'Cuisine', array('restaurant', 'post'), $args, $capabilities, $labels );
+
+/**
+Declare Meal Type
+*/
+
+ $labels = array(
+   'name'              => _x( 'Restaurant Types', 'restaurant-types' ),
+   'singular_name'     => _x( 'Restaurant Type', 'restaurant-type' ),
+   'search_items'      => __( 'Search Restaurant Types' ),
+   'all_items'         => __( 'All Restaurant Types' ),
+   'parent_item'       => __( 'Parent Restaurant Types' ),
+   'parent_item_colon' => __( 'Parent Restaurant Types:' ),
+   'edit_item'         => __( 'Edit Restaurant Types' ),
+   'update_item'       => __( 'Update Restaurant Types' ),
+   'add_new_item'      => __( 'Add New Restaurant Types' ),
+   'new_item_name'     => __( 'New Restaurant Types' ),
+   'menu_name'         => __( 'Restaurant Types' ),
+);
+
+$rewrite = array(
+  'slug' => 'restaurant-type',
+  'with_front' => 'false',
+  'hierarchical' => true,
+);
+
+$args = array(
+  'description' => 'Restaurant type as in Breakfast, Dinner, Pub, Fine Dining',
+  'rewrite' => $rewrite,
+);
+
+$restaurant_type = new Custom_Taxonomy( 'Restaurant Type', array('restaurant', 'post'), $args, $capabilities, $labels );

@@ -9,6 +9,8 @@
   License: GPL2
 */
 
+require_once( 'nt-restaurant-fields.php' );
+
 /**
 Declare Restaurant custom content type
 */
