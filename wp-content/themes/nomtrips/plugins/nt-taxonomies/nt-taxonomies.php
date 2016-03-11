@@ -10,6 +10,8 @@
   License: GPL2
 */
 
+require_once( 'nt-taxonomy-fields.php' );
+
 /**
 Declare City
 */
@@ -136,4 +138,4 @@ $args = array(
   'rewrite' => $rewrite,
 );
 
-$restaurant_type = new Custom_Taxonomy( 'Neighborhood', array('restaurant', 'post'), $args, $capabilities, $labels );
+$restaurant_type = new Custom_Taxonomy( 'Neighborhood', array('restaurant'), $args, $capabilities, $labels );
