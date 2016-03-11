@@ -18,5 +18,23 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       )
   ) );
   
+  $rest_form->set_form_item( array(
+    'name' => 'nt_cpt_restaurant_street',
+    'item_type' => 'field',
+    'fields' => array(
+      'group' => 'nt_cpt_restaurant_location_info',
+      'label' => 'Street Address',
+    )
+  ) );
+  
+  $rest_form->set_form_item( array(
+    'name' => 'nt_cpt_restaurant_suiteno',
+    'item_type' => 'field',
+    'fields' => array(
+      'group' => 'nt_cpt_restaurant_location_info',
+      'label' => 'Suite No.',
+    )
+  ) );
+  
   $rest_form->print_form();
 });

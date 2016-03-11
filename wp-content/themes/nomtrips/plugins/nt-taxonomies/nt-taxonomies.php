@@ -85,12 +85,12 @@ Declare Meal Type
    'singular_name'     => _x( 'Restaurant Type', 'restaurant-type' ),
    'search_items'      => __( 'Search Restaurant Types' ),
    'all_items'         => __( 'All Restaurant Types' ),
-   'parent_item'       => __( 'Parent Restaurant Types' ),
+   'parent_item'       => __( 'Parent Restaurant Type' ),
    'parent_item_colon' => __( 'Parent Restaurant Types:' ),
-   'edit_item'         => __( 'Edit Restaurant Types' ),
-   'update_item'       => __( 'Update Restaurant Types' ),
-   'add_new_item'      => __( 'Add New Restaurant Types' ),
-   'new_item_name'     => __( 'New Restaurant Types' ),
+   'edit_item'         => __( 'Edit Restaurant Type' ),
+   'update_item'       => __( 'Update Restaurant Type' ),
+   'add_new_item'      => __( 'Add New Restaurant Type' ),
+   'new_item_name'     => __( 'New Restaurant Type' ),
    'menu_name'         => __( 'Restaurant Types' ),
 );
 
@@ -106,3 +106,34 @@ $args = array(
 );
 
 $restaurant_type = new Custom_Taxonomy( 'Restaurant Type', array('restaurant', 'post'), $args, $capabilities, $labels );
+
+/**
+Neighborhood
+*/
+
+ $labels = array(
+   'name'              => _x( 'Neighborhoods', 'neighborhoods' ),
+   'singular_name'     => _x( 'Neighborhood', 'neighborhood' ),
+   'search_items'      => __( 'Search Neighborhoods' ),
+   'all_items'         => __( 'All Neighborhoods' ),
+   'parent_item'       => __( 'Parent Neighborhood' ),
+   'parent_item_colon' => __( 'Parent Neighborhoods:' ),
+   'edit_item'         => __( 'Edit Neighborhood' ),
+   'update_item'       => __( 'Update Neighborhood' ),
+   'add_new_item'      => __( 'Add New Neighborhood' ),
+   'new_item_name'     => __( 'New Neighborhood' ),
+   'menu_name'         => __( 'Neighborhoods' ),
+);
+
+$rewrite = array(
+  'slug' => 'neighborhood',
+  'with_front' => 'false',
+  'hierarchical' => false,
+);
+
+$args = array(
+  'description' => 'Section of city locals are familiar with like burrough, ward, district, etc. example: Brooklyn, West End, Downtown, Chinatown, etc.',
+  'rewrite' => $rewrite,
+);
+
+$restaurant_type = new Custom_Taxonomy( 'Neighborhood', array('restaurant', 'post'), $args, $capabilities, $labels );
