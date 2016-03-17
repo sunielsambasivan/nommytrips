@@ -28,7 +28,7 @@ $config = array(
 $metabox =  new Tax_Meta_Class( $config );
 
 $metabox->addSelect( 
-  $prefix. 'state-prov', 
+  $prefix . 'state-prov', 
   array(
     '' => 'Choose',
     'AL' => 'Alabama',
@@ -104,6 +104,15 @@ $metabox->addSelect(
   ),
   array('name'=> __('State/Province ','tax-meta'), 'std'=> array('')
   )
+);
+
+$metabox->addText(
+  $prefix . 'map_info',
+  array('name'=> __(
+    'Google Maps ',
+    'tax-meta'
+  ),
+  'desc' => 'Mapping info')
 );
 
 $metabox->Finish();
