@@ -17,6 +17,10 @@ require_once ( NT_INCLUDE_PATH . 'classes/class-custom-taxonomy.php' );
 /* load 3rd party plugins */
 require ( NT_PLUGIN_PATH . 'Tax-meta-class/Tax-meta-class.php' );
 
-/* load custom plugins */
-require ( 'plugins/nt-cpt-restaurant/nt-cpt-restaurant.php' );
-require ( 'plugins/nt-taxonomies/nt-taxonomies.php' );
+/* load custom plugins and fields */
+require_once ( NT_INCLUDE_PATH . '/fields/nt-fields-contact.php' );
+require_once ( 'plugins/nt-cpt-restaurant/nt-cpt-restaurant.php' );
+require_once ( 'plugins/nt-taxonomies/nt-taxonomies.php' );
+require_once ( NT_INCLUDE_PATH . '/fields/nt-fields-social.php' );
+
+

@@ -19,26 +19,6 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
   ) );
   
   $rest_form->set_form_item( array(
-    'name' => 'nt_cpt_main_email',
-    'item_type' => 'field',
-    'fields' => array(
-      'group' => 'nt_cpt_restaurant_locations',
-      'label' => 'Main Email',
-      'field_type' => 'email'
-    )
-  ) );
-  
-  $rest_form->set_form_item( array(
-    'name' => 'nt_cpt_website',
-    'item_type' => 'field',
-    'fields' => array(
-      'group' => 'nt_cpt_restaurant_locations',
-      'label' => 'Website address',
-      'field_type' => 'link'
-    )
-  ) );
-  
-  $rest_form->set_form_item( array(
     'name' => 'nt_cpt_location_multifield',
     'item_type' => 'multifield',
     'fields' => array(
@@ -89,7 +69,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'group' => 'nt_cpt_restaurant_locations',
       'multifield' => 'nt_cpt_location_multifield',
       'field_type' => 'tel',
-      'label' => 'Phone No.',
+      'label' => 'Location Phone No.',
     )
   ) );
   
