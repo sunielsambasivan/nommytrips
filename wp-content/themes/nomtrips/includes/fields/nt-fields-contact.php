@@ -28,7 +28,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
   ) );
   
   $contact_form->set_form_item( array(
-    'name' => 'nt_cpt_email',
+    'name' => 'nt_cpt_main_email',
     'item_type' => 'field',
     'fields' => array(
       'group' => 'nt_cpt_fields_contact',
