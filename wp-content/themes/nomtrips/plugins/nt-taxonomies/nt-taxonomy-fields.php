@@ -1,7 +1,7 @@
 <?php
 /***
 * custom fields for taxonomies
-* using tax-meta-class pluging
+* using tax-meta-class plugin
 **/
 
 /**
@@ -113,6 +113,15 @@ $metabox->addText(
     'tax-meta'
   ),
   'desc' => 'Mapping info')
+);
+
+$metabox->addFile(
+  $prefix . 'city_img',
+  array('name'=> __(
+    'City Image ',
+    'tax-meta'
+  ),
+  'desc' => 'The image for the city')
 );
 
 $metabox->Finish();

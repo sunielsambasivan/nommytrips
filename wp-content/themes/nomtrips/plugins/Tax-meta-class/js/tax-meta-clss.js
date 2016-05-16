@@ -60,7 +60,8 @@ function update_repeater_fields(){
      *
      * @since 2.1.1
      */
-    $('.at-color').wpColorPicker();
+    //causing jquery errors
+    //$('.at-color').wpColorPicker();
   
     /**
      * Delete File.
@@ -153,8 +154,9 @@ jQuery(document).ready(function($) {
     $this.timepicker( { showSecond: true, timeFormat: format } );
     
   });
-
-  $('.at-color').wpColorPicker();
+  
+  //causing jquery errors
+  //$('.at-color').wpColorPicker();
 
   /**
    * Helper Function
