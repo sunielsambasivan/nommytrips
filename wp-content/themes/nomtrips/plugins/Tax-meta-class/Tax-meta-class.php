@@ -155,11 +155,18 @@ class Tax_Meta_Class {
       $this->check_field_upload();
       $this->check_field_color();
       $this->check_field_date();
-      $this->check_field_time();
-      // Enqueue Meta Box Style
+      $this->check_field_time();      
+      
+      /**** had to change this as path was wrong - suniel s.
       wp_enqueue_style( 'tax-meta-clss', $plugin_path . '/css/Tax-meta-class.css' );
       // Enqueue Meta Box Scripts
       wp_enqueue_script( 'tax-meta-clss', $plugin_path . '/js/tax-meta-clss.js', array( 'jquery' ), null, true );
+      ****/
+      
+      // Enqueue Meta Box Style
+      wp_enqueue_style( 'tax-meta-clss', get_template_directory_uri() . '/plugins/Tax-meta-class/css/Tax-meta-class.css' );
+      // Enqueue Meta Box Scripts
+      wp_enqueue_script( 'tax-meta-clss', get_template_directory_uri() . '/plugins/Tax-meta-class/js/tax-meta-clss.js', array( 'jquery' ), null, true );
     
     }
     

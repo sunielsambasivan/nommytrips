@@ -47,21 +47,5 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
     )
   ) );
   
-  $contact_form->set_form_item( array(
-    'name' => 'nt_cpt_cost',
-    'item_type' => 'field',
-    'fields' => array(
-      'group' => 'nt_cpt_fields_contact',
-      'field_type' => 'select',
-      'label' => 'Price Category',
-      'values' => array(
-        1 => '$',
-        2 => '$$',
-        3 => '$$$',
-        4 => '$$$$',
-      )
-    )
-  ) );
-  
   $contact_form->print_form();
 });

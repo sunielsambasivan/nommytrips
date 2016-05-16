@@ -3,6 +3,9 @@
 misc custom function definitions
 **/
 
+//theme supports
+add_theme_support( 'post-thumbnails' );
+
 //debugging function
 function ama_debug( $var ) {
   echo '<blockquote><pre>';
