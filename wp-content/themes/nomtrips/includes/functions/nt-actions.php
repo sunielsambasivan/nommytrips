@@ -1,5 +1,5 @@
 <?php
-/** Actions
+/** Actions and filters
 **/
 // apply tags to attachments
 function nt_add_tags_to_attachments() {
@@ -7,56 +7,22 @@ function nt_add_tags_to_attachments() {
 }
 add_action( 'init' , 'nt_add_tags_to_attachments' );
 
-/*
-function save_restaurant( $post_id ) {
-  if( isset( $_POST ) && !empty( $_POST ) ) { 
-    global $wpdb;
-    $post_id = $_POST['post_ID'];
-    
-    //get locations for this restaurant nt_locations table
-    $locations = $wpdb->get_results( $wpdb->prepare(
-    "
-      SELECT *
-      FROM nt_locations
-      WHERE
-      rest_id = %s
-    ", $post_id
-    ) );
-    
-    ama_debug($locations);
-    ama_debug($_POST['_x_multifield_nt_cpt_location_multifield']);
-    
-    $post_locations = $_POST['_x_multifield_nt_cpt_location_multifield'];
-    foreach( $locations as $location ) {
-      if( isset( $post_locations[$location[0]] ) ) {
-        //santize variables
-        $street = sanitize_text_field( $location['street'] );
-        $city = sanitize_text_field( $location['city'] );
-        $postal = sanitize_text_field( $location['postal'] );
-        $phone = sanitize_text_field( $location['phone'] );
-        $email = sanitize_email( $location['email'] );
-        
-        $wpdb->update(
-          $wpdb->prepare(
-          "
-            UPDATE nt_locations
-            SET 
-            street = $street,
-            city = $city,
-            postal = $postal,
-            phone = $phone,
-            email = $email
-            WHERE 
-            rest_id = %s AND
-            order = %s
-          ", 
-          )
-        );
-      }
-    }
-    
-  }
-}
 
-add_action( 'save_post_restaurant', 'save_restaurant' );
-*/
+//rewrite url filter restaurants, put city name in front
+function restaurant_permalink($permalink, $post_id, $leavename) {
+  if (strpos($permalink, '%city%') === FALSE) return $permalink;
+    // Get post
+    $post = get_post($post_id);
+    if (!$post) return $permalink;
+
+    // Get taxonomy terms
+    $terms = wp_get_object_terms($post->ID, 'city');
+    if (!is_wp_error($terms) && !empty($terms) && is_object($terms[0]))
+      $taxonomy_slug = $terms[0]->slug;
+    else $taxonomy_slug = 'no-city';
+
+  return str_replace('%city%', $taxonomy_slug, $permalink);
+}
+add_filter('post_link', 'restaurant_permalink', 1, 3);
+add_filter('post_type_link', 'restaurant_permalink', 1, 3);
+
