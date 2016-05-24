@@ -19,66 +19,57 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
   ) );
   
   $rest_form->set_form_item( array(
-    'name' => 'nt_cpt_location_multifield',
-    'item_type' => 'multifield',
+    'name' => 'nt_cpt_building_no',
+    'item_type' => 'field',
     'fields' => array(
       'group' => 'nt_cpt_restaurant_info',
-      'label' => 'Location(s)',
+      'label' => 'Building No.',
     )
   ) );
   
   $rest_form->set_form_item( array(
-    'name' => 'nt_cpt_street_mf',
+    'name' => 'nt_cpt_street',
     'item_type' => 'field',
     'fields' => array(
       'group' => 'nt_cpt_restaurant_info',
-      'multifield' => 'nt_cpt_location_multifield',
       'label' => 'Street Address',
     )
   ) );
   
-  $cities = nt_get_cities();
-
   $rest_form->set_form_item( array(
-    'name' => 'nt_cpt_cities_mf',
+    'name' => 'nt_cpt_suite_no',
     'item_type' => 'field',
     'fields' => array(
       'group' => 'nt_cpt_restaurant_info',
-      'multifield' => 'nt_cpt_location_multifield',
-      'field_type' => 'select',
-      'label' => 'Choose City',
-      'values' => $cities
+      'label' => 'Suite No.',
     )
   ) );
   
   $rest_form->set_form_item( array(
-    'name' => 'nt_cpt_zip_mf',
+    'name' => 'nt_cpt_zip',
     'item_type' => 'field',
     'fields' => array(
       'group' => 'nt_cpt_restaurant_info',
-      'multifield' => 'nt_cpt_location_multifield',
       'field_type' => 'text',
       'label' => 'Zip/Postal',
     )
   ) );
   
   $rest_form->set_form_item( array(
-    'name' => 'nt_cpt_ph_mf',
+    'name' => 'nt_cpt_ph',
     'item_type' => 'field',
     'fields' => array(
       'group' => 'nt_cpt_restaurant_info',
-      'multifield' => 'nt_cpt_location_multifield',
       'field_type' => 'tel',
       'label' => 'Location Phone No.',
     )
   ) );
   
   $rest_form->set_form_item( array(
-    'name' => 'nt_cpt_email_mf',
+    'name' => 'nt_cpt_email',
     'item_type' => 'field',
     'fields' => array(
       'group' => 'nt_cpt_restaurant_info',
-      'multifield' => 'nt_cpt_location_multifield',
       'field_type' => 'email',
       'label' => 'location email',
     )
@@ -170,7 +161,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
     'item_type' => 'field',
     'fields' => array(
       'group' => 'nt_cpt_restaurant_hours',
-      'label' => 'All Day',
+      'label' => 'All Days',
     )
   ) );
   
@@ -179,8 +170,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
     'item_type' => 'field',
     'fields' => array(
       'group' => 'nt_cpt_restaurant_hours',
-      'label' => 'Mon',
-      'desc' => 'Set specific hours for this day if it varies'
+      'label' => 'Mon'
     )
   ) );
   
@@ -189,8 +179,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
     'item_type' => 'field',
     'fields' => array(
       'group' => 'nt_cpt_restaurant_hours',
-      'label' => 'Tue',
-      'desc' => 'Set specific hours for this day if it varies'
+      'label' => 'Tue'
     )
   ) );
   
@@ -199,8 +188,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
     'item_type' => 'field',
     'fields' => array(
       'group' => 'nt_cpt_restaurant_hours',
-      'label' => 'Wed',
-      'desc' => 'Set specific hours for this day if it varies'
+      'label' => 'Wed'
     )
   ) );
   
@@ -209,8 +197,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
     'item_type' => 'field',
     'fields' => array(
       'group' => 'nt_cpt_restaurant_hours',
-      'label' => 'Thu',
-      'desc' => 'Set specific hours for this day if it varies'
+      'label' => 'Thu'
     )
   ) );
   
@@ -219,8 +206,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
     'item_type' => 'field',
     'fields' => array(
       'group' => 'nt_cpt_restaurant_hours',
-      'label' => 'Fri',
-      'desc' => 'Set specific hours for this day if it varies'
+      'label' => 'Fri'
     )
   ) );
   
@@ -229,8 +215,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
     'item_type' => 'field',
     'fields' => array(
       'group' => 'nt_cpt_restaurant_hours',
-      'label' => 'Sat',
-      'desc' => 'Set specific hours for this day if it varies'
+      'label' => 'Sat'
     )
   ) );
   
@@ -239,9 +224,17 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
     'item_type' => 'field',
     'fields' => array(
       'group' => 'nt_cpt_restaurant_hours',
-      'label' => 'Sun',
-      'desc' => 'Set specific hours for this day if it varies'
+      'label' => 'Sun'
     )
+  ) );
+  
+  $rest_form->set_form_item( array(
+    'name' => 'nt_cpt_rest_hrs_holidays',
+    'item_type' => 'field',
+    'fields' => array(
+      'group' => 'nt_cpt_restaurant_hours',
+      'label' => 'Holidays'
+      )
   ) );
   
   $rest_form->print_form();

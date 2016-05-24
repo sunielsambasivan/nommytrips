@@ -40,7 +40,7 @@ $args = array(
   'menu_position' => 8,
   'supports'      => array( 'title','thumbnail', 'revisions', 'editor', 'custom-fields', 'author' ), //turns off the text-editor and the excerpts
   'has_archive'   => false,
-  'rewrite' => array( 'slug' => '/restaurant' ),
+  'rewrite' => array( 'slug' => '/restaurant/%city%', 'with_front' => false ),
   'exclude_from_search' => false,
 );
 

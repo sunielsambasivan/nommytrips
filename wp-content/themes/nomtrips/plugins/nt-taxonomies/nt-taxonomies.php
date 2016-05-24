@@ -37,12 +37,13 @@ $capabilities = array (
 $rewrite = array(
   'slug' => 'city',
   'with_front' => 'false',
-  'hierarchical' => true,
+  'hierarchical' => false,
 );
 
 $args = array(
   'description' => 'City',
   'rewrite' => $rewrite,
+  'query_var' => 'city'
 );
 
 $city = new Custom_Taxonomy( 'City', array('restaurant', 'post'), $args, $capabilities, $labels );
