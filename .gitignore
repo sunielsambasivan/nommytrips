@@ -150,3 +150,8 @@ wp-content/plugins/index.php
 *.rar
 *.tar
 *.zip
+
+# Foundation #
+bower_components
+node_modules
+npm-debug.log
