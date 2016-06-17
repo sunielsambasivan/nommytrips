@@ -1,0 +1,126 @@
+﻿/**
+    AMA Theme
+    **/
+
+//branding
+$color-ama-red:           #da291c; //logo red
+$color-ama-blue:          #00539b; //logo blue
+$color-ama-brand:         #00205b;
+$color-ama-insurance:     #00A3E0;
+$color-ama-travel:        #E35205;
+$color-rewards:           #78be20;
+
+//colors
+$blue: $color-ama-blue;
+$brand: $color-ama-brand;
+$red: $color-ama-red;
+$orange: $color-ama-travel;
+$cyan: $color-ama-insurance;
+$green: $color-rewards;
+
+//hovers
+$brand-hover: #002d54;
+$blue-hover: #12429b;
+$red-hover: #881911;
+$orange-hover: #c34401;
+
+//highlights
+$color-teal:              #A5DDF4;
+$color-teal-light:        #DDF1FA;
+
+//greys
+$ash:                     #f7f7f7;
+$stone:                   #eaeaea;
+$smoke:                   #cccccc; 
+$grey:                    #bababa;
+$slate:                   #838383;
+$charcoal:                #656565;
+$jet:                     #323232;
+
+//styles
+$color-black: $jet;
+$border-radius: 3px;
+$border: 1px solid $smoke;
+
+//bg classes
+.color-black, .bg-black { background-color: $jet; color: white }
+.color-green, .bg-green { background-color: $green; color: white; }
+.color-red, .bg-red { background-color: $red; color: white; }
+.color-blue, .bg-blue { background-color: $color-ama-blue; color: white; }
+.color-brand { background-color: $brand; color: white }
+.color-blue-brand { background-color: $color-ama-brand; color: white; }
+.color-orange, .bg-orange { 
+    background-color: $orange; color: white;
+}
+
+.cta {
+    &.color-blue {
+        &:hover {
+            opacity: .8;
+            background: $blue-hover;
+            color: white;
+        }
+    }
+
+    &.color-brand {
+        &:hover {
+            opacity: .8;
+            background: $brand-hover;
+            color: white;
+        }
+    }
+
+    &.color-orange {
+        &:hover {
+            opacity: .8;
+            background-color: $orange-hover;
+            color: white;
+        }
+    }
+
+    &.color-red {
+        &:hover {
+            opacity: .8;
+            background-color: $red-hover;
+            color: white;
+        }
+    }
+
+    &.outline {
+        &.color-orange {
+            @include outline($orange, 2px);
+        }
+
+        &.color-blue {
+             @include outline($color-ama-blue, 2px);
+        }
+
+        &.color-blue-brand {
+             @include outline($blue, 2px);
+        }
+
+        &.color-red {
+             @include outline($red, 2px);
+        }
+    }
+}
+
+.color-cyan, .bg-cyan { background-color: $cyan; color: white; }
+.color-teal { background-color: $color-teal; color: white; }
+.grey-ash { background-color: $ash; color: $jet; }
+.grey-stone { background-color: $stone; color: $jet}
+.grey-smoke { background-color: $smoke; color: $jet }
+.grey-slate { background-color: $slate; color: white; }
+.grey-charcoal { background-color: $charcoal; color: white; }
+.grey-jet { background-color: $jet; color: white; }
+
+//text classes
+.color-black-text { color: $jet; }
+.color-teal-text { color: $color-teal; }
+.color-brand-text { color: $brand; }
+.color-blue-text { color: $blue; }
+.color-red-text { color: $red; }
+.color-green-text { color: $green; }
+.color-orange-text { color: $orange; }
+.text-white, .color-white-text { color: white; }
+.text-grey, .color-grey-text { color: $charcoal; }

@@ -1,0 +1,109 @@
+﻿/* variables */
+
+//paths
+$images_path: "../../../Content/Images/"; //bootstrap
+$font_path: "../../../Fonts/";
+$icon-font-path: "Vendor/Bootstrap/fonts/";
+$images_path_css: "../Content/Images"; //from site.css file
+$icomoon-font-path: "../fonts/travelicons/";
+
+//bootstrap breakpoints
+$screen-xs: 320px;
+$screen-sm: 768px;
+$screen-md: 1024px;
+$screen-lg: 1366px;
+
+$screen-xs-min: $screen-xs;
+$screen-sm-min: $screen-sm;
+$screen-md-min: $screen-md;
+$screen-lg-min: $screen-lg;
+               
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+
+$screen-phone: $screen-xs-min !default;
+$screen-tablet: $screen-sm-min !default;
+$screen-desktop: $screen-md-min !default;
+$screen-lg-desktop: $screen-lg-min !default;
+
+//ama specific breakpoints
+$mobile-iphone4-min: 320px; 
+$mobile-iphone4-max: 480px; //landscape
+$mobile-iphone5-max: 568px;
+$mobile-iphone6-min: 375px; 
+$mobile-iphone6-max: 667px; //landscape
+$mobile-iphone6plus-min: 414px; 
+$mobile-iphone6plus-max: 736px; //landscape
+$tablet-small: 737px;
+$tablet-medium: 768px;
+$tablet-large: 800px;
+$tablet-ls: 1024px; //landscape or small desktop
+$desktop-medium: 1080px;
+$desktop-large: 1280px;
+$header-large: 1366px;
+
+//layout
+$grid-gutter-width: 20px; //bootstrap override (bso)
+$base-padding: 20px;
+$base-margin: 20px;
+
+//containers
+$container-tablet:             ($screen-sm - $grid-gutter-width);
+$container-sm:                 $container-tablet;
+$container-desktop:            ($screen-md - ($grid-gutter-width));
+$container-md:                 $container-desktop;
+$container-large-desktop:      $desktop-large;
+$container-lg:                 $container-large-desktop;
+
+//Fluid grid widths
+$col1: 6.382978723404%;
+$col2: 14.893617021277%;
+$col3: 23.404255319149%;
+$col4: 31.914893617021%;
+$col5: 40.425531914894%;
+$col6: 48.936170212766%;
+$col7: 57.446808510638%;
+$col8: 65.957446808511%;
+$col9: 74.468085106383%;
+$col10: 82.978723404255%;
+$col11: 91.489361702128%;
+$col12: 100%;
+$grid-margin: 2.127659574468%;
+$fluid-responsive-width: 95.744680851064%;
+
+//type
+$base-font-size: 16px;
+$base-line-height: 24px;
+$base-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font: $base-font-size/$base-line-height $base-font-family;
+$heading-font-family: 'Knockout 48', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$script-font-family: 'wisdom_script_airegular', 'Knockout 48', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$heading-font-family-ie: 'Knockout 48 A', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$script-font-familyie: 'wisdom_script_airegular', 'Knockout 48 A', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$script-font-size: 58px;
+
+$font-size-xxxl: 2.5rem; //48px
+$font-size-xxl: 2.25rem; //36px
+$font-size-xl: 1.875rem; //30px
+$font-size-plus: 1.5rem; //24px
+$font-size-lg: 1.25rem; //20px
+$font-size-md-lg: 1.125rem; //18px
+$font-size-md: 1rem; //16px
+$font-size-sm-md: .9375rem; //15px
+$font-size-sm: .875rem; //14px
+$font-size-xs: .75rem; //12px
+$font-size-xxs: .625rem; //10px
+$font-size-xxxs: .6rem; //9.6px
+
+//headings
+$font-size-h1:  $font-size-xxxl; //48px
+$font-size-h2:  $font-size-xxl; //36px
+$font-size-h3:  $font-size-xl; //30px
+$font-size-h4:  $font-size-plus; //24px
+$font-size-h5:  $font-size-lg; //20px
+$font-size-h6:  $font-size-md-lg; //18px
+
+//styles
+$border-radius: 3px;
+$radius-circle: 50%;

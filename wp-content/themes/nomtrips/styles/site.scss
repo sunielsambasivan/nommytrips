@@ -1,0 +1,25 @@
+/**
+External styles manifest
+**/
+
+//Foundation
+@import "vendor/foundation/foundation-flex";
+
+//Vendors/3rd party
+@import "vendor/FontAwesome/font-awesome";
+
+//Variables
+@import "nomtrips/scss/variables";
+
+//mixins
+@import "nomtrips/scss/mixins";
+@import "nomtrips/scss/mixins_flexbox";
+
+//nomtrip styles
+@import "nomtrips/scss/fonts";
+@import "nomtrips/scss/ie";
+@import "nomtrips/scss/theme";
+@import "nomtrips/scss/base_ama";
+@import "nomtrips/scss/forms";
+@import "nomtrips/scss/type";
+@import "nomtrips/scss/grid";

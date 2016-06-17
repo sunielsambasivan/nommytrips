@@ -1,0 +1,75 @@
+﻿/**
+    Base default styles (classes without dots (.))
+    **/
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: $base-font-family;
+    font-size: 16px;
+    background: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    line-height: $base-line-height;
+}
+
+h1, h2, h3, .h1, .h2, .h3 {
+    @extend %heading-font;
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-top: $base-margin/2;
+}
+
+h1 {
+    font-size: $font-size-h1;
+}
+
+h2 {
+    font-size: $font-size-h2;
+}
+
+h3 {
+    font-size: $font-size-h3;
+}
+
+h4 {
+    font-size: $font-size-h4;
+}
+
+h5 {
+    font-size: $font-size-h5;
+}
+
+h6 {
+    font-size: $font-size-h6;
+}
+
+p {
+    margin: $base-margin/2 0;
+}
+
+a {
+    cursor:pointer;
+    color: $color-ama-blue;
+    outline: none !important;
+    text-decoration: none;
+
+    &:hover, &:active, &:focus {
+        color: $blue-hover;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+img {
+    max-width: 100%;
+}

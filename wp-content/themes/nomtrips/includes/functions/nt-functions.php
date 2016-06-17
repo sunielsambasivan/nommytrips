@@ -7,7 +7,7 @@ misc custom function definitions
 add_theme_support( 'post-thumbnails' );
 
 //debugging function
-function ama_debug( $var ) {
+function nt_debug( $var ) {
   echo '<blockquote><pre>';
   $pre = print_r( $var, true );
   echo esc_html( $pre );

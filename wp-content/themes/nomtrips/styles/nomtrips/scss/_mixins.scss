@@ -1,0 +1,495 @@
+﻿/**
+    Custom mixins (functions)
+    **/
+
+/* for media queries */
+@mixin respond-to($media) {
+
+    @if $media == mobile {
+        /* 0px -> $mobile-iphone6plus-max  */
+        @media only screen and (min-width: 0) and (max-width: $mobile-iphone6plus-max) {
+            @content;
+        }
+    }
+
+    @else if $media == mobile-xs {
+        /* iphone 4/4s & iphone 5/5s */
+        @media only screen and (max-width: $screen-xs) {
+            @content;
+        }
+    }
+
+    @else if $media == mobile-xs-max {
+        /* iphone 4/4s & iphone 5/5s */
+        @media only screen and (max-width: $mobile-iphone4-max) {
+            @content;
+        }
+    }
+
+    @else if $media == mobile-xs-ls {
+        /* iphone 4/5 landscape */
+        @media only screen and (min-width: $mobile-iphone4-max) and (max-width: $mobile-iphone5-max) and (orientation: landscape) {
+            @content;
+        }
+    }
+
+    @else if $media == mobile-medium {
+        /* wider than iphone 4/5 & smaller than iphone 6plus */
+        @media only screen and (min-width: $mobile-iphone4-min + 1) and (max-width: $mobile-iphone6plus-min - 1) {
+            @content;
+        }
+    }
+
+    @else if $media == mobile-medium-ls {
+        /* iphone 6 landscape */
+        @media only screen and (min-width: $mobile-iphone6-max) and (max-width: $mobile-iphone6plus-max - 1) and (orientation: landscape) {
+            @content;
+        }
+    }
+
+    @else if $media == mobile-large {
+        /* iphone 6plus */
+        @media only screen and (min-width: 0) and (max-width: $tablet-medium - 1) {
+            @content;
+        }
+    }
+
+    @else if $media == mobile-medium-ls {
+        /* iphone 6 plus landscape */
+        @media only screen and (min-width: $mobile-iphone6plus-max) and (orientation: landscape) {
+            @content;
+        }
+    }
+
+    @else if $media == mobile-tablet {
+        /* mobile and tablet landscape */
+        @media only screen and (min-width: 0) and (max-width: $tablet-ls - 1) {
+            @content;
+        }
+    }
+
+    @else if $media == tablet {
+        /* really large mobile or smaller tablets */
+        @media only screen and (min-width: $tablet-small) and (max-width: $tablet-ls - 1) {
+            @content;
+        }
+    }
+
+    @else if $media == tablet-small {
+        /* really large mobile or smaller tablets */
+        @media only screen and (min-width: $tablet-small) and (max-width: $tablet-medium - 1) {
+            @content;
+        }
+    }
+
+    @else if $media == tablet-medium {
+        /* normal sized tablets i.e. ipads */
+        @media only screen and (min-width: $tablet-medium) {
+            @content;
+        }
+    }
+
+    @else if $media == tablet-large {
+        /* larger sized tablets i.e. galaxy tab */
+        @media only screen and (min-width: $tablet-large) {
+            @content;
+        }
+    }
+
+    @else if $media == tablet-max or $media == desktop-small {
+        /* ipad landscape or higher or small desktop+ */
+        @media only screen and (min-width: $tablet-ls) {
+            @content;
+        }
+    }
+
+    @else if $media == tablet--desktop-medium {
+        /* tablets to medium desktops */
+        @media only screen and (min-width: $tablet-small) and (max-width: $desktop-large - 1) {
+            @content;
+        }
+    }
+
+    @else if $media == desktop-medium or $media == desktop {
+        /* standard desktop size+ */
+        @media only screen and (min-width: $desktop-medium) {
+            @content;
+        }
+    }
+
+    @else if $media == desktop-medium-max {
+        /* max large desktop and below */
+        @media only screen and (max-width: $desktop-large - 1) {
+            @content;
+        }
+    }
+
+    @else if $media == desktop-medium-only {
+        /* standard desktop size only */
+        @media only screen and (min-width: $tablet-ls) and (max-width: $desktop-large - 1) {
+            @content;
+        }
+    }
+
+    @else if $media == desktop-large {
+        /* large desktop+ */
+        @media only screen and (min-width: $desktop-large) {
+            @content;
+        }
+    }
+
+    @else if $media == header-large {
+        /* large desktop+ */
+        @media only screen and (min-width: $header-large) {
+            @content;
+        }
+    }
+}
+
+//ie compatibility
+@mixin ie($version) {
+    /* IE10-specific styles go here */
+    @if $version == ie10 {
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            @content;
+        }
+    }
+    /* IE9 and IE10 rule sets go here */
+    @else if $version == ie9-10 {
+        @media screen and (min-width:0\0) {
+            @content;
+        }
+    }
+    /* <= IE9 or browsers that dont support flexbox */
+    @else if $version == ie9 {
+        .no-flexbox {
+            @content;
+        }
+    }
+
+    @else if $version == edge {
+        _:-ms-fullscreen, :root {
+            @content;
+        }
+    }
+}
+
+/* border radius */
+@mixin border-curve($tl, $tr: $tl, $br: $tl, $bl: $tl) {
+    -webkit-border-top-left-radius: $tl;
+    -webkit-border-top-right-radius: $tr;
+    -webkit-border-bottom-right-radius: $br;
+    -webkit-border-bottom-left-radius: $bl;
+    -moz-border-radius-topleft: $tl;
+    -moz-border-radius-topright: $tr;
+    -moz-border-radius-bottomright: $br;
+    -moz-border-radius-bottomleft: $bl;
+    border-top-left-radius: $tl;
+    border-top-right-radius: $tr;
+    border-bottom-right-radius: $br;
+    border-bottom-left-radius: $bl;
+}
+
+/* icon font */
+@mixin icon-font($glyph, $fsize: inherit) {
+    display: inline-block;
+    content: $glyph;
+    font-family: 'travelicons';
+    font-size: $fsize;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    speak: none;
+}
+
+@mixin icon-font-fa($glyph, $fsize: inherit) {
+    display: inline-block;
+    content: $glyph;
+    font-family: 'FontAwesome';
+    font-size: $fsize;
+    font-style: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* center content vertically */
+@mixin center-vertically( $top: 50%, $translateY: -50%, $position: relative ) {
+    position: $position;
+    top: $top;
+    -moz-transform: translateY( $translateY );
+    -ms-transform: translateY( $translateY );
+    -webkit-transform: translateY( $translateY );
+    transform: translateY( $translateY );
+}
+
+@mixin center-horizontally( $left: 50%, $translateX: -50%, $position: relative ) {
+    position: $position;
+    left: $left;
+    -moz-transform: translateY( $translateX );
+    -ms-transform: translateY( $translateX );
+    -webkit-transform: translateY( $translateX );
+    transform: translateY( $translateX );
+}
+
+@mixin outline($color: white, $thickness: 1px, $line: solid, $keep-bg: no) {
+    border: $thickness $line $color;
+    color: $color;
+
+    @if $keep-bg == no {
+        background-color: none;
+    }
+
+    &:hover {
+        color: white;
+        border-color: initial;
+        background-color: $color;
+        opacity: 1;
+    }
+}
+
+@mixin solid($bg: $charcoal, $text: white, $border: no, $border-color: $bg, $thickness: 0, $line: solid) {
+    background: $bg;
+    color: $text;
+
+    @if $border == yes {
+        border: $border-color $thickness $line;
+    }
+}
+
+@mixin border($color: $jet, $thickness: 1px, $type: solid) {
+    border: $color $thickness $type;
+}
+
+@mixin circle-border($size: 10px, $color: white, $bsize: 1px, $fsize: 1rem) {
+    @include border-curve(50%);
+    display: inline-block;
+    width: $size;
+    height: $size;
+    border: $bsize solid $color;
+    text-align: center;
+
+    > * {
+        font-size: $fsize;
+        line-height: 1rem;
+        @include center-vertically();
+    }
+}
+
+@mixin heading-font($size: $font-size-xxl, $color: $jet) {
+    @extend %heading-font;
+    font-size: $size;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    text-shadow: none;
+}
+
+@mixin base-font($size: $base-font-size, $color: $jet) {
+    font-family: $base-font-family;
+    font-size: $size;
+    color: $color;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+@mixin diamond( $w, $h, $color ) {
+    width: $w;
+    height: $h;
+    background: $color;
+    /* Rotate */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    /* Rotate Origin */
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+
+@mixin diamond-narrow( $w, $h, $color ) {
+    width: 0;
+    height: 0;
+    border: $h solid transparent;
+    border-bottom: $w solid $color;
+    position: relative;
+    top: -$h;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: -$h;
+        top: $w;
+        width: 0;
+        height: 0;
+        border: $h solid transparent;
+        border-top: $w solid $color;
+    }
+
+    ;
+}
+
+/** css transitions **/
+@mixin rotate($degrees...) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+}
+
+@mixin transform-origin($origin...) {
+    -moz-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+@mixin transform($transform...) {
+    -moz-transform: $transform;
+    -webkit-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    -ms-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transition-property($property...) {
+    -moz-transition-property: $property;
+    -o-transition-property: $property;
+    -webkit-transition-property: $property;
+    transition-property: $property;
+}
+
+@mixin padding-x($padding: $base-padding) {
+    padding-left: $padding;
+    padding-right: $padding;
+}
+
+@mixin margin-x($margin: $base-margin) {
+    margin-left: $margin;
+    margin-right: $margin;
+}
+
+@mixin remove-appearance() {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+//overlay cta boxes
+@mixin overlay-items() {
+    .image {
+        background: black;
+
+        img {
+            opacity: .7;
+        }
+
+        &:hover {
+            background: none;
+
+            img {
+                opacity: 1;
+            }
+        }
+
+        &:focus {
+            img {
+                opacity: .9;
+            }
+        }
+    }
+
+    .title {
+        @include center-vertically(50%, -50%, absolute);
+        width: 100%;
+        padding: $base-padding/2;
+        color: white;
+
+        h3, a {
+            margin: 0;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+            color: white;
+        }
+
+        span {
+            font-size: inherit;
+        }
+    }
+}
+
+//media queries for specific elements
+@mixin mq-items() {
+    @include respond-to(mobile-tablet) {
+        margin-top: 0;
+        @include flex-wrap(wrap);
+
+        .item, .box {
+            margin: $grid-margin 0;
+        }
+
+        .title {
+            width: 100%;
+            padding: $base-padding/2;
+
+            h3 {
+                margin: 0;
+                font-size: $font-size-md-lg;
+            }
+
+            h4 {
+                margin-bottom: 0;
+                font-size: $font-size-sm;
+            }
+
+            span {
+                font-size: inherit;
+            }
+        }
+    }
+
+    @include respond-to(tablet) {
+        @include justify-content(space-around);
+
+        &.items, &.boxes {
+            .item, .box {
+                margin-right: 0;
+            }
+        }
+
+        &.flex-6 {
+            .title {
+                h3 {
+                    font-size: $font-size-xl;
+                }
+
+                h4 {
+                    margin-bottom: 0;
+                    font-size: $font-size-sm;
+                }
+            }
+        }
+    }
+}

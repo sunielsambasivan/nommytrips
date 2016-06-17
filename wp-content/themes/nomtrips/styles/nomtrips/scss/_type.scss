@@ -1,0 +1,121 @@
+﻿/**
+    Typography 
+    **/
+
+.script {
+    font-family: $script-font-family;
+    font-size: $script-font-size;
+    text-transform: lowercase;
+}
+
+.has-script {
+    font-size: $script-font-size;
+    line-height: 4rem;
+    
+    span {
+        @extend .script;
+    }
+}
+
+%heading-font {
+    font-family: $heading-font-family;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+
+     @include ie(ie9-10) {
+         font-family: $heading-font-family-ie;
+     }
+}
+
+.heading-font {
+    @extend %heading-font;
+}
+
+.smoothing {
+  -moz-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  zoom: 1;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: oblique;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.font-size-xxxl {
+    font-size: $font-size-xxxl; //3rem 48px
+}
+
+.font-size-xxl {
+    font-size: $font-size-xxl; //2rem 32px
+}
+
+.font-size-xl {
+    font-size: $font-size-xl; //1.5rem 24px
+}
+
+.font-size-lg {
+    font-size: $font-size-lg; //1.25rem 20px
+}
+
+.font-size-md-lg {
+    font-size: $font-size-md-lg; //1.125rem 18px
+}
+
+.font-size-md {
+    font-size: $font-size-md; //1rem 16
+}
+
+.font-size-sm-md {
+    font-size: $font-size-sm-md; //.915rem 14.64px
+}
+
+.font-size-sm {
+    font-size: $font-size-sm; //.875rem 14px
+}
+
+.font-size-xs {
+    font-size: $font-size-xs; //.75rem 12px
+}
+
+.font-size-xxs {
+    font-size: $font-size-xxs; //.65rem 10.4
+}
+
+.font-size-xxxs, .micetype {
+    font-size: $font-size-xxxs; //.6rem 9.6px
+}
+
+//will delete later
+.f-s-xsmall{
+  font-size: $font-size-sm-md;
+}
