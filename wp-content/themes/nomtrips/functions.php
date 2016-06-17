@@ -23,5 +23,7 @@ require_once ( NT_INCLUDE_PATH . '/fields/nt-fields-contact.php' );
 require ( 'plugins/nt-cpt-restaurant/nt-cpt-restaurant.php' );
 require ( 'plugins/nt-taxonomies/nt-taxonomies.php' );
 require_once ( NT_INCLUDE_PATH . '/fields/nt-fields-social.php' );
-/* custom shared fields */
 
+/*stylesheets & scripts*/
+require_once ( NT_INCLUDE_PATH . '/functions/nt-stylesheets.php' );
+require_once ( NT_INCLUDE_PATH . '/functions/nt-scripts.php' );

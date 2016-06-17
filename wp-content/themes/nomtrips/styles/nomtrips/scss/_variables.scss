@@ -1,11 +1,9 @@
 ﻿/* variables */
 
 //paths
-$images_path: "../../../Content/Images/"; //bootstrap
-$font_path: "../../../Fonts/";
-$icon-font-path: "Vendor/Bootstrap/fonts/";
-$images_path_css: "../Content/Images"; //from site.css file
-$icomoon-font-path: "../fonts/travelicons/";
+$images_path_theme: "../images"; //from site.css file
+$font-path: "../fonts";
+$fa-font-path: "../fonts/fontawesome";
 
 //bootstrap breakpoints
 $screen-xs: 320px;
@@ -77,10 +75,10 @@ $base-font-size: 16px;
 $base-line-height: 24px;
 $base-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $base-font: $base-font-size/$base-line-height $base-font-family;
-$heading-font-family: 'Knockout 48', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$script-font-family: 'wisdom_script_airegular', 'Knockout 48', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$heading-font-family-ie: 'Knockout 48 A', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$script-font-familyie: 'wisdom_script_airegular', 'Knockout 48 A', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$heading-font-family: 'Open Sans Extra Bold','Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$script-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$heading-font-family-ie: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$script-font-familyie: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $script-font-size: 58px;
 
 $font-size-xxxl: 2.5rem; //48px
