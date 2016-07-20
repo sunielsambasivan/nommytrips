@@ -41,21 +41,7 @@ input[type=reset] {
 
 .button-pill {
     @extend .button;
-
     padding: 2px;
-}
-
-.outline {
-    input[type=text],
-    input[type=email],
-    input[type=datetime],
-    input[type=datetime-local],
-    input[type=search],
-    input[type=url] {
-        border: none;
-        color: white;
-        background-color: transparent;
-    }
 }
 
 .form-item {

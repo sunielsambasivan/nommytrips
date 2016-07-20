@@ -9,19 +9,19 @@ if ( !defined('ABSPATH')) exit;
  * @package nomtrips
  */
 ?>
-  </div><!-- #main -->
+    </div><!-- #main -->
 
-  <div id="footer" role="contentinfo">
+    <div id="footer" role="contentinfo">
 
-    <div id="credits">
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-    </div><!-- #site-info -->
+      <div id="credits">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+          <?php bloginfo( 'name' ); ?>
+        </a>
+      </div><!-- #site-info -->
 
-  </div><!-- #footer -->
-
-</div><!-- #container -->
+    </div><!-- #footer -->
+  </div><!-- #container -->
+</div><!--off-canvas-content-->
 
 <?php wp_footer(); ?>
 </body>

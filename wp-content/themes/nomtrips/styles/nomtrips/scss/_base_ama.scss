@@ -10,7 +10,7 @@
 
 body, html {
     font-family: $base-font-family;
-    font-size: 16px;
+    font-size: 12px;
     background: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -23,7 +23,6 @@ h1, h2, h3, .h1, .h2, .h3 {
     margin-top: 0;
     text-transform: uppercase;
     letter-spacing: .5px;
-    margin-top: $base-margin/2;
 }
 
 h1 {
@@ -56,12 +55,12 @@ p {
 
 a {
     cursor:pointer;
-    color: $color-ama-blue;
+    color: $color-blue;
     outline: none !important;
     text-decoration: none;
 
     &:hover, &:active, &:focus {
-        color: $blue-hover;
+        color: $color-blue-hover;
     }
 }
 

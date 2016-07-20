@@ -23,3 +23,11 @@ External styles manifest
 @import "nomtrips/scss/forms";
 @import "nomtrips/scss/type";
 @import "nomtrips/scss/grid";
+
+//components
+@import "nomtrips/components/off-canvas";
+@import "nomtrips/components/header";
+@import "nomtrips/components/logo";
+@import "nomtrips/components/nav--main";
+@import "nomtrips/components/nav--login";
+@import "nomtrips/components/nav--off-canvas";

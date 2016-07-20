@@ -15,6 +15,9 @@ require_once ( NT_INCLUDE_PATH . 'classes/class-custom-post-type.php' );
 require_once ( NT_INCLUDE_PATH . 'classes/class-custom-metadata-form.php' );
 require_once ( NT_INCLUDE_PATH . 'classes/class-custom-taxonomy.php' );
 
+/* menus */
+require_once ( NT_INCLUDE_PATH . 'functions/nt-menus.php' );
+
 /* load 3rd party plugins */
 require ( NT_PLUGIN_PATH . 'Tax-meta-class/Tax-meta-class.php' );
 
