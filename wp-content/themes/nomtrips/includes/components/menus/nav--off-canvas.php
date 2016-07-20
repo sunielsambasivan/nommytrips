@@ -11,27 +11,19 @@
       </button>
     </header>
     <section class="menu-user">
-      <?php
-      $user = wp_get_current_user();
-      if( $user->ID ) {
-        $email = $user->data->user_email;
-       
-        if (function_exists('get_avatar')) {
-          echo get_avatar($email);
+      <div class="columns small-12">
+        <?php
+        $user = wp_get_current_user(); 
+        //nt_debug($user);
+        if( $user->ID ) {
+          include( locate_template( NT_COMPONENTS_PATH .'menus/nav--logged-in.php') );
         } 
-           
-        else {
-          //alternate gravatar code for < 2.5
-          $grav_url = "http://www.gravatar.com/avatar/" . 
-          md5(strtolower($email)) . "?d=" . urlencode($default) . "&s=" . $size;
-          echo "<img src='$grav_url'/>";
-        }
-      } 
     
-      else {
-        wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'menu-login' ) ); 
-      }
-      ?>
+        else {
+          wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'menu-login' ) ); 
+        }
+        ?>
+      </div>
     </section>
   </div>
 </nav><!-- #nav -->

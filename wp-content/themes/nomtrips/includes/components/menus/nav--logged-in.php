@@ -1,24 +1,33 @@
 <nav role="navigation" class="nav--logged-in">
   <?php
-  $email = $user->data->user_email;
+    $email = $user->data->user_email;
   ?>
-  <div class="columns small-4">
-    <?php
-      if (function_exists('get_avatar')) {
-        echo get_avatar($email);
-      } 
+  <div class="profile">
+    <div class="profile-avatar">
+      <div class="image">
+      <?php
+        if (function_exists('get_avatar')) {
+          echo get_avatar($email);
+        } 
      
-      else {
-        //alternate gravatar code for < 2.5
-        $grav_url = "http://www.gravatar.com/avatar/" . 
-        md5(strtolower($email)) . "?d=" . urlencode($default) . "&s=" . $size;
-        echo "<img src='$grav_url'/>";
-      }
-    ?>
+        else {
+          //alternate gravatar code for < 2.5
+          $grav_url = "http://www.gravatar.com/avatar/" . 
+          md5(strtolower($email)) . "?d=" . urlencode($default) . "&s=" . $size;
+          echo "<img src='$grav_url'/>";
+        }
+      ?>
+      </div>
+    </div>
+  
+    <div class="profile-name">
+      <?php echo $user->data->display_name; ?>
+    </div>
   </div>
-  <div class="columns small-8">
-  </div>
-  <ul>
-    <li><li>
+  <ul class="menu--logged-in-items">
+    <li><a href="#">Your Itineraries</a></li>
+    <li><a href="#">Nom Lists</a></li>
+    <li><a href="#">Saved Guides</a></li>
+    <li><a href="#">Logout</a></li>
   </ul>
-</div>
+</nav>
