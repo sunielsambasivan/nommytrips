@@ -1,0 +1,26 @@
+.nav--logged-in {
+  .profile {
+    @include flexbox();
+    @include align-items(center);
+    margin: $base-margin/2 0 $base-margin;
+    padding: 0 $base-padding/4;
+  }
+  
+  .profile-avatar {
+    float: left;
+    @include flex(0 0 50px);
+    width: 50px;
+    
+    img {
+      @include circle-border(50px, white, 2px);
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, .15);
+    }
+  }
+  
+  .profile-name {
+    float: left;
+    @include flex(0 0 220px);
+    width: 220px;
+    padding: 0 $base-padding/2 4px;
+  }
+}
