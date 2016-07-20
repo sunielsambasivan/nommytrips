@@ -1,0 +1,13 @@
+#header #logo {
+  svg {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  #header #logo {
+    svg {
+      width: 100%;
+    }
+  }
+}
