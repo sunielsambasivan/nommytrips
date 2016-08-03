@@ -5,142 +5,44 @@
 /* for media queries */
 @mixin respond-to($media) {
 
-    @if $media == mobile {
-        /* 0px -> $mobile-iphone6plus-max  */
-        @media only screen and (min-width: 0) and (max-width: $mobile-iphone6plus-max) {
+    @if $media == mobile-only {
+        /* mobile only */
+        @media screen and (max-width: 39.9375em) {
+          @content;
+        }
+    }
+    
+    @else if $media == tablet-only {
+        /* tablet only */
+        @media only screen and (min-width: 40em) and (max-width: 63.9375em) {
             @content;
         }
     }
-
-    @else if $media == mobile-xs {
-        /* iphone 4/4s & iphone 5/5s */
-        @media only screen and (max-width: $screen-xs) {
-            @content;
-        }
-    }
-
-    @else if $media == mobile-xs-max {
-        /* iphone 4/4s & iphone 5/5s */
-        @media only screen and (max-width: $mobile-iphone4-max) {
-            @content;
-        }
-    }
-
-    @else if $media == mobile-xs-ls {
-        /* iphone 4/5 landscape */
-        @media only screen and (min-width: $mobile-iphone4-max) and (max-width: $mobile-iphone5-max) and (orientation: landscape) {
-            @content;
-        }
-    }
-
-    @else if $media == mobile-medium {
-        /* wider than iphone 4/5 & smaller than iphone 6plus */
-        @media only screen and (min-width: $mobile-iphone4-min + 1) and (max-width: $mobile-iphone6plus-min - 1) {
-            @content;
-        }
-    }
-
-    @else if $media == mobile-medium-ls {
-        /* iphone 6 landscape */
-        @media only screen and (min-width: $mobile-iphone6-max) and (max-width: $mobile-iphone6plus-max - 1) and (orientation: landscape) {
-            @content;
-        }
-    }
-
-    @else if $media == mobile-large {
-        /* iphone 6plus */
-        @media only screen and (min-width: 0) and (max-width: $tablet-medium - 1) {
-            @content;
-        }
-    }
-
-    @else if $media == mobile-medium-ls {
-        /* iphone 6 plus landscape */
-        @media only screen and (min-width: $mobile-iphone6plus-max) and (orientation: landscape) {
-            @content;
-        }
-    }
-
-    @else if $media == mobile-tablet {
-        /* mobile and tablet landscape */
-        @media only screen and (min-width: 0) and (max-width: $tablet-ls - 1) {
-            @content;
-        }
-    }
-
+    
     @else if $media == tablet {
-        /* really large mobile or smaller tablets */
-        @media only screen and (min-width: $tablet-small) and (max-width: $tablet-ls - 1) {
+        /* tablet */
+        @media only screen and (min-width: 40em) {
             @content;
         }
     }
-
-    @else if $media == tablet-small {
-        /* really large mobile or smaller tablets */
-        @media only screen and (min-width: $tablet-small) and (max-width: $tablet-medium - 1) {
+    
+    @else if $media == desktop-only {
+        /* desktop only */
+        @media only screen and (min-width: 64em) and (max-width: 74.9375em) {
             @content;
         }
     }
-
-    @else if $media == tablet-medium {
-        /* normal sized tablets i.e. ipads */
-        @media only screen and (min-width: $tablet-medium) {
+    
+    @else if $media == desktop {
+        /* desktop */
+        @media only screen and (min-width: 64em) {
             @content;
         }
     }
-
-    @else if $media == tablet-large {
-        /* larger sized tablets i.e. galaxy tab */
-        @media only screen and (min-width: $tablet-large) {
-            @content;
-        }
-    }
-
-    @else if $media == tablet-max or $media == desktop-small {
-        /* ipad landscape or higher or small desktop+ */
-        @media only screen and (min-width: $tablet-ls) {
-            @content;
-        }
-    }
-
-    @else if $media == tablet--desktop-medium {
-        /* tablets to medium desktops */
-        @media only screen and (min-width: $tablet-small) and (max-width: $desktop-large - 1) {
-            @content;
-        }
-    }
-
-    @else if $media == desktop-medium or $media == desktop {
-        /* standard desktop size+ */
-        @media only screen and (min-width: $desktop-medium) {
-            @content;
-        }
-    }
-
-    @else if $media == desktop-medium-max {
-        /* max large desktop and below */
-        @media only screen and (max-width: $desktop-large - 1) {
-            @content;
-        }
-    }
-
-    @else if $media == desktop-medium-only {
-        /* standard desktop size only */
-        @media only screen and (min-width: $tablet-ls) and (max-width: $desktop-large - 1) {
-            @content;
-        }
-    }
-
+    
     @else if $media == desktop-large {
-        /* large desktop+ */
-        @media only screen and (min-width: $desktop-large) {
-            @content;
-        }
-    }
-
-    @else if $media == header-large {
-        /* large desktop+ */
-        @media only screen and (min-width: $header-large) {
+        /* desktop */
+        @media only screen and (min-width: 114em) {
             @content;
         }
     }

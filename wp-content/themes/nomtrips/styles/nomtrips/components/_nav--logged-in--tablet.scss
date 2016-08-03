@@ -1,0 +1,16 @@
+@include respond-to(tablet) {
+  .nav--logged-in {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+    
+    .profile {
+      @include justify-content(flex-end);
+      
+      .profile-name {
+        @include flex(0 0 auto);
+        width: auto;
+      }
+    }
+  }
+}

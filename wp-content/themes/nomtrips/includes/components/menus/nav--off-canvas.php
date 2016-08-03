@@ -18,7 +18,7 @@
         if( $user->ID ) {
           include( locate_template( NT_COMPONENTS_PATH .'menus/nav--logged-in.php') );
         } 
-    
+
         else {
           wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'menu-login' ) ); 
         }
