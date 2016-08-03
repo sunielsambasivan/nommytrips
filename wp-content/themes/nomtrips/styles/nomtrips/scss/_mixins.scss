@@ -93,21 +93,6 @@
 }
 
 /* icon font */
-@mixin icon-font($glyph, $fsize: inherit) {
-    display: inline-block;
-    content: $glyph;
-    font-family: 'travelicons';
-    font-size: $fsize;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    speak: none;
-}
 
 @mixin icon-font-fa($glyph, $fsize: inherit) {
     display: inline-block;

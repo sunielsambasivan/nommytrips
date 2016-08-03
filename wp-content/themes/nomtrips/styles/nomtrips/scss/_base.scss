@@ -8,9 +8,13 @@
     box-sizing: border-box;
 }
 
+html {
+  font-size: 12px;
+}
+
 body, html {
     font-family: $base-font-family;
-    font-size: 12px;
+    font-size: 16px;
     background: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

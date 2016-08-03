@@ -21,10 +21,10 @@
     </div>
   
     <div class="profile-name">
-      <button class="button" type="button" data-toggle="loggedInMenu"><?php echo $user->data->display_name; ?>
+      <a href="#" class="profile-name-link float-right hover" data-toggle="loggedInMenu"><?php echo $user->data->display_name; ?></a>
     </div>
   </div>
-  <ul class="dropdown-pane menu--logged-in-items" id="loggedInMenu" data-dropdown data-auto-focus="true">
+  <ul class="dropdown-pane bottom menu--logged-in-items" id="loggedInMenu" data-dropdown data-v-offset="40" data-auto-focus="true">
     <li><a href="#">Your Itineraries</a></li>
     <li><a href="#">Nom Lists</a></li>
     <li><a href="#">Saved Guides</a></li>
