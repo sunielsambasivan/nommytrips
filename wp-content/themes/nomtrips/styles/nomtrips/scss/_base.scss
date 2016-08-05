@@ -76,3 +76,8 @@ ul {
 img {
     max-width: 100%;
 }
+
+picture img {
+  max-width: none;
+  width: 100%;
+}

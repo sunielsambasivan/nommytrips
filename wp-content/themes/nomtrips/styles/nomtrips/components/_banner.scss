@@ -1,0 +1,11 @@
+.banner .picturefill-background {
+  height: 170px;
+  
+  @include respond-to(tablet) {
+    height: 338px;
+  }
+  
+  @include respond-to(desktop) {
+    height: 500px;
+  }
+}

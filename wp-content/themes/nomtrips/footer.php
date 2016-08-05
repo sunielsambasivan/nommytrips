@@ -9,7 +9,7 @@ if ( !defined('ABSPATH')) exit;
  * @package nomtrips
  */
 ?>
-    </div><!-- #main -->
+    </section><!-- #main -->
 
     <div id="footer" role="contentinfo">
 

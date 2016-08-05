@@ -12,17 +12,7 @@ https://codex.wordpress.org/Function_Reference/register_post_type
 https://codex.wordpress.org/Function_Reference/register_taxonomy
 */
 class Custom_Post_Type
-{
-  /**
-  * public variables
-  */
-  public $post_type_name;
-  public $post_type_args;
-  public $post_type_roles;
-  public $post_type_labels;
-  public $post_type_capabilities;
-  public $post_type_permissions;
-   
+{  
   /* Class constructor */
   public function __construct( $name, $args = array(), $roles = array(), $capabilities = array(), $permissions = array(), $labels = array() ) {
 

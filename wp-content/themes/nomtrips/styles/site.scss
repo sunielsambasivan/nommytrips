@@ -5,11 +5,12 @@ External styles manifest
 //Foundation
 @import "vendor/foundation/foundation-flex";
 
+//Variables
+@import "vendor/FontAwesome/variables";
+@import "nomtrips/scss/variables";
+
 //Vendors/3rd party
 @import "vendor/FontAwesome/font-awesome";
-
-//Variables
-@import "nomtrips/scss/variables";
 
 //mixins
 @import "nomtrips/scss/mixins";
@@ -37,3 +38,4 @@ External styles manifest
 @import "nomtrips/components/nav--logged-in";
 @import "nomtrips/components/nav--logged-in--tablet";
 @import "nomtrips/components/nav--off-canvas";
+@import "nomtrips/components/banner";
