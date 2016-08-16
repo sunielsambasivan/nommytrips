@@ -15,6 +15,7 @@ require_once ( NT_INCLUDE_PATH . 'classes/class-custom-post-type.php' );
 require_once ( NT_INCLUDE_PATH . 'classes/class-custom-metadata-form.php' );
 require_once ( NT_INCLUDE_PATH . 'classes/class-custom-taxonomy.php' );
 require_once ( NT_INCLUDE_PATH . 'classes/class-banner.php' );
+require_once ( NT_INCLUDE_PATH . 'classes/class-city.php' );
 
 /* menus */
 require_once ( NT_INCLUDE_PATH . 'functions/nt-menus.php' );

@@ -19,7 +19,6 @@
 
 %heading-font {
     font-family: $heading-font-family;
-    text-transform: uppercase;
     letter-spacing: .5px;
 
      @include ie(ie9-10) {

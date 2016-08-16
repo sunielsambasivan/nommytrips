@@ -15,6 +15,7 @@ function nt_image_sizes_init() {
   
   //thumbs/cards
   add_image_size( 'thumb-card', 610 );        //images for cards
+  add_image_size( 'thumb-card-vert', 768, 805, true ); //images for cards (vertical)
   add_image_size( 'thumb-nomtrips', 120 );    //food images for nom-trips list (circles)
   add_image_size( 'thumb-nomtrips', 150 );    //profile images (circles)
   add_image_size( 'thumb-food', 260 );        //food review thumb
@@ -39,3 +40,7 @@ function nt_custom_sizes_choose( $sizes ) {
     'thumb-rest'      => __( 'restaurant page food thumbs' )
   ) );
 }
+
+/**
+  Helpers
+**/
