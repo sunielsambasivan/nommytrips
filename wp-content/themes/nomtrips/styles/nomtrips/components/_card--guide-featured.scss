@@ -1,0 +1,37 @@
+.card--guides-featured {
+  @include flexbox();
+  @include flex-flow(column);
+  margin-bottom: rem_calc($base-margin *2);
+  border: $border;
+  @include card-shadow();
+}
+
+.card--guides-featured--title,
+.card--guides-featured--content,
+.card--guides-featured--action
+{
+  padding: 0 rem_calc($base-padding);
+}
+
+.card--guides-featured--title {
+  padding-top: rem_calc($base-padding);
+}
+
+.card--guides-featured--heading {
+  font-family: $base-font-family;
+  font-size: $font-size-lg;
+  margin-bottom: 0;
+}
+
+.card--guides-featured--action {
+  padding-bottom: rem_calc($base-padding);
+  padding-top: 0;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+@include respond-to(tablet) {
+  .card--guides-featured {
+    height: 100%;
+  }
+}

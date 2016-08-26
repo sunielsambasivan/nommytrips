@@ -102,16 +102,4 @@ class City
     return $city_objects;
   }
   
-  /*public static function show_feature_cities( $page = 'home' ) {
-    if( $page == 'home' ) {
-      $cities = City::get_featured_cities();
-      $city_obj = false;
-      
-      foreach( $cities as $city ) {
-        $city_obj = new City($city->term_id);
-        //nt_debug($city_obj->get_city_image('thumb-card'));
-      }
-    }
-  }*/
-  
 }
