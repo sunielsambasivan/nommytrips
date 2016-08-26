@@ -13,6 +13,10 @@
   padding: 0 rem_calc($base-padding);
 }
 
+.card--guides-featured--image {
+  position: relative;
+}
+
 .card--guides-featured--title {
   padding-top: rem_calc($base-padding);
 }
@@ -29,6 +33,16 @@
   margin-top: auto;
   margin-bottom: 0;
 }
+
+.card--guides-featured--profile {
+  position: absolute;
+  bottom: $base-margin;
+  left: $base-margin;
+}
+
+/**
+  responsive
+**/
 
 @include respond-to(tablet) {
   .card--guides-featured {
