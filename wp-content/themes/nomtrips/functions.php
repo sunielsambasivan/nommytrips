@@ -21,16 +21,17 @@ require_once ( NT_INCLUDE_PATH . 'classes/class-city.php' );
 require_once ( NT_INCLUDE_PATH . 'functions/nt-menus.php' );
 
 /* load 3rd party plugins */
-require ( NT_PLUGIN_PATH . 'Tax-meta-class/Tax-meta-class.php' );
+require_once ( NT_PLUGIN_PATH . 'Tax-meta-class/Tax-meta-class.php' );
 
 /* load images sizes and helpers */
 require_once ( NT_INCLUDE_PATH . 'functions/nt-image-sizes.php' );
 
 /* load custom plugins and fields */
+require_once ( NT_INCLUDE_PATH . '/fields/nt-fields-user.php' );
 require_once ( NT_INCLUDE_PATH . '/fields/nt-fields-contact.php' );
-require ( 'plugins/nt-cpt-restaurant/nt-cpt-restaurant.php' );
-require ( 'plugins/nt-taxonomies/nt-taxonomies.php' );
 require_once ( NT_INCLUDE_PATH . '/fields/nt-fields-social.php' );
+require_once ( NT_PLUGIN_PATH_REL . '/nt-cpt-restaurant/nt-cpt-restaurant.php' );
+require_once ( NT_PLUGIN_PATH_REL . '/nt-taxonomies/nt-taxonomies.php' );
 
 /*stylesheets & scripts*/
 require_once ( NT_INCLUDE_PATH . '/functions/nt-stylesheets.php' );
