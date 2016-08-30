@@ -124,6 +124,15 @@ $metabox->addFile(
   'desc' => 'The image for the city')
 );
 
+$metabox->addCheckbox(
+  $prefix . 'feat_city',
+  array('name'=> __(
+    'Featured City ',
+    'tax-meta'
+  ),
+  'desc' => 'Featured city (y/n) (Shows up on home page)')
+);
+
 $metabox->Finish();
 
 }

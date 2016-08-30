@@ -28,6 +28,6 @@
     <li><a href="#">Your Itineraries</a></li>
     <li><a href="#">Nom Lists</a></li>
     <li><a href="#">Saved Guides</a></li>
-    <li><a href="#">Logout</a></li>
+    <li><a href="<?php echo wp_logout_url(home_url( '/' )) ?>">Logout</a></li>
   </ul>
 </nav>

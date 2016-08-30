@@ -8,41 +8,68 @@
     box-sizing: border-box;
 }
 
+html {
+  font-size: 12px;
+}
+
 body, html {
     font-family: $base-font-family;
-    font-size: 12px;
+    font-size: 16px;
     background: white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-smoothing: antialiased;
     line-height: $base-line-height;
+    color: $color-dark-blue;
 }
 
 h1, h2, h3, .h1, .h2, .h3 {
     @extend %heading-font;
     margin-top: 0;
-    text-transform: uppercase;
-    letter-spacing: .5px;
 }
 
 h1 {
-    font-size: $font-size-h1;
+    font-size: $font-size-h4;
+    
+    @include respond-to(tablet) {
+      font-size: $font-size-h3;
+    }
+    
+    @include respond-to(desktop) {
+      font-size: $font-size-h1;
+    }
 }
 
 h2 {
-    font-size: $font-size-h2;
+    font-size: $font-size-h5;
+    
+    @include respond-to(tablet) {
+      font-size: $font-size-h4;
+    }
+    
+    @include respond-to(desktop) {
+      font-size: $font-size-h2;
+    }
 }
 
 h3 {
-    font-size: $font-size-h3;
+    font-size: $font-size-h6;
+    
+    @include respond-to(tablet) {
+      font-size: $font-size-h5;
+    }
+    
+    @include respond-to(desktop) {
+      font-size: $font-size-h3;
+    }
 }
 
-h4 {
-    font-size: $font-size-h4;
+h4 {    
+  font-size: $font-size-h4;
 }
 
 h5 {
-    font-size: $font-size-h5;
+  font-size: $font-size-h5;
 }
 
 h6 {
@@ -71,4 +98,9 @@ ul {
 
 img {
     max-width: 100%;
+}
+
+picture img {
+  max-width: none;
+  width: 100%;
 }

@@ -37,30 +37,6 @@
     @include align-items(flex-start);
     margin-top: $base-margin;
   }
-  
-  .menu-user, .menu {
-    color: $color-blue;
-    
-    a {
-      color: $color-blue;
-      font-size: $base-font-size;
-    }
-  }
-  
-  .menu--logged-in-items, .menu {
-    padding: 0 $base-padding/4;
-    
-    li {
-      width: 100%;
-      padding-bottom: $base-padding/2;
-      margin-bottom: $base-margin/2;
-      border-bottom: $border;
-      
-      &:last-child {
-        border-bottom: none;
-      }
-    }
-  }
 }
 
 .js-off-canvas-exit {

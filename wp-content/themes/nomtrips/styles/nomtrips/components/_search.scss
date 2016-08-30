@@ -1,0 +1,14 @@
+.form-search--cities {
+  h2 {
+    color: white;
+    font-size: rem_calc(18);
+    
+    @include respond-to(tablet) {
+      font-size: rem_calc(28);
+    }
+  }
+  
+  .form-item {
+    margin: auto;
+  }
+}

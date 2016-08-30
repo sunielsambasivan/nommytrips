@@ -15,7 +15,7 @@ if ( !defined('ABSPATH')) exit;
 
 get_header(); ?>
 
-<div id="content" class="row">
+<div id="content">
         
   <?php if (have_posts()) : ?>
 

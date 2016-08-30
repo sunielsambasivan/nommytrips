@@ -8,8 +8,7 @@ input[type=datetime],
 input[type=datetime-local],
 input[type=search],
 input[type=url] {
-    padding: $base-margin/4 $base-margin/2;
-    border-radius: $border-radius;
+    padding: $base-margin/2;
     &.outline {
         background: transparent;
         border: 1px solid white;

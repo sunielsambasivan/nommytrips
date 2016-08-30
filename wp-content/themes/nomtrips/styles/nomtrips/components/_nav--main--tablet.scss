@@ -1,0 +1,5 @@
+@include respond-to(tablet) {
+  .nav--main {
+    @include flexbox();
+  }
+}

@@ -25,6 +25,9 @@ $screen-tablet: $screen-sm-min !default;
 $screen-desktop: $screen-md-min !default;
 $screen-lg-desktop: $screen-lg-min !default;
 
+//foundation components
+$dropdown-width: 200px;
+
 //ama specific breakpoints
 $mobile-iphone4-min: 320px; 
 $mobile-iphone4-max: 480px; //landscape

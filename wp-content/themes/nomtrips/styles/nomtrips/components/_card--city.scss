@@ -1,0 +1,36 @@
+.card--city {
+  @include flexbox();
+  @include flex-flow(column);
+  @include justify-content(center);
+  @include align-items(center);
+  position: relative;
+  margin-bottom: rem_calc(15px);
+}
+
+.card--city--image {
+  max-height: 185px;
+  overflow: hidden;
+}
+
+.card--city--title {
+  @include center-vertically(50%, -50%, absolute);
+  width: 100%;
+  text-align: center;
+  color: white;  
+  
+  h2 {
+    color: white;
+  }
+}
+
+@include respond-to(tablet) {
+  .card--city--image {
+    height: 196px;
+  }
+}
+
+@include respond-to(desktop) {
+  .card--city--image {
+    height: 370px;
+  }
+}
