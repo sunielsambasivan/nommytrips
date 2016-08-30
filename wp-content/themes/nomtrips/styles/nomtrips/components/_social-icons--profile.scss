@@ -1,0 +1,28 @@
+.social-icons--profile {
+  margin-top: rem_calc(15px);
+}
+
+.social-icons--profile--items {
+  @extend .social-icons--items;
+  @include justify-content(center);
+  
+  .social-icons--icon {
+    margin-left: rem_calc($base-padding/2);
+    margin-right: rem_calc($base-padding/2);
+    background: $color-blue;
+  }
+  
+  .social-icons--icon > *:before {
+    color: white;
+  };
+}
+
+@include respond-to(tablet-only) {
+  .social-icons--profile--items {
+    @include justify-content(flex-start);
+    
+    .social-icons--icon {
+      margin-left: 0;
+    }
+  }
+}

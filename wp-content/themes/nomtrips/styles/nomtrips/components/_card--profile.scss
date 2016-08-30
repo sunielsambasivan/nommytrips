@@ -1,0 +1,5 @@
+.card--profile {
+  @extend .card;
+  
+  margin-bottom: rem_calc($base-margin/2);
+}
