@@ -5,28 +5,26 @@
 
 .menu--footer {
   @include flexbox();
-  @include flex-flow(row wrap);
+  @include flex-flow(column wrap);
   @include justify-content(space-between);
   margin: 0;
   font-size: rem_calc($font-size-sm);
+  
+  @include respond-to(tablet) {
+    @include flex-flow(row wrap);
+  }
   
   a {
     color: white;
     font-weight: bold;
     
     @include respond-to(tablet) {
-      ont-weight: normal;
+      font-weight: normal;
     }
   }
   
   > li {
     white-space: nowrap; 
-    
-    @include respond-to(desktop) {
-      padding-left: rem_calc($base-padding);
-      padding-right: rem_calc($base-padding);
-      border-right: solid 1px white;
-    } 
   }
   
   > li:first-child {

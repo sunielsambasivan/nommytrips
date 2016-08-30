@@ -35,7 +35,7 @@ if ( !defined('ABSPATH')) exit;
         </div>
         <!--/column-->
         
-        <div class="column small-12 medium-6 large-8 align-bottom flex">
+        <div class="column small-12 medium-6 large-7 large-offset-1 align-bottom flex">
           <div class="social-icons--footer push-right-tablet push-left-desktop ">
             <span class="font-size-sm text-teal">Connect with us</span>            
             <?php get_template_part(NT_COMPONENTS_PATH . 'social/social-icons', '-footer'); ?>
