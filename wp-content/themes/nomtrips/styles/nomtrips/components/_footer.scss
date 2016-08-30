@@ -7,7 +7,7 @@
 .credits {
   color: white;
   font-size: rem_calc($font-size-sm);
-  
+  padding-bottom: rem_calc($base-padding/2);
   a {
     color: white;
   }
