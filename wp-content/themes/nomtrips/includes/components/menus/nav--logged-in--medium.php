@@ -3,7 +3,7 @@
     $email = $user->data->user_email;
   ?>
   <div class="profile">
-    <div class="profile-avatar">
+    <div class="profile--avatar">
       <div class="image">
       <?php
         if (function_exists('get_avatar')) {
@@ -20,8 +20,8 @@
       </div>
     </div>
   
-    <div class="profile-name">
-      <a href="#" class="profile-name-link float-right hover" data-toggle="loggedInMenu"><?php echo $user->data->display_name; ?></a>
+    <div class="profile--name">
+      <a href="#" class="profile--name--link float-right hover" data-toggle="loggedInMenu"><?php echo $user->data->display_name; ?></a>
     </div>
   </div>
   <ul class="dropdown-pane bottom menu--logged-in-items" id="loggedInMenu" data-dropdown data-v-offset="40" data-auto-focus="true">

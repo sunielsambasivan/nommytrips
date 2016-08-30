@@ -3,7 +3,7 @@
     $email = $user->data->user_email;
   ?>
   <div class="profile">
-    <div class="profile-avatar">
+    <div class="profile--avatar">
       <div class="image">
       <?php
         if (function_exists('get_avatar')) {
@@ -20,7 +20,7 @@
       </div>
     </div>
   
-    <div class="profile-name">
+    <div class="profile--name">
       <?php echo $user->data->display_name; ?>
     </div>
   </div>

@@ -1,8 +1,51 @@
-.content--post {
-  padding: $base-padding/2 0;
-  text-align: center;
+.content {
+  padding-top: rem_calc($base-padding);
+  padding-bottom: rem_calc($base-padding);
+}
+
+.content--heading {
+  > h1 {
+    font-size: rem_calc(28);
+    margin-bottom: rem_calc($base-padding)
+  }
   
-  h1 {
-    font-size: rem_calc(16);
+  > h2 {
+    font-size: rem_calc(24);
+    margin-bottom: rem_calc($base-padding)
+  }
+}
+
+.content-desc {
+  margin-bottom: rem_calc($base-margin);
+  text-align: center;
+}
+
+.content--post {
+  padding-left: rem_calc($base-padding);
+  padding-right: rem_calc($base-padding);
+}
+
+.content--post > .row > .columns:last-child {
+  .card--city {
+    margin-bottom: 0;
+  }
+}
+
+/**
+  page specific
+**/
+
+.home .content--heading {
+  text-align: center;
+}
+
+/**
+  responsive
+**/
+
+@include respond-to(desktop) {
+  .content--post {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

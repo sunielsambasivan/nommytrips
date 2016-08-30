@@ -21,3 +21,23 @@
     font-size: $base-font-size;
   }
 }
+
+/**
+  responsive
+**/
+
+@include respond-to(tablet) {
+  .menu {
+    li {
+      width: auto;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+  
+  .menu-header {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}

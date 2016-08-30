@@ -4,11 +4,10 @@
   @include justify-content(center);
   @include align-items(center);
   position: relative;
-  margin-bottom: rem_calc(15px);
+  margin-bottom: rem_calc($base-margin *2);
 }
 
 .card--city--image {
-  max-height: 185px;
   overflow: hidden;
 }
 
@@ -18,12 +17,24 @@
   text-align: center;
   color: white;  
   
-  h2 {
+  * {
     color: white;
   }
 }
 
+/**
+  responsive
+**/
+
 @include respond-to(tablet) {
+  .card--city {
+    margin-bottom: 0;
+  }
+  
+  .primary-content .card--city {
+    margin-bottom: rem_calc($base-margin *2);
+  }
+  
   .card--city--image {
     height: 196px;
   }
@@ -31,6 +42,10 @@
 
 @include respond-to(desktop) {
   .card--city--image {
-    height: 370px;
+    height: auto;
+  }
+  
+  .primary-content .card--city--image {
+    height: 350px;
   }
 }

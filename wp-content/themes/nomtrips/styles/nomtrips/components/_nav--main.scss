@@ -8,3 +8,13 @@ nav {
     margin: 0;
   }
 }
+
+/**
+  responsive
+**/
+
+@include respond-to(tablet) {
+  .nav--main {
+    @include flexbox();
+  }
+}

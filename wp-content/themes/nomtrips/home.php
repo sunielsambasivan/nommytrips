@@ -37,14 +37,13 @@ get_header(); ?>
 
     <?php while (have_posts()) : the_post(); ?>
     <div class="row">
-      <div class="columns small-12" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        
-        <section class="content--post">
-          
+      <div class="content columns small-12" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <section class="content--heading">
           <?php the_content(); ?>
+        </section>
+        <section class="content--post">
           <div class="row">
             <?php
-          
             /* get cities */
             $city_array = array( 'new-york', 'los-angeles', 'san-diego', 'miami', 'las-vegas' ); //set order
             $image_size = 'thumb-card';
@@ -57,7 +56,7 @@ get_header(); ?>
                 $current = City::get_city_by_slug( $city );
                 $image_size = 'thumb-card';
                 ?>
-                  <article class="columns small-12 medium-6">
+                  <article class="columns small-12 medium-6 primary-content">
                     <?php
                       include( locate_template( NT_COMPONENTS_PATH .'cards/card--city.php') );
                     ?>  
@@ -69,7 +68,7 @@ get_header(); ?>
                 $current = City::get_city_by_slug( $city );
                 $image_size = 'thumb-card';
                 ?>
-                  <article class="columns small-12 medium-6">
+                  <article class="columns small-12 medium-6 primary-content">
                     <?php
                       include( locate_template( NT_COMPONENTS_PATH .'cards/card--city.php') );
                     ?>  
@@ -115,15 +114,45 @@ get_header(); ?>
                 
               }
             }
-
             ?>
           </div>
-        
         </section><!-- end of .post-entry -->
-      </div><!-- end of #post-<?php the_ID(); ?> -->
-    </div>
+      </div><!-- end of content columns small-12-->
       
-      <?php comments_template( '', true ); 
+      <div class="content columns small-12">
+        <header class="content--heading">
+          <h2>Feature Guides</h2>
+        </header>
+        
+        <div class="content-desc">
+          <p>Whatever irony tacos gochujang mixtape, church-key crucifix shoreditch.</p>
+        </div>
+        
+        <div class="content--post">
+          <div class="row">
+            <div class="columns small-12 medium-4">
+              <?php
+                include( locate_template( NT_COMPONENTS_PATH .'cards/card--guides-featured.php') );
+              ?>
+            </div>
+            
+            <div class="columns small-12 medium-4">
+              <?php
+                include( locate_template( NT_COMPONENTS_PATH .'cards/card--guides-featured.php') );
+              ?>
+            </div>
+            
+            <div class="columns small-12 medium-4">
+              <?php
+                include( locate_template( NT_COMPONENTS_PATH .'cards/card--guides-featured.php') );
+              ?>
+            </div>
+          </div><!--end of row-->
+        </div><!--end content--post-->
+      </div><!-- end of content columns small-12-->
+    </div><!--end of row-->
+      
+    <?php comments_template( '', true ); 
       
     endwhile; 
 
