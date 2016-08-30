@@ -1,0 +1,39 @@
+/*
+.nav--footer {
+}
+*/
+
+.menu--footer {
+  @include flexbox();
+  @include flex-flow(row wrap);
+  @include justify-content(space-between);
+  margin: 0;
+  font-size: rem_calc($font-size-sm);
+  
+  a {
+    color: white;
+    font-weight: bold;
+    
+    @include respond-to(tablet) {
+      ont-weight: normal;
+    }
+  }
+  
+  > li {
+    white-space: nowrap; 
+    
+    @include respond-to(desktop) {
+      padding-left: rem_calc($base-padding);
+      padding-right: rem_calc($base-padding);
+      border-right: solid 1px white;
+    } 
+  }
+  
+  > li:first-child {
+    padding-left: 0;
+  }
+  
+  > li:last-child {
+    border-right: none;
+  }
+}

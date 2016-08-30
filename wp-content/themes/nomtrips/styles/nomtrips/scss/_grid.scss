@@ -107,50 +107,105 @@
     &.flex-6 > * {
         @include flex(0 0 $col6);
     }
+}
 
-    &.justify-center {
-        @include justify-content(center);
-    }
+.justify-center {
+    @include justify-content(center);
+}
 
-    &.justify-space-between {
-        @include justify-content(space-between);
-    }
+.justify-space-between {
+    @include justify-content(space-between);
+}
 
-    &.justify-space-around {
-        @include justify-content(space-around);
-    }
+.justify-space-around {
+    @include justify-content(space-around);
+}
 
-    &.justify-flex-start {
-        @include justify-content(flex-start);
-    }
+.justify-flex-start {
+    @include justify-content(flex-start);
+}
 
-    &.justify-flex-end {
-        @include justify-content(flex-end);
-    }
+.justify-flex-end {
+    @include justify-content(flex-end);
+}
 
-    &.align-center {
-        @include align-items(center);
-    }
+.align-center {
+    @include align-items(center);
+}
 
-    &.align-flex-end {
-        @include align-items(flex-end);
-    }
+.align-flex-end {
+    @include align-items(flex-end);
+}
 
-    &.align-stretch {
-        @include align-items(stretch);
-    }
+.align-stretch {
+    @include align-items(stretch);
+}
 
-    &.align-baseline {
-        @include align-items(baseline);
-    }
+.align-baseline {
+    @include align-items(baseline);
+}
 
-    &.wrap {
-        @include flex-wrap(wrap);
-    }
+.wrap {
+    @include flex-wrap(wrap);
+}
 
-    &.nowrap {
-        @include flex-wrap(nowrap);
-    }
+.nowrap {
+    @include flex-wrap(nowrap);
+}
+
+/** 
+  flex push 
+**/
+.push-right {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+@include respond-to(tablet) {
+  .push-right-tablet {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+@include respond-to(desktop) {
+  .push-right-desktop {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+@include respond-to(desktop-large) {
+  .push-right-desktop {
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+.push-left {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+@include respond-to(tablet) {
+  .push-left-tablet {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+@include respond-to(desktop) {
+  .push-left-desktop {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
+@include respond-to(desktop-large) {
+  .push-left-desktop {
+    margin-left: 0;
+    margin-right: auto;
+  }
 }
 
 /*

@@ -14,6 +14,7 @@ External styles manifest
 
 //mixins
 @import "nomtrips/scss/mixins";
+@import "nomtrips/scss/mixins_grid";
 @import "nomtrips/scss/mixins_flexbox";
 
 //nomtrip styles
@@ -28,15 +29,20 @@ External styles manifest
 //components
 @import "nomtrips/components/off-canvas";
 @import "nomtrips/components/header";
-@import "nomtrips/components/logo";
+@import "nomtrips/components/footer";
+@import "nomtrips/components/logo--header";
+@import "nomtrips/components/logo--footer";
 @import "nomtrips/components/nav";
 @import "nomtrips/components/nav--main";
+@import "nomtrips/components/nav--footer";
 @import "nomtrips/components/nav--login";
-@import "nomtrips/components/profile";
 @import "nomtrips/components/nav--logged-in";
 @import "nomtrips/components/nav--off-canvas";
+@import "nomtrips/components/profile";
 @import "nomtrips/components/banner";
 @import "nomtrips/components/content--post";
 @import "nomtrips/components/search";
 @import "nomtrips/components/card--city";
 @import "nomtrips/components/card--guide-featured";
+@import "nomtrips/components/social-icons";
+@import "nomtrips/components/social-icons--footer";

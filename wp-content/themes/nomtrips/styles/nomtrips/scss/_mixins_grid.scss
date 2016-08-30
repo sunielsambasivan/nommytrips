@@ -1,0 +1,45 @@
+/* for media queries */
+@mixin respond-to($media) {
+
+    @if $media == mobile-only {
+        /* mobile only */
+        @media screen and (max-width: 39.9375em) {
+          @content;
+        }
+    }
+    
+    @else if $media == tablet-only {
+        /* tablet only */
+        @media only screen and (min-width: 40em) and (max-width: 63.9375em) {
+            @content;
+        }
+    }
+    
+    @else if $media == tablet {
+        /* tablet */
+        @media only screen and (min-width: 40em) {
+            @content;
+        }
+    }
+    
+    @else if $media == desktop-only {
+        /* desktop only */
+        @media only screen and (min-width: 64em) and (max-width: 74.9375em) {
+            @content;
+        }
+    }
+    
+    @else if $media == desktop {
+        /* desktop */
+        @media only screen and (min-width: 64em) {
+            @content;
+        }
+    }
+    
+    @else if $media == desktop-large {
+        /* desktop */
+        @media only screen and (min-width: 114em) {
+            @content;
+        }
+    }
+}

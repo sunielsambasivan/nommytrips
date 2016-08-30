@@ -12,20 +12,6 @@
   @include align-items(center);
   @include justify-content(flex-start);
   margin-left: map-get($grid-column-gutter, small); //small gutter from _settings.scss in foundation
-  
-  #logo {
-    margin-bottom: 0;
-    
-    & h1 {
-      -webkit-margin-before: 0;
-      -webkit-margin-after: 0;
-    }
-    
-    a {
-      display: block;
-      line-height: 1rem;
-    }
-  }
 }
 
 /**

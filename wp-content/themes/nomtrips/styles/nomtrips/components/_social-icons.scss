@@ -1,0 +1,34 @@
+.social-icons--items {
+  @include flexbox();
+}
+
+.social-icons--icon {
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
+  height: 45px;
+  width: 45px;
+  margin-right: rem_calc($base-margin/2);
+  border-radius: 50%;
+  background: $color-teal;
+  
+  .fb:before {
+    @include icon-font-fa($fa-var-facebook-f, 24px, $color-dark-blue);
+  }
+  
+  .twitter:before {
+    @include icon-font-fa($fa-var-twitter, 24px, $color-dark-blue);
+  }
+  
+  .youtube:before {
+    @include icon-font-fa($fa-var-youtube, 24px, $color-dark-blue);
+  }
+  
+  .instagram:before {
+    @include icon-font-fa($fa-var-instagram, 24px, $color-dark-blue);
+  }
+  
+  .google:before {
+    @include icon-font-fa($fa-var-google-plus, 24px, $color-dark-blue);
+  }
+}
