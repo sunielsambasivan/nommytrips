@@ -1,0 +1,29 @@
+.card--list-select {
+  @extend .card;
+}
+
+.card--list-select--item {
+  padding: rem_calc($base-padding/2);
+  border-bottom: $border;
+  font-weight: bold;
+  
+  //arrow
+  &:after {
+    @include icon-font-fa($fa-var-chevron-right);
+    float: right;
+  }
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  
+  &:hover {
+    background: $color-blue;
+    color: white;
+    
+    //arrow on hover
+    &:after {
+      color: white;
+    }
+  }
+}

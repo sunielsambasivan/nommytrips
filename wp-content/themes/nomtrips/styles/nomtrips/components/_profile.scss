@@ -8,7 +8,7 @@
 .profile--avatar {
   img {
     @include circle-border(50px, white, 2px);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, .15);
+    @include card-shadow();
   }
 }
 
@@ -36,6 +36,7 @@
 
 .profile--desc {
   font-size: $font-size-sm;
+  padding: 0 rem_calc($base-padding/2);
 }
 
 .profile--edit-link {

@@ -114,6 +114,12 @@
   box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.1);
 }
 
+@mixin button-shadow() {
+  -webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.1);
+  -moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.1);
+}
+
 @mixin circle-border($size: 10px, $color: white, $bsize: 1px, $fsize: 1rem) {
     @include border-curve(50%);
     display: inline-block;
