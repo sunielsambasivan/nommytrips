@@ -100,7 +100,7 @@ if( array_intersect( $allowed_roles, $user->roles ) ) { ?>
         <!--list item-->
         <div class="list--location--item">
           <div class="list--location--image">
-            <?php $imgsrc = wp_get_attachment_image_src( 99, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
+            <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
             <img src="<?php echo esc_url($imgsrc[0]); ?>" />
             <div class="indicator-likes">5</div>
           </div>
@@ -121,7 +121,7 @@ if( array_intersect( $allowed_roles, $user->roles ) ) { ?>
         <!--list item-->
         <div class="list--location--item">
           <div class="list--location--image">
-            <?php $imgsrc = wp_get_attachment_image_src( 99, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
+            <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
             <img src="<?php echo esc_url($imgsrc[0]); ?>" />
           </div>
           <div class="list--location--content">
@@ -141,7 +141,7 @@ if( array_intersect( $allowed_roles, $user->roles ) ) { ?>
         <!--list item-->
         <div class="list--location--item">
           <div class="list--location--image">
-            <?php $imgsrc = wp_get_attachment_image_src( 99, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
+            <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
             <img src="<?php echo esc_url($imgsrc[0]); ?>" />
           </div>
           <div class="list--location--content">
@@ -161,7 +161,7 @@ if( array_intersect( $allowed_roles, $user->roles ) ) { ?>
         <!--list item-->
         <div class="list--location--item">
           <div class="list--location--image">
-            <?php $imgsrc = wp_get_attachment_image_src( 99, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
+            <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
             <img src="<?php echo esc_url($imgsrc[0]); ?>" />
           </div>
           <div class="list--location--content">
