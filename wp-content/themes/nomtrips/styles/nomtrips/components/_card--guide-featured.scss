@@ -1,9 +1,8 @@
 .card--guides-featured {
+  @extend .card;
   @include flexbox();
   @include flex-flow(column);
   margin-bottom: rem_calc($base-margin *2);
-  border: $border;
-  @include card-shadow();
 }
 
 .card--guides-featured--title,

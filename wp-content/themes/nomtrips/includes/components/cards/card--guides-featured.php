@@ -1,12 +1,12 @@
 <article class="card--guides-featured" href="#">
   <div class="card--guides-featured--image">
-    <img src="http://localhost:8888/nomtrips/wp-content/uploads/2016/08/feature_guide_placeholder.jpg" alt="Click to visit this guide" />
+    <img src="/wp-content/uploads/2016/09/feature_guide_placeholder.jpg" alt="Click to visit this guide" />
     
     <div class="card--guides-featured--profile">
       <div class="profile">
           <div class="profile--avatar">
             <div class="image">
-              <img src="http://localhost:8888/nomtrips/wp-content/uploads/2016/08/ron_swanson.jpg" />
+              <img src="/wp-content/uploads/2016/09/ron_swanson.jpg" />
             </div>
           </div>
   

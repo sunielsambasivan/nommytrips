@@ -6,20 +6,13 @@
 }
 
 .profile--avatar {
-  float: left;
-  @include flex(0 0 50px);
-  width: 50px;
-  
   img {
     @include circle-border(50px, white, 2px);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, .15);
+    @include card-shadow();
   }
 }
 
 .profile--name {
-  float: left;
-  @include flex(0 0 220px);
-  width: 220px;
   padding: 0 $base-padding/2 4px;
 }
 
@@ -27,6 +20,28 @@
   @extend .profile--name;
   color: white;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+}
+
+.profile--city {
+  text-align: center;
+  font-size: $font-size-sm;
+  
+  p {
+    &:before {
+      @include icon-font-fa($fa-var-map-marker, $font-size-md, $color-teal);
+      padding-right: rem_calc($base-padding/2);
+    }
+  }
+}
+
+.profile--desc {
+  font-size: $font-size-sm;
+  padding: 0 rem_calc($base-padding/2);
+}
+
+.profile--edit-link {
+  margin-top: $base-margin;
+  text-align: center;
 }
 
 /**
@@ -49,7 +64,7 @@
   }
 
   .profile--name--link:after {
-    @include icon-font-fa($fa-var-caret-down, $font-size-sm);
+    @include icon-font-fa($fa-var-caret-down, $font-size-sm, white);
     padding-left: $base-padding/4;
   }
 

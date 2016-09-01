@@ -1,6 +1,5 @@
 .content {
   padding-top: rem_calc($base-padding);
-  padding-bottom: rem_calc($base-padding);
 }
 
 .content--heading {
@@ -42,6 +41,12 @@
 /**
   responsive
 **/
+
+@include respond-to(tablet) {
+  .content {
+    padding-bottom: rem_calc($base-padding* 1.5);
+  }
+}
 
 @include respond-to(desktop) {
   .content--post {

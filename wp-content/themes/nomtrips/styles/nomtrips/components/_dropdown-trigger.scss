@@ -1,0 +1,13 @@
+.dropdown-trigger {
+  @include flexbox();
+  @include justify-content(space-between);
+  padding: rem_calc($base-padding/2);
+}
+
+.dropdown-trigger--title {
+  font-family: $heading-font-family;
+}
+
+.dropdown-trigger--menu-icon:after {
+  @include icon-font-fa($fa-var-chevron-down);
+}

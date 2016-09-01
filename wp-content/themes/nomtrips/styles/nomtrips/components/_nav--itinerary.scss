@@ -1,0 +1,49 @@
+.nav--itinerary {
+  padding: rem_calc($base-padding/2) 0;
+}
+
+.menu--itinerary {
+  margin: 0;
+  
+  > li {
+    padding: $base-padding/2;
+    border-bottom: solid 1px $smoke;
+    
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    
+    a {
+      display: block;
+    }
+  }
+}
+
+@include respond-to(tablet) {
+  .nav--itinerary {
+    padding: rem_calc($base-padding/2) 0 0;
+  }
+  
+  .menu--itinerary {
+    @include flexbox();
+    
+    > li {
+      width: 25%;
+      padding: 0;
+      border-bottom: none;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+    > li a {
+      padding-bottom: $base-padding/4;
+    }
+    
+    .current-menu-item {
+      border-bottom: solid 3px $color-blue;
+    }
+  }
+  
+  
+}

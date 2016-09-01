@@ -2,7 +2,7 @@
   <?php
     $email = $user->data->user_email;
   ?>
-  <div class="profile">
+  <div class="profile--header">
     <div class="profile--avatar">
       <div class="image">
       <?php
@@ -25,7 +25,7 @@
     </div>
   </div>
   <ul class="dropdown-pane bottom menu--logged-in-items" id="loggedInMenu" data-dropdown data-v-offset="40" data-auto-focus="true">
-    <li><a href="#">Your Itineraries</a></li>
+    <li><a href="my-itineraries/">Your Itineraries</a></li>
     <li><a href="#">Nom Lists</a></li>
     <li><a href="#">Saved Guides</a></li>
     <li><a href="<?php echo wp_logout_url(home_url( '/' )) ?>">Logout</a></li>

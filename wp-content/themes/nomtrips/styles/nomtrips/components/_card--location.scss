@@ -1,0 +1,33 @@
+.card--location {
+  @extend .card;
+  padding: rem_calc($base-padding);
+  background: white;
+  
+  ul {
+    margin: 0;
+  }
+}
+
+.card--location--title {
+  color: $color-teal;
+  font-size: $font-size-sm;
+}
+
+.card--location--address {
+  font-size: $font-size-sm;
+}
+
+.card--location--icon-bar {
+  font-size: $font-size-sm;
+  border: 1px solid rgba($color-dark-blue, .3);
+  width: auto;
+  
+  i {
+    border-right: 1px solid rgba($color-dark-blue, .3);
+    padding: rem_calc(5px);
+    
+    &:last-child {
+      border-right: none;
+    }
+  }
+}

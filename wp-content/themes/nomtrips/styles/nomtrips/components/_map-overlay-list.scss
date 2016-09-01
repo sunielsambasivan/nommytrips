@@ -1,0 +1,23 @@
+.map-overlay-list {
+  position: absolute;
+  bottom: rem_calc($base-padding);
+  left: rem_calc($base-padding *2);
+  z-index: 99999;
+}
+
+.map-overlay-list--slides {
+  @include flexbox();
+  
+  li {
+    list-style-type: none;
+    margin-right: rem_calc(10px);
+  }
+}
+
+@include respond-to(tablet) {
+  .map-overlay-list--slides {
+    li {
+      margin-right: rem_calc(40px);
+    }
+  }
+}

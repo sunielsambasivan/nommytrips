@@ -66,7 +66,7 @@ setup_postdata( $post );
 
 <body <?php body_class("off-canvas-wrapper"); ?>>
 <div id="container" class="off-canvas-wrapper-inner hfeed" data-off-canvas-wrapper>
-  <div class="off-canvas-content" data-off-canvas-content>
+  <div id="head" class="off-canvas-content" data-off-canvas-content>
   <header id="header" class="header title-bar">
     <div class="row header--contents">    
       <!--off canvas Login menu-->
@@ -76,7 +76,9 @@ setup_postdata( $post );
       <?php 
       $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
       <<?php echo $heading_tag; ?> id="logo" class="small-9 medium-3 large-2 columns">
-          <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php get_template_part(NT_COMPONENTS_PATH . 'svgs/logo', '-rev'); ?></a>
+          <a class="logo--header" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+            <?php get_template_part(NT_COMPONENTS_PATH . 'svgs/logo', '-rev'); ?>
+          </a>
       </<?php echo $heading_tag; ?>>
       
       <!--main login menu-->

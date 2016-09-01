@@ -1,0 +1,11 @@
+.paging {
+  margin-top: rem_calc($base-margin/2);
+}
+
+.pagination-previous a::before, .pagination-previous.disabled::before {
+  @include icon-font-fa($fa-var-chevron-left);
+}
+
+.pagination-next a::after, .pagination-next.disabled::after {
+  display: none;
+}

@@ -1,0 +1,20 @@
+.footer {
+  min-height: 290px;
+  padding: rem_calc($base-padding/2) rem_calc($base-padding/2) rem_calc($base-padding);
+  background: $color-dark-blue;
+}
+
+.credits {
+  color: white;
+  font-size: rem_calc($font-size-sm);
+  padding-bottom: rem_calc($base-padding/2);
+  a {
+    color: white;
+  }
+}
+
+@include respond-to(tablet) {
+  .footer {
+    min-height: 160px;
+  }
+}

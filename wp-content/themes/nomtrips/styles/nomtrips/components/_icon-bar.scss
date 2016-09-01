@@ -1,0 +1,24 @@
+.icon-bar {
+  padding: rem_calc($base-padding/2);
+  
+  i {
+    font-size: $font-size-xl;
+  }
+  .menu {
+    @include flexbox();
+    @include justify-content(space-around);
+    
+    li {
+      @include flex(0 0 auto);
+      width: auto;
+      padding: 0;
+      margin: 0;
+      border: none;
+      
+      a {
+        padding: rem_calc(2px);
+      }
+    }
+  }
+  
+}

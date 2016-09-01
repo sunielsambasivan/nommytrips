@@ -1,0 +1,25 @@
+.logo--header {
+  display: block;
+  line-height: 1rem;
+  
+  svg {
+    width: 80%;
+  }
+}
+
+#logo {
+  margin-bottom: 0;
+  
+  & h1 {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+  }
+}
+
+@media screen and (tablet) {
+  .logo--header {
+    svg {
+      width: 100%;
+    }
+  }
+}

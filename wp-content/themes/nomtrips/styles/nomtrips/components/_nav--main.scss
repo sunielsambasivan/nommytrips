@@ -16,5 +16,10 @@ nav {
 @include respond-to(tablet) {
   .nav--main {
     @include flexbox();
+    
+    .menu-header .menu {
+      @include flexbox();
+      @include justify-content(flex-end);
+    }
   }
 }

@@ -1,0 +1,13 @@
+.section--heading {
+  @include flexbox();
+  @include justify-content(space-between);
+  @include align-content(center);
+  margin: rem_calc($base-margin/2) 0;
+  
+  > * {
+    font-family: $base-font-family;
+    font-size: rem_calc($font-size-lg);
+    margin-bottom: 0;
+    @include align-self(center);
+  }
+}

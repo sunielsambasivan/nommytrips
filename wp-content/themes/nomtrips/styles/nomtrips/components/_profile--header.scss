@@ -1,0 +1,27 @@
+.profile--header {
+  @extend .profile;
+  
+  .profile--name {
+    float: left;
+    @include flex(0 0 220px);
+    width: 220px;
+    padding: 0 $base-padding/2 4px;
+  }
+  
+  .profile--avatar {
+    float: left;
+    @include flex(0 0 50px);
+    width: 50px;
+  }
+}
+
+@include respond-to(tablet) {
+  .profile--header {
+    @include justify-content(flex-end);
+    
+    .profile--name {
+      @include flex(0 0 auto);
+      width: auto;
+    }
+  }
+}
