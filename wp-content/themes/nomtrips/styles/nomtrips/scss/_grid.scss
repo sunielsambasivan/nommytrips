@@ -382,17 +382,8 @@ Framework classes
 }
 
 //hide and show media queries
-@include respond-to(mobile-tablet) {
-    .show-mobile-tablet {
-        display: block;
-    }
 
-    .hide-mobile-tablet {
-        display: none;
-    }
-}
-
-@include respond-to(mobile) {
+@include respond-to(mobile-only) {
     .show-mobile {
         display: block;
     }
@@ -402,7 +393,7 @@ Framework classes
     }
 }
 
-@include respond-to(tablet-desktop) {
+@include respond-to(tablet) {
     .show-tablet-desktop {
         display: block;
     }
@@ -428,16 +419,6 @@ Framework classes
     }
 
     .hide-desktop {
-        display: none;
-    }
-}
-
-@include respond-to(desktop-medium-only) {
-    .show-desktop-md-only {
-        display: block;
-    }
-
-    .hide-desktop-md-only {
         display: none;
     }
 }

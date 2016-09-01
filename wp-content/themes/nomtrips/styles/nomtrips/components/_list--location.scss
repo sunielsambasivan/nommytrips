@@ -1,0 +1,53 @@
+.list--location {
+}
+
+.list--location--item {
+  @include flexbox();
+  padding: rem_calc($base-padding/2);
+  border-bottom: $border;
+  
+  &:last-child {
+    border-bottom: none;
+  };
+}
+
+.list--location--image {
+  @include flex(0 0 68px);
+  position: relative;
+  
+  img {
+    @include circle-border(68px, white, 2px);
+    @include card-shadow();
+  }
+}
+
+.list--location--content {
+  @include flex(0 0 72%);
+  max-width: 75%;
+  margin-left: rem_calc($base-margin/2);
+}
+
+.list--location--title {
+  color: $color-blue;
+  margin-bottom: rem_calc($base-margin/4);
+}
+
+.list--location--location {
+  @include flexbox();
+  font-size: $font-size-sm;
+  line-height: $font-size-sm;
+}
+
+.list--location--map-pin {
+  color: $color-teal;
+  font-size: $font-size-lg;
+}
+
+.list--location--address {
+  margin: 0 0 rem_calc($base-margin/2) rem_calc($base-margin/4);
+  
+  li {
+    font-size: $font-size-sm;
+    line-height: $font-size-md;
+  }
+}

@@ -11,6 +11,9 @@
   &:after {
     @include icon-font-fa($fa-var-chevron-right);
     float: right;
+    display: inline-block;
+    width: 5%;
+    text-align: right;
   }
   
   &:last-child {
@@ -27,3 +30,8 @@
     }
   }
 }
+
+.card--list-select--title {
+  display: inline-block;
+    width: 95%;
+} 

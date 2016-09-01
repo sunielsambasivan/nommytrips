@@ -7,6 +7,8 @@ $color-blue: #418aca; //main-buttons, etc
 $color-dark-blue: #2b3e50; //dark blue in footer
 $color-teal: #4db6ac; //teal color in header
 $color-green: #27ad60;
+$color-red: #e95a4a;
+$color-orange: #e67d21;
 
 //hovers
 $color-blue-hover: darken($color-blue, 20);
@@ -51,8 +53,12 @@ $border: 1px solid $smoke;
 }
 
 //text classes
-.text-black { color: $jet; }
 .text-teal { color: $color-teal; }
 .text-blue { color: $color-blue; }
+.text-dark-blue { color: $color-dark-blue; }
+.text-grean { color: $color-green; }
+.text-red { color: $color-red; }
+.text-orange { color: $color-orange; }
+.text-black { color: $jet; }
 .text-white { color: white; }
 .text-grey { color: $charcoal; }

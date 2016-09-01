@@ -73,10 +73,10 @@
 @mixin center-horizontally( $left: 50%, $translateX: -50%, $position: relative ) {
     position: $position;
     left: $left;
-    -moz-transform: translateY( $translateX );
-    -ms-transform: translateY( $translateX );
-    -webkit-transform: translateY( $translateX );
-    transform: translateY( $translateX );
+    -moz-transform: translateX( $translateX );
+    -ms-transform: translateX( $translateX );
+    -webkit-transform: translateX( $translateX );
+    transform: translateX( $translateX );
 }
 
 @mixin outline($color: white, $thickness: 1px, $line: solid, $keep-bg: no) {

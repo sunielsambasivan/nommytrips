@@ -5,7 +5,8 @@
   margin: rem_calc($base-margin/2) 0;
   
   > * {
-    font-size: rem_calc($font-size-md);
+    font-family: $base-font-family;
+    font-size: rem_calc($font-size-lg);
     margin-bottom: 0;
     @include align-self(center);
   }

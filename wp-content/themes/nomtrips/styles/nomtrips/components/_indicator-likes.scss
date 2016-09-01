@@ -1,0 +1,14 @@
+.indicator-likes {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  padding: 15px 0;
+  color: white;
+  font-size: $font-size-sm;
+  line-height: 0;
+  text-align: center;
+  background: $color-teal;
+  border-radius: $border-radius;
+}
