@@ -1,8 +1,3 @@
-<?php
-//search cities
-  get_template_part(NT_COMPONENTS_PATH . 'forms/search', '-off-canvas-menu');
-?>
-
 <nav role="navigation" class="nav--logged-in">
   <?php
     $email = $user->data->user_email;
@@ -36,3 +31,8 @@
     <li><a href="<?php echo wp_logout_url(home_url( '/' )) ?>">Logout</a></li>
   </ul>
 </nav>
+
+<?php
+//search cities
+  get_template_part(NT_COMPONENTS_PATH . 'forms/search', '-off-canvas-menu');
+?>
