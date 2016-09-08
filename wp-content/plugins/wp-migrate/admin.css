@@ -1,0 +1,28 @@
+#test-results.success {
+	color:green;
+}
+
+#test-results.failure {
+	color:red;
+}
+
+h3 span.heading-caption {
+	color:red;
+	font-size:0.8em;
+	font-weight:normal;
+}
+
+#wpcontent #option_tables {
+	height:150px;
+	width:250px;
+}
+
+#logs {display:none;}
+
+#results {
+	background:#FFFCDF;
+	border:1px solid #999;
+	padding:0 10px;
+}
+
+#memorylimit {width:38px;}
