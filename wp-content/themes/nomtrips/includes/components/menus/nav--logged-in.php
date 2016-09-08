@@ -1,3 +1,8 @@
+<?php
+//search cities
+  get_template_part(NT_COMPONENTS_PATH . 'forms/search', '-off-canvas-menu');
+?>
+
 <nav role="navigation" class="nav--logged-in">
   <?php
     $email = $user->data->user_email;
@@ -8,18 +13,18 @@
       <?php
         if (function_exists('get_avatar')) {
           echo get_avatar($email);
-        } 
-     
+        }
+
         else {
           //alternate gravatar code for < 2.5
-          $grav_url = "http://www.gravatar.com/avatar/" . 
+          $grav_url = "http://www.gravatar.com/avatar/" .
           md5(strtolower($email)) . "?d=" . urlencode($default) . "&s=" . $size;
           echo "<img src='$grav_url'/>";
         }
       ?>
       </div>
     </div>
-  
+
     <div class="profile--name">
       <?php echo $user->data->display_name; ?>
     </div>
