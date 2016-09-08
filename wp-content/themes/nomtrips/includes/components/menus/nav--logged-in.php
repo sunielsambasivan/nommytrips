@@ -33,6 +33,7 @@
 </nav>
 
 <?php
-//search cities
+//search cities if not home page
+if(!is_front_page())
   get_template_part(NT_COMPONENTS_PATH . 'forms/search', '-off-canvas-menu');
 ?>
