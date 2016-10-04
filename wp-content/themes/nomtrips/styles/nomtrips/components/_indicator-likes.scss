@@ -1,14 +1,19 @@
 .indicator-likes {
-  position: absolute;
-  top: 40px;
-  right: 0;
-  width: 30px;
-  height: 30px;
-  padding: 15px 0;
+  width: rem_calc(30px);
+  height: rem_calc(30px);
+  padding: rem_calc(15px) 0;
   color: white;
   font-size: $font-size-sm;
   line-height: 0;
   text-align: center;
   background: $color-teal;
   border-radius: $border-radius;
+}
+
+//modifier for likes indicator on map cards
+.indicator-likes--map {
+  @extend .indicator-likes;
+  width: rem_calc(25px);
+  height: rem_calc(25px);
+  padding: rem_calc(12.5px) 0;
 }

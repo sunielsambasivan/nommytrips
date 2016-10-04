@@ -25,7 +25,7 @@
 .profile--city {
   text-align: center;
   font-size: $font-size-sm;
-  
+
   p {
     &:before {
       @include icon-font-fa($fa-var-map-marker, $font-size-md, $color-teal);
@@ -52,7 +52,7 @@
   .profile {
     @include justify-content(flex-end);
     margin: 0;
-  
+
     button {
       margin-bottom: 0;
     }
@@ -70,5 +70,6 @@
 
   .menu--logged-in-items {
     padding: $base-padding $base-padding 0;
+    top: 76px !important; //data-v-offset option is not working
   }
 }

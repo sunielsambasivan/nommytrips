@@ -5,15 +5,15 @@ if ( !defined('ABSPATH')) exit;
 
 /**
  * City Taxonomy Template
- * 
+ *
  *
  * @file           taxonomy-city.php
- * @package        NotTrips 
+ * @package        NotTrips
  * @author         Suniel Sambasivan
  * @copyright      2015 - 2016 Suniel Sambasivan
  */
 
-get_header(); 
+get_header();
 
 $term_id = get_queried_object()->term_id;
 $term = get_term( $term_id, 'city' );
@@ -22,16 +22,16 @@ $address = $city->name .', '. $city->state;
 ?>
 
 <div class="card-overlay">
-  <div class="card">
-    <div class="dropdown-trigger" type="button" data-toggle="city-info">
-      <div class="dropdown-trigger--title"><?php echo $city->name; ?></div>
-      <button class="dropdown-trigger--menu-icon" type="button" data-toggle></button>
-    </div>
-    <div class="dropdown-pane" id="city-info" data-dropdown data-auto-focus="true">
-      <p><?php echo  $city->description; ?></p>
-    </div>
+
+  <div class="dropdown-trigger card" type="button" data-toggle="city-info">
+    <div class="dropdown-trigger--title"><?php echo $city->name; ?></div>
+    <button class="dropdown-trigger--menu-icon" type="button" data-toggle></button>
   </div>
-  
+  <div class="dropdown-pane card" id="city-info" data-dropdown data-auto-focus="true">
+    <p><?php echo  $city->description; ?></p>
+  </div>
+
+
   <div class="card">
     <div class="icon-bar">
       <ul class="menu">
@@ -50,9 +50,14 @@ $address = $city->name .', '. $city->state;
       <!--slide-->
       <li class="orbit-slide is-active">
         <div class="card--location">
-          <div class="card--location--title">Mexico Place</div>
+          <div class="card--location--rating">
+            <div class="indicator-likes--map">5</div>
+          </div>
+
+          <div class="card--location--title"><a href="<?php echo get_site_url() ?>/restaurants/new-york/joeys/">Joey's</a></div>
+
           <ul class="card--location--address">
-            <li>987654 Zoro Mari Park</li>
+            <li>123 345 Street</li>
             <li>New York, NY</li>
             <li class="cuisine">Cuisines: Italian, Chinese</li>
             <li>
@@ -64,11 +69,12 @@ $address = $city->name .', '. $city->state;
           </ul>
         </div>
       </li>
-      
+
       <!--slide-->
       <li class="orbit-slide hide-mobile">
         <div class="card--location">
           <div class="card--location--title">Luke's Lobster</div>
+
           <ul class="card--location--address">
             <li>84122 Kinfolk Echo Park</li>
             <li>New York, NY</li>
@@ -82,7 +88,7 @@ $address = $city->name .', '. $city->state;
           </ul>
         </div>
       </li>
-      
+
       <!--slide-->
       <li class="orbit-slide hide-mobile">
         <div class="card--location">
