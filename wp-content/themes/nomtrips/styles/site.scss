@@ -12,6 +12,10 @@ External styles manifest
 //Vendors/3rd party
 @import "vendor/FontAwesome/font-awesome";
 
+//custom fonts
+@import "nomtrips/icons/nomtrips/variables";
+@import "nomtrips/icons/nomtrips/style";
+
 //mixins
 @import "nomtrips/scss/mixins";
 @import "nomtrips/scss/mixins_grid";
@@ -42,6 +46,7 @@ External styles manifest
 @import "nomtrips/components/nav--off-canvas";
 @import "nomtrips/components/nav--itinerary";
 @import "nomtrips/components/icon-bar";
+@import "nomtrips/components/button-bar";
 @import "nomtrips/components/heading--section";
 @import "nomtrips/components/profile";
 @import "nomtrips/components/profile--header";
@@ -64,6 +69,8 @@ External styles manifest
 @import "nomtrips/components/social-icons--profile";
 @import "nomtrips/components/social-icons--footer";
 @import "nomtrips/components/paging";
+@import "nomtrips/components/breadcrumbs";
+@import "nomtrips/components/star-rating";
 
 //overrides
 @import "nomtrips/overrides/orbits";

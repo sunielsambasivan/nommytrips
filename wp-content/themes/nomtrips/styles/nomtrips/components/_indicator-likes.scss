@@ -11,7 +11,7 @@
 }
 
 //modifier for likes indicator on map cards
-.indicator-likes--map {
+.indicator-likes--map, .indicator-likes--sm {
   @extend .indicator-likes;
   width: rem_calc(25px);
   height: rem_calc(25px);

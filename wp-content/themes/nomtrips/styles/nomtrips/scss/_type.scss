@@ -1,21 +1,6 @@
 ﻿/**
-    Typography 
+    Typography
     **/
-
-.script {
-    font-family: $script-font-family;
-    font-size: $script-font-size;
-    text-transform: lowercase;
-}
-
-.has-script {
-    font-size: $script-font-size;
-    line-height: 4rem;
-    
-    span {
-        @extend .script;
-    }
-}
 
 %heading-font {
     font-family: $heading-font-family;
@@ -112,9 +97,4 @@
 
 .font-size-xxxs, .micetype {
     font-size: $font-size-xxxs; //.6rem 9.6px
-}
-
-//will delete later
-.f-s-xsmall{
-  font-size: $font-size-sm-md;
 }

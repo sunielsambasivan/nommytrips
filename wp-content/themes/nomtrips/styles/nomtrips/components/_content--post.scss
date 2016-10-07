@@ -1,5 +1,6 @@
 .content {
   padding-top: rem_calc($base-padding);
+  padding-bottom: rem_calc($base-padding);
 }
 
 .content--heading {
@@ -7,7 +8,7 @@
     font-size: rem_calc(28);
     margin-bottom: rem_calc($base-padding)
   }
-  
+
   > h2 {
     font-size: rem_calc(24);
     margin-bottom: rem_calc($base-padding)
@@ -38,12 +39,25 @@
   text-align: center;
 }
 
+.content--heading--restaurant {
+  > * {
+    @include flex(0 1 auto);
+    @include align-self(center);
+  }
+
+  .content--heading--title {
+    font-family: $base-font-family;
+    font-size: rem_calc(20);
+    margin-bottom: 0;
+  }
+}
+
 /**
   responsive
 **/
 
 @include respond-to(tablet) {
-  .content {
+  .home .content {
     padding-bottom: rem_calc($base-padding* 1.5);
   }
 }
