@@ -2,13 +2,26 @@
   h1 {
     color: white;
     font-size: rem_calc(18);
-    
+
     @include respond-to(tablet) {
       font-size: rem_calc(28);
     }
   }
-  
+
   .form-item {
     margin: auto;
+  }
+}
+
+.search--header {
+  display: none;
+
+  @include respond-to(tablet) {
+    display: block;
+    @include flex(1 1 auto);
+  }
+
+  .search-cities {
+    background: transparent;
   }
 }

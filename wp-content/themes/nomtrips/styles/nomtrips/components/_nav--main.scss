@@ -1,4 +1,5 @@
 .nav--main {
+  display: none;
   margin-left: auto;
   margin-right: 0;
 }
@@ -16,7 +17,9 @@ nav {
 @include respond-to(tablet) {
   .nav--main {
     @include flexbox();
-    
+    @include align-items(center);
+    @include flex(0 1 auto);
+
     .menu-header .menu {
       @include flexbox();
       @include justify-content(flex-end);

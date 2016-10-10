@@ -1,4 +1,4 @@
-<nav role="navigation" class="nav--logged-in">
+<nav role="navigation" id="navMainMenu" class="nav--logged-in">
   <?php
     $email = $user->data->user_email;
   ?>
