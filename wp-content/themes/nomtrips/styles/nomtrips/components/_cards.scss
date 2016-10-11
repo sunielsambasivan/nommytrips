@@ -1,0 +1,11 @@
+.cards {}
+
+.cards--heading {
+  @include flexbox();
+  @include align-items(center);
+}
+
+.cards--title {
+  font-size: $font-size-md-lg;
+  margin-bottom: 0;
+}

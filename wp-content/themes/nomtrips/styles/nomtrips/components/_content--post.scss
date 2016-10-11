@@ -6,12 +6,12 @@
 .content--heading {
   > h1 {
     font-size: rem_calc(28);
-    margin-bottom: rem_calc($base-padding)
+    margin-bottom: rem_calc($base-padding);
   }
 
   > h2 {
     font-size: rem_calc(24);
-    margin-bottom: rem_calc($base-padding)
+    margin-bottom: rem_calc($base-padding);
   }
 }
 
@@ -50,6 +50,10 @@
     font-size: rem_calc(20);
     margin-bottom: 0;
   }
+}
+
+.content-desc--restaurant {
+  margin-top: rem_calc($base-margin);
 }
 
 /**

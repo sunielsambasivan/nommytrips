@@ -22,11 +22,12 @@ $custom_vars = get_post_custom();
 $cities = get_the_terms(get_the_id(), 'city');
 $city = isset($cities[0]->term_id) ? $cities[0]->name : false;
 $state = isset($cities[0]->term_id) ? get_term_meta($cities[0]->term_id, 'nt_state-prov', true) :  false;
-
+$cuisines = get_the_terms(get_the_id(), 'cuisine');
+/*
 nt_debug($state);
 nt_debug($city);
 nt_debug($custom_vars);
-
+*/
 ?>
 
 <?php if (have_posts()) : ?>
@@ -87,20 +88,30 @@ nt_debug($custom_vars);
         </div><!--end of row-->
 
         <!--restaurant details section-->
-        <div class="row">
+        <div class="row content-desc--restaurant">
 
           <!--left col-->
-          <section class="columns small-12 medium-3">
+          <section class="columns small-12 medium-6 large-3">
             <?php include( locate_template( NT_COMPONENTS_PATH .'cards/card--restaurant.php') ); ?>
           </section>
 
           <!--middle col-->
-          <section class="columns small-12 medium-6">
+          <section class="columns small-12 medium-6 large-6 cards">
+            <div class="cards--heading">
+              <h2 class="cards--title">Must Eats</h2>
+              <div class="cards--buttons">
+                <a href="#" class="button-icon fa fa-cutlery">Add Dish</a>
+              </div>
+            </div>
+
+            <div class=cards--carousel>
+
+            </div>
 
           </section>
 
           <!--right col-->
-          <section class="columns small-12 medium-3">
+          <section class="columns small-12 large-3">
 
           </section>
 
