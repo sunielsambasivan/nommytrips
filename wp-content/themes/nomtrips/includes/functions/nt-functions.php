@@ -55,6 +55,24 @@ function nt_media_queries() {
     'desktop' => '65em',
     'desktop-large' => '114em'
   );
-  
+
   return $mqs;
+}
+
+/**
+ * Format phone as (555) 555 - 5555
+*/
+function nt_format_phone($ph = 0) {
+  //remove all special chars
+  if($ph) {
+    $ph = preg_replace('/[^a-z0-9]/i', '', $ph);
+  }
+
+  //format it
+  if(  preg_match( '/^(\d{3})(\d{3})(\d{4})$/', $ph,  $matches ) )
+  {
+    $ph = $matches[1] . '-' .$matches[2] . '-' . $matches[3];
+  }
+
+  return $ph;
 }

@@ -14,6 +14,21 @@ if ( !defined('ABSPATH')) exit;
 
 get_header(); ?>
 
+<?php
+/**
+ * restaurant variables
+**/
+$custom_vars = get_post_custom();
+$cities = get_the_terms(get_the_id(), 'city');
+$city = isset($cities[0]->term_id) ? $cities[0]->name : false;
+$state = isset($cities[0]->term_id) ? get_term_meta($cities[0]->term_id, 'nt_state-prov', true) :  false;
+
+nt_debug($state);
+nt_debug($city);
+nt_debug($custom_vars);
+
+?>
+
 <?php if (have_posts()) : ?>
 
   <?php while (have_posts()) : the_post(); ?>
@@ -76,7 +91,7 @@ get_header(); ?>
 
           <!--left col-->
           <section class="columns small-12 medium-3">
-
+            <?php include( locate_template( NT_COMPONENTS_PATH .'cards/card--restaurant.php') ); ?>
           </section>
 
           <!--middle col-->

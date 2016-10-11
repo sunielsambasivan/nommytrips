@@ -3,7 +3,7 @@
   background: $color-teal;
   padding: $base-padding 0;
   color: white;
-  
+
   a {
     color: white;
   }
@@ -13,6 +13,10 @@
   @include align-items(center);
   @include justify-content(flex-start);
   margin-left: map-get($grid-column-gutter, small); //small gutter from _settings.scss in foundation
+}
+
+.header--wrapper {
+  @include flexbox();
 }
 
 /**
