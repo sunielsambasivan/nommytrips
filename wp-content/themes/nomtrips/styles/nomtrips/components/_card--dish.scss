@@ -1,3 +1,14 @@
 .card--dish {
   @extend .card;
 }
+
+.card--dish--content {
+  padding: rem_calc($base-padding /2);
+}
+
+//if in carousel
+.cards--carousel {
+  .card--dish {
+    @include flex(0 0 100%);
+  }
+}

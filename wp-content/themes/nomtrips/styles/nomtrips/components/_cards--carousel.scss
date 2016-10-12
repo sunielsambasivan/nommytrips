@@ -1,2 +1,60 @@
+/**
+  carousel - uses slick (http://kenwheeler.github.io/slick/)
+**/
+
 .cards--carousel {
+  position: relative;
+  margin-top: rem_calc($base-margin);
+  margin-bottom: rem_calc($base-margin);
+  padding-left: rem_calc($base-padding *1.5);
+  padding-right: rem_calc($base-padding *1.5);
+}
+
+.cards--carousel--container {
+  margin-left: -(rem_calc(5px));
+  margin-right: -(rem_calc(5px));
+
+  /*
+  override slick styling
+  */
+  .slick-track {
+    @include flexbox();
+  }
+}
+
+.cards--carousel--slide {
+  @include flex-basis(auto);
+  padding-left: rem_calc(5px);
+  padding-right: rem_calc(5px);
+
+  /*
+  override slick styling
+  */
+  @include flexbox(true);
+  @include flex-direction(column);
+
+  &.slick-slide {
+    height: auto;
+  }
+}
+
+.cards--carousel--btn {
+  /*
+  override slick styling
+  */
+  .slick-next {
+    right: 0;
+
+    &:before {
+      @include icon-font-fa($fa-var-chevron-right, 2rem);
+    }
+  }
+
+  .slick-prev {
+    left: 0;
+
+    &:before {
+      @include icon-font-fa($fa-var-chevron-left, 2rem);
+    }
+  }
 }

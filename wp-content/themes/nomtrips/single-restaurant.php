@@ -100,50 +100,86 @@ nt_debug($custom_vars);
             <div class="cards--heading">
               <h2 class="cards--title">Must Eats</h2>
               <div class="cards--buttons">
-                <a href="#" class="button-icon fa-cutlery">Add Dish</a>
+                <a href="#" class="button-icon fa fa-cutlery">Add Dish</a>
               </div>
             </div>
 
             <div class="cards--carousel">
-                <ul class="cards--carousel--slides">
-                  <li class="small-12 medium-4 cards--carousel--slide">
+              <div class="cards--carousel--btn"> <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button> </div>
+                <ul class="cards--carousel--container">
+
+                  <!--slide 1-->
+                  <li class="cards--carousel--slide small-12 medium-4">
                     <div class="card--dish">
                       <div class="card--dish--image">
                         <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food' ); ?>
                         <img src="<?php echo esc_url($imgsrc[0]); ?>" />
                       </div>
-                      <div class="card--dish--title">Pork Buns</div>
-                      <div class="card--dish--likes">10 people nommed</div>
+                      <div class="card--dish--content">
+                        <div class="card--dish--title">Pork Buns</div>
+                        <div class="card--dish--likes">10 people nommed</div>
+                      </div>
                     </div>
                   </li>
 
-                  <li class="small-12 medium-4 cards--carousel--slide">
+                  <!--slide 2-->
+                  <li class="cards--carousel--slide small-12 medium-4">
                     <div class="card--dish">
                       <div class="card--dish--image">
                         <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food' ); ?>
                         <img src="<?php echo esc_url($imgsrc[0]); ?>" />
                       </div>
-                      <div class="card--dish--title">Pork Buns More</div>
-                      <div class="card--dish--likes">10 people nommed</div>
+                      <div class="card--dish--content">
+                        <div class="card--dish--title">Pork Buns More</div>
+                        <div class="card--dish--likes">10 people nommed</div>
+                      </div>
                     </div>
                   </li>
 
-                  <li class="small-12 medium-4 cards--carousel--slide">
+                  <!--slide 3-->
+                  <li class="cards--carousel--slide small-12 medium-4">
                     <div class="card--dish">
                       <div class="card--dish--image">
                         <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food' ); ?>
                         <img src="<?php echo esc_url($imgsrc[0]); ?>" />
                       </div>
-                      <div class="card--dish--title">Pork Buns More-er</div>
-                      <div class="card--dish--likes">10 people nommed</div>
+                      <div class="card--dish--content">
+                        <div class="card--dish--title">Pork Buns More-er</div>
+                        <div class="card--dish--likes">10 people nommed</div>
+                      </div>
                     </div>
                   </li>
+
+                  <!--slide 4-->
+                  <li class="cards--carousel--slide small-12 medium-4">
+                    <div class="card--dish">
+                      <div class="card--dish--image">
+                        <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food' ); ?>
+                        <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+                      </div>
+                      <div class="card--dish--content">
+                        <div class="card--dish--title">Pork Buns More-er-er</div>
+                        <div class="card--dish--likes">10 people nommed</div>
+                      </div>
+                    </div>
+                  </li>
+
                 </ul>
-              </div>
-
-
-
+                <div class="cards--carousel--btn"> <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button> </div>
+            </div>
           </section>
+
+          <script type="text/javascript">
+              jQuery(document).ready(function($){
+                $('.cards--carousel--container').slick({
+                  infinite: true,
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                  nextArrow: '.slick-next ',
+                  prevArrow: '.slick-prev'
+                });
+              });
+            </script>
 
           <!--right col-->
           <section class="columns small-12 large-3">
