@@ -17,8 +17,29 @@
   /*
   override slick styling
   */
+
+  .slick-list {
+    padding-bottom: 20px;
+  }
+
   .slick-track {
     @include flexbox();
+  }
+
+  .slick-dots button {
+    &:before {
+      @include icon-font-fa($fa-var-circle, $font-size-md);
+      color: $color-teal !important;
+      opacity: 1 !important;
+    }
+  }
+
+  .slick-dots .slick-active button {
+    &:before {
+      @include icon-font-fa($fa-var-circle-o, $font-size-md);
+      color: $color-teal !important;
+      opacity: 1 !important;
+    }
   }
 }
 
@@ -46,7 +67,7 @@
     right: 0;
 
     &:before {
-      @include icon-font-fa($fa-var-chevron-right, 2rem);
+      @include icon-font-fa($fa-var-chevron-right, 2rem, $color-teal);
     }
   }
 
@@ -54,7 +75,7 @@
     left: 0;
 
     &:before {
-      @include icon-font-fa($fa-var-chevron-left, 2rem);
+      @include icon-font-fa($fa-var-chevron-left, 2rem, $color-teal);
     }
   }
 }

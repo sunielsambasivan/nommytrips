@@ -109,10 +109,10 @@ nt_debug($custom_vars);
                 <ul class="cards--carousel--container">
 
                   <!--slide 1-->
-                  <li class="cards--carousel--slide small-12 medium-4">
+                  <li class="cards--carousel--slide small-12 medium-6">
                     <div class="card--dish">
                       <div class="card--dish--image">
-                        <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food' ); ?>
+                        <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-card' ); ?>
                         <img src="<?php echo esc_url($imgsrc[0]); ?>" />
                       </div>
                       <div class="card--dish--content">
@@ -123,10 +123,10 @@ nt_debug($custom_vars);
                   </li>
 
                   <!--slide 2-->
-                  <li class="cards--carousel--slide small-12 medium-4">
+                  <li class="cards--carousel--slide small-12 medium-6">
                     <div class="card--dish">
                       <div class="card--dish--image">
-                        <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food' ); ?>
+                        <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-card' ); ?>
                         <img src="<?php echo esc_url($imgsrc[0]); ?>" />
                       </div>
                       <div class="card--dish--content">
@@ -137,10 +137,10 @@ nt_debug($custom_vars);
                   </li>
 
                   <!--slide 3-->
-                  <li class="cards--carousel--slide small-12 medium-4">
+                  <li class="cards--carousel--slide small-12 medium-6">
                     <div class="card--dish">
                       <div class="card--dish--image">
-                        <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food' ); ?>
+                        <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-card' ); ?>
                         <img src="<?php echo esc_url($imgsrc[0]); ?>" />
                       </div>
                       <div class="card--dish--content">
@@ -151,10 +151,10 @@ nt_debug($custom_vars);
                   </li>
 
                   <!--slide 4-->
-                  <li class="cards--carousel--slide small-12 medium-4">
+                  <li class="cards--carousel--slide small-12 medium-6">
                     <div class="card--dish">
                       <div class="card--dish--image">
-                        <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food' ); ?>
+                        <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-card' ); ?>
                         <img src="<?php echo esc_url($imgsrc[0]); ?>" />
                       </div>
                       <div class="card--dish--content">
@@ -172,9 +172,33 @@ nt_debug($custom_vars);
           <script type="text/javascript">
               jQuery(document).ready(function($){
                 $('.cards--carousel--container').slick({
+                dots: true,
                   infinite: true,
+                  speed: 300,
                   slidesToShow: 3,
                   slidesToScroll: 1,
+                  responsive: [
+                    {
+                      breakpoint: 1024,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                      }
+                    },
+                    {
+                      breakpoint: 640,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+
+                      }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                  ],
                   nextArrow: '.slick-next ',
                   prevArrow: '.slick-prev'
                 });

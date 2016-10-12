@@ -6,6 +6,20 @@
   padding: rem_calc($base-padding /2);
 }
 
+.card--dish--title {
+  font-size: $font-size-sm;
+}
+
+.card--dish--likes {
+  @include inline-flex();
+  @include align-items(center);
+  font-size: $font-size-xs;
+
+  &:before {
+    @include icon-font-fa($fa-var-heart, $font-size-md, $color-teal);
+  }
+}
+
 //if in carousel
 .cards--carousel {
   .card--dish {
