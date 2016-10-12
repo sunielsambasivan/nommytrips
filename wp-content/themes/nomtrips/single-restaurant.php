@@ -100,13 +100,48 @@ nt_debug($custom_vars);
             <div class="cards--heading">
               <h2 class="cards--title">Must Eats</h2>
               <div class="cards--buttons">
-                <a href="#" class="button-icon fa fa-cutlery">Add Dish</a>
+                <a href="#" class="button-icon fa-cutlery">Add Dish</a>
               </div>
             </div>
 
-            <div class=cards--carousel>
+            <div class="cards--carousel">
+                <ul class="cards--carousel--slides">
+                  <li class="small-12 medium-4 cards--carousel--slide">
+                    <div class="card--dish">
+                      <div class="card--dish--image">
+                        <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food' ); ?>
+                        <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+                      </div>
+                      <div class="card--dish--title">Pork Buns</div>
+                      <div class="card--dish--likes">10 people nommed</div>
+                    </div>
+                  </li>
 
-            </div>
+                  <li class="small-12 medium-4 cards--carousel--slide">
+                    <div class="card--dish">
+                      <div class="card--dish--image">
+                        <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food' ); ?>
+                        <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+                      </div>
+                      <div class="card--dish--title">Pork Buns More</div>
+                      <div class="card--dish--likes">10 people nommed</div>
+                    </div>
+                  </li>
+
+                  <li class="small-12 medium-4 cards--carousel--slide">
+                    <div class="card--dish">
+                      <div class="card--dish--image">
+                        <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food' ); ?>
+                        <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+                      </div>
+                      <div class="card--dish--title">Pork Buns More-er</div>
+                      <div class="card--dish--likes">10 people nommed</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+
 
           </section>
 
