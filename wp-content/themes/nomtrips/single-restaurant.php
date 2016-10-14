@@ -97,15 +97,17 @@ nt_debug($custom_vars);
 
           <!--middle col-->
           <section class="columns small-12 medium-6 large-6 cards">
+
+            <!--cards carousel section-->
             <div class="cards--heading">
               <h2 class="cards--title">Must Eats</h2>
-              <div class="cards--buttons">
+              <div class="cards--buttons column">
                 <a href="#" class="button-icon fa fa-cutlery">Add Dish</a>
               </div>
             </div>
 
-            <div class="cards--carousel">
-              <div class="cards--carousel--btn"> <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button> </div>
+            <div class="cards--carousel content-section">
+              <div class="cards--carousel--btn"> <button type="button" data-role="none" class="slick-prev--must-eats slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button> </div>
                 <ul class="cards--carousel--container">
 
                   <!--slide 1-->
@@ -165,50 +167,189 @@ nt_debug($custom_vars);
                   </li>
 
                 </ul>
-                <div class="cards--carousel--btn"> <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button> </div>
+                <div class="cards--carousel--btn"> <button type="button" data-role="none" class="slick-next--must-eats slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button> </div>
             </div>
+            <!--end cards-carousel-->
+
+            <!--Menu Section-->
+            <div class="cards--heading">
+              <h2 class="cards--title">Menu</h2>
+              <div class="cards--buttons column">
+                <a href="#" class="button-icon fa fa-pencil column">Add Menu</a>
+              </div>
+            </div>
+
+            <div class="card--list-select">
+              <div class="card--list-select--item">
+                <div class="card--list-select--title">
+                Lunch
+                </div>
+              </div>
+
+              <div class="card--list-select--item">
+                <div class="card--list-select--title">
+                Dinner
+                </div>
+              </div>
+
+              <div class="card--list-select--item">
+                <div class="card--list-select--title">
+                Special
+                </div>
+              </div>
+            </div>
+            <!--/menu section-->
+
+            <!--photo section-->
+            <div class="cards--heading">
+              <h2 class="cards--title">Photos</h2>
+              <div class="cards--buttons column">
+                <a href="#" class="button-icon fa fa-image">Add Image</a>
+              </div>
+            </div>
+
+            <div class="cards--carousel">
+              <div class="cards--carousel--btn"> <button type="button" data-role="none" class="slick-prev--images slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button> </div>
+                <ul class="cards--carousel--container">
+
+                  <!--slide 1-->
+                  <li class="cards--carousel--slide small-12 medium-6">
+                    <div class="card--dish">
+                      <div class="card--dish--image">
+                        <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-card' ); ?>
+                        <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+                      </div>
+                      <div class="card--dish--content">
+                        <div class="card--dish--title">Pork Buns</div>
+                        <div class="card--dish--likes">10 people nommed</div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!--slide 2-->
+                  <li class="cards--carousel--slide small-12 medium-6">
+                    <div class="card--dish">
+                      <div class="card--dish--image">
+                        <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-card' ); ?>
+                        <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+                      </div>
+                      <div class="card--dish--content">
+                        <div class="card--dish--title">Pork Buns More</div>
+                        <div class="card--dish--likes">10 people nommed</div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!--slide 3-->
+                  <li class="cards--carousel--slide small-12 medium-6">
+                    <div class="card--dish">
+                      <div class="card--dish--image">
+                        <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-card' ); ?>
+                        <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+                      </div>
+                      <div class="card--dish--content">
+                        <div class="card--dish--title">Pork Buns More-er</div>
+                        <div class="card--dish--likes">10 people nommed</div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!--slide 4-->
+                  <li class="cards--carousel--slide small-12 medium-6">
+                    <div class="card--dish">
+                      <div class="card--dish--image">
+                        <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-card' ); ?>
+                        <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+                      </div>
+                      <div class="card--dish--content">
+                        <div class="card--dish--title">Pork Buns More-er-er</div>
+                        <div class="card--dish--likes">10 people nommed</div>
+                      </div>
+                    </div>
+                  </li>
+
+                </ul>
+                <div class="cards--carousel--btn"> <button type="button" data-role="none" class="slick-next--images slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button> </div>
+            </div>
+            <!--end photo section-->
+
+            <!--review section-->
+            <div class="cards--heading">
+              <h2 class="cards--title">Review</h2>
+              <div class="cards--buttons column">
+                <a href="#" class="button-icon fa fa-pencil">Write a Review</a>
+              </div>
+            </div>
+
+            <div class="list--review">
+
+              <!--review-item-->
+              <div class="list--review--item">
+                <div class="list--review--image">
+                  <div class="profile--avatar">
+                    <div class="image">
+                      <img src="<?php echo site_url(); ?>/wp-content/uploads/2016/09/ron_swanson.jpg" />
+                    </div>
+                  </div>
+                </div>
+                <div class="list--review--meta">
+                  <div class="list--location--title list--review--title"><strong>Rob Swansen</strong></div>
+                  <div>10 review(s)</div>
+                  <div class="indicator-likes indicator-likes--sm list--review-likes">5</div>
+                </div>
+                <div class="list--review--desc">
+                  Tofu adipiscing gravida wire-rimmed glasses lorem auctor food truck molestie non specs commodo nulla food truck et sed fixie diam. Orci Portland tempus sagittis noise-rock enim curabitur noise-rock leo in biodiesel duis congue organic risus elementum Toms ipsum.
+                </div>
+              </div>
+
+              <!--review-item-->
+              <div class="list--review--item">
+                <div class="list--review--image">
+                  <div class="profile--avatar">
+                    <div class="image">
+                      <img src="<?php echo site_url(); ?>/wp-content/uploads/2016/09/ron_swanson.jpg" />
+                    </div>
+                  </div>
+                </div>
+                <div class="list--review--meta">
+                  <div class="list--location--title list--review--title"><strong>Rob Swansen</strong></div>
+                  <div>10 review(s)</div>
+                  <div class="indicator-likes indicator-likes--sm list--review-likes">5</div>
+                </div>
+                <div class="list--review--desc">
+                  Tofu adipiscing gravida wire-rimmed glasses lorem auctor food truck molestie non specs commodo nulla food truck et sed fixie diam. Orci Portland tempus sagittis noise-rock enim curabitur noise-rock leo in biodiesel duis congue organic risus elementum Toms ipsum.
+                </div>
+              </div>
+
+              <!--review-item-->
+              <div class="list--review--item">
+                <div class="list--review--image">
+                  <div class="profile--avatar">
+                    <div class="image">
+                      <img src="<?php echo site_url(); ?>/wp-content/uploads/2016/09/ron_swanson.jpg" />
+                    </div>
+                  </div>
+                </div>
+                <div class="list--review--meta">
+                  <div class="list--location--title list--review--title"><strong>Rob Swansen</strong></div>
+                  <div>10 review(s)</div>
+                  <div class="indicator-likes indicator-likes--sm list--review-likes">5</div>
+                </div>
+                <div class="list--review--desc">
+                  Tofu adipiscing gravida wire-rimmed glasses lorem auctor food truck molestie non specs commodo nulla food truck et sed fixie diam. Orci Portland tempus sagittis noise-rock enim curabitur noise-rock leo in biodiesel duis congue organic risus elementum Toms ipsum.
+                </div>
+              </div>
+
+            </div>
+            <!--end review section-->
+
           </section>
-
-          <script type="text/javascript">
-              jQuery(document).ready(function($){
-                $('.cards--carousel--container').slick({
-                dots: true,
-                  infinite: true,
-                  speed: 300,
-                  slidesToShow: 3,
-                  slidesToScroll: 1,
-                  responsive: [
-                    {
-                      breakpoint: 1024,
-                      settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        infinite: true,
-                        dots: true
-                      }
-                    },
-                    {
-                      breakpoint: 640,
-                      settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-
-                      }
-                    }
-                    // You can unslick at a given breakpoint now by adding:
-                    // settings: "unslick"
-                    // instead of a settings object
-                  ],
-                  nextArrow: '.slick-next ',
-                  prevArrow: '.slick-prev'
-                });
-              });
-            </script>
+          <!--end middle section-->
 
           <!--right col-->
           <section class="columns small-12 large-3">
-
           </section>
+          <!--end right col-->
 
         </div><!--end of row-->
 

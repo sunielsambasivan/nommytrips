@@ -3,8 +3,8 @@
   @include justify-content(space-between);
   @include align-content(center);
   margin: rem_calc($base-margin/2) 0;
-  
-  > * {
+
+  > h2 {
     font-family: $base-font-family;
     font-size: rem_calc($font-size-lg);
     margin-bottom: 0;

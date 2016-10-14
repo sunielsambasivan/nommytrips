@@ -15,7 +15,7 @@ $screen-xs-min: $screen-xs;
 $screen-sm-min: $screen-sm;
 $screen-md-min: $screen-md;
 $screen-lg-min: $screen-lg;
-               
+
 $screen-xs-max: ($screen-sm-min - 1);
 $screen-sm-max: ($screen-md-min - 1);
 $screen-md-max: ($screen-lg-min - 1);
@@ -29,12 +29,12 @@ $screen-lg-desktop: $screen-lg-min !default;
 $dropdown-width: 200px;
 
 //ama specific breakpoints
-$mobile-iphone4-min: 320px; 
+$mobile-iphone4-min: 320px;
 $mobile-iphone4-max: 480px; //landscape
 $mobile-iphone5-max: 568px;
-$mobile-iphone6-min: 375px; 
+$mobile-iphone6-min: 375px;
 $mobile-iphone6-max: 667px; //landscape
-$mobile-iphone6plus-min: 414px; 
+$mobile-iphone6plus-min: 414px;
 $mobile-iphone6plus-max: 736px; //landscape
 $tablet-small: 737px;
 $tablet-medium: 768px;
@@ -75,7 +75,7 @@ $fluid-responsive-width: 95.744680851064%;
 
 //type
 $base-font-size: 1.3333333333rem;
-$base-line-height: 2rem;
+$base-line-height: 1.5rem;
 $base-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $base-font: $base-font-size/$base-line-height $base-font-family;
 $heading-font-family: 'Open Sans Extra Bold','Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;

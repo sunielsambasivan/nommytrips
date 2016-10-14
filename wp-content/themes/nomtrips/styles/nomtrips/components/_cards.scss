@@ -7,5 +7,5 @@
 
 .cards--title {
   font-size: $font-size-md-lg;
-  margin-bottom: 0;
+  margin-top: rem_calc($base-margin);
 }

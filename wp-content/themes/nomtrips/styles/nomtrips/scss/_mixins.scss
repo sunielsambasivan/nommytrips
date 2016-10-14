@@ -61,7 +61,7 @@
 }
 
 /* center content vertically */
-@mixin center-vertically( $top: 50%, $translateY: -50%, $position: relative ) {
+@mixin center-vertically( $top: 50%, $translateY: -50%, $position: absolute ) {
     position: $position;
     top: $top;
     -moz-transform: translateY( $translateY );

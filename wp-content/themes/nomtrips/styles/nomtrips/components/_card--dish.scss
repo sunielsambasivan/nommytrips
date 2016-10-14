@@ -17,6 +17,7 @@
 
   &:before {
     @include icon-font-fa($fa-var-heart, $font-size-md, $color-teal);
+    padding-right: 3px;
   }
 }
 

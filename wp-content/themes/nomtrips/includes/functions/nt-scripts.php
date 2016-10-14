@@ -17,4 +17,8 @@ function nt_add_js() {
 
   //responsive bg images (https://github.com/M6Web/picturefill-background)
   wp_enqueue_script( 'picturefill-background', NT_JS_PATH . 'vendor/picturefill-background/picturefill-background.js', array('jquery'), '', true );
+
+  //slick carousel
+  wp_enqueue_script( 'slick', NT_JS_PATH . 'vendor/slick/slick.js', array('jquery'), '', true );
+  wp_enqueue_script( 'slick-init', NT_JS_PATH . 'vendor/slick/slick-init.js', array('jquery'), '', true );
 }

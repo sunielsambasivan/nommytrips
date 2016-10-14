@@ -27,10 +27,10 @@
   <div class="card--restaurant--hours"><?php echo wp_kses_post( nt_get_hours() ); ?></div>
 
   <div class="button-bar margin-top">
-    <a class="button-bar--btn fa fa-globe"></a>
-    <a class="button-bar--btn fa fa-twitter"></a>
-    <a class="button-bar--btn fa fa-facebook-official"></a>
-    <a class="button-bar--btn fa fa-google-plus"></a>
-    <a class="button-bar--btn fa fa-instagram"></a>
+    <a class="button-bar--btn font-size-lg-strict fa fa-globe"></a>
+    <a class="button-bar--btn font-size-lg-strict fa fa-twitter"></a>
+    <a class="button-bar--btn font-size-lg-strict fa fa-facebook-official"></a>
+    <a class="button-bar--btn font-size-lg-strict fa fa-google-plus"></a>
+    <a class="button-bar--btn font-size-lg-strict fa fa-instagram"></a>
   </div>
 </div>

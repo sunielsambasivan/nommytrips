@@ -10,6 +10,12 @@ function nt_add_stylesheets() {
   wp_register_style( 'motion-ui', get_stylesheet_directory_uri() . '/styles/vendor/foundation/motion-ui.min.css');
   wp_enqueue_style( 'motion-ui' );
 
+  //slick carousel
+  wp_register_style( 'slick', get_stylesheet_directory_uri() . '/styles/vendor/slick/slick.css');
+  wp_enqueue_style( 'slick' );
+  wp_register_style( 'slick-theme', get_stylesheet_directory_uri() . '/styles/vendor/slick/slick-theme.css');
+  wp_enqueue_style( 'slick-theme' );
+
   //nomtrip styles
   wp_register_style( 'nomtrips-css', get_stylesheet_directory_uri() . '/styles/site.css');
   wp_enqueue_style( 'nomtrips-css' );
