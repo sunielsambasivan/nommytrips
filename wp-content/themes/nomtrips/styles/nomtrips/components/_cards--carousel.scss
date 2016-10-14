@@ -9,6 +9,28 @@
   padding-right: rem_calc($base-padding *1.5);
 }
 
+.cards--carousel--map-overlay {
+  .slick-track {
+    width: 100% !important;
+  }
+
+  .slick-slide {
+    //width: 100% !important;
+
+    @include respond-to(desktop) {
+      width: 33.333% !important;
+    }
+  }
+
+  .slick-dots {
+    bottom: 0;
+  }
+
+  .cards--carousel--btn button:before {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .75);
+  }
+}
+
 .cards--carousel--container {
   margin-left: -(rem_calc(5px));
   margin-right: -(rem_calc(5px));
