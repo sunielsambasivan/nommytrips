@@ -20,6 +20,18 @@
   }
 }
 
+.card--restaurant--map {
+  height: 200px;
+
+  @include respond-to(tablet) {
+    height: 350px;
+  }
+
+  @include respond-to(desktop) {
+    height: 200px;
+  }
+}
+
 .card--restaurant--address {
   padding-top: rem_calc($base-padding/2);
   line-height: $font-size-md-lg;

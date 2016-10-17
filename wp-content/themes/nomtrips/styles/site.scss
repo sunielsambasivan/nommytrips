@@ -31,9 +31,13 @@ External styles manifest
 @import "nomtrips/scss/grid";
 
 //components
+@import "nomtrips/components/link";
 @import "nomtrips/components/off-canvas";
 @import "nomtrips/components/container";
+@import "nomtrips/components/form-elements";
 @import "nomtrips/components/map";
+@import "nomtrips/components/speech-bubble";
+@import "nomtrips/components/media-object--nomtip";
 @import "nomtrips/components/header";
 @import "nomtrips/components/footer";
 @import "nomtrips/components/logo--header";

@@ -1,14 +1,26 @@
+<?php
+$address['suiteno'] = isset( $custom_vars['nt_cpt_suite_no'] ) ? esc_html( $custom_vars['nt_cpt_suite_no'][0] ) : '';
+$address['buildingno'] = isset( $custom_vars['nt_cpt_building_no'] ) ? esc_html( $custom_vars['nt_cpt_building_no'][0] ) : '';
+$address['street'] = isset( $custom_vars['nt_cpt_street'] ) ? esc_html( $custom_vars['nt_cpt_street'][0] ) : '';
+$address['city'] = isset( $city ) ? esc_html( $city ) : '';
+$address['state'] = isset( $state ) ? esc_html( $state ) : '';
+$address['neighborhood'] = isset( $neighborhoods[0]->term_id ) ? $neighborhoods[0]->name : '';
+$neighborhood_string = $address['neighborhood'] != '' ? ', ' . $address['neighborhood'] : '';
+$suite_string = $address['suiteno'] != '' ? $address['suiteno'] . ' &ndash; ' : '';
+$address_string = $suite_string . $address['buildingno'] . ' ' . $address['street'] .  $neighborhood_string . ', ' . $address['city'] . ', ' . $address['state'];
+?>
 <div class="card--restaurant">
   <div class="card--restaurant--map">
-    <img src="<?php echo get_template_directory_uri() ?>/images/placeholder-pin-map.jpg" alt="" />
+    <div id="map" class="map"></div>
   </div>
   <div class="card--restaurant--address">
     <span>
-      <?php echo isset( $custom_vars['nt_cpt_suite_no'] ) ? esc_html( $custom_vars['nt_cpt_suite_no'][0] ) . ' &ndash; ' : '' ?>
-      <?php echo isset( $custom_vars['nt_cpt_building_no'] ) ? esc_html( $custom_vars['nt_cpt_building_no'][0] ) . '&nbsp;' : '' ?>
-      <?php echo isset( $custom_vars['nt_cpt_street'] ) ? esc_html( $custom_vars['nt_cpt_street'][0] ) . '&nbsp;' : '' ?>
-      <?php echo isset( $city ) ? esc_html( $city ) . ',&nbsp;' : '' ?>
-      <?php echo isset( $state ) ? esc_html( $state ) : '' ?>
+      <?php echo $address_string; ?>
+      <?php  // echo isset( $custom_vars['nt_cpt_suite_no'] ) ? esc_html( $custom_vars['nt_cpt_suite_no'][0] ) . ' &ndash; ' : '' ?>
+      <?php  // echo isset( $custom_vars['nt_cpt_building_no'] ) ? esc_html( $custom_vars['nt_cpt_building_no'][0] ) . '&nbsp;' : '' ?>
+      <?php  // echo isset( $custom_vars['nt_cpt_street'] ) ? esc_html( $custom_vars['nt_cpt_street'][0] ) . '&nbsp;' : '' ?>
+      <?php  // echo isset( $city ) ? esc_html( $city ) . ',&nbsp;' : '' ?>
+      <?php  // echo isset( $state ) ? esc_html( $state ) : '' ?>
     </span>
   </div>
 

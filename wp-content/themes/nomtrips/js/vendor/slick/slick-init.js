@@ -1,9 +1,11 @@
 jQuery(document).ready(function($){
   $('.cards--carousel').each(function() {
     var container = $(this).find('.cards--carousel--container');
+
+    //button class names need to be unique to have multiple carousels on one page.
     var prevClass = $(this).find('button[class^="slick-prev"]');
     var nextClass = $(this).find('button[class^="slick-next"]');
-    console.log($(prevClass));
+
     container.slick({
       dots: true,
       infinite: false,

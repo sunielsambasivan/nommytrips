@@ -31,6 +31,8 @@ $color-black: $jet;
 $border-radius: 3px;
 $border: 1px solid $smoke;
 $border-light: 1px solid $stone;
+$text-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
+$card-shadow: 2px 2px 5px 1px rgba(0,0,0,0.1);
 
 //bg classes
 .color-black, .bg-black { background-color: $jet; color: white }

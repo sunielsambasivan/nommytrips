@@ -50,6 +50,10 @@
     font-size: $font-size-sm;
     line-height: $font-size-md;
   }
+
+  @include respond-to(desktop) {
+    max-width: 85%;
+  }
 }
 
 .list--location--rating {

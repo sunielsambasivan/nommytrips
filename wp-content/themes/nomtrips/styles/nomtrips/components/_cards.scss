@@ -1,4 +1,10 @@
-.cards {}
+.cards {
+  margin-bottom: rem_calc($base-margin);
+
+  @include respond-to(tablet) {
+    margin-bottom: rem_calc($base-margin *2);
+  }
+}
 
 .cards--heading {
   @include flexbox();
