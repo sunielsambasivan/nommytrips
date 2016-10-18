@@ -16,8 +16,11 @@ get_header(); ?>
 
 <?php
 /**
- * restaurant variables
+ * new restaurant object
 **/
+
+$restaurant = new Restaurant();
+
 $custom_vars = get_post_custom();
 $cities = get_the_terms(get_the_id(), 'city');
 $city = isset($cities[0]->term_id) ? $cities[0]->name : false;
@@ -27,7 +30,7 @@ $neighborhoods = get_the_terms(get_the_id(), 'neighborhood');
 $address = array();
 $address_string = '';
 
-//nt_debug(new Restaurant());
+nt_debug(new Restaurant());
 
 /*
 nt_debug($state);
@@ -48,16 +51,16 @@ nt_debug($custom_vars);
           <span class="breadcrumb--divider">></span>
           <span class="breadcrumb--item"><a href="#">Restaurants</a></span>
           <span class="breadcrumb--divider">></span>
-          <span class="breadcrumb--item"><a href="#">New York City</a></span>
+          <span class="breadcrumb--item"><a href="#"><?php echo esc_html($restaurant->restaurant_location->city->name) ?></a></span>
           <span class="breadcrumb--divider">></span>
-          <span class="breadcrumb--item">Joey's</span>
+          <span class="breadcrumb--item"><?php echo esc_html($restaurant->restaurant_name) ?></span>
         </div>
 
         <!--heading section-->
         <section class="row content--heading--restaurant">
           <h1 class="columns content--heading--title"><?php the_title(); ?></h1>
 
-          <div class="columns indicator-likes--sm">5</div>
+          <div class="columns indicator-likes--sm"><?php echo esc_html( $restaurant->restaurant_rating->value) ?></div>
 
           <div class="columns star-rating">
             <i class="star-rating--star fa fa-star-o"></i>
