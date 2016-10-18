@@ -1,0 +1,33 @@
+.speech-bubble {
+  position: relative;
+  z-index: 99;
+}
+
+.speech-bubble--content {
+  position: relative;
+  font-size: $font-size-sm;
+  line-height: $font-size-sm;
+  padding: rem_calc(5px);
+  box-shadow: $card-shadow;
+  border: $border;
+  z-index: 9;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    bottom: -16px;
+    border: 8px solid;
+    border-color: $smoke transparent transparent $smoke;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -14px;
+    border: 7px solid;
+    border-color: #fff transparent transparent #fff;
+  }
+
+}

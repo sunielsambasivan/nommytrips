@@ -8,13 +8,13 @@ if ( !defined('ABSPATH')) exit;
  * Template Name: landing-itinerary
  * Description: page where a signed up user can see their profile card, nomtrips and itineraries
  * @file           index.php
- * @package        NotTrips 
+ * @package        NotTrips
  * @author         Suniel Sambasivan
  * @copyright      2015 - 2016 Suniel Sambasivan
  */
 
 get_header(); ?>
-        
+
 <?php
 $user = wp_get_current_user();//nt_debug($user);
 $allowed_roles = array( 'editor', 'administrator', 'author', 'subscriber' );
@@ -27,7 +27,7 @@ if( $user->ID) {
 ?>
 
 <?php
-//if logged in, show their itineraries 
+//if logged in, show their itineraries
 if( array_intersect( $allowed_roles, $user->roles ) ) { ?>
 <div class="row">
   <div class="content columns small-12 medium-7 large-9">
@@ -37,9 +37,9 @@ if( array_intersect( $allowed_roles, $user->roles ) ) { ?>
           <?php include( locate_template( NT_COMPONENTS_PATH .'profiles/profile--card.php') ); ?>
         </div><!--/card-->
       </div>
-      
+
       <div class="columns small-12 large-8">
-          
+
         <div class="card">
           <div class="dropdown-trigger" data-responsive-toggle="menu-itinerary" data-hide-for="medium">
             <div class="dropdown-trigger--title">Show Navigation</div>
@@ -49,25 +49,25 @@ if( array_intersect( $allowed_roles, $user->roles ) ) { ?>
             <?php wp_nav_menu( array( 'container' => 'nav', 'container_class' => 'nav--itinerary', 'menu_class' => 'menu--itinerary', 'theme_location' => 'menu-itinerary', 'items_wrap' => '<ul id="%1$s" class="nav nav-navbar %2$s">%3$s</ul>' ) ); ?>
           </div>
         </div>
-        
+
         <div class="section--heading">
           <h2><?php the_title() ?></h2>
           <a class="button small green">New Itinerary</a>
         </div>
-        
+
         <div class="card--list-select">
           <div class="card--list-select--item">
             <div class="card--list-select--title">
             Food Trip to New WestMinster
             </div>
           </div>
-          
+
           <div class="card--list-select--item">
             <div class="card--list-select--title">
             Food Trip to New WestMinster
             </div>
           </div>
-          
+
           <div class="card--list-select--item">
             <div class="card--list-select--title">
             Food Trip to New WestMinster
@@ -75,7 +75,7 @@ if( array_intersect( $allowed_roles, $user->roles ) ) { ?>
           </div>
         </div>
         <!--/card--list-select-->
-        
+
         <div class="paging">
           <ul class="pagination text-right" role="navigation" aria-label="Pagination">
             <li class="pagination-previous"><a href="#" class="fa fa-chevron-left" aria-label="Prev page"></a></li>
@@ -96,18 +96,23 @@ if( array_intersect( $allowed_roles, $user->roles ) ) { ?>
   <div class="content columns small-12 medium-5 large-3">
     <div class="card">
       <div class="list--location">
-        
+
         <!--list item-->
         <div class="list--location--item">
           <div class="list--location--image">
             <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
             <img src="<?php echo esc_url($imgsrc[0]); ?>" />
-            <div class="indicator-likes">5</div>
+
+            <div class="list--location--rating">
+              <div class="indicator-likes">5</div>
+            </div>
           </div>
           <div class="list--location--content">
             <div class="list--location--title">Ippudo NYC</div>
+
             <div class="list--location--location">
               <div class="list--location--map-pin fa fa-map-marker"></div>
+
               <ul class="list--location--address">
                 <li>10022 intelligentsia marfa Ave</li>
                 <li>New York, NY</li>
@@ -117,17 +122,23 @@ if( array_intersect( $allowed_roles, $user->roles ) ) { ?>
             </div>
           </div>
         </div>
-        
+
         <!--list item-->
         <div class="list--location--item">
           <div class="list--location--image">
             <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
             <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+
+            <div class="list--location--rating">
+              <div class="indicator-likes">5</div>
+            </div>
           </div>
+
           <div class="list--location--content">
             <div class="list--location--title">Ippudo NYC</div>
             <div class="list--location--location">
               <div class="list--location--map-pin fa fa-map-marker"></div>
+
               <ul class="list--location--address">
                 <li>10022 intelligentsia marfa Ave</li>
                 <li>New York, NY</li>
@@ -137,17 +148,24 @@ if( array_intersect( $allowed_roles, $user->roles ) ) { ?>
             </div>
           </div>
         </div>
-        
+
         <!--list item-->
         <div class="list--location--item">
           <div class="list--location--image">
             <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
             <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+
+            <div class="list--location--rating">
+              <div class="indicator-likes">5</div>
+            </div>
           </div>
+
           <div class="list--location--content">
             <div class="list--location--title">Ippudo NYC</div>
+
             <div class="list--location--location">
               <div class="list--location--map-pin fa fa-map-marker"></div>
+
               <ul class="list--location--address">
                 <li>10022 intelligentsia marfa Ave</li>
                 <li>New York, NY</li>
@@ -157,17 +175,24 @@ if( array_intersect( $allowed_roles, $user->roles ) ) { ?>
             </div>
           </div>
         </div>
-        
+
         <!--list item-->
         <div class="list--location--item">
           <div class="list--location--image">
             <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
             <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+
+            <div class="list--location--rating">
+              <div class="indicator-likes">5</div>
+            </div>
           </div>
+
           <div class="list--location--content">
             <div class="list--location--title">Ippudo NYC</div>
+
             <div class="list--location--location">
               <div class="list--location--map-pin fa fa-map-marker"></div>
+
               <ul class="list--location--address">
                 <li>10022 intelligentsia marfa Ave</li>
                 <li>New York, NY</li>
@@ -177,11 +202,11 @@ if( array_intersect( $allowed_roles, $user->roles ) ) { ?>
             </div>
           </div>
         </div>
-        
+
       </div>
     </div>
   </div>
 </div>
 <?php } ?>
-      
+
 <?php get_footer(); ?>

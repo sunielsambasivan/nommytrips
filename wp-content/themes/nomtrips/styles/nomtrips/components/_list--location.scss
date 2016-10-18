@@ -5,7 +5,7 @@
   @include flexbox();
   padding: rem_calc($base-padding/2);
   border-bottom: $border;
-  
+
   &:last-child {
     border-bottom: none;
   };
@@ -14,7 +14,7 @@
 .list--location--image {
   @include flex(0 0 68px);
   position: relative;
-  
+
   img {
     @include circle-border(68px, white, 2px);
     @include card-shadow();
@@ -45,9 +45,19 @@
 
 .list--location--address {
   margin: 0 0 rem_calc($base-margin/2) rem_calc($base-margin/4);
-  
+
   li {
     font-size: $font-size-sm;
     line-height: $font-size-md;
+
+    @include respond-to(desktop) {
+      max-width: 85%;
+    }
   }
+}
+
+.list--location--rating {
+  position: absolute;
+  top: 40px;
+  right: 0;
 }

@@ -6,7 +6,7 @@
   padding: rem_calc($base-padding/2);
   border-bottom: $border;
   font-weight: bold;
-  
+
   //arrow
   &:after {
     @include icon-font-fa($fa-var-chevron-right);
@@ -15,15 +15,15 @@
     width: 5%;
     text-align: right;
   }
-  
+
   &:last-child {
     border-bottom: none;
   }
-  
+
   &:hover {
     background: $color-blue;
     color: white;
-    
+
     //arrow on hover
     &:after {
       color: white;
@@ -33,5 +33,5 @@
 
 .card--list-select--title {
   display: inline-block;
-    width: 95%;
-} 
+  width: 95%;
+}

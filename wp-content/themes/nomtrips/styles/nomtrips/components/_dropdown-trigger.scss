@@ -11,3 +11,15 @@
 .dropdown-trigger--menu-icon:after {
   @include icon-font-fa($fa-var-chevron-down);
 }
+
+.dropdown-pane {
+  width: 100%;
+
+  @include respond-to(tablet) {
+    width: 35%;
+  }
+
+  @include respond-to(desktop) {
+    width: auto;
+  }
+}

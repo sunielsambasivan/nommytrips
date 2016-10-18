@@ -32,11 +32,11 @@ h1, h2, h3, .h1, .h2, .h3 {
 
 h1 {
     font-size: $font-size-h4;
-    
+
     @include respond-to(tablet) {
       font-size: $font-size-h3;
     }
-    
+
     @include respond-to(desktop) {
       font-size: $font-size-h1;
     }
@@ -44,11 +44,11 @@ h1 {
 
 h2 {
     font-size: $font-size-h5;
-    
+
     @include respond-to(tablet) {
       font-size: $font-size-h4;
     }
-    
+
     @include respond-to(desktop) {
       font-size: $font-size-h2;
     }
@@ -56,17 +56,17 @@ h2 {
 
 h3 {
     font-size: $font-size-h6;
-    
+
     @include respond-to(tablet) {
       font-size: $font-size-h5;
     }
-    
+
     @include respond-to(desktop) {
       font-size: $font-size-h3;
     }
 }
 
-h4 {    
+h4 {
   font-size: $font-size-h4;
 }
 
@@ -83,13 +83,14 @@ p {
 }
 
 a {
-    cursor:pointer;
+    cursor: pointer;
     color: $color-blue;
     outline: none !important;
     text-decoration: none;
 
     &:hover, &:active, &:focus {
         color: $color-blue-hover;
+        text-decoration: underline;
     }
 }
 

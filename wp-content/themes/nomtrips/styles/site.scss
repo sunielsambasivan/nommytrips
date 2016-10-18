@@ -12,6 +12,10 @@ External styles manifest
 //Vendors/3rd party
 @import "vendor/FontAwesome/font-awesome";
 
+//custom fonts
+@import "nomtrips/icons/nomtrips/variables";
+@import "nomtrips/icons/nomtrips/style";
+
 //mixins
 @import "nomtrips/scss/mixins";
 @import "nomtrips/scss/mixins_grid";
@@ -27,9 +31,13 @@ External styles manifest
 @import "nomtrips/scss/grid";
 
 //components
+@import "nomtrips/components/link";
 @import "nomtrips/components/off-canvas";
 @import "nomtrips/components/container";
+@import "nomtrips/components/form-elements";
 @import "nomtrips/components/map";
+@import "nomtrips/components/speech-bubble";
+@import "nomtrips/components/media-object--nomtip";
 @import "nomtrips/components/header";
 @import "nomtrips/components/footer";
 @import "nomtrips/components/logo--header";
@@ -42,6 +50,8 @@ External styles manifest
 @import "nomtrips/components/nav--off-canvas";
 @import "nomtrips/components/nav--itinerary";
 @import "nomtrips/components/icon-bar";
+@import "nomtrips/components/button-icon";
+@import "nomtrips/components/button-bar";
 @import "nomtrips/components/heading--section";
 @import "nomtrips/components/profile";
 @import "nomtrips/components/profile--header";
@@ -50,20 +60,27 @@ External styles manifest
 @import "nomtrips/components/content--post";
 @import "nomtrips/components/search";
 @import "nomtrips/components/buttons";
+@import "nomtrips/components/cards";
+@import "nomtrips/components/cards--carousel";
 @import "nomtrips/components/card";
 @import "nomtrips/components/card--city";
 @import "nomtrips/components/card--guide-featured";
 @import "nomtrips/components/card--list-select";
 @import "nomtrips/components/card--location";
+@import "nomtrips/components/card--restaurant";
+@import "nomtrips/components/card--dish";
 @import "nomtrips/components/map-overlay-list";
 @import "nomtrips/components/card-overlay";
 @import "nomtrips/components/list--location";
+@import "nomtrips/components/list--review";
 @import "nomtrips/components/dropdown-trigger";
 @import "nomtrips/components/indicator-likes";
 @import "nomtrips/components/social-icons";
 @import "nomtrips/components/social-icons--profile";
 @import "nomtrips/components/social-icons--footer";
 @import "nomtrips/components/paging";
+@import "nomtrips/components/breadcrumbs";
+@import "nomtrips/components/star-rating";
 
 //overrides
 @import "nomtrips/overrides/orbits";

@@ -1,0 +1,16 @@
+.breadcrumb {
+  width: 100%;
+  margin: $base-margin/2 0;
+}
+
+.breadcrumb--item {
+  color: $color-dark-blue;
+
+  a {
+    color: $color-teal;
+  }
+}
+
+.breadcrumb--divider {
+  color: $color-dark-blue;
+}

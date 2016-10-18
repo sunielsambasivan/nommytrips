@@ -61,7 +61,7 @@
 }
 
 /* center content vertically */
-@mixin center-vertically( $top: 50%, $translateY: -50%, $position: relative ) {
+@mixin center-vertically( $top: 50%, $translateY: -50%, $position: absolute ) {
     position: $position;
     top: $top;
     -moz-transform: translateY( $translateY );
@@ -109,9 +109,15 @@
 }
 
 @mixin card-shadow() {
-  -webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.1);
-  -moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.1);
-  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.1);
+  -webkit-box-shadow: $card-shadow;
+  -moz-box-shadow: $card-shadow;
+  box-shadow: $card-shadow;
+}
+
+@mixin text-shadow() {
+  -webkit-text-shadow: $text-shadow;
+  -moz-text-shadow: $text-shadow;
+  text-shadow: $text-shadow;
 }
 
 @mixin button-shadow() {
@@ -148,46 +154,6 @@
     color: $color;
     text-transform: none;
     letter-spacing: normal;
-}
-
-@mixin diamond( $w, $h, $color ) {
-    width: $w;
-    height: $h;
-    background: $color;
-    /* Rotate */
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    /* Rotate Origin */
-    -webkit-transform-origin: 0 100%;
-    -moz-transform-origin: 0 100%;
-    -ms-transform-origin: 0 100%;
-    -o-transform-origin: 0 100%;
-    transform-origin: 0 100%;
-}
-
-@mixin diamond-narrow( $w, $h, $color ) {
-    width: 0;
-    height: 0;
-    border: $h solid transparent;
-    border-bottom: $w solid $color;
-    position: relative;
-    top: -$h;
-
-    &:after {
-        content: '';
-        position: absolute;
-        left: -$h;
-        top: $w;
-        width: 0;
-        height: 0;
-        border: $h solid transparent;
-        border-top: $w solid $color;
-    }
-
-    ;
 }
 
 /** css transitions **/
@@ -248,101 +214,5 @@
 
     &::-ms-expand {
         display: none;
-    }
-}
-
-//overlay cta boxes
-@mixin overlay-items() {
-    .image {
-        background: black;
-
-        img {
-            opacity: .7;
-        }
-
-        &:hover {
-            background: none;
-
-            img {
-                opacity: 1;
-            }
-        }
-
-        &:focus {
-            img {
-                opacity: .9;
-            }
-        }
-    }
-
-    .title {
-        @include center-vertically(50%, -50%, absolute);
-        width: 100%;
-        padding: $base-padding/2;
-        color: white;
-
-        h3, a {
-            margin: 0;
-            text-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
-            color: white;
-        }
-
-        span {
-            font-size: inherit;
-        }
-    }
-}
-
-//media queries for specific elements
-@mixin mq-items() {
-    @include respond-to(mobile-tablet) {
-        margin-top: 0;
-        @include flex-wrap(wrap);
-
-        .item, .box {
-            margin: $grid-margin 0;
-        }
-
-        .title {
-            width: 100%;
-            padding: $base-padding/2;
-
-            h3 {
-                margin: 0;
-                font-size: $font-size-md-lg;
-            }
-
-            h4 {
-                margin-bottom: 0;
-                font-size: $font-size-sm;
-            }
-
-            span {
-                font-size: inherit;
-            }
-        }
-    }
-
-    @include respond-to(tablet) {
-        @include justify-content(space-around);
-
-        &.items, &.boxes {
-            .item, .box {
-                margin-right: 0;
-            }
-        }
-
-        &.flex-6 {
-            .title {
-                h3 {
-                    font-size: $font-size-xl;
-                }
-
-                h4 {
-                    margin-bottom: 0;
-                    font-size: $font-size-sm;
-                }
-            }
-        }
     }
 }
