@@ -1,7 +1,17 @@
 <?php
 /**
- * Description: creates a restaurant object by restaurant post id
+ *
 */
+
+/**
+ * Restaurant Class
+ *
+ * @file                 class-restaurant.php
+ * @package            NomTrips
+ * @author              Suniel Sambasivan
+ * @copyright           2016 Suniel Sambasivan
+ * @description         Creates a restaurant object by restaurant post id
+ */
 
 class Restaurant {
   public $restaurant_id;
