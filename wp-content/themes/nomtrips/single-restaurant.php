@@ -469,117 +469,120 @@ nt_debug($custom_vars);
             </div><!--end cards-->
 
             <div class="cards">
-              <div class="card">
-              <div class="list--location">
-
-                <!--list item-->
-                <div class="list--location--item">
-                  <div class="list--location--image">
-                    <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
-                    <img src="<?php echo esc_url($imgsrc[0]); ?>" />
-
-                    <div class="list--location--rating">
-                      <div class="indicator-likes">5</div>
-                    </div>
-                  </div>
-                  <div class="list--location--content">
-                    <div class="list--location--title">Ippudo NYC</div>
-
-                    <div class="list--location--location">
-                      <div class="list--location--map-pin fa fa-map-marker"></div>
-
-                      <ul class="list--location--address">
-                        <li>10022 intelligentsia marfa Ave</li>
-                        <li>New York, NY</li>
-                        <li>USA</li>
-                        <li>+905 394 1233</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <!--list item-->
-                <div class="list--location--item">
-                  <div class="list--location--image">
-                    <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
-                    <img src="<?php echo esc_url($imgsrc[0]); ?>" />
-
-                    <div class="list--location--rating">
-                      <div class="indicator-likes">5</div>
-                    </div>
-                  </div>
-
-                  <div class="list--location--content">
-                    <div class="list--location--title">Ippudo NYC</div>
-                    <div class="list--location--location">
-                      <div class="list--location--map-pin fa fa-map-marker"></div>
-
-                      <ul class="list--location--address">
-                        <li>10022 intelligentsia marfa Ave</li>
-                        <li>New York, NY</li>
-                        <li>USA</li>
-                        <li>+905 394 1233</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <!--list item-->
-                <div class="list--location--item">
-                  <div class="list--location--image">
-                    <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
-                    <img src="<?php echo esc_url($imgsrc[0]); ?>" />
-
-                    <div class="list--location--rating">
-                      <div class="indicator-likes">5</div>
-                    </div>
-                  </div>
-
-                  <div class="list--location--content">
-                    <div class="list--location--title">Ippudo NYC</div>
-
-                    <div class="list--location--location">
-                      <div class="list--location--map-pin fa fa-map-marker"></div>
-
-                      <ul class="list--location--address">
-                        <li>10022 intelligentsia marfa Ave</li>
-                        <li>New York, NY</li>
-                        <li>USA</li>
-                        <li>+905 394 1233</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <!--list item-->
-                <div class="list--location--item">
-                  <div class="list--location--image">
-                    <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
-                    <img src="<?php echo esc_url($imgsrc[0]); ?>" />
-
-                    <div class="list--location--rating">
-                      <div class="indicator-likes">5</div>
-                    </div>
-                  </div>
-
-                  <div class="list--location--content">
-                    <div class="list--location--title">Ippudo NYC</div>
-
-                    <div class="list--location--location">
-                      <div class="list--location--map-pin fa fa-map-marker"></div>
-
-                      <ul class="list--location--address">
-                        <li>10022 intelligentsia marfa Ave</li>
-                        <li>New York, NY</li>
-                        <li>USA</li>
-                        <li>+905 394 1233</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
+              <div class="cards--heading">
+                <h2 class="cards--title">Hot on Nomtrips</h2>
               </div>
-            </div>
+
+              <div class="card">
+                <div class="list--location">
+                  <!--list item-->
+                  <div class="list--location--item">
+                    <div class="list--location--image">
+                      <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
+                      <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+
+                      <div class="list--location--rating">
+                        <div class="indicator-likes">5</div>
+                      </div>
+                    </div>
+                    <div class="list--location--content">
+                      <div class="list--location--title">Ippudo NYC</div>
+
+                      <div class="list--location--location">
+                        <div class="list--location--map-pin fa fa-map-marker"></div>
+
+                        <ul class="list--location--address">
+                          <li>10022 intelligentsia marfa Ave</li>
+                          <li>New York, NY</li>
+                          <li>USA</li>
+                          <li>+905 394 1233</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--list item-->
+                  <div class="list--location--item">
+                    <div class="list--location--image">
+                      <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
+                      <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+
+                      <div class="list--location--rating">
+                        <div class="indicator-likes">5</div>
+                      </div>
+                    </div>
+
+                    <div class="list--location--content">
+                      <div class="list--location--title">Ippudo NYC</div>
+                      <div class="list--location--location">
+                        <div class="list--location--map-pin fa fa-map-marker"></div>
+
+                        <ul class="list--location--address">
+                          <li>10022 intelligentsia marfa Ave</li>
+                          <li>New York, NY</li>
+                          <li>USA</li>
+                          <li>+905 394 1233</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--list item-->
+                  <div class="list--location--item">
+                    <div class="list--location--image">
+                      <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
+                      <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+
+                      <div class="list--location--rating">
+                        <div class="indicator-likes">5</div>
+                      </div>
+                    </div>
+
+                    <div class="list--location--content">
+                      <div class="list--location--title">Ippudo NYC</div>
+
+                      <div class="list--location--location">
+                        <div class="list--location--map-pin fa fa-map-marker"></div>
+
+                        <ul class="list--location--address">
+                          <li>10022 intelligentsia marfa Ave</li>
+                          <li>New York, NY</li>
+                          <li>USA</li>
+                          <li>+905 394 1233</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--list item-->
+                  <div class="list--location--item">
+                    <div class="list--location--image">
+                      <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
+                      <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+
+                      <div class="list--location--rating">
+                        <div class="indicator-likes">5</div>
+                      </div>
+                    </div>
+
+                    <div class="list--location--content">
+                      <div class="list--location--title">Ippudo NYC</div>
+
+                      <div class="list--location--location">
+                        <div class="list--location--map-pin fa fa-map-marker"></div>
+
+                        <ul class="list--location--address">
+                          <li>10022 intelligentsia marfa Ave</li>
+                          <li>New York, NY</li>
+                          <li>USA</li>
+                          <li>+905 394 1233</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div><!--end list location-->
+              </div><!--end card-->
             </div><!--end cards-->
 
           </section>
