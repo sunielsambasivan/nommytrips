@@ -9906,9 +9906,14 @@ nav ul {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/components\/_list--location\.scss}line{font-family:\0000349}}
   .list--location--address li {
     font-size: 0.875rem;
-    line-height: 1rem; }
+    line-height: 1rem;
+    /* desktop */ }
+    @media only screen and (min-width: 64em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/components\/_list--location\.scss}line{font-family:\0000349}}
+      .list--location--address li {
+        max-width: 85%; } }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/components\/_list--location\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/components\/_list--location\.scss}line{font-family:\0000359}}
 .list--location--rating {
   position: absolute;
   top: 40px;
