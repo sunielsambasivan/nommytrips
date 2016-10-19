@@ -73,7 +73,7 @@
   override slick styling
   */
   @include flexbox(true);
-  @include flex-direction(column);
+  @include flex-direction(row);
 
   &.slick-slide {
     height: auto;
