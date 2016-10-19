@@ -24,6 +24,7 @@
 //if in carousel
 .cards--carousel {
   .card--dish {
-    @include flex(0 0 100%);
+    @include flex(1 1 100%);
+    @include flex-direction(column);
   }
 }

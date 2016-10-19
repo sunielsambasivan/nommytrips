@@ -9752,12 +9752,18 @@ nav ul {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/components\/_card--dish\.scss}line{font-family:\0000326}}
 .cards--carousel .card--dish {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 100%;
-  -moz-box-flex: 0;
-  -moz-flex: 0 0 100%;
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%; }
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 100%;
+  -moz-box-flex: 1;
+  -moz-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/components\/_map-overlay-list\.scss}line{font-family:\000031}}
 .map-overlay-list {
@@ -10172,8 +10178,8 @@ nav ul {
   justify-content: center; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/components\/_social-icons--profile\.scss}line{font-family:\000039}}
   .social-icons--profile--items .social-icons--icon {
-    margin-left: 0.625rem;
-    margin-right: 0.625rem;
+    margin-left: 0.3125rem;
+    margin-right: 0.3125rem;
     background: #418aca; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/components\/_social-icons--profile\.scss}line{font-family:\0000315}}
   .social-icons--profile--items .social-icons--icon > *:before {
@@ -10190,7 +10196,9 @@ nav ul {
     justify-content: flex-start; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/components\/_social-icons--profile\.scss}line{font-family:\0000324}}
     .social-icons--profile--items .social-icons--icon {
-      margin-left: 0; } }
+      margin-left: 0;
+      width: 40px;
+      height: 40px; } }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/components\/_paging\.scss}line{font-family:\000031}}
 .paging {
   margin-top: 0.625rem; }

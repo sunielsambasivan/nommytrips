@@ -30,9 +30,8 @@ $neighborhoods = get_the_terms(get_the_id(), 'neighborhood');
 $address = array();
 $address_string = '';
 
-nt_debug(new Restaurant());
-
 /*
+nt_debug($restaurant);
 nt_debug($state);
 nt_debug($city);
 nt_debug($custom_vars);
