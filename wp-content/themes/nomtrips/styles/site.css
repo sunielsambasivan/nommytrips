@@ -9743,9 +9743,10 @@ nav ul {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/components\/_card--dish\.scss}line{font-family:\000039}}
 .card--dish--title {
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  line-height: 1rem; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/components\/_card--dish\.scss}line{font-family:\0000313}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/components\/_card--dish\.scss}line{font-family:\0000314}}
 .card--dish--likes {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -9757,8 +9758,8 @@ nav ul {
   -webkit-align-items: center;
   -moz-align-items: center;
   align-items: center;
-  font-size: 0.75rem; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/components\/_card--dish\.scss}line{font-family:\0000318}}
+  font-size: 0.625rem; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/components\/_card--dish\.scss}line{font-family:\0000319}}
   .card--dish--likes:before {
     display: inline-block;
     content: "";
@@ -9771,7 +9772,7 @@ nav ul {
     -moz-osx-font-smoothing: grayscale;
     padding-right: 3px; }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/components\/_card--dish\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/components\/_card--dish\.scss}line{font-family:\0000327}}
 .cards--carousel .card--dish {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 100%;
