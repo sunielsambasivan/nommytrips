@@ -609,7 +609,7 @@ endif; ?>
 <script>
 var map;
 function initMap() {
-  var address = '<?php echo $address_string ?>';
+  var address = '<?php echo $restaurant->get_address_string(); ?>';
   var geocoder = new google.maps.Geocoder();
   geocoder.geocode({
       'address': address
