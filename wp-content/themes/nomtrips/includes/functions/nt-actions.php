@@ -1,14 +1,20 @@
 <?php
-/** Actions and filters
+/**
+  * Actions and filters
 **/
-// apply tags to attachments
+
+/**
+ * apply tags to attachments
+**/
 function nt_add_tags_to_attachments() {
     register_taxonomy_for_object_type( 'post_tag', 'attachment' );
 }
 add_action( 'init' , 'nt_add_tags_to_attachments' );
 
 
-//rewrite url filter restaurants, put city name in front
+/**
+ * rewrite url filter restaurants, put city name in front
+*/
 function restaurant_permalink($permalink, $post_id, $leavename) {
   if (strpos($permalink, '%city%') === FALSE) return $permalink;
     // Get post
@@ -25,4 +31,3 @@ function restaurant_permalink($permalink, $post_id, $leavename) {
 }
 add_filter('post_link', 'restaurant_permalink', 1, 3);
 add_filter('post_type_link', 'restaurant_permalink', 1, 3);
-

@@ -21,11 +21,9 @@ function nt_restaurant_metabox_add_buttons_callback( $restaurant ) {
     <tr>
       <td>Add Review</td>
       <td>
-          <a data-post-id="<?php echo $restaurant->ID; ?>" href="<?php echo get_admin_url() . '/post-new.php'; ?>" class="button">Add Review</a>
+          <a id="addReviewLinkAdmin" data-post-id="<?php echo $restaurant->ID; ?>" href="<?php echo get_admin_url() . '/post-new.php?rid=' . $restaurant->ID; ?>" class="button">Add Review</a>
       </td>
     </tr>
   </table>
-
 <?php
-//nt_debug();
 }

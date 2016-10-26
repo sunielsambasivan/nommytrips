@@ -10,6 +10,7 @@
 */
 
 require_once( 'nt-restaurant-fields.php' );
+require_once( 'nt-restaurant-actions.php' );
 require_once( 'nt-restaurant-add-buttons.php' );
 
 /**

@@ -1,13 +1,15 @@
 <?php
 
+/**
+* not logged in - public site
+**/
+
 if (!is_admin())
   add_action( 'wp_enqueue_scripts', 'nt_add_js' );
 
 function nt_add_js() {
   $template_directory_uri = get_template_directory_uri();
-  // JS at the bottom for fast page loading.
 
-  // except for Modernizr which enables HTML5 elements & feature detects.
   wp_enqueue_script( 'jquery');
   wp_enqueue_script( 'jquery-ui');
 
@@ -21,4 +23,16 @@ function nt_add_js() {
   //slick carousel
   wp_enqueue_script( 'slick', NT_JS_PATH . 'vendor/slick/slick.js', array('jquery'), '', true );
   wp_enqueue_script( 'slick-init', NT_JS_PATH . 'vendor/slick/slick-init.js', array('jquery'), '', true );
+}
+
+
+/**
+* admin section
+**/
+
+if (is_admin())
+  add_action( 'admin_enqueue_scripts', 'nt_add_js_admin' );
+
+function nt_add_js_admin() {
+  wp_enqueue_script( 'nt-admin-scripts', NT_JS_PATH . 'admin/nt-admin-scripts.js', array('jquery'), '', true );
 }
