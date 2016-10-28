@@ -19,6 +19,7 @@ $term_id = get_queried_object()->term_id;
 $term = get_term( $term_id, 'city' );
 $city = new City($term_id); //nt_debug($city);
 $address = $city->name .', '. $city->state;
+$nt_post = new Nomtrip_Post(29);
 ?>
 
 <div class="card-overlay">

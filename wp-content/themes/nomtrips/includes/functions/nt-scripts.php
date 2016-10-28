@@ -17,6 +17,9 @@ function nt_add_js() {
   wp_enqueue_script( 'foundation', NT_JS_PATH . 'vendor/foundation/foundation.js', array('jquery'), '', true );
   wp_enqueue_script( 'foundation-app', NT_JS_PATH . 'vendor/foundation/app.js', array('jquery'), '', true );
 
+  //https://github.com/scottjehl/picturefill
+  wp_enqueue_script( 'picturefill', NT_JS_PATH . 'vendor/picturefill/picturefill.js', array('jquery'), '', true );
+
   //responsive bg images (https://github.com/M6Web/picturefill-background)
   wp_enqueue_script( 'picturefill-background', NT_JS_PATH . 'vendor/picturefill-background/picturefill-background.js', array('jquery'), '', true );
 

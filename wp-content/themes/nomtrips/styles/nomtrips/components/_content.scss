@@ -20,7 +20,7 @@
   text-align: center;
 }
 
-.content--post {
+.content--post--home {
   padding-left: rem_calc($base-padding);
   padding-right: rem_calc($base-padding);
 }
@@ -31,6 +31,10 @@
   }
 }
 
+.content--by-line {
+  font-size: $font-size-sm;
+}
+
 /**
   page specific
 **/
@@ -39,7 +43,30 @@
   text-align: center;
 }
 
+.content--heading--post {
+  @include flexbox();
+  @include align-items(center);
+
+  .content--heading--title {
+    @include flex(0 1 auto);
+    font-family: $base-font-family;
+    font-size: rem_calc(20);
+    margin-bottom: 0;
+  }
+
+  .star-rating {
+    @include flex(0 1 auto);
+    padding: 0;
+  }
+
+  .content--by-line {
+    @include flex(0 0 100%);
+  }
+}
+
 .content--heading--restaurant {
+  @include flexbox();
+
   > * {
     @include flex(0 1 auto);
     @include align-self(center);

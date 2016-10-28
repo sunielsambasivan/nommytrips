@@ -17,6 +17,7 @@ require_once ( NT_INCLUDE_PATH . 'classes/class-custom-taxonomy.php' );
 require_once ( NT_INCLUDE_PATH . 'classes/class-banner.php' );
 require_once ( NT_INCLUDE_PATH . 'classes/class-city.php' );
 require_once ( NT_INCLUDE_PATH . 'classes/class-restaurant.php' );
+require_once ( NT_INCLUDE_PATH . 'classes/class-nomtrip-post.php' );
 
 /* menus */
 require_once ( NT_INCLUDE_PATH . 'functions/nt-menus.php' );

@@ -17,11 +17,9 @@ function nt_save_post_meta_restaurant( $post_id, $post, $update ) {
 
   if( !isset( $_GET['rid'] ) ) return;
 
-  nt_debug($_GET['rid']);die;
-
   add_post_meta( $post_id, 'restaurant_review', $_GET['rid'], true ) or
     update_post_meta( $post_id, 'restaurant_review', $_GET['rid'] );
 
-  //nt_debug($rowid); die;
+  //nt_debug($rowid);
 
 }

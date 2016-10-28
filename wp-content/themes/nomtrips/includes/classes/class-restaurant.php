@@ -96,6 +96,7 @@ class Restaurant {
     //city (taxonomy)
     $cities = get_the_terms( $this->restaurant_id, 'city' );
     $location->city = isset( $cities[0]->term_id ) ? $cities[0] : false;
+    $location->cityObject = $location->city ? new City($cities[0]->term_id ) : false;
 
     //state (nt_state-prov)
     $location->state = $location->city ? get_term_meta( $location->city->term_id, 'nt_state-prov', true ) :  false;

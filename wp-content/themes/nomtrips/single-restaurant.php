@@ -20,7 +20,6 @@ get_header(); ?>
 **/
 
 $restaurant = new Restaurant();
-
 $custom_vars = get_post_custom();
 $cities = get_the_terms(get_the_id(), 'city');
 $city = isset($cities[0]->term_id) ? $cities[0]->name : false;
@@ -32,9 +31,6 @@ $address_string = '';
 
 /*
 nt_debug($restaurant);
-nt_debug($state);
-nt_debug($city);
-nt_debug($custom_vars);
 */
 ?>
 
@@ -91,7 +87,6 @@ nt_debug($custom_vars);
                 <span class="button-bar--label">Write a Review</span>
               </a>
             </div>
-
           </section>
         </div><!--end of row-->
 
