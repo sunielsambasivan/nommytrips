@@ -2,6 +2,9 @@
 External styles manifest
 **/
 
+//flex mixins - needs to avail for foundation
+@import "nomtrips/scss/mixins_flexbox";
+
 //Foundation
 @import "vendor/foundation/foundation-flex";
 
@@ -17,9 +20,11 @@ External styles manifest
 @import "nomtrips/icons/nomtrips/style";
 
 //mixins
+
+//flex mixins - needs to avail for foundation
+@import "nomtrips/scss/mixins_flexbox";
 @import "nomtrips/scss/mixins";
 @import "nomtrips/scss/mixins_grid";
-@import "nomtrips/scss/mixins_flexbox";
 
 //nomtrip styles
 @import "nomtrips/scss/fonts";

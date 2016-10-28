@@ -15,7 +15,7 @@ $-zf-flex-align: (
 
 /// Enables flexbox by adding `display: flex` to the element.
 @mixin flex {
-  display: flex;
+  @include flexbox();
 }
 
 /// Horizontally or vertically aligns the items within a flex container.
@@ -42,7 +42,7 @@ $-zf-flex-align: (
   }
 
   justify-content: $x;
-  align-items: $y;
+  @include align-items($y);
 }
 
 /// Vertically align a single column within a flex row. Apply this mixin to a flex column.
@@ -64,5 +64,5 @@ $-zf-flex-align: (
 /// Changes the source order of a flex child. Children with lower numbers appear first in the layout.
 /// @param {Number} $order [0] - Order number to apply.
 @mixin flex-order($order: 0) {
-  order: $order;
+  @include order($order);
 }

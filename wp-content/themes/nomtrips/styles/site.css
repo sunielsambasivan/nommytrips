@@ -644,26 +644,50 @@ button {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
 .small-order-1 {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -moz-order: 1;
+  -ms-flex-order: 1;
   order: 1; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
 .small-order-2 {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  -moz-order: 2;
+  -ms-flex-order: 2;
   order: 2; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
 .small-order-3 {
+  -webkit-box-ordinal-group: 4;
+  -webkit-order: 3;
+  -moz-order: 3;
+  -ms-flex-order: 3;
   order: 3; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
 .small-order-4 {
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -moz-order: 4;
+  -ms-flex-order: 4;
   order: 4; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
 .small-order-5 {
+  -webkit-box-ordinal-group: 6;
+  -webkit-order: 5;
+  -moz-order: 5;
+  -ms-flex-order: 5;
   order: 5; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
 .small-order-6 {
+  -webkit-box-ordinal-group: 7;
+  -webkit-order: 6;
+  -moz-order: 6;
+  -ms-flex-order: 6;
   order: 6; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003223}}
@@ -851,26 +875,50 @@ button {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
   .medium-order-1 {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -moz-order: 1;
+    -ms-flex-order: 1;
     order: 1; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
   .medium-order-2 {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -moz-order: 2;
+    -ms-flex-order: 2;
     order: 2; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
   .medium-order-3 {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -moz-order: 3;
+    -ms-flex-order: 3;
     order: 3; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
   .medium-order-4 {
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+    -moz-order: 4;
+    -ms-flex-order: 4;
     order: 4; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
   .medium-order-5 {
+    -webkit-box-ordinal-group: 6;
+    -webkit-order: 5;
+    -moz-order: 5;
+    -ms-flex-order: 5;
     order: 5; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
   .medium-order-6 {
+    -webkit-box-ordinal-group: 7;
+    -webkit-order: 6;
+    -moz-order: 6;
+    -ms-flex-order: 6;
     order: 6; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003223}}
@@ -1068,26 +1116,50 @@ button {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
   .large-order-1 {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -moz-order: 1;
+    -ms-flex-order: 1;
     order: 1; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
   .large-order-2 {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -moz-order: 2;
+    -ms-flex-order: 2;
     order: 2; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
   .large-order-3 {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -moz-order: 3;
+    -ms-flex-order: 3;
     order: 3; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
   .large-order-4 {
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+    -moz-order: 4;
+    -ms-flex-order: 4;
     order: 4; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
   .large-order-5 {
+    -webkit-box-ordinal-group: 6;
+    -webkit-order: 5;
+    -moz-order: 5;
+    -ms-flex-order: 5;
     order: 5; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003216}}
   .large-order-6 {
+    -webkit-box-ordinal-group: 7;
+    -webkit-order: 6;
+    -moz-order: 6;
+    -ms-flex-order: 6;
     order: 6; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/grid\/_flex-grid\.scss}line{font-family:\00003223}}
@@ -4097,6 +4169,10 @@ table.hover tr:nth-of-type(even):hover {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000311}}
 .align-top {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
   align-items: flex-start; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000315}}
@@ -4105,6 +4181,10 @@ table.hover tr:nth-of-type(even):hover {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000311}}
 .align-bottom {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  -webkit-align-items: flex-end;
+  -moz-align-items: flex-end;
   align-items: flex-end; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000315}}
@@ -4113,6 +4193,10 @@ table.hover tr:nth-of-type(even):hover {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000311}}
 .align-middle {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
   align-items: center; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000315}}
@@ -4121,6 +4205,10 @@ table.hover tr:nth-of-type(even):hover {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000311}}
 .align-stretch {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
   align-items: stretch; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000315}}
@@ -4129,75 +4217,147 @@ table.hover tr:nth-of-type(even):hover {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
 .small-order-1 {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -moz-order: 1;
+  -ms-flex-order: 1;
   order: 1; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
 .small-order-2 {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  -moz-order: 2;
+  -ms-flex-order: 2;
   order: 2; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
 .small-order-3 {
+  -webkit-box-ordinal-group: 4;
+  -webkit-order: 3;
+  -moz-order: 3;
+  -ms-flex-order: 3;
   order: 3; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
 .small-order-4 {
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -moz-order: 4;
+  -ms-flex-order: 4;
   order: 4; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
 .small-order-5 {
+  -webkit-box-ordinal-group: 6;
+  -webkit-order: 5;
+  -moz-order: 5;
+  -ms-flex-order: 5;
   order: 5; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
 .small-order-6 {
+  -webkit-box-ordinal-group: 7;
+  -webkit-order: 6;
+  -moz-order: 6;
+  -ms-flex-order: 6;
   order: 6; }
 
 @media screen and (min-width: 40em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
   .medium-order-1 {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -moz-order: 1;
+    -ms-flex-order: 1;
     order: 1; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
   .medium-order-2 {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -moz-order: 2;
+    -ms-flex-order: 2;
     order: 2; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
   .medium-order-3 {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -moz-order: 3;
+    -ms-flex-order: 3;
     order: 3; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
   .medium-order-4 {
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+    -moz-order: 4;
+    -ms-flex-order: 4;
     order: 4; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
   .medium-order-5 {
+    -webkit-box-ordinal-group: 6;
+    -webkit-order: 5;
+    -moz-order: 5;
+    -ms-flex-order: 5;
     order: 5; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
   .medium-order-6 {
+    -webkit-box-ordinal-group: 7;
+    -webkit-order: 6;
+    -moz-order: 6;
+    -ms-flex-order: 6;
     order: 6; } }
 @media screen and (min-width: 64em) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
   .large-order-1 {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+    -moz-order: 1;
+    -ms-flex-order: 1;
     order: 1; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
   .large-order-2 {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -moz-order: 2;
+    -ms-flex-order: 2;
     order: 2; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
   .large-order-3 {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -moz-order: 3;
+    -ms-flex-order: 3;
     order: 3; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
   .large-order-4 {
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+    -moz-order: 4;
+    -ms-flex-order: 4;
     order: 4; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
   .large-order-5 {
+    -webkit-box-ordinal-group: 6;
+    -webkit-order: 5;
+    -moz-order: 5;
+    -ms-flex-order: 5;
     order: 5; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/vendor\/foundation\/scss\/components\/_flex\.scss}line{font-family:\0000323}}
   .large-order-6 {
+    -webkit-box-ordinal-group: 7;
+    -webkit-order: 6;
+    -moz-order: 6;
+    -ms-flex-order: 6;
     order: 6; } }
 /* variables */
 /*!
@@ -7507,8 +7667,8 @@ h1, h2, h3, .h1, .h2, .h3, .heading-font {
 .font-size-xxxs-strict, .micetype-strict {
   font-size: 0.6rem !important; }
 
-/* 
-    * Grid for non flexbox environments i.e. IE 9-     
+/*
+    * Grid for non flexbox environments i.e. IE 9-
     * fluid 12 col grid widths
     * classes for spacing and positioning
 */
@@ -7595,138 +7755,73 @@ h1, h2, h3, .h1, .h2, .h3, .heading-font {
 
 /*
     Flexbox classes
-*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/scss\/_grid\.scss}line{font-family:\0000391}}
 .flex {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/scss\/_grid\.scss}line{font-family:\0000395}}
-  .flex.flex-2 > * {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 14.8936170213%;
-    -moz-box-flex: 0;
-    -moz-flex: 0 0 14.8936170213%;
-    -ms-flex: 0 0 14.8936170213%;
-    flex: 0 0 14.8936170213%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/scss\/_grid\.scss}line{font-family:\0000399}}
-  .flex.flex-3 > * {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 23.4042553191%;
-    -moz-box-flex: 0;
-    -moz-flex: 0 0 23.4042553191%;
-    -ms-flex: 0 0 23.4042553191%;
-    flex: 0 0 23.4042553191%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/scss\/_grid\.scss}line{font-family:\00003103}}
-  .flex.flex-4 > * {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 31.914893617%;
-    -moz-box-flex: 0;
-    -moz-flex: 0 0 31.914893617%;
-    -ms-flex: 0 0 31.914893617%;
-    flex: 0 0 31.914893617%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/scss\/_grid\.scss}line{font-family:\00003107}}
-  .flex.flex-6 > * {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 48.9361702128%;
-    -moz-box-flex: 0;
-    -moz-flex: 0 0 48.9361702128%;
-    -ms-flex: 0 0 48.9361702128%;
-    flex: 0 0 48.9361702128%; }
+    @include flexbox();
+    @include flex-wrap(wrap);
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/scss\/_grid\.scss}line{font-family:\00003112}}
+    &.flex-2 > * {
+        //@include flex(0 0 $col2);
+    }
+
+    &.flex-3 > * {
+        @include flex(0 0 $col3);
+    }
+
+    &.flex-4 > * {
+        @include flex(0 0 $col4);
+    }
+
+    &.flex-6 > * {
+        @include flex(0 0 $col6);
+    }
+}
+
 .justify-center {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center; }
+    @include justify-content(center);
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/scss\/_grid\.scss}line{font-family:\00003116}}
 .justify-space-between {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  justify-content: space-between; }
+    @include justify-content(space-between);
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/scss\/_grid\.scss}line{font-family:\00003120}}
 .justify-space-around {
-  -ms-flex-pack: distribute;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  justify-content: space-around; }
+    @include justify-content(space-around);
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/scss\/_grid\.scss}line{font-family:\00003124}}
 .justify-flex-start {
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  justify-content: flex-start; }
+    @include justify-content(flex-start);
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/scss\/_grid\.scss}line{font-family:\00003128}}
 .justify-flex-end {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  -moz-justify-content: flex-end;
-  justify-content: flex-end; }
+    @include justify-content(flex-end);
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/scss\/_grid\.scss}line{font-family:\00003132}}
 .align-center {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  align-items: center; }
+    @include align-items(center);
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/scss\/_grid\.scss}line{font-family:\00003136}}
 .align-flex-end {
-  -webkit-box-align: end;
-  -ms-flex-align: end;
-  -webkit-align-items: flex-end;
-  -moz-align-items: flex-end;
-  align-items: flex-end; }
+    @include align-items(flex-end);
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/scss\/_grid\.scss}line{font-family:\00003140}}
 .align-stretch {
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  -webkit-align-items: stretch;
-  -moz-align-items: stretch;
-  align-items: stretch; }
+    @include align-items(stretch);
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/scss\/_grid\.scss}line{font-family:\00003144}}
 .align-baseline {
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  -webkit-align-items: baseline;
-  -moz-align-items: baseline;
-  align-items: baseline; }
+    @include align-items(baseline);
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/scss\/_grid\.scss}line{font-family:\00003148}}
 .wrap {
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+    @include flex-wrap(wrap);
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/scss\/_grid\.scss}line{font-family:\00003152}}
 .nowrap {
-  -webkit-flex-wrap: nowrap;
-  -moz-flex-wrap: nowrap;
-  -ms-flex-wrap: none;
-  flex-wrap: nowrap; }
-
-/** 
-  flex push 
+    @include flex-wrap(nowrap);
+}
+*/
+/**
+  flex push
 **/
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/sunielsambasivan\/CLIENTS\/NomTraveller\/src\/nomtrips\/wp-content\/themes\/nomtrips\/styles\/nomtrips\/scss\/_grid\.scss}line{font-family:\00003159}}
 .push-right {
