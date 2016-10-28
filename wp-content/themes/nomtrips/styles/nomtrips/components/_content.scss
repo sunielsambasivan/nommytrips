@@ -1,6 +1,5 @@
 .content {
-  padding-top: rem_calc($base-padding);
-  padding-bottom: rem_calc($base-padding);
+  padding: rem_calc($base-padding);
 }
 
 .content--heading {
@@ -18,11 +17,6 @@
 .content-desc {
   margin-bottom: rem_calc($base-margin);
   text-align: center;
-}
-
-.content--post--home {
-  padding-left: rem_calc($base-padding);
-  padding-right: rem_calc($base-padding);
 }
 
 .content--post > .row > .columns:last-child {
@@ -88,14 +82,15 @@
 **/
 
 @include respond-to(tablet) {
+  .content {
+    padding: rem_calc($base-padding* 1.5);
+  }
+
   .home .content {
-    padding-bottom: rem_calc($base-padding* 1.5);
+    padding: rem_calc($base-padding) rem_calc($base-padding) rem_calc($base-padding* 1.5);
   }
 }
 
 @include respond-to(desktop) {
-  .content--post {
-    padding-left: 0;
-    padding-right: 0;
-  }
+
 }
