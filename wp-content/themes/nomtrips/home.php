@@ -54,7 +54,7 @@ get_header(); ?>
               $current = City::get_city_by_slug( $city );
               $image_size = 'thumb-card';
               ?>
-                <article class="columns small-12 medium-6 card--city primary-content">
+                <article class="columns small-12 medium-6 card--city card--city--primary">
                   <?php
                     include( locate_template( NT_COMPONENTS_PATH .'cards/card--city.php') );
                   ?>
@@ -66,7 +66,7 @@ get_header(); ?>
               $current = City::get_city_by_slug( $city );
               $image_size = 'thumb-card';
               ?>
-                <article class="columns small-12 medium-6 card--city primary-content">
+                <article class="columns small-12 medium-6 card--city card--city--primary">
                   <?php
                     include( locate_template( NT_COMPONENTS_PATH .'cards/card--city.php') );
                   ?>
@@ -128,19 +128,19 @@ get_header(); ?>
 
       <div class="content--post--home">
         <div class="row">
-          <div class="columns small-12 medium-4">
+          <div class="columns small-12 medium-4 card--guides-featured">
             <?php
               include( locate_template( NT_COMPONENTS_PATH .'cards/card--guides-featured.php') );
             ?>
           </div>
 
-          <div class="columns small-12 medium-4">
+          <div class="columns small-12 medium-4 card--guides-featured">
             <?php
               include( locate_template( NT_COMPONENTS_PATH .'cards/card--guides-featured.php') );
             ?>
           </div>
 
-          <div class="columns small-12 medium-4">
+          <div class="columns small-12 medium-4 card--guides-featured">
             <?php
               include( locate_template( NT_COMPONENTS_PATH .'cards/card--guides-featured.php') );
             ?>

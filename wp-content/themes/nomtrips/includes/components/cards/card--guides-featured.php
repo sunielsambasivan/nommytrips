@@ -1,4 +1,4 @@
-<article class="card--guides-featured" href="#">
+<article class="card--guides-featured--item" href="#">
   <div class="card--guides-featured--image">
     <img src="<?php echo site_url(); ?>/wp-content/uploads/2016/09/feature_guide_placeholder.jpg" alt="Click to visit this guide" />
 

@@ -1,8 +1,21 @@
 .card--guides-featured {
+  @include flexbox();
+  margin-bottom: rem_calc($base-margin *1.5);
+
+  &:last-child {
+    margin-bottom: rem_calc($base-margin/2);
+  }
+}
+
+.card--guides-featured--item {
   @extend .card;
   @include flexbox();
   @include flex-flow(column);
-  margin-bottom: rem_calc($base-margin *2);
+  @include flex(0 1 100%);
+
+  .home & {
+    margin-bottom: 0;
+  }
 }
 
 .card--guides-featured--title,
@@ -45,6 +58,10 @@
 
 @include respond-to(tablet) {
   .card--guides-featured {
-    height: 100%;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

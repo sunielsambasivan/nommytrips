@@ -3,7 +3,8 @@ External styles manifest
 **/
 
 //flex mixins - needs to avail for foundation
-@import "nomtrips/scss/mixins_flexbox";
+//don't want to conflict with foundations flex mixins
+@import "nomtrips/scss/mixins_flexbox_prefixed";
 
 //Foundation
 @import "vendor/foundation/foundation-flex";

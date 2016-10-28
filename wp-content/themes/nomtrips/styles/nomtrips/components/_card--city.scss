@@ -1,5 +1,5 @@
 .card--city {
-  margin-bottom: rem_calc($base-margin *2);
+  margin-bottom: rem_calc($base-margin * 1.5);
 
   &:last-child {
     margin-bottom: 0;
@@ -39,8 +39,8 @@
     margin-bottom: 0;
   }
 
-  .card--city.primary-content {
-    margin-bottom: rem_calc($base-margin *2);
+  .card--city--primary {
+    margin-bottom: rem_calc($base-margin);
   }
 
   .card--city--container {
@@ -49,6 +49,10 @@
 }
 
 @include respond-to(desktop) {
+  .card--city--primary {
+    margin-bottom: rem_calc($base-margin *2);
+  }
+
   .card--city--image {
     height: auto;
   }
