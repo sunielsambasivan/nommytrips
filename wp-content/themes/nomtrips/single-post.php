@@ -57,7 +57,7 @@ $blog_page = in_category('blog');
         <i class="star-rating--star fa fa-star-o"></i>
         <i class="star-rating--star fa fa-star-o"></i>
       </div>
-      <div class="columns small-12 content--by-line">written by: <a href="#">vic</a> || <span class="content--date">October 20, 2016</span></div>
+      <div class="columns small-12 content--by-line">written by: <a href="#">vic</a> | <span class="content--date">October 20, 2016</span></div>
     </section>
 
     <!--post content section-->

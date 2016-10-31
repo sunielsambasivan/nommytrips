@@ -10224,21 +10224,24 @@ nav ul {
 /* line 21, nomtrips/components/_card--location.scss */
 .card--location--address {
   font-size: 0.875rem; }
+  /* line 24, nomtrips/components/_card--location.scss */
+  .cards--carousel--map-overlay .card--location--address {
+    width: 58%; }
 
-/* line 25, nomtrips/components/_card--location.scss */
+/* line 29, nomtrips/components/_card--location.scss */
 .card--location--icon-bar {
   font-size: 0.875rem;
   border: 1px solid rgba(43, 62, 80, 0.3);
   width: auto; }
-  /* line 30, nomtrips/components/_card--location.scss */
+  /* line 34, nomtrips/components/_card--location.scss */
   .card--location--icon-bar i {
     border-right: 1px solid rgba(43, 62, 80, 0.3);
     padding: 0.3125rem; }
-    /* line 34, nomtrips/components/_card--location.scss */
+    /* line 38, nomtrips/components/_card--location.scss */
     .card--location--icon-bar i:last-child {
       border-right: none; }
 
-/* line 40, nomtrips/components/_card--location.scss */
+/* line 44, nomtrips/components/_card--location.scss */
 .card--location--rating {
   position: absolute;
   top: 10px;

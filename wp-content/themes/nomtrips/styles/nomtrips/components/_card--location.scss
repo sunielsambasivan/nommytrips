@@ -20,6 +20,10 @@
 
 .card--location--address {
   font-size: $font-size-sm;
+
+  .cards--carousel--map-overlay & {
+    width: 58%;
+  }
 }
 
 .card--location--icon-bar {
