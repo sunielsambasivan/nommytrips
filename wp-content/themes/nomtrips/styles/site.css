@@ -7870,7 +7870,7 @@ body, html {
   color: #2b3e50; }
 
 /* line 26, nomtrips/scss/_base.scss */
-h1, h2, h3, .h1, .h2, .h3, h4, .h4 {
+h1, h2, h3, .h1, .h2, .h3 {
   margin-bottom: 0.625rem; }
 
 /* line 31, nomtrips/scss/_base.scss */
@@ -7925,33 +7925,34 @@ h5 {
 
 /* line 76, nomtrips/scss/_base.scss */
 h6 {
+  font-weight: bold;
   font-size: 1.125rem; }
 
-/* line 81, nomtrips/scss/_base.scss */
+/* line 82, nomtrips/scss/_base.scss */
 p {
   margin: 10px 0; }
 
-/* line 85, nomtrips/scss/_base.scss */
+/* line 86, nomtrips/scss/_base.scss */
 a {
   cursor: pointer;
   color: #418aca;
   outline: none !important;
   text-decoration: none; }
-  /* line 91, nomtrips/scss/_base.scss */
+  /* line 92, nomtrips/scss/_base.scss */
   a:hover, a:active, a:focus {
     color: #245681;
     text-decoration: underline; }
 
-/* line 97, nomtrips/scss/_base.scss */
+/* line 98, nomtrips/scss/_base.scss */
 ul {
   list-style-type: none;
   padding-left: 0; }
 
-/* line 102, nomtrips/scss/_base.scss */
+/* line 103, nomtrips/scss/_base.scss */
 img {
   max-width: 100%; }
 
-/* line 106, nomtrips/scss/_base.scss */
+/* line 107, nomtrips/scss/_base.scss */
 picture img {
   max-width: none;
   width: 100%; }
@@ -7960,12 +7961,12 @@ picture img {
     Typography
     **/
 /* line 5, nomtrips/scss/_type.scss */
-h1, h2, h3, .h1, .h2, .h3, h4, .h4, h5, h6, .heading-font {
+h1, h2, h3, .h1, .h2, .h3, h5, h6, .heading-font {
   font-family: "Open Sans Extra Bold", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   /* IE10-specific styles go here */ }
   @media screen and (min-width: 0\0) {
     /* line 5, nomtrips/scss/_type.scss */
-    h1, h2, h3, .h1, .h2, .h3, h4, .h4, h5, h6, .heading-font {
+    h1, h2, h3, .h1, .h2, .h3, h5, h6, .heading-font {
       font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; } }
 
 /* line 17, nomtrips/scss/_type.scss */
@@ -9657,22 +9658,39 @@ nav ul {
   margin-bottom: 1.25rem;
   text-align: center; }
 
-/* line 23, nomtrips/components/_content.scss */
+/* line 22, nomtrips/components/_content.scss */
+.content--post {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem; }
+
+/* line 28, nomtrips/components/_content.scss */
 .content--post > .row > .columns:last-child .card--city {
   margin-bottom: 0; }
 
-/* line 28, nomtrips/components/_content.scss */
+/* line 33, nomtrips/components/_content.scss */
 .content--by-line {
   font-size: 0.875rem; }
+
+/* line 37, nomtrips/components/_content.scss */
+.content--post-img {
+  position: relative; }
+
+/* line 41, nomtrips/components/_content.scss */
+.content--post-img-caption {
+  position: absolute;
+  bottom: 0;
+  padding: 0.625rem;
+  background: rgba(0, 0, 0, 0.2);
+  color: white; }
 
 /**
   page specific
 **/
-/* line 36, nomtrips/components/_content.scss */
+/* line 53, nomtrips/components/_content.scss */
 .home .content--heading {
   text-align: center; }
 
-/* line 40, nomtrips/components/_content.scss */
+/* line 57, nomtrips/components/_content.scss */
 .content--heading--post {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9684,7 +9702,7 @@ nav ul {
   -webkit-align-items: center;
   -moz-align-items: center;
   align-items: center; }
-  /* line 44, nomtrips/components/_content.scss */
+  /* line 61, nomtrips/components/_content.scss */
   .content--heading--post .content--heading--title {
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 auto;
@@ -9695,7 +9713,7 @@ nav ul {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.25rem;
     margin-bottom: 0; }
-  /* line 51, nomtrips/components/_content.scss */
+  /* line 68, nomtrips/components/_content.scss */
   .content--heading--post .star-rating {
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 auto;
@@ -9704,7 +9722,7 @@ nav ul {
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
     padding: 0; }
-  /* line 56, nomtrips/components/_content.scss */
+  /* line 73, nomtrips/components/_content.scss */
   .content--heading--post .content--by-line {
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 100%;
@@ -9713,14 +9731,14 @@ nav ul {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%; }
 
-/* line 61, nomtrips/components/_content.scss */
+/* line 78, nomtrips/components/_content.scss */
 .content--heading--restaurant {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex; }
-  /* line 64, nomtrips/components/_content.scss */
+  /* line 81, nomtrips/components/_content.scss */
   .content--heading--restaurant > * {
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 auto;
@@ -9732,13 +9750,13 @@ nav ul {
     -moz-align-self: center;
     -ms-flex-item-align: center;
     align-self: center; }
-  /* line 69, nomtrips/components/_content.scss */
+  /* line 86, nomtrips/components/_content.scss */
   .content--heading--restaurant .content--heading--title {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.25rem;
     margin-bottom: 0; }
 
-/* line 76, nomtrips/components/_content.scss */
+/* line 93, nomtrips/components/_content.scss */
 .content-desc--restaurant {
   margin-top: 1.25rem; }
 
@@ -9747,11 +9765,11 @@ nav ul {
 **/
 /* tablet */
 @media only screen and (min-width: 48rem) {
-  /* line 85, nomtrips/components/_content.scss */
+  /* line 102, nomtrips/components/_content.scss */
   .content {
     padding: 1.875rem; }
 
-  /* line 89, nomtrips/components/_content.scss */
+  /* line 106, nomtrips/components/_content.scss */
   .home .content {
     padding: 1.25rem 1.25rem 1.875rem; } }
 /* desktop */
@@ -10019,13 +10037,16 @@ nav ul {
   -webkit-align-items: center;
   -moz-align-items: center;
   align-items: center;
-  position: relative; }
+  position: relative;
+  -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); }
 
-/* line 17, nomtrips/components/_card--city.scss */
+/* line 18, nomtrips/components/_card--city.scss */
 .card--city--image {
   overflow: hidden; }
 
-/* line 21, nomtrips/components/_card--city.scss */
+/* line 22, nomtrips/components/_card--city.scss */
 .card--city--title {
   position: absolute;
   top: 50%;
@@ -10036,7 +10057,7 @@ nav ul {
   width: 100%;
   text-align: center;
   color: white; }
-  /* line 27, nomtrips/components/_card--city.scss */
+  /* line 28, nomtrips/components/_card--city.scss */
   .card--city--title * {
     margin-bottom: 0;
     color: white; }
@@ -10046,29 +10067,29 @@ nav ul {
 **/
 /* tablet */
 @media only screen and (min-width: 48rem) {
-  /* line 38, nomtrips/components/_card--city.scss */
+  /* line 39, nomtrips/components/_card--city.scss */
   .card--city {
     margin-bottom: 0; }
 
-  /* line 42, nomtrips/components/_card--city.scss */
+  /* line 43, nomtrips/components/_card--city.scss */
   .card--city--primary {
     margin-bottom: 1.25rem; }
 
-  /* line 46, nomtrips/components/_card--city.scss */
+  /* line 47, nomtrips/components/_card--city.scss */
   .card--city--container {
     height: 196px; } }
 /* desktop */
 @media only screen and (min-width: 62rem) {
-  /* line 52, nomtrips/components/_card--city.scss */
+  /* line 53, nomtrips/components/_card--city.scss */
   .card--city--primary {
     margin-bottom: 2.5rem; }
 
-  /* line 56, nomtrips/components/_card--city.scss */
+  /* line 57, nomtrips/components/_card--city.scss */
   .card--city--image {
     height: auto; }
 
-  /* line 60, nomtrips/components/_card--city.scss */
-  .primary-content .card--city--image {
+  /* line 61, nomtrips/components/_card--city.scss */
+  .card--city--primary .card--city--container {
     height: 350px; } }
 /* line 1, nomtrips/components/_card--guide-featured.scss */
 .card--guides-featured {
@@ -10329,8 +10350,11 @@ nav ul {
 /* line 56, nomtrips/components/_card--restaurant.scss */
 .card--restaurant--hours {
   line-height: 1.125rem; }
+  /* line 59, nomtrips/components/_card--restaurant.scss */
+  .card--restaurant--hours ul {
+    margin: 0; }
 
-/* line 60, nomtrips/components/_card--restaurant.scss */
+/* line 64, nomtrips/components/_card--restaurant.scss */
 .card--restaurant--hours:before {
   display: inline-block;
   content: "";

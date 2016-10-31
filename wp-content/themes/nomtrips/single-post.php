@@ -70,16 +70,23 @@ $blog_page = in_category('blog');
     <!--bookmark section-->
     <div class="row">
       <section class="columns small-12">
-        <div class="button-bar">
-          <a class="button-bar--btn fa fa-heart"></a>
-          <a class="button-bar--btn fa fa-bookmark"></a>
-          <a class="button-bar--btn button-bar--nt-icon">
-            <span class="icon-nomtrips-logomark"></span>
-            <span class="button-bar--label">Add to Trip</span>
+        <h5>Share</h5>
+        <div class="button-bar button-bar--social">
+          <a class="button-bar--btn">
+            <span class="fa fa-facebook"></span>
+            <span class="button-bar--label">Facebook</span>
           </a>
           <a class="button-bar--btn">
-            <span class="fa fa-pencil"></span>
-            <span class="button-bar--label">Write a Review</span>
+            <span class="fa fa-twitter"></span>
+            <span class="button-bar--label">Facebook</span>
+          </a>
+          <a class="button-bar--btn">
+            <span class="fa fa-envelope"></span>
+            <span class="button-bar--label">Email</span>
+          </a>
+          <a class="button-bar--btn">
+            <span class="fa fa-google"></span>
+            <span class="button-bar--label">Google</span>
           </a>
         </div>
       </section>
@@ -92,10 +99,159 @@ $blog_page = in_category('blog');
    <!--sidebar content section-->
    <div class="content columns small-12 medium-5 large-3">
 
+     <!--restaurant card-->
+     <div class="cards">
+       <?php include( locate_template( NT_COMPONENTS_PATH .'cards/card--restaurant.php') ); ?>
+     </div>
+
+     <!--Hot on Nomtrips-->
+      <div class="cards">
+        <div class="cards--heading">
+          <h2 class="cards--title">Hot on Nomtrips</h2>
+        </div>
+
+        <div class="card">
+          <div class="list--location">
+            <!--list item-->
+            <div class="list--location--item">
+              <div class="list--location--image">
+                <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
+                <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+
+                <div class="list--location--rating">
+                  <div class="indicator-likes">5</div>
+                </div>
+              </div>
+              <div class="list--location--content">
+                <div class="list--location--title">Ippudo NYC</div>
+
+                <div class="list--location--location">
+                  <div class="list--location--map-pin fa fa-map-marker"></div>
+
+                  <ul class="list--location--address">
+                    <li>10022 intelligentsia marfa Ave</li>
+                    <li>New York, NY</li>
+                    <li>USA</li>
+                    <li>+905 394 1233</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!--list item-->
+            <div class="list--location--item">
+              <div class="list--location--image">
+                <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
+                <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+
+                <div class="list--location--rating">
+                  <div class="indicator-likes">5</div>
+                </div>
+              </div>
+
+              <div class="list--location--content">
+                <div class="list--location--title">Ippudo NYC</div>
+                <div class="list--location--location">
+                  <div class="list--location--map-pin fa fa-map-marker"></div>
+
+                  <ul class="list--location--address">
+                    <li>10022 intelligentsia marfa Ave</li>
+                    <li>New York, NY</li>
+                    <li>USA</li>
+                    <li>+905 394 1233</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!--list item-->
+            <div class="list--location--item">
+              <div class="list--location--image">
+                <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
+                <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+
+                <div class="list--location--rating">
+                  <div class="indicator-likes">5</div>
+                </div>
+              </div>
+
+              <div class="list--location--content">
+                <div class="list--location--title">Ippudo NYC</div>
+
+                <div class="list--location--location">
+                  <div class="list--location--map-pin fa fa-map-marker"></div>
+
+                  <ul class="list--location--address">
+                    <li>10022 intelligentsia marfa Ave</li>
+                    <li>New York, NY</li>
+                    <li>USA</li>
+                    <li>+905 394 1233</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!--list item-->
+            <div class="list--location--item">
+              <div class="list--location--image">
+                <?php $imgsrc = wp_get_attachment_image_src( 103, 'thumb-food-sq' ); //nt_debug($imgsrc); ?>
+                <img src="<?php echo esc_url($imgsrc[0]); ?>" />
+
+                <div class="list--location--rating">
+                  <div class="indicator-likes">5</div>
+                </div>
+              </div>
+
+              <div class="list--location--content">
+                <div class="list--location--title">Ippudo NYC</div>
+
+                <div class="list--location--location">
+                  <div class="list--location--map-pin fa fa-map-marker"></div>
+
+                  <ul class="list--location--address">
+                    <li>10022 intelligentsia marfa Ave</li>
+                    <li>New York, NY</li>
+                    <li>USA</li>
+                    <li>+905 394 1233</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div><!--end list location-->
+        </div><!--end card-->
+      </div><!--end cards-->
+
    </div>
    <!--end sidebar content section-->
 
 </div>
 <!--end row-->
+
+<script>
+var map;
+function initMap() {
+  var address = '<?php echo $restaurant->get_address_string(); ?>';
+  var geocoder = new google.maps.Geocoder();
+  geocoder.geocode({
+      'address': address
+  }, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      var Lat = results[0].geometry.location.lat();
+      var Lng = results[0].geometry.location.lng();
+      var myOptions = {
+        zoom: 11,
+        center: new google.maps.LatLng(Lat, Lng)
+      };
+      var map = new google.maps.Map(
+        document.getElementById("map"), myOptions);
+    } else {
+      alert("Something got wrong " + status);
+    }
+  });
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ81efbEIFdgwhEpO3rShce8gtN-9ahQA&callback=initMap" async defer></script>
 
 <?php get_footer(); ?>

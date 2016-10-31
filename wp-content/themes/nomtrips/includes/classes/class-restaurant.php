@@ -215,9 +215,11 @@ class Restaurant {
       $results = array();
       foreach( $cuisines->terms as $c ) {
         $results[] = $c->name;
+        $urls[] = array( $c->name, get_term_link( $c->term_id, 'cuisine' ) );
       }
 
       $cuisines->string = implode( ', ', $results );
+      $cuisines->urls = $urls;
     }
 
     return $cuisines;
@@ -275,11 +277,14 @@ class Restaurant {
     //cuisines for a restaurant as comma separated string
     if( !empty( $dining_types->terms ) ) {
       $results = array();
+      $urls = array();
       foreach( $dining_types->terms as $d ) {
         $results[] = $d->name;
+        $urls[] = array( $d->name, get_term_link( $d->term_id, 'restaurant_type' ) );
       }
 
       $dining_types->string = implode( ', ', $results );
+      $dining_types->urls = $urls;
     }
 
     return $dining_types;

@@ -26,6 +26,9 @@ function nt_add_js() {
   //slick carousel
   wp_enqueue_script( 'slick', NT_JS_PATH . 'vendor/slick/slick.js', array('jquery'), '', true );
   wp_enqueue_script( 'slick-init', NT_JS_PATH . 'vendor/slick/slick-init.js', array('jquery'), '', true );
+
+  //nomtrip scripts
+  wp_enqueue_script( 'nt-script', NT_JS_PATH . 'nomtrips/nt_script.js', array('jquery'), '', true );
 }
 
 

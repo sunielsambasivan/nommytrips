@@ -55,6 +55,10 @@
 
 .card--restaurant--hours {
   line-height: $font-size-md-lg;
+
+  ul {
+    margin: 0;
+  }
 }
 
 .card--restaurant--hours:before {

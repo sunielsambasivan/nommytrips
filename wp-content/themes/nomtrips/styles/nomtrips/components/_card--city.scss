@@ -12,6 +12,7 @@
   @include justify-content(center);
   @include align-items(center);
   position: relative;
+  @include card-shadow();
 }
 
 .card--city--image {
@@ -57,7 +58,7 @@
     height: auto;
   }
 
-  .primary-content .card--city--image {
+  .card--city--primary .card--city--container {
     height: 350px;
   }
 }

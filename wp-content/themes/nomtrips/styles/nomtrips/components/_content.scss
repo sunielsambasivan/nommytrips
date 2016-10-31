@@ -19,6 +19,11 @@
   text-align: center;
 }
 
+.content--post {
+  padding-top: rem_calc($base-padding);
+  padding-bottom: rem_calc($base-padding);
+}
+
 .content--post > .row > .columns:last-child {
   .card--city {
     margin-bottom: 0;
@@ -27,6 +32,18 @@
 
 .content--by-line {
   font-size: $font-size-sm;
+}
+
+.content--post-img {
+  position: relative;
+}
+
+.content--post-img-caption {
+  position: absolute;
+  bottom: 0;
+  padding: rem_calc($base-padding /2);
+  background: rgba(black, .2);
+  color: white;
 }
 
 /**

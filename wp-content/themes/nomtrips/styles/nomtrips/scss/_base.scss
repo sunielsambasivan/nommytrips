@@ -23,7 +23,7 @@ body, html {
     color: $color-dark-blue;
 }
 
-h1, h2, h3, .h1, .h2, .h3, h4, .h4 {
+h1, h2, h3, .h1, .h2, .h3{
     @extend %heading-font;
     margin-bottom: rem_calc($base-margin /2);
 }
@@ -75,6 +75,7 @@ h5 {
 
 h6 {
   @extend %heading-font;
+    font-weight: bold;
     font-size: $font-size-h6;
 }
 

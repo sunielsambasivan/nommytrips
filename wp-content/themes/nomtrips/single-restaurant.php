@@ -20,14 +20,6 @@ get_header(); ?>
 **/
 
 $restaurant = new Restaurant();
-$custom_vars = get_post_custom();
-$cities = get_the_terms(get_the_id(), 'city');
-$city = isset($cities[0]->term_id) ? $cities[0]->name : false;
-$state = isset($cities[0]->term_id) ? get_term_meta($cities[0]->term_id, 'nt_state-prov', true) :  false;
-$cuisines = get_the_terms(get_the_id(), 'cuisine');
-$neighborhoods = get_the_terms(get_the_id(), 'neighborhood');
-$address = array();
-$address_string = '';
 
 /*
 nt_debug($restaurant);
