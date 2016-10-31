@@ -23,7 +23,6 @@ $address = $city->name .', '. $city->state;
 ?>
 
 <div class="card-overlay">
-
   <div class="dropdown-trigger card" type="button" data-toggle="city-info">
     <div class="dropdown-trigger--title"><?php echo $city->name; ?></div>
     <button class="dropdown-trigger--menu-icon" type="button" data-toggle></button>
@@ -47,8 +46,10 @@ $address = $city->name .', '. $city->state;
 </div>
 
 <?php
-$carousel = new Carousel('restaurant', 5, 'city', array($city->slug));
-//nt_debug($carousel->posts->have_posts()); die;
+/**
+ * show the carousel of restuarants of this city
+**/
+$carousel = new Carousel( 'restaurant', 5, 'city', array($city->slug) );
 $carousel->show_posts('map-overlay');
 ?>
 
