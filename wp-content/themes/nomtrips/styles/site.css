@@ -10339,25 +10339,31 @@ nav ul {
   -moz-osx-font-smoothing: grayscale; }
 
 /* line 52, nomtrips/components/_card--restaurant.scss */
-.card--restaurant--cuisine:before {
-  display: inline-block;
-  content: "";
-  color: #2b3e50;
-  font-family: 'FontAwesome';
-  font-size: inherit;
-  font-style: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+.card--restaurant--cuisine {
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  /* line 55, nomtrips/components/_card--restaurant.scss */
+  .card--restaurant--cuisine:before {
+    display: inline-block;
+    content: "";
+    color: #2b3e50;
+    font-family: 'FontAwesome';
+    font-size: inherit;
+    font-style: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
 
-/* line 56, nomtrips/components/_card--restaurant.scss */
+/* line 60, nomtrips/components/_card--restaurant.scss */
 .card--restaurant--hours {
   line-height: 1.125rem; }
-  /* line 59, nomtrips/components/_card--restaurant.scss */
+  /* line 63, nomtrips/components/_card--restaurant.scss */
   .card--restaurant--hours ul {
     margin: 0; }
 
-/* line 64, nomtrips/components/_card--restaurant.scss */
+/* line 68, nomtrips/components/_card--restaurant.scss */
 .card--restaurant--hours:before {
   display: inline-block;
   content: "";

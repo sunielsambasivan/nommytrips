@@ -49,8 +49,12 @@
   @include icon-font-fa($fa-var-money);
 }
 
-.card--restaurant--cuisine:before {
-  @include icon-font-fa($fa-var-cutlery);
+.card--restaurant--cuisine {
+  @include flex-wrap(wrap);
+
+  &:before {
+    @include icon-font-fa($fa-var-cutlery);
+  }
 }
 
 .card--restaurant--hours {
