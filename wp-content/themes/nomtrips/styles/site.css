@@ -8554,7 +8554,7 @@ Framework classes
   - container for map pages (city pages)
   - stretch the #main to remainder of viewport height using flexboxs
 **/
-/* line 6, nomtrips/components/_container.scss */
+/* line 7, nomtrips/components/_container.scss */
 .tax-city #container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8565,8 +8565,13 @@ Framework classes
   -moz-flex-flow: column;
   -ms-flex-flow: column;
   flex-flow: column;
-  height: 100%; }
-  /* line 11, nomtrips/components/_container.scss */
+  height: 100%;
+  /* tablet */ }
+  @media only screen and (min-width: 48rem) {
+    /* line 7, nomtrips/components/_container.scss */
+    .tax-city #container {
+      height: 100vh; } }
+  /* line 16, nomtrips/components/_container.scss */
   .tax-city #container #head, .tax-city #container #footer {
     -webkit-box-flex: 0;
     -webkit-flex: 0 1 auto;
@@ -8574,13 +8579,13 @@ Framework classes
     -moz-flex: 0 1 auto;
     -ms-flex: 0 1 auto;
     flex: 0 1 auto; }
-  /* line 15, nomtrips/components/_container.scss */
+  /* line 20, nomtrips/components/_container.scss */
   .tax-city #container #head {
     min-height: 77px; }
-  /* line 19, nomtrips/components/_container.scss */
+  /* line 24, nomtrips/components/_container.scss */
   .tax-city #container #footer {
     padding: 0; }
-  /* line 23, nomtrips/components/_container.scss */
+  /* line 28, nomtrips/components/_container.scss */
   .tax-city #container #main {
     -webkit-box-flex: 1;
     -webkit-flex: 1 0 auto;
@@ -8601,7 +8606,7 @@ Framework classes
     position: relative;
     /* tablet */ }
     @media only screen and (min-width: 48rem) {
-      /* line 23, nomtrips/components/_container.scss */
+      /* line 28, nomtrips/components/_container.scss */
       .tax-city #container #main {
         -webkit-box-flex: 1;
         -webkit-flex: 1 1 auto;
@@ -9885,7 +9890,7 @@ nav ul {
   /* line 51, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--container .slick-dots button:before {
     display: inline-block;
-    content: "";
+    content: "";
     color: #2b3e50;
     font-family: 'FontAwesome';
     font-size: 1rem;
@@ -9898,7 +9903,7 @@ nav ul {
   /* line 59, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--container .slick-dots .slick-active button:before {
     display: inline-block;
-    content: "";
+    content: "";
     color: #2b3e50;
     font-family: 'FontAwesome';
     font-size: 1rem;
@@ -10207,41 +10212,42 @@ nav ul {
 /* line 1, nomtrips/components/_card--location.scss */
 .card--location {
   position: relative;
+  width: 100%;
   padding: 1.25rem;
   background: white; }
-  /* line 7, nomtrips/components/_card--location.scss */
+  /* line 8, nomtrips/components/_card--location.scss */
   .card--location ul {
     margin: 0; }
 
-/* line 12, nomtrips/components/_card--location.scss */
+/* line 13, nomtrips/components/_card--location.scss */
 .card--location--title {
   color: #4db6ac;
   font-size: 0.875rem; }
-  /* line 16, nomtrips/components/_card--location.scss */
+  /* line 17, nomtrips/components/_card--location.scss */
   .card--location--title a {
     color: #4db6ac; }
 
-/* line 21, nomtrips/components/_card--location.scss */
+/* line 22, nomtrips/components/_card--location.scss */
 .card--location--address {
   font-size: 0.875rem; }
-  /* line 24, nomtrips/components/_card--location.scss */
+  /* line 25, nomtrips/components/_card--location.scss */
   .cards--carousel--map-overlay .card--location--address {
     width: 58%; }
 
-/* line 29, nomtrips/components/_card--location.scss */
+/* line 30, nomtrips/components/_card--location.scss */
 .card--location--icon-bar {
   font-size: 0.875rem;
   border: 1px solid rgba(43, 62, 80, 0.3);
   width: auto; }
-  /* line 34, nomtrips/components/_card--location.scss */
+  /* line 35, nomtrips/components/_card--location.scss */
   .card--location--icon-bar i {
     border-right: 1px solid rgba(43, 62, 80, 0.3);
     padding: 0.3125rem; }
-    /* line 38, nomtrips/components/_card--location.scss */
+    /* line 39, nomtrips/components/_card--location.scss */
     .card--location--icon-bar i:last-child {
       border-right: none; }
 
-/* line 44, nomtrips/components/_card--location.scss */
+/* line 45, nomtrips/components/_card--location.scss */
 .card--location--rating {
   position: absolute;
   top: 10px;
@@ -10432,27 +10438,26 @@ nav ul {
   margin: auto;
   left: 0;
   bottom: 1.25rem;
-  z-index: 99999;
-  /* desktop */ }
-  @media only screen and (min-width: 62rem) {
-    /* line 1, nomtrips/components/_map-overlay-list.scss */
-    .map-overlay-list {
-      left: 2.5rem; } }
+  z-index: 99999; }
 
-/* line 14, nomtrips/components/_map-overlay-list.scss */
+/* line 10, nomtrips/components/_map-overlay-list.scss */
 .map-overlay-list--slides {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex; }
-  /* line 17, nomtrips/components/_map-overlay-list.scss */
+  /* line 13, nomtrips/components/_map-overlay-list.scss */
   .map-overlay-list--slides li {
     list-style-type: none;
     margin-right: 0.625rem; }
 
 /* tablet */
 @media only screen and (min-width: 48rem) {
+  /* line 20, nomtrips/components/_map-overlay-list.scss */
+  .map-overlay-list {
+    padding: 1.25rem; }
+
   /* line 25, nomtrips/components/_map-overlay-list.scss */
   .map-overlay-list--slides li {
     margin-right: 2.5rem; } }
@@ -10710,12 +10715,17 @@ nav ul {
 /* line 15, nomtrips/components/_dropdown-trigger.scss */
 .dropdown-pane {
   width: 100%;
-  /* tablet */
   /* desktop */ }
-  @media only screen and (min-width: 48rem) {
-    /* line 15, nomtrips/components/_dropdown-trigger.scss */
-    .dropdown-pane {
-      width: 35%; } }
+  /* line 18, nomtrips/components/_dropdown-trigger.scss */
+  .nav--logged-in .dropdown-pane {
+    -webkit-box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.1);
+    /* tablet */ }
+    @media only screen and (min-width: 48rem) {
+      /* line 18, nomtrips/components/_dropdown-trigger.scss */
+      .nav--logged-in .dropdown-pane {
+        width: 35%; } }
   @media only screen and (min-width: 62rem) {
     /* line 15, nomtrips/components/_dropdown-trigger.scss */
     .dropdown-pane {

@@ -37,6 +37,7 @@ class Restaurant {
       if( !get_the_id() ) {
         $this->restaurant_id = false;
         $this->error = 'Could not retrieve post ID';
+        throw new Exception($this->error);
       }
 
       else {
@@ -48,9 +49,10 @@ class Restaurant {
     }
 
     else {
-      if( !$status = get_post_status ( $id ) ) {
+      if( !$status = get_post_status( $id ) ) {
         $this->restaurant_id = false;
         $this->error = 'Invalid ID';
+        throw new Exception($this->error);
       }
 
       else {

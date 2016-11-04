@@ -5,19 +5,19 @@ Declare fields for restaurant content type
 */
 
 add_action( 'custom_metadata_manager_init_metadata', function() {
-  
+
   $post_types = array( 'restaurant' );
-  
+
   $rest_form = new Custom_Metadata_Form( 'rest-form', $post_types );
-  
+
   $rest_form->set_form_item( array(
-    'name' => 'nt_cpt_restaurant_info', 
+    'name' => 'nt_cpt_restaurant_info',
     'item_type' => 'metabox',
     'fields' => array(
-      'label' => 'Restaurant Info', 
+      'label' => 'Restaurant Info',
       )
   ) );
-  
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_building_no',
     'item_type' => 'field',
@@ -26,7 +26,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'label' => 'Building No.',
     )
   ) );
-  
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_street',
     'item_type' => 'field',
@@ -35,7 +35,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'label' => 'Street Address',
     )
   ) );
-  
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_suite_no',
     'item_type' => 'field',
@@ -44,7 +44,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'label' => 'Suite No.',
     )
   ) );
-  
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_zip',
     'item_type' => 'field',
@@ -54,7 +54,8 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'label' => 'Zip/Postal',
     )
   ) );
-  
+
+  /* dont think these are needed now
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_ph',
     'item_type' => 'field',
@@ -64,7 +65,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'label' => 'Location Phone No.',
     )
   ) );
-  
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_email',
     'item_type' => 'field',
@@ -74,7 +75,8 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'label' => 'location email',
     )
   ) );
-  
+  */
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_cost',
     'item_type' => 'field',
@@ -90,7 +92,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       )
     )
   ) );
-  
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_rating',
     'item_type' => 'field',
@@ -111,12 +113,12 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       )
     )
   ) );
-  
+
   $rest_form->set_form_item( array(
-    'name' => 'nt_cpt_rest_menu', 
+    'name' => 'nt_cpt_rest_menu',
     'item_type' => 'metabox',
     'fields' => array(
-      'label' => 'Menu', 
+      'label' => 'Menu',
       )
   ) );
 
@@ -131,13 +133,13 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
   ) );
 
   $rest_form->set_form_item( array(
-    'name' => 'nt_cpt_restaurant_hours', 
+    'name' => 'nt_cpt_restaurant_hours',
     'item_type' => 'metabox',
     'fields' => array(
-      'label' => 'Hours of Operation', 
+      'label' => 'Hours of Operation',
       )
   ) );
-  
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_rest_hrs_m_f',
     'item_type' => 'field',
@@ -146,7 +148,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'label' => 'Mon-Fri',
     )
   ) );
-  
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_rest_hrs_s_s',
     'item_type' => 'field',
@@ -155,7 +157,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'label' => 'Sat-Sun',
     )
   ) );
-  
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_rest_hrs_all',
     'item_type' => 'field',
@@ -164,7 +166,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'label' => 'All Days',
     )
   ) );
-  
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_rest_hrs_mon',
     'item_type' => 'field',
@@ -173,7 +175,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'label' => 'Mon'
     )
   ) );
-  
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_rest_hrs_tue',
     'item_type' => 'field',
@@ -182,7 +184,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'label' => 'Tue'
     )
   ) );
-  
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_rest_hrs_wed',
     'item_type' => 'field',
@@ -191,7 +193,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'label' => 'Wed'
     )
   ) );
-  
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_rest_hrs_thu',
     'item_type' => 'field',
@@ -200,7 +202,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'label' => 'Thu'
     )
   ) );
-  
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_rest_hrs_fri',
     'item_type' => 'field',
@@ -209,7 +211,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'label' => 'Fri'
     )
   ) );
-  
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_rest_hrs_sat',
     'item_type' => 'field',
@@ -218,7 +220,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'label' => 'Sat'
     )
   ) );
-  
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_rest_hrs_sun',
     'item_type' => 'field',
@@ -227,7 +229,7 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'label' => 'Sun'
     )
   ) );
-  
+
   $rest_form->set_form_item( array(
     'name' => 'nt_cpt_rest_hrs_holidays',
     'item_type' => 'field',
@@ -236,6 +238,6 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
       'label' => 'Holidays'
       )
   ) );
-  
+
   $rest_form->print_form();
 });

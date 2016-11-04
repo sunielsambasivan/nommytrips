@@ -29,11 +29,10 @@ class Carousel
 
   public function get_posts() {
     //see if taxonomy terms supplied
-    $tax_query = array();
-    if( !empty($terms) ) {
+    if( !empty($this->terms) ) {
       $tax_query = array(
         array(
-          'taxonomy' => $taxonomy,
+          'taxonomy' => $this->taxonomy,
           'field' => 'slug',
           'terms' => $this->terms
         )

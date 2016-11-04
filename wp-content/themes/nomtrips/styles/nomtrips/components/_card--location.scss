@@ -1,6 +1,7 @@
 .card--location {
   @extend .card;
   position: relative;
+  width: 100%;
   padding: rem_calc($base-padding);
   background: white;
 

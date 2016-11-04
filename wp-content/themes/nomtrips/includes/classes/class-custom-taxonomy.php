@@ -9,9 +9,15 @@ class Custom_Taxonomy {
   public $taxonomy_args;
   public $taxonomy_capabilities;
   public $taxonomy_labels;
+  public $error;
 
   /* Class constructor */
   public function __construct( $name = null, $post_types = array(), $args = array(), $capabilities = array(), $labels = array() ) {
+
+    if( $name == null || empty( $post_types ) ) {
+      $this->error = "No name or post_type specified";
+      throw new Exception( $this->error );
+    }
 
     $this->taxonomy_name = Custom_Post_Type::uglify( $name );
     $this->taxonomy_post_types = $post_types;

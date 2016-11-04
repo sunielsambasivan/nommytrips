@@ -27,10 +27,6 @@ jQuery(document).ready( function( $ ) {
       //add caption and image to image div
       $(this).appendTo(imageDiv);
       $(captionDiv).appendTo(imageDiv);
-
-      //sometimes caption is wider than image
-      //var imgWidth = this.width;
-      //$(captionDiv).width(imgWidth);
     }
   });
 

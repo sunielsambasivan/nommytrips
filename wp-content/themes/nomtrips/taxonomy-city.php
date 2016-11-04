@@ -14,10 +14,7 @@ if ( !defined('ABSPATH')) exit;
  */
 
 get_header();
-
-$term_id = get_queried_object()->term_id;
-$term = get_term( $term_id, 'city' );
-$city = new City($term_id); //nt_debug($city);
+$city = new City(); //nt_debug($city);
 $address = $city->name .', '. $city->state;
 
 ?>
@@ -49,7 +46,7 @@ $address = $city->name .', '. $city->state;
 /**
  * show the carousel of restuarants of this city
 **/
-$carousel = new Carousel( 'restaurant', 5, 'city', array($city->slug) );
+$carousel = new Carousel( 'restaurant', 10, 'city', array($city->slug) );
 $carousel->show_posts('map-overlay');
 ?>
 
