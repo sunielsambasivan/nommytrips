@@ -8826,13 +8826,14 @@ form :-moz-placeholder {
   -moz-justify-content: space-between;
   justify-content: space-between;
   height: 77px;
+  padding: 0;
   background: #4db6ac;
   color: white; }
-  /* line 9, nomtrips/components/_header.scss */
+  /* line 10, nomtrips/components/_header.scss */
   .header a {
     color: white; }
 
-/* line 14, nomtrips/components/_header.scss */
+/* line 15, nomtrips/components/_header.scss */
 .header--contents {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -8864,29 +8865,37 @@ form :-moz-placeholder {
 /**
   responsive
 **/
-/* tablet */
-@media only screen and (min-width: 48rem) {
-  /* line 39, nomtrips/components/_header.scss */
-  .tax-city .header--contents {
-    max-width: none;
-    width: 100%;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 100%;
-    -moz-box-flex: 0;
-    -moz-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%; } }
 /* desktop */
 @media only screen and (min-width: 85.375rem) {
-  /* line 48, nomtrips/components/_header.scss */
+  /* line 32, nomtrips/components/_header.scss */
   .header--contents {
     width: 85.375rem;
-    flex: 0 0 85.375rem; } }
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 85.375rem;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 85.375rem;
+    -ms-flex: 0 0 85.375rem;
+    flex: 0 0 85.375rem; }
+    /* line 37, nomtrips/components/_header.scss */
+    .tax-city .header--contents {
+      max-width: none;
+      width: 100%;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 100%;
+      -moz-box-flex: 0;
+      -moz-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%; } }
 /* desktop */
 @media only screen and (min-width: 100rem) {
-  /* line 55, nomtrips/components/_header.scss */
+  /* line 46, nomtrips/components/_header.scss */
   .header--contents {
     width: 100rem;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100rem;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 100rem;
+    -ms-flex: 0 0 100rem;
     flex: 0 0 100rem; } }
 /* line 1, nomtrips/components/_footer.scss */
 .footer {
@@ -8924,10 +8933,16 @@ form :-moz-placeholder {
     -webkit-margin-before: 0;
     -webkit-margin-after: 0; }
 
-@media screen and (tablet) {
+/* tablet */
+@media only screen and (min-width: 48rem) {
   /* line 21, nomtrips/components/_logo--header.scss */
   .logo--header svg {
     width: 100%; } }
+/* desktop */
+@media only screen and (min-width: 62rem) {
+  /* line 28, nomtrips/components/_logo--header.scss */
+  .logo--header {
+    padding-right: 6.25rem; } }
 /* line 1, nomtrips/components/_logo--footer.scss */
 .logo--footer {
   display: block;

@@ -1,7 +1,7 @@
 .logo--header {
   display: block;
   line-height: 1rem;
-  
+
   svg {
     width: 80%;
   }
@@ -9,17 +9,23 @@
 
 #logo {
   margin-bottom: 0;
-  
+
   & h1 {
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
   }
 }
 
-@media screen and (tablet) {
+@include respond-to(tablet) {
   .logo--header {
     svg {
       width: 100%;
     }
+  }
+}
+
+@include respond-to(desktop) {
+  .logo--header {
+    padding-right: rem_calc(100px);
   }
 }

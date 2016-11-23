@@ -3,6 +3,7 @@
   @include align-items(center);
   @include justify-content(space-between);
   height: 77px;
+  padding: 0;
   background: $color-teal;
   color: white;
 
@@ -16,7 +17,6 @@
   @include justify-content(flex-start);
   width: 100%;
   @include flex(0 0 100%);
-  //margin-left: map-get($grid-column-gutter, small); //small gutter from _settings.scss in foundation
   margin: auto;
 }
 
@@ -28,12 +28,10 @@
   responsive
 **/
 
-@include respond-to(tablet) {
+@include respond-to(desktop-large) {
   .header--contents {
-    //min-height: rem_calc(90px);
-    //width: rem_calc(map-get($breakpoints, medium));
-    //@include flex(0 0 rem_calc(map-get($breakpoints, medium)));
-    //margin: 0;
+    width: rem_calc(map-get($breakpoints, xlarge));
+    @include flex(0 0 rem_calc(map-get($breakpoints, xlarge)));
 
     //full width for map page
     .tax-city & {
@@ -44,16 +42,9 @@
   }
 }
 
-@include respond-to(desktop-large) {
-  .header--contents {
-    width: rem_calc(map-get($breakpoints, xlarge));
-    flex: 0 0 rem_calc(map-get($breakpoints, xlarge));
-  }
-}
-
 @include respond-to(desktop-xlarge) {
   .header--contents {
     width: rem_calc(map-get($breakpoints, xxlarge));
-    flex: 0 0 rem_calc(map-get($breakpoints, xxlarge));
+    @include flex(0 0 rem_calc(map-get($breakpoints, xxlarge)));
   }
 }
