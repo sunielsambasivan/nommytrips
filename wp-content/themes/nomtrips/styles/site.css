@@ -7722,12 +7722,12 @@ table.hover tr:nth-of-type(even):hover {
 
 /* line 41, nomtrips/scss/_theme.scss */
 .grey-ash {
-  background-color: #f7f7f7;
+  background-color: #f8f8f8;
   color: #323232; }
 
 /* line 42, nomtrips/scss/_theme.scss */
 .grey-stone {
-  background-color: #eaeaea;
+  background-color: #ededed;
   color: #323232; }
 
 /* line 43, nomtrips/scss/_theme.scss */
@@ -8547,6 +8547,10 @@ Framework classes
   position: static; }
 
 /* line 5, nomtrips/components/_off-canvas.scss */
+.off-canvas-wrapper-inner {
+  background: #f8f8f8; }
+
+/* line 9, nomtrips/components/_off-canvas.scss */
 .off-canvas-content {
   box-shadow: none; }
 
@@ -8806,15 +8810,29 @@ form :-moz-placeholder {
 
 /* line 1, nomtrips/components/_header.scss */
 .header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
   height: 77px;
   background: #4db6ac;
-  padding: 20px 0;
   color: white; }
-  /* line 7, nomtrips/components/_header.scss */
+  /* line 9, nomtrips/components/_header.scss */
   .header a {
     color: white; }
 
-/* line 12, nomtrips/components/_header.scss */
+/* line 14, nomtrips/components/_header.scss */
 .header--contents {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -8826,9 +8844,16 @@ form :-moz-placeholder {
   -webkit-justify-content: flex-start;
   -moz-justify-content: flex-start;
   justify-content: flex-start;
-  margin-left: 20px; }
+  width: 100%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  margin: auto; }
 
-/* line 18, nomtrips/components/_header.scss */
+/* line 23, nomtrips/components/_header.scss */
 .header--wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8841,13 +8866,28 @@ form :-moz-placeholder {
 **/
 /* tablet */
 @media only screen and (min-width: 48rem) {
-  /* line 27, nomtrips/components/_header.scss */
-  .header--contents {
-    min-height: 90px;
-    margin: 0;
+  /* line 39, nomtrips/components/_header.scss */
+  .tax-city .header--contents {
     max-width: none;
     width: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
     flex: 0 0 100%; } }
+/* desktop */
+@media only screen and (min-width: 85.375rem) {
+  /* line 48, nomtrips/components/_header.scss */
+  .header--contents {
+    width: 85.375rem;
+    flex: 0 0 85.375rem; } }
+/* desktop */
+@media only screen and (min-width: 100rem) {
+  /* line 55, nomtrips/components/_header.scss */
+  .header--contents {
+    width: 100rem;
+    flex: 0 0 100rem; } }
 /* line 1, nomtrips/components/_footer.scss */
 .footer {
   min-height: 290px;
@@ -9219,7 +9259,7 @@ nav ul {
   font-weight: bold;
   line-height: initial;
   background-color: #fff;
-  border: 1px solid #eaeaea;
+  border: 1px solid #ededed;
   border-radius: 3px;
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
@@ -9243,7 +9283,7 @@ nav ul {
   align-items: stretch;
   line-height: initial;
   background-color: #fff;
-  border: 1px solid #eaeaea;
+  border: 1px solid #ededed;
   border-radius: 3px;
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
@@ -10003,11 +10043,13 @@ nav ul {
 
 /* line 1, nomtrips/components/_card.scss */
 .card, .card--guides-featured--item, .card--list-select, .card--location, .card--restaurant, .card--dish {
-  border: 1px solid #cccccc;
+  border: 1px solid #ededed;
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   margin-bottom: 1.25rem;
+  background: white;
+  border-radius: 3px;
   /* desktop */ }
   @media only screen and (min-width: 62rem) {
     /* line 1, nomtrips/components/_card.scss */

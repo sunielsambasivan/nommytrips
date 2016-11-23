@@ -1,4 +1,4 @@
-<div class="small-3 medium-9 large-10">
+<div class="small-3 medium-9 large-9">
   <div class="header--wrapper">
     <?php
     $user = wp_get_current_user();

@@ -75,7 +75,7 @@ setup_postdata( $post );
         <!--Site Logo-->
         <?php
         $heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div'; ?>
-        <<?php echo $heading_tag; ?> id="logo" class="small-9 medium-3 large-2 columns">
+        <<?php echo $heading_tag; ?> id="logo" class="small-9 medium-3 large-3 columns">
             <a class="logo--header" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
               <?php get_template_part(NT_COMPONENTS_PATH . 'svgs/logo', '-rev'); ?>
             </a>
