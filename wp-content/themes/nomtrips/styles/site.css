@@ -9846,12 +9846,100 @@ nav ul {
 .form-search--cities .form-item {
   margin: auto; }
 
-/* line 16, nomtrips/components/_search.scss */
+/* line 17, nomtrips/components/_search.scss */
+.search--form .form-item {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center; }
+
+/* line 25, nomtrips/components/_search.scss */
+.search--input-text {
+  height: 40px;
+  margin-bottom: 0; }
+
+/* line 30, nomtrips/components/_search.scss */
+.search--input-text:focus,
+.search--input-text:active {
+  max-width: 80%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 80%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 80%;
+  -ms-flex: 0 0 80%;
+  flex: 0 0 80%;
+  -moz-transition: width 175ms ease-out;
+  -o-transition: width 175ms ease-out;
+  -webkit-transition: width 175ms ease-out;
+  -ms-transition: width 175ms ease-out;
+  transition: width 175ms ease-out; }
+  /* line 36, nomtrips/components/_search.scss */
+  .search--input-text:focus ~ .search--icon,
+  .search--input-text:active ~ .search--icon {
+    width: 0;
+    height: 0;
+    line-height: 0;
+    opacity: 0;
+    -moz-transition: opacity 175ms ease-out;
+    -o-transition: opacity 175ms ease-out;
+    -webkit-transition: opacity 175ms ease-out;
+    -ms-transition: opacity 175ms ease-out;
+    transition: opacity 175ms ease-out; }
+  /* line 44, nomtrips/components/_search.scss */
+  .search--input-text:focus ~ .search--btn,
+  .search--input-text:active ~ .search--btn {
+    display: block;
+    width: 18%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 18%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 18%;
+    -ms-flex: 0 0 18%;
+    flex: 0 0 18%;
+    line-height: 1rem;
+    opacity: 1; }
+
+/* line 53, nomtrips/components/_search.scss */
+.search--btn {
+  display: none;
+  width: 0;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  opacity: 0; }
+
+/* line 63, nomtrips/components/_search.scss */
+.search--icon {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  color: #2b3e50;
+  opacity: 1;
+  -moz-transition: opacity 175ms ease-in;
+  -o-transition: opacity 175ms ease-in;
+  -webkit-transition: opacity 175ms ease-in;
+  -ms-transition: opacity 175ms ease-in;
+  transition: opacity 175ms ease-in; }
+
+/* line 72, nomtrips/components/_search.scss */
 .search--header {
   display: none;
   /* tablet */ }
   @media only screen and (min-width: 48rem) {
-    /* line 16, nomtrips/components/_search.scss */
+    /* line 72, nomtrips/components/_search.scss */
     .search--header {
       display: block;
       -webkit-box-flex: 1;
@@ -9860,7 +9948,7 @@ nav ul {
       -moz-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
       flex: 1 1 auto; } }
-  /* line 24, nomtrips/components/_search.scss */
+  /* line 80, nomtrips/components/_search.scss */
   .search--header .search-cities {
     background: transparent; }
 
