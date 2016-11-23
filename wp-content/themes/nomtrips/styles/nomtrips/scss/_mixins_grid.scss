@@ -3,42 +3,49 @@
 
     @if $media == mobile-only {
         /* mobile only */
-        @media screen and (max-width: 39.9375em) {
+        @media screen and (max-width: 47.9375rem) {
           @content;
         }
     }
-    
+
     @else if $media == tablet-only {
         /* tablet only */
-        @media only screen and (min-width: 40em) and (max-width: 63.9375em) {
+        @media only screen and (min-width: 48rem) and (max-width: 61.9375rem) {
             @content;
         }
     }
-    
+
     @else if $media == tablet {
         /* tablet */
-        @media only screen and (min-width: 40em) {
+        @media only screen and (min-width: 48rem) {
             @content;
         }
     }
-    
+
     @else if $media == desktop-only {
         /* desktop only */
-        @media only screen and (min-width: 64em) and (max-width: 74.9375em) {
+        @media only screen and (min-width: 62rem) and (max-width: 74.9375rem) {
             @content;
         }
     }
-    
+
     @else if $media == desktop {
         /* desktop */
-        @media only screen and (min-width: 64em) {
+        @media only screen and (min-width: 62rem) {
             @content;
         }
     }
-    
+
     @else if $media == desktop-large {
         /* desktop */
-        @media only screen and (min-width: 114em) {
+        @media only screen and (min-width: 85.375rem) {
+            @content;
+        }
+    }
+
+    @else if $media == desktop-xlarge {
+        /* desktop */
+        @media only screen and (min-width: 100rem) {
             @content;
         }
     }

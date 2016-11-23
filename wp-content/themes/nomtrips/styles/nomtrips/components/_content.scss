@@ -1,0 +1,113 @@
+.content {
+  padding: rem_calc($base-padding);
+}
+
+.content--heading {
+  > h1 {
+    font-size: rem_calc(28);
+    margin-bottom: rem_calc($base-padding);
+  }
+
+  > h2 {
+    font-size: rem_calc(24);
+    margin-bottom: rem_calc($base-padding);
+  }
+}
+
+.content-desc {
+  margin-bottom: rem_calc($base-margin);
+  text-align: center;
+}
+
+.content--post {
+  padding-top: rem_calc($base-padding);
+  padding-bottom: rem_calc($base-padding);
+}
+
+.content--post > .row > .columns:last-child {
+  .card--city {
+    margin-bottom: 0;
+  }
+}
+
+.content--by-line {
+  font-size: $font-size-sm;
+}
+
+.content--post-img {
+  position: relative;
+}
+
+.content--post-img-caption {
+  position: absolute;
+  bottom: 0;
+  padding: rem_calc($base-padding /2);
+  background: rgba(black, .2);
+  color: white;
+}
+
+/**
+  page specific
+**/
+
+.home .content--heading {
+  text-align: center;
+}
+
+.content--heading--post {
+  @include flexbox();
+  @include align-items(center);
+
+  .content--heading--title {
+    @include flex(0 1 auto);
+    font-family: $base-font-family;
+    font-size: rem_calc(20);
+    margin-bottom: 0;
+  }
+
+  .star-rating {
+    @include flex(0 1 auto);
+    padding: 0;
+  }
+
+  .content--by-line {
+    @include flex(0 0 100%);
+  }
+}
+
+.content--heading--restaurant {
+  @include flexbox();
+
+  > * {
+    @include flex(0 1 auto);
+    @include align-self(center);
+  }
+
+  .content--heading--title {
+    font-family: $base-font-family;
+    font-size: rem_calc(20);
+    margin-bottom: 0;
+  }
+}
+
+.content-desc--restaurant {
+  margin-top: rem_calc($base-margin);
+}
+
+/**
+  responsive
+**/
+
+@include respond-to(tablet) {
+  .content {
+    padding: rem_calc($base-padding* 1.5);
+  }
+
+  .home .content {
+    padding: rem_calc($base-padding) rem_calc($base-padding) rem_calc($base-padding* 1.5);
+  }
+}
+
+@include respond-to(desktop) {
+
+}

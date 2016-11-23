@@ -1,3 +1,10 @@
 .media-object--nomtip {
+  @include flexbox();
   margin-bottom: rem_calc($base-margin * 1.5);
+}
+
+.media-object-section--nomtop {
+  @include flex-basis(auto);
+  @include flex-grow(0);
+  @include flex-shrink(1);
 }

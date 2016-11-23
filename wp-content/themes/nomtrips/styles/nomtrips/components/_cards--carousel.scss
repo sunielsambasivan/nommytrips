@@ -49,7 +49,7 @@
 
   .slick-dots button {
     &:before {
-      @include icon-font-fa($fa-var-circle, $font-size-md);
+      @include icon-font-fa($fa-var-circle-o, $font-size-md);
       color: $color-teal !important;
       opacity: 1 !important;
     }
@@ -57,7 +57,7 @@
 
   .slick-dots .slick-active button {
     &:before {
-      @include icon-font-fa($fa-var-circle-o, $font-size-md);
+      @include icon-font-fa($fa-var-circle, $font-size-md);
       color: $color-teal !important;
       opacity: 1 !important;
     }
@@ -73,7 +73,7 @@
   override slick styling
   */
   @include flexbox(true);
-  @include flex-direction(column);
+  @include flex-direction(row);
 
   &.slick-slide {
     height: auto;

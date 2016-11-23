@@ -2,6 +2,10 @@
 External styles manifest
 **/
 
+//flex mixins - needs to avail for foundation
+//don't want to conflict with foundations flex mixins
+@import "nomtrips/scss/mixins_flexbox_prefixed";
+
 //Foundation
 @import "vendor/foundation/foundation-flex";
 
@@ -17,9 +21,11 @@ External styles manifest
 @import "nomtrips/icons/nomtrips/style";
 
 //mixins
+
+//flex mixins - needs to avail for foundation
+@import "nomtrips/scss/mixins_flexbox";
 @import "nomtrips/scss/mixins";
 @import "nomtrips/scss/mixins_grid";
-@import "nomtrips/scss/mixins_flexbox";
 
 //nomtrip styles
 @import "nomtrips/scss/fonts";
@@ -57,7 +63,7 @@ External styles manifest
 @import "nomtrips/components/profile--header";
 @import "nomtrips/components/profile--card";
 @import "nomtrips/components/banner";
-@import "nomtrips/components/content--post";
+@import "nomtrips/components/content";
 @import "nomtrips/components/search";
 @import "nomtrips/components/buttons";
 @import "nomtrips/components/cards";

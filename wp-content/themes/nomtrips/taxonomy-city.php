@@ -14,15 +14,12 @@ if ( !defined('ABSPATH')) exit;
  */
 
 get_header();
-
-$term_id = get_queried_object()->term_id;
-$term = get_term( $term_id, 'city' );
-$city = new City($term_id); //nt_debug($city);
+$city = new City(); //nt_debug($city);
 $address = $city->name .', '. $city->state;
+
 ?>
 
 <div class="card-overlay">
-
   <div class="dropdown-trigger card" type="button" data-toggle="city-info">
     <div class="dropdown-trigger--title"><?php echo $city->name; ?></div>
     <button class="dropdown-trigger--menu-icon" type="button" data-toggle></button>
@@ -45,100 +42,13 @@ $address = $city->name .', '. $city->state;
   </div>
 </div>
 
-<div class="map-overlay-list">
-  <div class="cards--carousel cards--carousel--map-overlay">
-      <!--arrow buttons-->
-      <div class="cards--carousel--btn"> <button type="button" data-role="none" class="slick-prev--images slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button> </div>
-
-      <ul class="cards--carousel--container">
-
-        <!--slide-->
-        <li class="cards--carousel--slide small-12 medium-6">
-          <div class="card--location">
-            <div class="card--location--rating">
-              <div class="indicator-likes--map">5</div>
-            </div>
-            <div class="card--location--title"><a href="<?php echo get_site_url() ?>/restaurants/new-york/joeys/">Joey's</a></div>
-            <ul class="card--location--address">
-              <li>123 345 Street</li>
-              <li>New York, NY</li>
-              <li class="cuisine">Cuisines: Italian, Chinese</li>
-              <li>
-                <span class="card--location--icon-bar">
-                  <i class="fa fa-map-o"></i>
-                  <i class="fa fa-list-ul"></i>
-                </span>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <!--slide-->
-        <li class="cards--carousel--slide small-12 medium-6">
-          <div class="card--location">
-            <div class="card--location--title">Luke's Lobster</div>
-            <ul class="card--location--address">
-              <li>84122 Kinfolk Echo Park</li>
-              <li>New York, NY</li>
-              <li class="cuisine">Cuisines: Italian, Chinese</li>
-              <li>
-                <span class="card--location--icon-bar">
-                  <i class="fa fa-map-o"></i>
-                  <i class="fa fa-list-ul"></i>
-                </span>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <!--slide-->
-        <li class="cards--carousel--slide small-12 medium-6">
-          <div class="card--location">
-            <div class="card--location--title">Matt's Kitchen</div>
-            <ul class="card--location--address">
-              <li>84122 Kinfolk Echo Park</li>
-              <li>New York, NY</li>
-              <li class="cuisine">Cuisines: Italian, Chinese</li>
-              <li>
-                <span class="card--location--icon-bar">
-                  <i class="fa fa-map-o"></i>
-                  <i class="fa fa-list-ul"></i>
-                </span>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-        <!--slide-->
-        <li class="cards--carousel--slide small-12 medium-6">
-          <div class="card--location">
-            <div class="card--location--title">Matt's Kitchen</div>
-            <ul class="card--location--address">
-              <li>84122 Kinfolk Echo Park</li>
-              <li>New York, NY</li>
-              <li class="cuisine">Cuisines: Italian, Chinese</li>
-              <li>
-                <span class="card--location--icon-bar">
-                  <i class="fa fa-map-o"></i>
-                  <i class="fa fa-list-ul"></i>
-                </span>
-              </li>
-            </ul>
-          </div>
-        </li>
-
-      </ul>
-
-      <!--arrow buttons-->
-      <div class="cards--carousel--btn"> <button type="button" data-role="none" class="slick-next--images slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button> </div>
-
-    </div>
-  </div>
-
-  <!--end list-->
-
-
-
+<?php
+/**
+ * show the carousel of restuarants of this city
+**/
+$carousel = new Carousel( 'restaurant', 10, 'city', array($city->slug) );
+$carousel->show_posts('map-overlay');
+?>
 
 <div id="map" class="map"></div>
 <script>

@@ -70,7 +70,7 @@
     transform: translateY( $translateY );
 }
 
-@mixin center-horizontally( $left: 50%, $translateX: -50%, $position: relative ) {
+@mixin center-horizontally( $left: 50%, $translateX: -50%, $position: absolute ) {
     position: $position;
     left: $left;
     -moz-transform: translateX( $translateX );
@@ -120,10 +120,10 @@
   text-shadow: $text-shadow;
 }
 
-@mixin button-shadow() {
-  -webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.1);
-  -moz-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.1);
-  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.1);
+@mixin button-shadow($hshadow: 2px, $vshadow: 2px, $blur: 5px, $spread: 1px, $rgba: rgba(0,0,0,0.1)) {
+  -webkit-box-shadow: $hshadow $vshadow $blur $spread $rgba;
+  -moz-box-shadow: $hshadow $vshadow $blur $spread $rgba;
+  box-shadow: $hshadow $vshadow $blur $spread $rgba;
 }
 
 @mixin circle-border($size: 10px, $color: white, $bsize: 1px, $fsize: 1rem) {

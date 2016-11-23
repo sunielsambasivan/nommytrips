@@ -2,11 +2,16 @@
   - container for map pages (city pages)
   - stretch the #main to remainder of viewport height using flexboxs
 **/
+
 #container {
   .tax-city & {
     @include flexbox();
     @include flex-flow(column);
     height: 100%;
+
+    @include respond-to(tablet) {
+      height: 100vh;
+    }
 
     #head, #footer {
       @include flex(0 1 auto);

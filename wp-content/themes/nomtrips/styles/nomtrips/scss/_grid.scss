@@ -1,5 +1,5 @@
-﻿/* 
-    * Grid for non flexbox environments i.e. IE 9-     
+﻿/*
+    * Grid for non flexbox environments i.e. IE 9-
     * fluid 12 col grid widths
     * classes for spacing and positioning
 */
@@ -77,23 +77,22 @@
 }
 
 .clearfix {
-  &:after { 
-     content: "."; 
-     visibility: hidden; 
-     display: block; 
-     height: 0; 
+  &:after {
+     content: ".";
+     visibility: hidden;
+     display: block;
+     height: 0;
      clear: both;
   }
 }
 /*
     Flexbox classes
-*/
 .flex {
     @include flexbox();
     @include flex-wrap(wrap);
 
     &.flex-2 > * {
-        @include flex(0 0 ($col2));
+        //@include flex(0 0 $col2);
     }
 
     &.flex-3 > * {
@@ -152,9 +151,10 @@
 .nowrap {
     @include flex-wrap(nowrap);
 }
+*/
 
-/** 
-  flex push 
+/**
+  flex push
 **/
 .push-right {
   margin-right: 0;

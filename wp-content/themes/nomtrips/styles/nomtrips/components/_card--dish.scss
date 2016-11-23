@@ -8,12 +8,13 @@
 
 .card--dish--title {
   font-size: $font-size-sm;
+  line-height: 1rem;
 }
 
 .card--dish--likes {
   @include inline-flex();
   @include align-items(center);
-  font-size: $font-size-xs;
+  font-size: $font-size-xxs;
 
   &:before {
     @include icon-font-fa($fa-var-heart, $font-size-md, $color-teal);
@@ -24,6 +25,7 @@
 //if in carousel
 .cards--carousel {
   .card--dish {
-    @include flex(0 0 100%);
+    @include flex(1 1 100%);
+    @include flex-direction(column);
   }
 }

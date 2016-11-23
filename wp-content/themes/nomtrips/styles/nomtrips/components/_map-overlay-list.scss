@@ -5,10 +5,6 @@
   left: 0;
   bottom: rem_calc($base-padding);
   z-index: 99999;
-
-  @include respond-to(desktop) {
-    left: rem_calc($base-padding *2);
-  }
 }
 
 .map-overlay-list--slides {
@@ -21,6 +17,10 @@
 }
 
 @include respond-to(tablet) {
+  .map-overlay-list {
+    padding: rem_calc($base-padding);
+  }
+
   .map-overlay-list--slides {
     li {
       margin-right: rem_calc(40px);

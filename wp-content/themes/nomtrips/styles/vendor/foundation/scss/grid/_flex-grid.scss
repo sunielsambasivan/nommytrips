@@ -38,8 +38,8 @@
   }
 
   @if $base {
-    display: flex;
-    flex-flow: row wrap;
+    @include nt_flexbox();
+    @include nt_flex-flow(row wrap);
   }
 
   @if $columns != null {
@@ -77,7 +77,7 @@
   $gutter: $grid-column-gutter
 ) {
   // Base properties
-  flex: flex-grid-column($columns);
+  @include nt_flex(flex-grid-column($columns));
 
   // Gutters
   @if type-of($gutter) == 'map' {
@@ -115,12 +115,12 @@
   $n,
   $selector: '.column'
 ) {
-  flex-wrap: wrap;
+  @include nt_flex-wrap(wrap);
 
   > #{$selector} {
     $pct: percentage(1/$n);
 
-    flex: 0 0 $pct;
+    @include nt_flex(0 0 $pct);
     max-width: $pct;
   }
 }
@@ -129,7 +129,7 @@
 /// @param {Number} $order [0] - Order number to apply.
 @mixin flex-grid-order($order: 0) {
   @warn 'This mixin is being replaced by flex-order(). flex-grid-order() will be removed in Foundation 6.3.';
-  @include flex-order($order);
+  @include nt_flex-order($order);
 }
 
 /// Horizontally or vertically aligns the columns within a flex row. Apply this mixin to a flex row.
@@ -138,7 +138,7 @@
 /// @param {Keyword} $y [null] - Vertical alignment to use. Can be `top`, `bottom`, `middle`, or `stretch`. Or, set it to `null` (the default) to not set vertical alignment.
 @mixin flex-grid-row-align($x: null, $y: null) {
   @warn 'This mixin is being replaced by flex-align(). flex-grid-row-align() will be removed in Foundation 6.3.';
-  @include flex-align($x, $y);
+  @include nt_flex-align($x, $y);
 }
 
 /// Vertically align a single column within a flex row. Apply this mixin to a flex column.
@@ -146,7 +146,7 @@
 /// @param {Keyword} $y [null] - Vertical alignment to use. Can be `top`, `bottom`, `middle`, or `stretch`. Or, set it to `null` (the default) to not set vertical alignment.
 @mixin flex-grid-column-align($y: null) {
   @warn 'This mixin is being replaced by flex-align-self(). flex-grid-column-align() will be removed in Foundation 6.3.';
-  @include flex-align-self($y);
+  @include nt_flex-align-self($y);
 }
 
 @mixin foundation-flex-grid {
@@ -199,7 +199,7 @@
     @for $i from 1 through $grid-column-count {
       // Sizing (percentage)
       .#{$-zf-size}-#{$i} {
-        flex: flex-grid-column($i);
+        @include nt_flex(flex-grid-column($i));
         max-width: grid-column($i);
       }
 
@@ -229,7 +229,7 @@
       // Sizing (expand)
       @include breakpoint($-zf-size) {
         .#{$-zf-size}-expand {
-          flex: flex-grid-column();
+          @include nt_flex(flex-grid-column());
         }
       }
 
@@ -237,10 +237,10 @@
       @at-root (without: media) {
         .row.#{$-zf-size}-unstack {
           > .column {
-            flex: flex-grid-column(100%);
+            @include nt_flex(flex-grid-column(100%));
 
             @include breakpoint($-zf-size) {
-              flex: flex-grid-column();
+              @include nt_flex(flex-grid-column());
             }
           }
         }
@@ -261,7 +261,7 @@
 
   // Sizing (shrink)
   .shrink {
-    flex: flex-grid-column(shrink);
+    @include nt_flex(flex-grid-column(shrink));
     max-width: 100%;
   }
 

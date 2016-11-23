@@ -1,10 +1,18 @@
 .card--city {
+  margin-bottom: rem_calc($base-margin);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card--city--container {
   @include flexbox();
   @include flex-flow(column);
   @include justify-content(center);
   @include align-items(center);
   position: relative;
-  margin-bottom: rem_calc($base-margin *2);
+  @include card-shadow();
 }
 
 .card--city--image {
@@ -15,8 +23,8 @@
   @include center-vertically(50%, -50%, absolute);
   width: 100%;
   text-align: center;
-  color: white;  
-  
+  color: white;
+
   * {
     margin-bottom: 0;
     color: white;
@@ -31,22 +39,26 @@
   .card--city {
     margin-bottom: 0;
   }
-  
-  .primary-content .card--city {
-    margin-bottom: rem_calc($base-margin *2);
+
+  .card--city--primary {
+    margin-bottom: rem_calc($base-margin);
   }
-  
-  .card--city--image {
+
+  .card--city--container {
     height: 196px;
   }
 }
 
 @include respond-to(desktop) {
+  .card--city--primary {
+    margin-bottom: rem_calc($base-margin *2);
+  }
+
   .card--city--image {
     height: auto;
   }
-  
-  .primary-content .card--city--image {
+
+  .card--city--primary .card--city--container {
     height: 350px;
   }
 }

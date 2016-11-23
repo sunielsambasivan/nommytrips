@@ -1,6 +1,7 @@
 .card--location {
   @extend .card;
   position: relative;
+  width: 100%;
   padding: rem_calc($base-padding);
   background: white;
 
@@ -20,6 +21,10 @@
 
 .card--location--address {
   font-size: $font-size-sm;
+
+  .cards--carousel--map-overlay & {
+    width: 58%;
+  }
 }
 
 .card--location--icon-bar {

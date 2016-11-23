@@ -5,13 +5,13 @@
 .social-icons--profile--items {
   @extend .social-icons--items;
   @include justify-content(center);
-  
+
   .social-icons--icon {
-    margin-left: rem_calc($base-padding/2);
-    margin-right: rem_calc($base-padding/2);
+    margin-left: rem_calc($base-padding/4);
+    margin-right: rem_calc($base-padding/4);
     background: $color-blue;
   }
-  
+
   .social-icons--icon > *:before {
     color: white;
   };
@@ -20,9 +20,11 @@
 @include respond-to(tablet-only) {
   .social-icons--profile--items {
     @include justify-content(flex-start);
-    
+
     .social-icons--icon {
       margin-left: 0;
+      width: 40px;
+      height: 40px;
     }
   }
 }

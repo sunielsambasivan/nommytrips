@@ -10,6 +10,8 @@
 */
 
 require_once( 'nt-restaurant-fields.php' );
+require_once( 'nt-restaurant-actions.php' );
+require_once( 'nt-restaurant-add-buttons.php' );
 
 /**
 Declare Restaurant custom content type
@@ -44,8 +46,8 @@ $args = array(
   'exclude_from_search' => false,
 );
 
-$roles = array( 
-  'administrator', 
+$roles = array(
+  'administrator',
   'editor',
   'author',
 );

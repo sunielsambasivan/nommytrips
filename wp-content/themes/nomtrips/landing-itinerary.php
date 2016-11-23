@@ -24,6 +24,9 @@ if( $user->ID) {
   $user_city = get_the_author_meta('nt_usr_city', $user->data->ID);
   $user_link = get_edit_user_link($user->data->ID);
 }
+
+/*$itinerary = new Itinerary( $user->ID, 4 );
+nt_debug($itinerary->addRestaurantToItinerary(169));*/
 ?>
 
 <?php
