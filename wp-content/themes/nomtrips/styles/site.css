@@ -9912,6 +9912,19 @@ nav ul {
     opacity: 1; }
 
 /* line 53, nomtrips/components/_search.scss */
+.search--btn:active {
+  display: block;
+  width: 18%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 18%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 18%;
+  -ms-flex: 0 0 18%;
+  flex: 0 0 18%;
+  line-height: 1rem;
+  opacity: 1; }
+
+/* line 61, nomtrips/components/_search.scss */
 .search--btn {
   display: none;
   width: 0;
@@ -9921,7 +9934,7 @@ nav ul {
   line-height: 0;
   opacity: 0; }
 
-/* line 63, nomtrips/components/_search.scss */
+/* line 71, nomtrips/components/_search.scss */
 .search--icon {
   position: absolute;
   top: 0.625rem;
@@ -9934,12 +9947,12 @@ nav ul {
   -ms-transition: opacity 175ms ease-in;
   transition: opacity 175ms ease-in; }
 
-/* line 72, nomtrips/components/_search.scss */
+/* line 80, nomtrips/components/_search.scss */
 .search--header {
   display: none;
   /* tablet */ }
   @media only screen and (min-width: 48rem) {
-    /* line 72, nomtrips/components/_search.scss */
+    /* line 80, nomtrips/components/_search.scss */
     .search--header {
       display: block;
       -webkit-box-flex: 1;
@@ -9948,7 +9961,7 @@ nav ul {
       -moz-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
       flex: 1 1 auto; } }
-  /* line 80, nomtrips/components/_search.scss */
+  /* line 88, nomtrips/components/_search.scss */
   .search--header .search-cities {
     background: transparent; }
 
