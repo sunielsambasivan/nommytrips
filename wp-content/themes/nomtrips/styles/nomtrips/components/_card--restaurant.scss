@@ -9,7 +9,7 @@
 .card--restaurant--cuisine,
 .card--restaurant--hours {
   @include flexbox();
-  font-size: $font-size-sm;
+  font-size: $font-size-xs;
 
   &:before {
     @include flex(0 0 10%);

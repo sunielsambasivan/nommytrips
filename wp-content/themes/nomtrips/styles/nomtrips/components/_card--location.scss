@@ -2,7 +2,7 @@
   @extend .card;
   position: relative;
   width: 100%;
-  padding: rem_calc($base-padding);
+  padding: rem_calc($base-padding /2);
   background: white;
 
   ul {
@@ -12,7 +12,9 @@
 
 .card--location--title {
   color: $color-teal;
-  font-size: $font-size-sm;
+  font-size: $font-size-md;
+  font-weight: bold;
+  width: 80%;
 
   a {
     color: $color-teal;
@@ -20,17 +22,19 @@
 }
 
 .card--location--address {
-  font-size: $font-size-sm;
+  font-size: $font-size-xs;
 
   .cards--carousel--map-overlay & {
-    width: 58%;
+    width: 78%;
   }
 }
 
 .card--location--icon-bar {
-  font-size: $font-size-sm;
-  border: 1px solid rgba($color-dark-blue, .3);
+  display: inline-block;
   width: auto;
+  margin-top: rem_calc($base-margin /4);
+  font-size: $font-size-xs;
+  border: 1px solid rgba($color-dark-blue, .3);
 
   i {
     border-right: 1px solid rgba($color-dark-blue, .3);

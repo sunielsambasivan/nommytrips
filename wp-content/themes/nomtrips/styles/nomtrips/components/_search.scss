@@ -34,47 +34,44 @@
   @include transition(width 175ms ease-out);
 
   & ~ .search--icon {
-    width: 0;
-    height: 0;
-    line-height: 0;
-    opacity: 0;
-    @include transition(opacity 175ms ease-out);
+    display: none;
   }
 
   & ~ .search--btn {
-    display: block;
     width: 18%;
+    height: 40px;
     @include flex(0 0 18%);
     line-height: 1rem;
     opacity: 1;
+    @include transition(all 175ms ease-in-out);
   }
 }
 
 .search--btn:active {
-  display: block;
   width: 18%;
+  height: 40px;
   @include flex(0 0 18%);
   line-height: 1rem;
   opacity: 1;
+  @include transition(all 175ms ease-in-out);
 };
 
 .search--btn {
-  display: none;
   width: 0;
-  height: 40px;
+  height: 0;
   padding: 0;
   margin: 0;
   line-height: 0;
   opacity: 0;
+  @include transition(all 175ms ease-out);
 }
 
 .search--icon {
+  display: block;
   position: absolute;
   top: rem_calc($base-padding/2);
   right: rem_calc($base-padding/2);
   color: $color-dark-blue;
-  opacity: 1;
-  @include transition(opacity 175ms ease-in);
 }
 
 .search--header {

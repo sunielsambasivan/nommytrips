@@ -19,7 +19,7 @@ $address = $city->name .', '. $city->state;
 
 ?>
 
-<div class="card-overlay">
+<div class="card--map-overlay">
   <div class="dropdown-trigger card" type="button" data-toggle="city-info">
     <div class="dropdown-trigger--title"><?php echo $city->name; ?></div>
     <button class="dropdown-trigger--menu-icon" type="button" data-toggle></button>

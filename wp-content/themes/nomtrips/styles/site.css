@@ -9888,20 +9888,12 @@ nav ul {
   /* line 36, nomtrips/components/_search.scss */
   .search--input-text:focus ~ .search--icon,
   .search--input-text:active ~ .search--icon {
-    width: 0;
-    height: 0;
-    line-height: 0;
-    opacity: 0;
-    -moz-transition: opacity 175ms ease-out;
-    -o-transition: opacity 175ms ease-out;
-    -webkit-transition: opacity 175ms ease-out;
-    -ms-transition: opacity 175ms ease-out;
-    transition: opacity 175ms ease-out; }
-  /* line 44, nomtrips/components/_search.scss */
+    display: none; }
+  /* line 40, nomtrips/components/_search.scss */
   .search--input-text:focus ~ .search--btn,
   .search--input-text:active ~ .search--btn {
-    display: block;
     width: 18%;
+    height: 40px;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 18%;
     -moz-box-flex: 0;
@@ -9909,12 +9901,17 @@ nav ul {
     -ms-flex: 0 0 18%;
     flex: 0 0 18%;
     line-height: 1rem;
-    opacity: 1; }
+    opacity: 1;
+    -moz-transition: all 175ms ease-in-out;
+    -o-transition: all 175ms ease-in-out;
+    -webkit-transition: all 175ms ease-in-out;
+    -ms-transition: all 175ms ease-in-out;
+    transition: all 175ms ease-in-out; }
 
-/* line 53, nomtrips/components/_search.scss */
+/* line 50, nomtrips/components/_search.scss */
 .search--btn:active {
-  display: block;
   width: 18%;
+  height: 40px;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 18%;
   -moz-box-flex: 0;
@@ -9922,37 +9919,41 @@ nav ul {
   -ms-flex: 0 0 18%;
   flex: 0 0 18%;
   line-height: 1rem;
-  opacity: 1; }
+  opacity: 1;
+  -moz-transition: all 175ms ease-in-out;
+  -o-transition: all 175ms ease-in-out;
+  -webkit-transition: all 175ms ease-in-out;
+  -ms-transition: all 175ms ease-in-out;
+  transition: all 175ms ease-in-out; }
 
-/* line 61, nomtrips/components/_search.scss */
+/* line 59, nomtrips/components/_search.scss */
 .search--btn {
-  display: none;
   width: 0;
-  height: 40px;
+  height: 0;
   padding: 0;
   margin: 0;
   line-height: 0;
-  opacity: 0; }
+  opacity: 0;
+  -moz-transition: all 175ms ease-out;
+  -o-transition: all 175ms ease-out;
+  -webkit-transition: all 175ms ease-out;
+  -ms-transition: all 175ms ease-out;
+  transition: all 175ms ease-out; }
 
-/* line 71, nomtrips/components/_search.scss */
+/* line 69, nomtrips/components/_search.scss */
 .search--icon {
+  display: block;
   position: absolute;
   top: 0.625rem;
   right: 0.625rem;
-  color: #2b3e50;
-  opacity: 1;
-  -moz-transition: opacity 175ms ease-in;
-  -o-transition: opacity 175ms ease-in;
-  -webkit-transition: opacity 175ms ease-in;
-  -ms-transition: opacity 175ms ease-in;
-  transition: opacity 175ms ease-in; }
+  color: #2b3e50; }
 
-/* line 80, nomtrips/components/_search.scss */
+/* line 77, nomtrips/components/_search.scss */
 .search--header {
   display: none;
   /* tablet */ }
   @media only screen and (min-width: 48rem) {
-    /* line 80, nomtrips/components/_search.scss */
+    /* line 77, nomtrips/components/_search.scss */
     .search--header {
       display: block;
       -webkit-box-flex: 1;
@@ -9961,7 +9962,7 @@ nav ul {
       -moz-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
       flex: 1 1 auto; } }
-  /* line 88, nomtrips/components/_search.scss */
+  /* line 85, nomtrips/components/_search.scss */
   .search--header .search-cities {
     background: transparent; }
 
@@ -10014,36 +10015,47 @@ nav ul {
   width: 100% !important; }
 /* line 17, nomtrips/components/_cards--carousel.scss */
 .cards--carousel--map-overlay .slick-slide {
+  width: 100% !important;
+  /* tablet */
+  /* desktop */
   /* desktop */ }
+  @media only screen and (min-width: 48rem) {
+    /* line 17, nomtrips/components/_cards--carousel.scss */
+    .cards--carousel--map-overlay .slick-slide {
+      width: 50% !important; } }
   @media only screen and (min-width: 62rem) {
     /* line 17, nomtrips/components/_cards--carousel.scss */
     .cards--carousel--map-overlay .slick-slide {
-      width: 33.333% !important; } }
-/* line 25, nomtrips/components/_cards--carousel.scss */
+      width: 25% !important; } }
+  @media only screen and (min-width: 85.375rem) {
+    /* line 17, nomtrips/components/_cards--carousel.scss */
+    .cards--carousel--map-overlay .slick-slide {
+      width: 16.666667% !important; } }
+/* line 34, nomtrips/components/_cards--carousel.scss */
 .cards--carousel--map-overlay .slick-dots {
   bottom: 0; }
-/* line 29, nomtrips/components/_cards--carousel.scss */
+/* line 38, nomtrips/components/_cards--carousel.scss */
 .cards--carousel--map-overlay .cards--carousel--btn button:before {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75); }
 
-/* line 34, nomtrips/components/_cards--carousel.scss */
+/* line 43, nomtrips/components/_cards--carousel.scss */
 .cards--carousel--container {
   margin-left: -0.3125rem;
   margin-right: -0.3125rem;
   /*
   override slick styling
   */ }
-  /* line 42, nomtrips/components/_cards--carousel.scss */
+  /* line 51, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--container .slick-list {
     padding-bottom: 20px; }
-  /* line 46, nomtrips/components/_cards--carousel.scss */
+  /* line 55, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--container .slick-track {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex; }
-  /* line 51, nomtrips/components/_cards--carousel.scss */
+  /* line 60, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--container .slick-dots button:before {
     display: inline-block;
     content: "";
@@ -10056,7 +10068,7 @@ nav ul {
     -moz-osx-font-smoothing: grayscale;
     color: #4db6ac !important;
     opacity: 1 !important; }
-  /* line 59, nomtrips/components/_cards--carousel.scss */
+  /* line 68, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--container .slick-dots .slick-active button:before {
     display: inline-block;
     content: "";
@@ -10070,7 +10082,7 @@ nav ul {
     color: #4db6ac !important;
     opacity: 1 !important; }
 
-/* line 67, nomtrips/components/_cards--carousel.scss */
+/* line 76, nomtrips/components/_cards--carousel.scss */
 .cards--carousel--slide {
   -webkit-flex-basis: auto;
   -moz-flex-basis: auto;
@@ -10092,21 +10104,21 @@ nav ul {
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row; }
-  /* line 78, nomtrips/components/_cards--carousel.scss */
+  /* line 87, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--slide.slick-slide {
     height: auto; }
 
-/* line 83, nomtrips/components/_cards--carousel.scss */
+/* line 92, nomtrips/components/_cards--carousel.scss */
 .cards--carousel--btn {
   /*
   override slick styling
   */ }
-  /* line 89, nomtrips/components/_cards--carousel.scss */
+  /* line 98, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--btn .slick-arrow {
     padding: 0 2px;
     width: 28px;
     height: 28px; }
-  /* line 95, nomtrips/components/_cards--carousel.scss */
+  /* line 104, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--btn *[class^="slick-next"] {
     position: absolute;
     top: 50%;
@@ -10117,7 +10129,7 @@ nav ul {
     right: 0;
     font-size: 0;
     line-height: 0; }
-    /* line 101, nomtrips/components/_cards--carousel.scss */
+    /* line 110, nomtrips/components/_cards--carousel.scss */
     .cards--carousel--btn *[class^="slick-next"]:before {
       display: inline-block;
       content: "";
@@ -10131,7 +10143,7 @@ nav ul {
       -webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
       -moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25); }
-  /* line 107, nomtrips/components/_cards--carousel.scss */
+  /* line 116, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--btn *[class^="slick-prev"] {
     position: absolute;
     top: 50%;
@@ -10142,7 +10154,7 @@ nav ul {
     left: 0;
     font-size: 0;
     line-height: 0; }
-    /* line 113, nomtrips/components/_cards--carousel.scss */
+    /* line 122, nomtrips/components/_cards--carousel.scss */
     .cards--carousel--btn *[class^="slick-prev"]:before {
       display: inline-block;
       content: "";
@@ -10363,7 +10375,7 @@ nav ul {
 .card--location {
   position: relative;
   width: 100%;
-  padding: 1.25rem;
+  padding: 0.625rem;
   background: white; }
   /* line 8, nomtrips/components/_card--location.scss */
   .card--location ul {
@@ -10372,32 +10384,36 @@ nav ul {
 /* line 13, nomtrips/components/_card--location.scss */
 .card--location--title {
   color: #4db6ac;
-  font-size: 0.875rem; }
-  /* line 17, nomtrips/components/_card--location.scss */
+  font-size: 1rem;
+  font-weight: bold;
+  width: 80%; }
+  /* line 19, nomtrips/components/_card--location.scss */
   .card--location--title a {
     color: #4db6ac; }
 
-/* line 22, nomtrips/components/_card--location.scss */
+/* line 24, nomtrips/components/_card--location.scss */
 .card--location--address {
-  font-size: 0.875rem; }
-  /* line 25, nomtrips/components/_card--location.scss */
+  font-size: 0.75rem; }
+  /* line 27, nomtrips/components/_card--location.scss */
   .cards--carousel--map-overlay .card--location--address {
-    width: 58%; }
+    width: 78%; }
 
-/* line 30, nomtrips/components/_card--location.scss */
+/* line 32, nomtrips/components/_card--location.scss */
 .card--location--icon-bar {
-  font-size: 0.875rem;
-  border: 1px solid rgba(43, 62, 80, 0.3);
-  width: auto; }
-  /* line 35, nomtrips/components/_card--location.scss */
+  display: inline-block;
+  width: auto;
+  margin-top: 0.3125rem;
+  font-size: 0.75rem;
+  border: 1px solid rgba(43, 62, 80, 0.3); }
+  /* line 39, nomtrips/components/_card--location.scss */
   .card--location--icon-bar i {
     border-right: 1px solid rgba(43, 62, 80, 0.3);
     padding: 0.3125rem; }
-    /* line 39, nomtrips/components/_card--location.scss */
+    /* line 43, nomtrips/components/_card--location.scss */
     .card--location--icon-bar i:last-child {
       border-right: none; }
 
-/* line 45, nomtrips/components/_card--location.scss */
+/* line 49, nomtrips/components/_card--location.scss */
 .card--location--rating {
   position: absolute;
   top: 10px;
@@ -10418,7 +10434,7 @@ nav ul {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  font-size: 0.875rem; }
+  font-size: 0.75rem; }
   /* line 14, nomtrips/components/_card--restaurant.scss */
   .card--restaurant--address:before,
   .card--restaurant--phone:before,
@@ -10611,8 +10627,8 @@ nav ul {
   /* line 25, nomtrips/components/_map-overlay-list.scss */
   .map-overlay-list--slides li {
     margin-right: 2.5rem; } }
-/* line 1, nomtrips/components/_card-overlay.scss */
-.card-overlay {
+/* line 1, nomtrips/components/_card--map-overlay.scss */
+.card--map-overlay {
   position: absolute;
   z-index: 999999;
   width: 90%;
@@ -10624,12 +10640,9 @@ nav ul {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   /* tablet */ }
-  /* line 8, nomtrips/components/_card-overlay.scss */
-  .card-overlay .card, .card-overlay .card--guides-featured--item, .card-overlay .card--list-select, .card-overlay .card--location, .card-overlay .card--restaurant, .card-overlay .card--dish {
-    background: white; }
   @media only screen and (min-width: 48rem) {
-    /* line 1, nomtrips/components/_card-overlay.scss */
-    .card-overlay {
+    /* line 1, nomtrips/components/_card--map-overlay.scss */
+    .card--map-overlay {
       width: 24rem;
       top: 2.5rem;
       left: 2.5rem;
