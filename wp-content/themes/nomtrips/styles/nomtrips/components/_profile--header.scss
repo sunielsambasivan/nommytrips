@@ -1,13 +1,13 @@
 .profile--header {
   @extend .profile;
-  
+
   .profile--name {
     float: left;
     @include flex(0 0 220px);
     width: 220px;
-    padding: 0 $base-padding/2 4px;
+    padding: 0 $base-padding/4 4px $base-padding/2;
   }
-  
+
   .profile--avatar {
     float: left;
     @include flex(0 0 50px);
@@ -18,7 +18,7 @@
 @include respond-to(tablet) {
   .profile--header {
     @include justify-content(flex-end);
-    
+
     .profile--name {
       @include flex(0 0 auto);
       width: auto;

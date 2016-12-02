@@ -8856,6 +8856,7 @@ form :-moz-placeholder {
 
 /* line 23, nomtrips/components/_header.scss */
 .header--wrapper {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -8867,7 +8868,7 @@ form :-moz-placeholder {
 **/
 /* desktop */
 @media only screen and (min-width: 85.375rem) {
-  /* line 32, nomtrips/components/_header.scss */
+  /* line 33, nomtrips/components/_header.scss */
   .header--contents {
     width: 85.375rem;
     -webkit-box-flex: 0;
@@ -8876,7 +8877,7 @@ form :-moz-placeholder {
     -moz-flex: 0 0 85.375rem;
     -ms-flex: 0 0 85.375rem;
     flex: 0 0 85.375rem; }
-    /* line 37, nomtrips/components/_header.scss */
+    /* line 38, nomtrips/components/_header.scss */
     .tax-city .header--contents {
       max-width: none;
       width: 100%;
@@ -8888,7 +8889,7 @@ form :-moz-placeholder {
       flex: 0 0 100%; } }
 /* desktop */
 @media only screen and (min-width: 100rem) {
-  /* line 46, nomtrips/components/_header.scss */
+  /* line 47, nomtrips/components/_header.scss */
   .header--contents {
     width: 100rem;
     -webkit-box-flex: 0;
@@ -9448,7 +9449,7 @@ nav ul {
 
 /* line 15, nomtrips/components/_profile.scss */
 .profile--name, .profile--name--white {
-  padding: 0 10px 4px; }
+  padding: 0 0 4px 10px; }
 
 /* line 19, nomtrips/components/_profile.scss */
 .profile--name--white {
@@ -9526,14 +9527,14 @@ nav ul {
   .menu--logged-in-items {
     padding: 20px 20px 0;
     top: 63px !important;
-    right: 9px !important;
+    right: 1.25rem !important;
     left: auto !important;
     border: none; }
     /* line 78, nomtrips/components/_profile.scss */
     .menu--logged-in-items:before {
       position: absolute;
       top: -5px;
-      right: 5px;
+      right: 0.625rem;
       content: "";
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
@@ -9549,7 +9550,7 @@ nav ul {
   -ms-flex: 0 0 220px;
   flex: 0 0 220px;
   width: 220px;
-  padding: 0 10px 4px; }
+  padding: 0 5px 4px 10px; }
 /* line 11, nomtrips/components/_profile--header.scss */
 .profile--header .profile--avatar {
   float: left;

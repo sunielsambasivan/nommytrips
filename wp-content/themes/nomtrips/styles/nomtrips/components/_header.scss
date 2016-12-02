@@ -21,6 +21,7 @@
 }
 
 .header--wrapper {
+  position: relative;
   @include flexbox();
 }
 

@@ -104,7 +104,7 @@ nt_debug($restaurant);
                 </div>
               </div>
 
-              <div class="cards--carousel content-section">
+              <div class="cards--carousel" data-carousel-init="cardsCarouselPageRestaurant">
                 <div class="cards--carousel--btn"> <button type="button" data-role="none" class="slick-prev--must-eats slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button> </div>
                   <ul class="cards--carousel--container">
 
@@ -209,7 +209,7 @@ nt_debug($restaurant);
                 </div>
               </div>
 
-              <div class="cards--carousel">
+              <div class="cards--carousel" data-carousel-init="cardsCarouselPageRestaurant">
                 <div class="cards--carousel--btn">
                   <button type="button" data-role="none" class="slick-prev--images slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button>
                 </div>
