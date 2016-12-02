@@ -1,5 +1,5 @@
 <!--slide-->
-<li class="cards--carousel--slide small-12 medium-6">
+<li class="cards--carousel--slide">
   <div class="card--location">
     <div class="card--location--rating">
       <div class="indicator-likes--map">5</div>

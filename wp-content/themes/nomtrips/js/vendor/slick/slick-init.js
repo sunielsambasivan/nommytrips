@@ -16,19 +16,12 @@ jQuery(document).ready(function($){
         dots: true,
         infinite: false,
         speed: 300,
-        slidesToShow: 6,
+        mobileFirst: true,
+        slidesToShow: 1,
         slidesToScroll: 1,
         responsive: [
           {
-            breakpoint: 1366,
-            settings: {
-              slidesToShow: 4,
-              slidesToScroll: 1,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 991,
+            breakpoint: 640,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 1,
@@ -38,7 +31,23 @@ jQuery(document).ready(function($){
           {
             breakpoint: 768,
             settings: {
-              slidesToShow: 1,
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 1366,
+            settings: {
+              slidesToShow: 6,
               slidesToScroll: 1,
               dots: true
             }

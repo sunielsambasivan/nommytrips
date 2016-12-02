@@ -59,7 +59,7 @@ $titlebar-icon-spacing: 0.25rem !default;
     // scss-lint:disable ZeroUnit
     .title-bar-left,
     .title-bar-right {
-      flex: 1 1 0px;
+      line-height: 0;
     }
 
     .title-bar-right {

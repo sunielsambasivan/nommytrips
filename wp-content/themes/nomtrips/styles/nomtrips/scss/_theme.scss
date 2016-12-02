@@ -28,7 +28,7 @@ $jet:                     #323232;
 
 //styles
 $color-black: $jet;
-$border-radius: 3px;
+$border-radius: 5px;
 $border: 1px solid $smoke;
 $border-light: 1px solid $stone;
 $text-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
@@ -44,7 +44,7 @@ $card-shadow: 2px 2px 5px 1px rgba(0,0,0,0.1);
 .grey-slate { background-color: $slate; color: white; }
 .grey-charcoal { background-color: $charcoal; color: white; }
 .grey-jet { background-color: $jet; color: white; }
-.green { background-color: $color-green; color: white; }
+.color-green, .green { background-color: $color-green; color: white; }
 
 .cta {
     &.color-blue {

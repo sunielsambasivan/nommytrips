@@ -11,7 +11,7 @@
 
 .cards--carousel--map-overlay {
   .slick-track {
-    width: 100% !important;
+    width: 100%;
   }
 
   .slick-slide {
@@ -27,7 +27,7 @@
     }
 
     @include respond-to(desktop-large) {
-      width: 16.666667% !important;
+      width: 16.666667%;
     }
   }
 

@@ -3,7 +3,7 @@
   line-height: 1rem;
 
   svg {
-    width: 80%;
+    max-width: 65%;
   }
 }
 
@@ -19,6 +19,7 @@
 @include respond-to(tablet) {
   .logo--header {
     svg {
+      max-width: none;
       width: 100%;
     }
   }

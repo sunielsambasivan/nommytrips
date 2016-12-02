@@ -4265,7 +4265,7 @@ table.hover tr:nth-of-type(even):hover {
 /* line 60, vendor/foundation/scss/components/_title-bar.scss */
 .title-bar-left,
 .title-bar-right {
-  flex: 1 1 0px; }
+  line-height: 0; }
 
 /* line 65, vendor/foundation/scss/components/_title-bar.scss */
 .title-bar-right {
@@ -7751,7 +7751,7 @@ table.hover tr:nth-of-type(even):hover {
   color: white; }
 
 /* line 47, nomtrips/scss/_theme.scss */
-.green {
+.color-green, .green {
   background-color: #27ad60;
   color: white; }
 
@@ -8761,7 +8761,7 @@ form :-moz-placeholder {
 .speech-bubble--content {
   position: relative;
   font-size: 0.875rem;
-  line-height: 0.875rem;
+  line-height: 1.125rem;
   padding: 0.3125rem;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   border: 1px solid #cccccc;
@@ -8924,7 +8924,7 @@ form :-moz-placeholder {
   line-height: 1rem; }
   /* line 5, nomtrips/components/_logo--header.scss */
   .logo--header svg {
-    width: 80%; }
+    max-width: 65%; }
 
 /* line 10, nomtrips/components/_logo--header.scss */
 #logo {
@@ -8938,10 +8938,11 @@ form :-moz-placeholder {
 @media only screen and (min-width: 48rem) {
   /* line 21, nomtrips/components/_logo--header.scss */
   .logo--header svg {
+    max-width: none;
     width: 100%; } }
 /* desktop */
 @media only screen and (min-width: 62rem) {
-  /* line 28, nomtrips/components/_logo--header.scss */
+  /* line 29, nomtrips/components/_logo--header.scss */
   .logo--header {
     padding-right: 6.25rem; } }
 /* line 1, nomtrips/components/_logo--footer.scss */
@@ -9227,23 +9228,33 @@ nav ul {
       border-bottom: solid 3px #418aca; } }
 /* line 1, nomtrips/components/_icon-bar.scss */
 .icon-bar {
-  padding: 0.625rem; }
-  /* line 4, nomtrips/components/_icon-bar.scss */
-  .icon-bar i {
-    font-size: 1.875rem; }
+  -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.25rem;
+  background: white;
+  border-radius: 5px; }
   /* line 7, nomtrips/components/_icon-bar.scss */
-  .icon-bar .menu {
+  .icon-bar i {
+    font-size: 1.25rem; }
+  /* line 11, nomtrips/components/_icon-bar.scss */
+  .icon-bar .icon-bar--add-location {
+    font-size: 0.6rem; }
+  /* line 15, nomtrips/components/_icon-bar.scss */
+  .icon-bar > .menu {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-    -webkit-justify-content: space-around;
-    -moz-justify-content: space-around;
-    justify-content: space-around; }
-    /* line 11, nomtrips/components/_icon-bar.scss */
-    .icon-bar .menu li {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0; }
+    /* line 20, nomtrips/components/_icon-bar.scss */
+    .icon-bar > .menu li {
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 auto;
       -moz-box-flex: 0;
@@ -9251,12 +9262,60 @@ nav ul {
       -ms-flex: 0 0 auto;
       flex: 0 0 auto;
       width: auto;
-      padding: 0;
+      padding: 0.625rem;
       margin: 0;
       border: none; }
-      /* line 18, nomtrips/components/_icon-bar.scss */
-      .icon-bar .menu li a {
-        padding: 0.125rem; }
+      /* line 28, nomtrips/components/_icon-bar.scss */
+      .icon-bar > .menu li.is-active > a, .icon-bar > .menu li.is-active i, .icon-bar > .menu li:hover > a, .icon-bar > .menu li:hover i {
+        color: white; }
+      /* line 32, nomtrips/components/_icon-bar.scss */
+      .icon-bar > .menu li.is-active a::after, .icon-bar > .menu li:hover a::after {
+        border-color: white transparent transparent !important; }
+      /* line 37, nomtrips/components/_icon-bar.scss */
+      .icon-bar > .menu li a {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        padding: 0.125rem;
+        text-decoration: none; }
+  /* line 46, nomtrips/components/_icon-bar.scss */
+  .icon-bar li li:hover a:hover {
+    color: #418aca; }
+  /* line 50, nomtrips/components/_icon-bar.scss */
+  .icon-bar .is-dropdown-submenu {
+    margin-top: 2px;
+    border: none;
+    border-radius: 0 0 5px 5px;
+    -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); }
+
+/* line 59, nomtrips/components/_icon-bar.scss */
+.icon-bar--item--blue.is-active, .icon-bar--item--blue:hover {
+  background-color: #418aca; }
+
+/* line 65, nomtrips/components/_icon-bar.scss */
+.icon-bar--item--teal.is-active, .icon-bar--item--teal:hover {
+  background-color: #4db6ac; }
+
+/* line 71, nomtrips/components/_icon-bar.scss */
+.icon-bar--item--red.is-active, .icon-bar--item--red:hover {
+  background-color: #e95a4a; }
+
+/* line 77, nomtrips/components/_icon-bar.scss */
+.icon-bar--item--green.is-active, .icon-bar--item--green:hover {
+  background-color: #27ad60; }
+
+/* line 83, nomtrips/components/_icon-bar.scss */
+.icon-bar--item--orange.is-active, .icon-bar--item--orange:hover {
+  background-color: #e67d21; }
 
 /* line 1, nomtrips/components/_button-icon.scss */
 .button-icon {
@@ -9276,7 +9335,7 @@ nav ul {
   line-height: initial;
   background-color: #fff;
   border: 1px solid #ededed;
-  border-radius: 3px;
+  border-radius: 5px;
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); }
@@ -9300,7 +9359,7 @@ nav ul {
   line-height: initial;
   background-color: #fff;
   border: 1px solid #ededed;
-  border-radius: 3px;
+  border-radius: 5px;
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); }
@@ -9969,7 +10028,7 @@ nav ul {
 
 /* line 1, nomtrips/components/_buttons.scss */
 .button, .button-pill {
-  border-radius: 3px;
+  border-radius: 5px;
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); }
@@ -10013,7 +10072,7 @@ nav ul {
 
 /* line 13, nomtrips/components/_cards--carousel.scss */
 .cards--carousel--map-overlay .slick-track {
-  width: 100% !important; }
+  width: 100%; }
 /* line 17, nomtrips/components/_cards--carousel.scss */
 .cards--carousel--map-overlay .slick-slide {
   width: 100% !important;
@@ -10031,7 +10090,7 @@ nav ul {
   @media only screen and (min-width: 85.375rem) {
     /* line 17, nomtrips/components/_cards--carousel.scss */
     .cards--carousel--map-overlay .slick-slide {
-      width: 16.666667% !important; } }
+      width: 16.666667%; } }
 /* line 34, nomtrips/components/_cards--carousel.scss */
 .cards--carousel--map-overlay .slick-dots {
   bottom: 0; }
@@ -10172,13 +10231,13 @@ nav ul {
 
 /* line 1, nomtrips/components/_card.scss */
 .card, .card--guides-featured--item, .card--list-select, .card--location, .card--restaurant, .card--dish {
+  margin-bottom: 1.25rem;
   border: 1px solid #ededed;
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.25rem;
+  border-radius: 5px;
   background: white;
-  border-radius: 3px;
   /* desktop */ }
   @media only screen and (min-width: 62rem) {
     /* line 1, nomtrips/components/_card.scss */
@@ -10601,8 +10660,8 @@ nav ul {
 /* line 1, nomtrips/components/_map-overlay-list.scss */
 .map-overlay-list {
   position: absolute;
-  max-width: 100%;
-  margin: auto;
+  width: 100%;
+  margin: 0;
   left: 0;
   bottom: 1.25rem;
   z-index: 99999; }
@@ -10644,7 +10703,7 @@ nav ul {
   @media only screen and (min-width: 48rem) {
     /* line 1, nomtrips/components/_card--map-overlay.scss */
     .card--map-overlay {
-      width: 24rem;
+      width: 20rem;
       top: 2.5rem;
       left: 2.5rem;
       transform: none; } }
@@ -10859,12 +10918,20 @@ nav ul {
   -moz-justify-content: space-between;
   justify-content: space-between;
   padding: 0.625rem; }
+  /* line 6, nomtrips/components/_dropdown-trigger.scss */
+  .card--map-overlay .dropdown-trigger {
+    margin-bottom: 1.25rem;
+    -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 5px; }
 
-/* line 7, nomtrips/components/_dropdown-trigger.scss */
+/* line 14, nomtrips/components/_dropdown-trigger.scss */
 .dropdown-trigger--title {
   font-family: "Open Sans Extra Bold", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-/* line 11, nomtrips/components/_dropdown-trigger.scss */
+/* line 18, nomtrips/components/_dropdown-trigger.scss */
 .dropdown-trigger--menu-icon:after {
   display: inline-block;
   content: "";
@@ -10876,22 +10943,22 @@ nav ul {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-/* line 15, nomtrips/components/_dropdown-trigger.scss */
+/* line 22, nomtrips/components/_dropdown-trigger.scss */
 .dropdown-pane {
   width: 100%;
   /* desktop */ }
-  /* line 18, nomtrips/components/_dropdown-trigger.scss */
+  /* line 25, nomtrips/components/_dropdown-trigger.scss */
   .nav--logged-in .dropdown-pane {
     -webkit-box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.1);
     box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.1);
     /* tablet */ }
     @media only screen and (min-width: 48rem) {
-      /* line 18, nomtrips/components/_dropdown-trigger.scss */
+      /* line 25, nomtrips/components/_dropdown-trigger.scss */
       .nav--logged-in .dropdown-pane {
         width: 35%; } }
   @media only screen and (min-width: 62rem) {
-    /* line 15, nomtrips/components/_dropdown-trigger.scss */
+    /* line 22, nomtrips/components/_dropdown-trigger.scss */
     .dropdown-pane {
       width: auto; } }
 
@@ -10905,7 +10972,7 @@ nav ul {
   line-height: 0;
   text-align: center;
   background: #4db6ac;
-  border-radius: 3px; }
+  border-radius: 5px; }
 
 /* line 14, nomtrips/components/_indicator-likes.scss */
 .indicator-likes--map, .indicator-likes--sm {
