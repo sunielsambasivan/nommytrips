@@ -1,58 +1,60 @@
 jQuery(document).ready(function($) {
     $(".single .content--post img").each(function() {
         if ($(this).attr("alt").length > 0) {
-            var e = $(this).attr("alt");
-            var t = document.createElement("div");
-            $(t).addClass("content--post-img");
+            var t = $(this).attr("alt");
+            var e = document.createElement("div");
+            $(e).addClass("content--post-img");
             var n = document.createElement("div");
-            $(n).addClass("content--post-img-caption").html(e);
-            $(t).insertBefore($(this));
-            $(this).appendTo(t);
-            $(n).appendTo(t);
+            $(n).addClass("content--post-img-caption").html(t);
+            $(e).insertBefore($(this));
+            $(this).appendTo(e);
+            $(n).appendTo(e);
         }
     });
-    var e = function(e) {
-        var t = -1;
+    var t = function(t) {
+        var e = -1;
         var n = -1;
         var a = 10;
-        e.addEventListener("mousedown", function(a) {
-            e.dragFlag = 0;
-            t = a.clientX;
+        t.addEventListener("mousedown", function(a) {
+            t.dragFlag = 0;
+            e = a.clientX;
             n = a.clientY;
         }, false);
-        e.addEventListener("mouseup", function(o) {
-            if (o.clientX > t - a && o.clientX < t + a && o.clientY > n - a && o.clientY < n + a) {
-                e.dragFlag = 0;
+        t.addEventListener("mouseup", function(o) {
+            if (o.clientX > e - a && o.clientX < e + a && o.clientY > n - a && o.clientY < n + a) {
+                t.dragFlag = 0;
             } else {
-                e.dragFlag = 1;
+                t.dragFlag = 1;
             }
         }, false);
     };
     $(".card--location").each(function() {
-        var t = e(this);
+        var e = t(this);
         $(this).click(function() {
             if (!this.dragFlag) {
                 window.location.href = $(this).data("url");
             }
         });
     });
-    var t = function() {
-        var e = document.createElement("style");
-        e.appendChild(document.createTextNode(""));
-        document.head.appendChild(e);
-        console.log(e.sheet.cssRules);
-        e.sheet.insertRule("body{background: #9988ee;}", 0);
-        return e.sheet;
+    var e = function() {
+        var t = document.createElement("style");
+        t.appendChild(document.createTextNode(""));
+        document.head.appendChild(t);
+        console.log(t.sheet.cssRules);
+        return t.sheet;
     }();
-    $(".has-tip").each(function() {
-        if ($(this).data("match-bg")) {
-            var e = $(this).children(".fa").css("color");
-            var n = $(this).data("toggle");
-            console.log(n);
-            $("#" + n).css({
-                "background-color": e
-            });
-            t.insertRule("#" + n + "::before{border-color: transparent transparent " + e + ";}", 0);
-        }
-    });
+    function n() {
+        console.log("ss");
+        $(".has-tip").each(function() {
+            if ($(this).data("match-bg")) {
+                var t = $(this).children(".fa").css("color");
+                var n = $(this).data("toggle");
+                $("#" + n).css({
+                    "background-color": t
+                });
+                e.insertRule("#" + n + "::before{border-color: transparent transparent " + t + ";}", 0);
+            }
+        });
+    }
+    setTimeout(n, 250);
 });

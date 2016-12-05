@@ -92,7 +92,6 @@ jQuery(document).ready( function( $ ) {
     document.head.appendChild(style);
 
     console.log(style.sheet.cssRules); // length is 0, and no rules
-    style.sheet.insertRule("body{background: #9988ee;}", 0);
 
     return style.sheet;
   })();
@@ -101,15 +100,18 @@ jQuery(document).ready( function( $ ) {
   /*
    *  Tooltips - overrides/adds foundation tooltip
    */
-  $(".has-tip").each(function(){
-    if($(this).data("match-bg")) {
-      var color = $(this).children(".fa").css("color");
-      var target = $(this).data("toggle");
-      console.log(target);
-      $("#" + target).css({"background-color" : color});
-      overrideTripStylesheet.insertRule('#' + target + '::before{border-color: transparent transparent ' + color + ';}', 0);
-      //console.log(overrideTripStylesheet.sheet); // length is 1, rule added
-      //console.log('#' + target + '{border-color: transparent transparent ' + color + ';}');
-    }
-  });
+  function setToolTipColors() {
+    console.log("ss");
+    $(".has-tip").each(function(){
+      if($(this).data("match-bg")) {
+        var color = $(this).children(".fa").css("color");
+        var target = $(this).data("toggle");
+        $("#" + target).css({"background-color" : color});
+        overrideTripStylesheet.insertRule('#' + target + '::before{border-color: transparent transparent ' + color + ';}', 0);
+      }
+    });
+  }
+
+  //timeout - wait for foundation js to its thang first
+  setTimeout(setToolTipColors, 250);
 });
