@@ -36,27 +36,28 @@ jQuery(document).ready( function( $ ) {
    *  anytime a mousedown occurs x/y coordinates change after mouseup, drag is assumed.
    */
   var clickOrDrag = function(element) {
-    element['dragFlag'] = 0;
     var clientX = -1;
     var clientY = -1;
     var threshold = 10;
 
     element.addEventListener("mousedown", function(e) {
-        element['dragFlag'] = 0;
+        element.dragFlag = 0;
         clientX = e.clientX;
         clientY = e.clientY;
-        console.log("X: " + e.clientX + " / Y: " + e.clientY);
+        //console.log("X: " + e.clientX + " / Y: " + e.clientY);
 
     }, false);
 
     element.addEventListener("mouseup", function(e) {
-      console.log("X: " + e.clientX + " / Y: " + e.clientY);
-      if(e.clientX > (clientX - threshold) && e.clientX < (clientX + threshold)) {
-        element['dragFlag'] = 0;
+      //console.log("X: " + e.clientX + " / Y: " + e.clientY);
+      if(e.clientX > (clientX - threshold) && e.clientX < (clientX + threshold) &&
+      e.clientY > (clientY - threshold) && e.clientY < (clientY + threshold))
+      {
+        element.dragFlag = 0;
       }
 
       else {
-        element['dragFlag'] = 1;
+        element.dragFlag = 1;
       }
     }, false);
   };
@@ -68,7 +69,47 @@ jQuery(document).ready( function( $ ) {
     var dragged = clickOrDrag(this);
 
     $(this).click(function() {
-      window.location.href = $(this).data("url");
+      if(!this.dragFlag) {
+        window.location.href = $(this).data("url");
+      }
     });
+  });
+
+
+  /*
+   *  Adding a stylesheet to override tooltip ::before psuedoelement.
+   *  Not sure how else to modify the tool tips
+   *  Other things can piggyback this stylesheet also
+   */
+  var overrideTripStylesheet = (function() {
+
+    var style = document.createElement("style");
+
+    // WebKit hack
+    style.appendChild(document.createTextNode(""));
+
+    // Add the <style> element to the page
+    document.head.appendChild(style);
+
+    console.log(style.sheet.cssRules); // length is 0, and no rules
+    style.sheet.insertRule("body{background: #9988ee;}", 0);
+
+    return style.sheet;
+  })();
+
+
+  /*
+   *  Tooltips - overrides/adds foundation tooltip
+   */
+  $(".has-tip").each(function(){
+    if($(this).data("match-bg")) {
+      var color = $(this).children(".fa").css("color");
+      var target = $(this).data("toggle");
+      console.log(target);
+      $("#" + target).css({"background-color" : color});
+      overrideTripStylesheet.insertRule('#' + target + '::before{border-color: transparent transparent ' + color + ';}', 0);
+      //console.log(overrideTripStylesheet.sheet); // length is 1, rule added
+      //console.log('#' + target + '{border-color: transparent transparent ' + color + ';}');
+    }
   });
 });

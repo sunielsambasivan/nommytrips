@@ -33,21 +33,29 @@ $address = $city->name .', '. $city->state;
       <li class="icon-bar--item--blue">
         <a href="#"><i class="fa fa-search text-blue"></i></a>
       </li>
-      <li class="icon-bar--item--teal is-dropdown-submenu-parent">
-        <a href="#"><i class="fa fa-calendar text-teal"></i></a>
+      <li class="icon-bar--item icon-bar--item--teal is-dropdown-submenu-parent">
+        <a href="#" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Calendar" data-v-offset="30" data-match-bg="true">
+          <i class="fa fa-calendar text-teal"></i></a>
         <ul class="menu">
           <li><a href="#">Item 1A</a></li>
           <!-- ... -->
         </ul>
       </li>
-      <li class="icon-bar--item--red">
-        <a href="#"><i class="fa fa-tag text-red"></i></a>
+      <li class="icon-bar--item icon-bar--item--red">
+        <a href="#" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Choose a tag or something" data-v-offset="30" data-match-bg="true">
+          <i class="fa fa-tag text-red"></i>
+        </a>
       </li>
-      <li class="icon-bar--item--green">
-        <a href="#"><i class="fa fa-bookmark text-green"></i></a>
+      <li class="icon-bar--item icon-bar--item--green">
+        <a href="#" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Bookmark This" data-v-offset="30" data-match-bg="true">
+          <i class="fa fa-bookmark text-green"></i>
+        </a>
       </li>
-      <li class="icon-bar--item--orange">
-        <a href="#"><i class="icon-bar--add-location fa fa-plus text-orange"></i> <i class="fa fa-map-marker text-orange"></i></a>
+      <li class="icon-bar--item icon-bar--item--orange">
+        <a href="#" data-tooltip aria-haspopup="true" class="has-tip" data-disable-hover="false" tabindex="1" title="Add Location" data-v-offset="30" data-match-bg="true">
+          <i class="icon-bar--add-location fa fa-plus text-orange"></i>
+          <i class="fa fa-map-marker text-orange"></i>
+        </a>
       </li>
     </ul>
   </div>

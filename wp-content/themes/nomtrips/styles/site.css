@@ -7774,7 +7774,7 @@ table.hover tr:nth-of-type(even):hover {
   color: #2b3e50; }
 
 /* line 63, nomtrips/scss/_theme.scss */
-.text-grean {
+.text-green {
   color: #27ad60; }
 
 /* line 64, nomtrips/scss/_theme.scss */
@@ -8783,6 +8783,18 @@ form :-moz-placeholder {
     border: 7px solid;
     border-color: #fff transparent transparent #fff; }
 
+/*
+ *  Overrides foundation tooltip styling.
+*/
+/* line 4, nomtrips/components/_tooltip.scss */
+.has-tip {
+  cursor: pointer;
+  border-bottom: none; }
+
+/* line 9, nomtrips/components/_tooltip.scss */
+.tooltip {
+  border-radius: 5px; }
+
 /* line 1, nomtrips/components/_media-object--nomtip.scss */
 .media-object--nomtip {
   display: -webkit-box;
@@ -9297,23 +9309,23 @@ nav ul {
     -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); }
 
-/* line 59, nomtrips/components/_icon-bar.scss */
+/* line 64, nomtrips/components/_icon-bar.scss */
 .icon-bar--item--blue.is-active, .icon-bar--item--blue:hover {
   background-color: #418aca; }
 
-/* line 65, nomtrips/components/_icon-bar.scss */
+/* line 70, nomtrips/components/_icon-bar.scss */
 .icon-bar--item--teal.is-active, .icon-bar--item--teal:hover {
   background-color: #4db6ac; }
 
-/* line 71, nomtrips/components/_icon-bar.scss */
+/* line 76, nomtrips/components/_icon-bar.scss */
 .icon-bar--item--red.is-active, .icon-bar--item--red:hover {
   background-color: #e95a4a; }
 
-/* line 77, nomtrips/components/_icon-bar.scss */
+/* line 82, nomtrips/components/_icon-bar.scss */
 .icon-bar--item--green.is-active, .icon-bar--item--green:hover {
   background-color: #27ad60; }
 
-/* line 83, nomtrips/components/_icon-bar.scss */
+/* line 88, nomtrips/components/_icon-bar.scss */
 .icon-bar--item--orange.is-active, .icon-bar--item--orange:hover {
   background-color: #e67d21; }
 

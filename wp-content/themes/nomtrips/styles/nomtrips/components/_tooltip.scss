@@ -1,0 +1,11 @@
+/*
+ *  Overrides foundation tooltip styling.
+*/
+.has-tip {
+  cursor: pointer;
+  border-bottom: none;
+}
+
+.tooltip {
+  border-radius: $border-radius;
+}
