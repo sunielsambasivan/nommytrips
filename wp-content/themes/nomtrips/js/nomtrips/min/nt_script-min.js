@@ -56,5 +56,5 @@ jQuery(document).ready(function($) {
             }
         });
     }
-    setTimeout(n, 250);
+    setTimeout(n, 1e3);
 });

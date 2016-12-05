@@ -113,5 +113,5 @@ jQuery(document).ready( function( $ ) {
   }
 
   //timeout - wait for foundation js to its thang first
-  setTimeout(setToolTipColors, 250);
+  setTimeout(setToolTipColors, 1000);
 });
