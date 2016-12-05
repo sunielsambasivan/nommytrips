@@ -8950,7 +8950,7 @@ form :-moz-placeholder {
 @media only screen and (min-width: 48rem) {
   /* line 21, nomtrips/components/_logo--header.scss */
   .logo--header svg {
-    max-width: none;
+    max-width: 180px;
     width: 100%; } }
 /* desktop */
 @media only screen and (min-width: 62rem) {
@@ -9899,7 +9899,7 @@ nav ul {
 @media only screen and (min-width: 48rem) {
   /* line 102, nomtrips/components/_content.scss */
   .content {
-    padding: 1.875rem; }
+    padding: 1.875rem 1.25rem; }
 
   /* line 106, nomtrips/components/_content.scss */
   .home .content {
