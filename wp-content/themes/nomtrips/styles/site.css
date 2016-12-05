@@ -10433,47 +10433,49 @@ nav ul {
 
 /* line 1, nomtrips/components/_card--location.scss */
 .card--location {
+  display: block;
   position: relative;
   width: 100%;
   padding: 0.625rem;
-  background: white; }
-  /* line 8, nomtrips/components/_card--location.scss */
+  background: white;
+  cursor: pointer; }
+  /* line 10, nomtrips/components/_card--location.scss */
   .card--location ul {
     margin: 0; }
 
-/* line 13, nomtrips/components/_card--location.scss */
+/* line 15, nomtrips/components/_card--location.scss */
 .card--location--title {
   color: #4db6ac;
   font-size: 1rem;
   font-weight: bold;
   width: 80%; }
-  /* line 19, nomtrips/components/_card--location.scss */
+  /* line 21, nomtrips/components/_card--location.scss */
   .card--location--title a {
     color: #4db6ac; }
 
-/* line 24, nomtrips/components/_card--location.scss */
+/* line 26, nomtrips/components/_card--location.scss */
 .card--location--address {
   font-size: 0.75rem; }
-  /* line 27, nomtrips/components/_card--location.scss */
+  /* line 29, nomtrips/components/_card--location.scss */
   .cards--carousel--map-overlay .card--location--address {
     width: 78%; }
 
-/* line 32, nomtrips/components/_card--location.scss */
+/* line 34, nomtrips/components/_card--location.scss */
 .card--location--icon-bar {
   display: inline-block;
   width: auto;
   margin-top: 0.3125rem;
   font-size: 0.75rem;
   border: 1px solid rgba(43, 62, 80, 0.3); }
-  /* line 39, nomtrips/components/_card--location.scss */
+  /* line 41, nomtrips/components/_card--location.scss */
   .card--location--icon-bar i {
     border-right: 1px solid rgba(43, 62, 80, 0.3);
     padding: 0.3125rem; }
-    /* line 43, nomtrips/components/_card--location.scss */
+    /* line 45, nomtrips/components/_card--location.scss */
     .card--location--icon-bar i:last-child {
       border-right: none; }
 
-/* line 49, nomtrips/components/_card--location.scss */
+/* line 51, nomtrips/components/_card--location.scss */
 .card--location--rating {
   position: absolute;
   top: 10px;

@@ -1,6 +1,6 @@
 <!--slide-->
 <li class="cards--carousel--slide">
-  <div class="card--location">
+  <div class="card--location" data-url="<?php the_permalink(); ?>">
     <div class="card--location--rating">
       <div class="indicator-likes--map">5</div>
     </div>

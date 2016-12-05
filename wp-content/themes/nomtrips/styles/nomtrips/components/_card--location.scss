@@ -1,9 +1,11 @@
 .card--location {
   @extend .card;
+  display: block;
   position: relative;
   width: 100%;
   padding: rem_calc($base-padding /2);
   background: white;
+  cursor: pointer;
 
   ul {
     margin: 0;
