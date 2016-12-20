@@ -12,6 +12,7 @@ class Carousel
   public $taxonomy;
   public $terms;
   public $posts;
+  public $display_types;
   public $error;
 
   public function __construct( $post_type = 'false', $num_posts = 5, $taxonomy = 'category', $terms = array() ) {
@@ -25,6 +26,11 @@ class Carousel
       $this->taxonomy = $taxonomy;
       $this->terms = $terms;
     }
+
+    $this->display_types = array(
+      'map-overlay' => 'cardsCarouselPageMap',
+      'restaurant-page' => 'cardsCarouselPageRestaurant'
+    );
   }
 
   public function get_posts() {
@@ -55,7 +61,7 @@ class Carousel
     if( $display_type == 'map-overlay' ) {
       if($this->posts->have_posts()) { ?>
       <div class="map-overlay-list">
-        <div class="cards--carousel cards--carousel--map-overlay">
+        <div class="cards--carousel cards--carousel--map-overlay" data-carousel-init="cardsCarouselPageMap">
           <!--arrow buttons-->
           <div class="cards--carousel--btn"> <button type="button" data-role="none" class="slick-prev--images slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button> </div>
 

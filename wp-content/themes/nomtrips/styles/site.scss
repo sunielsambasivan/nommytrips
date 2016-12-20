@@ -43,6 +43,7 @@ External styles manifest
 @import "nomtrips/components/form-elements";
 @import "nomtrips/components/map";
 @import "nomtrips/components/speech-bubble";
+@import "nomtrips/components/tooltip";
 @import "nomtrips/components/media-object--nomtip";
 @import "nomtrips/components/header";
 @import "nomtrips/components/footer";
@@ -76,7 +77,7 @@ External styles manifest
 @import "nomtrips/components/card--restaurant";
 @import "nomtrips/components/card--dish";
 @import "nomtrips/components/map-overlay-list";
-@import "nomtrips/components/card-overlay";
+@import "nomtrips/components/card--map-overlay";
 @import "nomtrips/components/list--location";
 @import "nomtrips/components/list--review";
 @import "nomtrips/components/dropdown-trigger";

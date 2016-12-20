@@ -1,7 +1,10 @@
 .header {
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(space-between);
   height: 77px;
+  padding: 0;
   background: $color-teal;
-  padding: $base-padding 0;
   color: white;
 
   a {
@@ -12,10 +15,13 @@
 .header--contents {
   @include align-items(center);
   @include justify-content(flex-start);
-  margin-left: map-get($grid-column-gutter, small); //small gutter from _settings.scss in foundation
+  width: 100%;
+  @include flex(0 0 100%);
+  margin: auto;
 }
 
 .header--wrapper {
+  position: relative;
   @include flexbox();
 }
 
@@ -23,12 +29,23 @@
   responsive
 **/
 
-@include respond-to(tablet) {
+@include respond-to(desktop-large) {
   .header--contents {
-    min-height: 90px;
-    margin: 0;
-    max-width: none;
-    width: 100%;
-    flex: 0 0 100%;
+    width: rem_calc(map-get($breakpoints, xlarge));
+    @include flex(0 0 rem_calc(map-get($breakpoints, xlarge)));
+
+    //full width for map page
+    .tax-city & {
+      max-width: none;
+      width: 100%;
+      @include flex(0 0 100%);
+    }
+  }
+}
+
+@include respond-to(desktop-xlarge) {
+  .header--contents {
+    width: rem_calc(map-get($breakpoints, xxlarge));
+    @include flex(0 0 rem_calc(map-get($breakpoints, xxlarge)));
   }
 }

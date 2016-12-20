@@ -1,16 +1,12 @@
-.card-overlay {
+.card--map-overlay {
   position: absolute;
   z-index: 999999;
   width: 90%;
   top: rem_calc($base-margin);
   @include center-horizontally(50%, -50%, absolute);
-  
-  .card {
-    background: white;
-  }
-  
+
   @include respond-to(tablet) {
-    width: 24rem;
+    width: 20rem;
     top: rem_calc($base-margin *2);
     left: rem_calc($base-margin *2);
     transform: none;

@@ -100,7 +100,7 @@
 
 @include respond-to(tablet) {
   .content {
-    padding: rem_calc($base-padding* 1.5);
+    padding: rem_calc($base-padding* 1.5) rem_calc($base-padding);
   }
 
   .home .content {

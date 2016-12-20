@@ -11,14 +11,23 @@
 
 .cards--carousel--map-overlay {
   .slick-track {
-    width: 100% !important;
+    width: 100%;
   }
 
   .slick-slide {
-    //width: 100% !important;
+    //add important to override slick carousel plugin js
+    width: 100% !important;
+
+    @include respond-to(tablet) {
+      width: 50% !important;
+    }
 
     @include respond-to(desktop) {
-      width: 33.333% !important;
+      width: 25% !important;
+    }
+
+    @include respond-to(desktop-large) {
+      width: 16.666667%;
     }
   }
 

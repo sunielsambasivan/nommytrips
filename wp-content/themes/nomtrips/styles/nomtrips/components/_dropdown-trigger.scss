@@ -2,6 +2,13 @@
   @include flexbox();
   @include justify-content(space-between);
   padding: rem_calc($base-padding/2);
+
+  .card--map-overlay & {
+    margin-bottom: rem_calc($base-margin);
+    @include card-shadow();
+    background: white;
+    border-radius: $border-radius;
+  }
 }
 
 .dropdown-trigger--title {

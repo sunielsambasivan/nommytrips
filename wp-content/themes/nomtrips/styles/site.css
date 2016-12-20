@@ -4265,7 +4265,7 @@ table.hover tr:nth-of-type(even):hover {
 /* line 60, vendor/foundation/scss/components/_title-bar.scss */
 .title-bar-left,
 .title-bar-right {
-  flex: 1 1 0px; }
+  line-height: 0; }
 
 /* line 65, vendor/foundation/scss/components/_title-bar.scss */
 .title-bar-right {
@@ -7722,12 +7722,12 @@ table.hover tr:nth-of-type(even):hover {
 
 /* line 41, nomtrips/scss/_theme.scss */
 .grey-ash {
-  background-color: #f7f7f7;
+  background-color: #f8f8f8;
   color: #323232; }
 
 /* line 42, nomtrips/scss/_theme.scss */
 .grey-stone {
-  background-color: #eaeaea;
+  background-color: #ededed;
   color: #323232; }
 
 /* line 43, nomtrips/scss/_theme.scss */
@@ -7751,7 +7751,7 @@ table.hover tr:nth-of-type(even):hover {
   color: white; }
 
 /* line 47, nomtrips/scss/_theme.scss */
-.green {
+.color-green, .green {
   background-color: #27ad60;
   color: white; }
 
@@ -7774,7 +7774,7 @@ table.hover tr:nth-of-type(even):hover {
   color: #2b3e50; }
 
 /* line 63, nomtrips/scss/_theme.scss */
-.text-grean {
+.text-green {
   color: #27ad60; }
 
 /* line 64, nomtrips/scss/_theme.scss */
@@ -8547,6 +8547,10 @@ Framework classes
   position: static; }
 
 /* line 5, nomtrips/components/_off-canvas.scss */
+.off-canvas-wrapper-inner {
+  background: #f8f8f8; }
+
+/* line 9, nomtrips/components/_off-canvas.scss */
 .off-canvas-content {
   box-shadow: none; }
 
@@ -8757,7 +8761,7 @@ form :-moz-placeholder {
 .speech-bubble--content {
   position: relative;
   font-size: 0.875rem;
-  line-height: 0.875rem;
+  line-height: 1.125rem;
   padding: 0.3125rem;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   border: 1px solid #cccccc;
@@ -8778,6 +8782,18 @@ form :-moz-placeholder {
     bottom: -14px;
     border: 7px solid;
     border-color: #fff transparent transparent #fff; }
+
+/*
+ *  Overrides foundation tooltip styling.
+*/
+/* line 4, nomtrips/components/_tooltip.scss */
+.has-tip {
+  cursor: pointer;
+  border-bottom: none; }
+
+/* line 9, nomtrips/components/_tooltip.scss */
+.tooltip {
+  border-radius: 5px; }
 
 /* line 1, nomtrips/components/_media-object--nomtip.scss */
 .media-object--nomtip {
@@ -8806,15 +8822,30 @@ form :-moz-placeholder {
 
 /* line 1, nomtrips/components/_header.scss */
 .header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
   height: 77px;
+  padding: 0;
   background: #4db6ac;
-  padding: 20px 0;
   color: white; }
-  /* line 7, nomtrips/components/_header.scss */
+  /* line 10, nomtrips/components/_header.scss */
   .header a {
     color: white; }
 
-/* line 12, nomtrips/components/_header.scss */
+/* line 15, nomtrips/components/_header.scss */
 .header--contents {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -8826,10 +8857,18 @@ form :-moz-placeholder {
   -webkit-justify-content: flex-start;
   -moz-justify-content: flex-start;
   justify-content: flex-start;
-  margin-left: 20px; }
+  width: 100%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 100%;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  margin: auto; }
 
-/* line 18, nomtrips/components/_header.scss */
+/* line 23, nomtrips/components/_header.scss */
 .header--wrapper {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -8839,15 +8878,38 @@ form :-moz-placeholder {
 /**
   responsive
 **/
-/* tablet */
-@media only screen and (min-width: 48rem) {
-  /* line 27, nomtrips/components/_header.scss */
+/* desktop */
+@media only screen and (min-width: 85.375rem) {
+  /* line 33, nomtrips/components/_header.scss */
   .header--contents {
-    min-height: 90px;
-    margin: 0;
-    max-width: none;
-    width: 100%;
-    flex: 0 0 100%; } }
+    width: 85.375rem;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 85.375rem;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 85.375rem;
+    -ms-flex: 0 0 85.375rem;
+    flex: 0 0 85.375rem; }
+    /* line 38, nomtrips/components/_header.scss */
+    .tax-city .header--contents {
+      max-width: none;
+      width: 100%;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 100%;
+      -moz-box-flex: 0;
+      -moz-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%; } }
+/* desktop */
+@media only screen and (min-width: 100rem) {
+  /* line 47, nomtrips/components/_header.scss */
+  .header--contents {
+    width: 100rem;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100rem;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 100rem;
+    -ms-flex: 0 0 100rem;
+    flex: 0 0 100rem; } }
 /* line 1, nomtrips/components/_footer.scss */
 .footer {
   min-height: 290px;
@@ -8874,7 +8936,7 @@ form :-moz-placeholder {
   line-height: 1rem; }
   /* line 5, nomtrips/components/_logo--header.scss */
   .logo--header svg {
-    width: 80%; }
+    max-width: 65%; }
 
 /* line 10, nomtrips/components/_logo--header.scss */
 #logo {
@@ -8884,10 +8946,17 @@ form :-moz-placeholder {
     -webkit-margin-before: 0;
     -webkit-margin-after: 0; }
 
-@media screen and (tablet) {
+/* tablet */
+@media only screen and (min-width: 48rem) {
   /* line 21, nomtrips/components/_logo--header.scss */
   .logo--header svg {
+    max-width: 180px;
     width: 100%; } }
+/* desktop */
+@media only screen and (min-width: 62rem) {
+  /* line 29, nomtrips/components/_logo--header.scss */
+  .logo--header {
+    padding-right: 6.25rem; } }
 /* line 1, nomtrips/components/_logo--footer.scss */
 .logo--footer {
   display: block;
@@ -9171,23 +9240,33 @@ nav ul {
       border-bottom: solid 3px #418aca; } }
 /* line 1, nomtrips/components/_icon-bar.scss */
 .icon-bar {
-  padding: 0.625rem; }
-  /* line 4, nomtrips/components/_icon-bar.scss */
-  .icon-bar i {
-    font-size: 1.875rem; }
+  -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.25rem;
+  background: white;
+  border-radius: 5px; }
   /* line 7, nomtrips/components/_icon-bar.scss */
-  .icon-bar .menu {
+  .icon-bar i {
+    font-size: 1.25rem; }
+  /* line 11, nomtrips/components/_icon-bar.scss */
+  .icon-bar .icon-bar--add-location {
+    font-size: 0.6rem; }
+  /* line 15, nomtrips/components/_icon-bar.scss */
+  .icon-bar > .menu {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-    -webkit-justify-content: space-around;
-    -moz-justify-content: space-around;
-    justify-content: space-around; }
-    /* line 11, nomtrips/components/_icon-bar.scss */
-    .icon-bar .menu li {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0; }
+    /* line 20, nomtrips/components/_icon-bar.scss */
+    .icon-bar > .menu li {
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 auto;
       -moz-box-flex: 0;
@@ -9195,12 +9274,60 @@ nav ul {
       -ms-flex: 0 0 auto;
       flex: 0 0 auto;
       width: auto;
-      padding: 0;
+      padding: 0.625rem;
       margin: 0;
       border: none; }
-      /* line 18, nomtrips/components/_icon-bar.scss */
-      .icon-bar .menu li a {
-        padding: 0.125rem; }
+      /* line 28, nomtrips/components/_icon-bar.scss */
+      .icon-bar > .menu li.is-active > a, .icon-bar > .menu li.is-active i, .icon-bar > .menu li:hover > a, .icon-bar > .menu li:hover i {
+        color: white; }
+      /* line 32, nomtrips/components/_icon-bar.scss */
+      .icon-bar > .menu li.is-active a::after, .icon-bar > .menu li:hover a::after {
+        border-color: white transparent transparent !important; }
+      /* line 37, nomtrips/components/_icon-bar.scss */
+      .icon-bar > .menu li a {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        align-items: center;
+        padding: 0.125rem;
+        text-decoration: none; }
+  /* line 46, nomtrips/components/_icon-bar.scss */
+  .icon-bar li li:hover a:hover {
+    color: #418aca; }
+  /* line 50, nomtrips/components/_icon-bar.scss */
+  .icon-bar .is-dropdown-submenu {
+    margin-top: 2px;
+    border: none;
+    border-radius: 0 0 5px 5px;
+    -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); }
+
+/* line 64, nomtrips/components/_icon-bar.scss */
+.icon-bar--item--blue.is-active, .icon-bar--item--blue:hover {
+  background-color: #418aca; }
+
+/* line 70, nomtrips/components/_icon-bar.scss */
+.icon-bar--item--teal.is-active, .icon-bar--item--teal:hover {
+  background-color: #4db6ac; }
+
+/* line 76, nomtrips/components/_icon-bar.scss */
+.icon-bar--item--red.is-active, .icon-bar--item--red:hover {
+  background-color: #e95a4a; }
+
+/* line 82, nomtrips/components/_icon-bar.scss */
+.icon-bar--item--green.is-active, .icon-bar--item--green:hover {
+  background-color: #27ad60; }
+
+/* line 88, nomtrips/components/_icon-bar.scss */
+.icon-bar--item--orange.is-active, .icon-bar--item--orange:hover {
+  background-color: #e67d21; }
 
 /* line 1, nomtrips/components/_button-icon.scss */
 .button-icon {
@@ -9219,8 +9346,8 @@ nav ul {
   font-weight: bold;
   line-height: initial;
   background-color: #fff;
-  border: 1px solid #eaeaea;
-  border-radius: 3px;
+  border: 1px solid #ededed;
+  border-radius: 5px;
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); }
@@ -9243,8 +9370,8 @@ nav ul {
   align-items: stretch;
   line-height: initial;
   background-color: #fff;
-  border: 1px solid #eaeaea;
-  border-radius: 3px;
+  border: 1px solid #ededed;
+  border-radius: 5px;
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); }
@@ -9393,7 +9520,7 @@ nav ul {
 
 /* line 15, nomtrips/components/_profile.scss */
 .profile--name, .profile--name--white {
-  padding: 0 10px 4px; }
+  padding: 0 0 4px 10px; }
 
 /* line 19, nomtrips/components/_profile.scss */
 .profile--name--white {
@@ -9471,14 +9598,14 @@ nav ul {
   .menu--logged-in-items {
     padding: 20px 20px 0;
     top: 63px !important;
-    right: 9px !important;
+    right: 1.25rem !important;
     left: auto !important;
     border: none; }
     /* line 78, nomtrips/components/_profile.scss */
     .menu--logged-in-items:before {
       position: absolute;
       top: -5px;
-      right: 5px;
+      right: 0.625rem;
       content: "";
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
@@ -9494,7 +9621,7 @@ nav ul {
   -ms-flex: 0 0 220px;
   flex: 0 0 220px;
   width: 220px;
-  padding: 0 10px 4px; }
+  padding: 0 5px 4px 10px; }
 /* line 11, nomtrips/components/_profile--header.scss */
 .profile--header .profile--avatar {
   float: left;
@@ -9772,7 +9899,7 @@ nav ul {
 @media only screen and (min-width: 48rem) {
   /* line 102, nomtrips/components/_content.scss */
   .content {
-    padding: 1.875rem; }
+    padding: 1.875rem 1.25rem; }
 
   /* line 106, nomtrips/components/_content.scss */
   .home .content {
@@ -9791,12 +9918,114 @@ nav ul {
 .form-search--cities .form-item {
   margin: auto; }
 
-/* line 16, nomtrips/components/_search.scss */
+/* line 17, nomtrips/components/_search.scss */
+.search--form .form-item {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center; }
+
+/* line 25, nomtrips/components/_search.scss */
+.search--input-text {
+  height: 40px;
+  margin-bottom: 0; }
+
+/* line 30, nomtrips/components/_search.scss */
+.search--input-text:focus,
+.search--input-text:active {
+  max-width: 80%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 80%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 80%;
+  -ms-flex: 0 0 80%;
+  flex: 0 0 80%;
+  -moz-transition: width 175ms ease-out;
+  -o-transition: width 175ms ease-out;
+  -webkit-transition: width 175ms ease-out;
+  -ms-transition: width 175ms ease-out;
+  transition: width 175ms ease-out; }
+  /* line 36, nomtrips/components/_search.scss */
+  .search--input-text:focus ~ .search--icon,
+  .search--input-text:active ~ .search--icon {
+    display: none; }
+  /* line 40, nomtrips/components/_search.scss */
+  .search--input-text:focus ~ .search--btn,
+  .search--input-text:active ~ .search--btn {
+    width: 18%;
+    height: 40px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 18%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 18%;
+    -ms-flex: 0 0 18%;
+    flex: 0 0 18%;
+    line-height: 1rem;
+    opacity: 1;
+    -moz-transition: all 175ms ease-in-out;
+    -o-transition: all 175ms ease-in-out;
+    -webkit-transition: all 175ms ease-in-out;
+    -ms-transition: all 175ms ease-in-out;
+    transition: all 175ms ease-in-out; }
+
+/* line 50, nomtrips/components/_search.scss */
+.search--btn:active {
+  width: 18%;
+  height: 40px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 18%;
+  -moz-box-flex: 0;
+  -moz-flex: 0 0 18%;
+  -ms-flex: 0 0 18%;
+  flex: 0 0 18%;
+  line-height: 1rem;
+  opacity: 1;
+  -moz-transition: all 175ms ease-in-out;
+  -o-transition: all 175ms ease-in-out;
+  -webkit-transition: all 175ms ease-in-out;
+  -ms-transition: all 175ms ease-in-out;
+  transition: all 175ms ease-in-out; }
+
+/* line 59, nomtrips/components/_search.scss */
+.search--btn {
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  opacity: 0;
+  -moz-transition: all 175ms ease-out;
+  -o-transition: all 175ms ease-out;
+  -webkit-transition: all 175ms ease-out;
+  -ms-transition: all 175ms ease-out;
+  transition: all 175ms ease-out; }
+
+/* line 69, nomtrips/components/_search.scss */
+.search--icon {
+  display: block;
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  color: #2b3e50; }
+
+/* line 77, nomtrips/components/_search.scss */
 .search--header {
   display: none;
   /* tablet */ }
   @media only screen and (min-width: 48rem) {
-    /* line 16, nomtrips/components/_search.scss */
+    /* line 77, nomtrips/components/_search.scss */
     .search--header {
       display: block;
       -webkit-box-flex: 1;
@@ -9805,13 +10034,13 @@ nav ul {
       -moz-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
       flex: 1 1 auto; } }
-  /* line 24, nomtrips/components/_search.scss */
+  /* line 85, nomtrips/components/_search.scss */
   .search--header .search-cities {
     background: transparent; }
 
 /* line 1, nomtrips/components/_buttons.scss */
 .button, .button-pill {
-  border-radius: 3px;
+  border-radius: 5px;
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1); }
@@ -9855,39 +10084,50 @@ nav ul {
 
 /* line 13, nomtrips/components/_cards--carousel.scss */
 .cards--carousel--map-overlay .slick-track {
-  width: 100% !important; }
+  width: 100%; }
 /* line 17, nomtrips/components/_cards--carousel.scss */
 .cards--carousel--map-overlay .slick-slide {
+  width: 100% !important;
+  /* tablet */
+  /* desktop */
   /* desktop */ }
+  @media only screen and (min-width: 48rem) {
+    /* line 17, nomtrips/components/_cards--carousel.scss */
+    .cards--carousel--map-overlay .slick-slide {
+      width: 50% !important; } }
   @media only screen and (min-width: 62rem) {
     /* line 17, nomtrips/components/_cards--carousel.scss */
     .cards--carousel--map-overlay .slick-slide {
-      width: 33.333% !important; } }
-/* line 25, nomtrips/components/_cards--carousel.scss */
+      width: 25% !important; } }
+  @media only screen and (min-width: 85.375rem) {
+    /* line 17, nomtrips/components/_cards--carousel.scss */
+    .cards--carousel--map-overlay .slick-slide {
+      width: 16.666667%; } }
+/* line 34, nomtrips/components/_cards--carousel.scss */
 .cards--carousel--map-overlay .slick-dots {
   bottom: 0; }
-/* line 29, nomtrips/components/_cards--carousel.scss */
+/* line 38, nomtrips/components/_cards--carousel.scss */
 .cards--carousel--map-overlay .cards--carousel--btn button:before {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75); }
 
-/* line 34, nomtrips/components/_cards--carousel.scss */
+/* line 43, nomtrips/components/_cards--carousel.scss */
 .cards--carousel--container {
   margin-left: -0.3125rem;
   margin-right: -0.3125rem;
   /*
   override slick styling
   */ }
-  /* line 42, nomtrips/components/_cards--carousel.scss */
+  /* line 51, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--container .slick-list {
     padding-bottom: 20px; }
-  /* line 46, nomtrips/components/_cards--carousel.scss */
+  /* line 55, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--container .slick-track {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex; }
-  /* line 51, nomtrips/components/_cards--carousel.scss */
+  /* line 60, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--container .slick-dots button:before {
     display: inline-block;
     content: "";
@@ -9900,7 +10140,7 @@ nav ul {
     -moz-osx-font-smoothing: grayscale;
     color: #4db6ac !important;
     opacity: 1 !important; }
-  /* line 59, nomtrips/components/_cards--carousel.scss */
+  /* line 68, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--container .slick-dots .slick-active button:before {
     display: inline-block;
     content: "";
@@ -9914,7 +10154,7 @@ nav ul {
     color: #4db6ac !important;
     opacity: 1 !important; }
 
-/* line 67, nomtrips/components/_cards--carousel.scss */
+/* line 76, nomtrips/components/_cards--carousel.scss */
 .cards--carousel--slide {
   -webkit-flex-basis: auto;
   -moz-flex-basis: auto;
@@ -9936,21 +10176,21 @@ nav ul {
   -moz-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row; }
-  /* line 78, nomtrips/components/_cards--carousel.scss */
+  /* line 87, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--slide.slick-slide {
     height: auto; }
 
-/* line 83, nomtrips/components/_cards--carousel.scss */
+/* line 92, nomtrips/components/_cards--carousel.scss */
 .cards--carousel--btn {
   /*
   override slick styling
   */ }
-  /* line 89, nomtrips/components/_cards--carousel.scss */
+  /* line 98, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--btn .slick-arrow {
     padding: 0 2px;
     width: 28px;
     height: 28px; }
-  /* line 95, nomtrips/components/_cards--carousel.scss */
+  /* line 104, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--btn *[class^="slick-next"] {
     position: absolute;
     top: 50%;
@@ -9961,7 +10201,7 @@ nav ul {
     right: 0;
     font-size: 0;
     line-height: 0; }
-    /* line 101, nomtrips/components/_cards--carousel.scss */
+    /* line 110, nomtrips/components/_cards--carousel.scss */
     .cards--carousel--btn *[class^="slick-next"]:before {
       display: inline-block;
       content: "";
@@ -9975,7 +10215,7 @@ nav ul {
       -webkit-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
       -moz-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25); }
-  /* line 107, nomtrips/components/_cards--carousel.scss */
+  /* line 116, nomtrips/components/_cards--carousel.scss */
   .cards--carousel--btn *[class^="slick-prev"] {
     position: absolute;
     top: 50%;
@@ -9986,7 +10226,7 @@ nav ul {
     left: 0;
     font-size: 0;
     line-height: 0; }
-    /* line 113, nomtrips/components/_cards--carousel.scss */
+    /* line 122, nomtrips/components/_cards--carousel.scss */
     .cards--carousel--btn *[class^="slick-prev"]:before {
       display: inline-block;
       content: "";
@@ -10003,11 +10243,13 @@ nav ul {
 
 /* line 1, nomtrips/components/_card.scss */
 .card, .card--guides-featured--item, .card--list-select, .card--location, .card--restaurant, .card--dish {
-  border: 1px solid #cccccc;
+  margin-bottom: 1.25rem;
+  border: 1px solid #ededed;
   -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.25rem;
+  border-radius: 5px;
+  background: white;
   /* desktop */ }
   @media only screen and (min-width: 62rem) {
     /* line 1, nomtrips/components/_card.scss */
@@ -10078,11 +10320,7 @@ nav ul {
 
   /* line 43, nomtrips/components/_card--city.scss */
   .card--city--primary {
-    margin-bottom: 1.25rem; }
-
-  /* line 47, nomtrips/components/_card--city.scss */
-  .card--city--container {
-    height: 196px; } }
+    margin-bottom: 1.25rem; } }
 /* desktop */
 @media only screen and (min-width: 62rem) {
   /* line 53, nomtrips/components/_card--city.scss */
@@ -10091,11 +10329,7 @@ nav ul {
 
   /* line 57, nomtrips/components/_card--city.scss */
   .card--city--image {
-    height: auto; }
-
-  /* line 61, nomtrips/components/_card--city.scss */
-  .card--city--primary .card--city--container {
-    height: 350px; } }
+    height: auto; } }
 /* line 1, nomtrips/components/_card--guide-featured.scss */
 .card--guides-featured {
   display: -webkit-box;
@@ -10211,43 +10445,49 @@ nav ul {
 
 /* line 1, nomtrips/components/_card--location.scss */
 .card--location {
+  display: block;
   position: relative;
   width: 100%;
-  padding: 1.25rem;
-  background: white; }
-  /* line 8, nomtrips/components/_card--location.scss */
+  padding: 0.625rem;
+  background: white;
+  cursor: pointer; }
+  /* line 10, nomtrips/components/_card--location.scss */
   .card--location ul {
     margin: 0; }
 
-/* line 13, nomtrips/components/_card--location.scss */
+/* line 15, nomtrips/components/_card--location.scss */
 .card--location--title {
   color: #4db6ac;
-  font-size: 0.875rem; }
-  /* line 17, nomtrips/components/_card--location.scss */
+  font-size: 1rem;
+  font-weight: bold;
+  width: 80%; }
+  /* line 21, nomtrips/components/_card--location.scss */
   .card--location--title a {
     color: #4db6ac; }
 
-/* line 22, nomtrips/components/_card--location.scss */
+/* line 26, nomtrips/components/_card--location.scss */
 .card--location--address {
-  font-size: 0.875rem; }
-  /* line 25, nomtrips/components/_card--location.scss */
+  font-size: 0.75rem; }
+  /* line 29, nomtrips/components/_card--location.scss */
   .cards--carousel--map-overlay .card--location--address {
-    width: 58%; }
+    width: 78%; }
 
-/* line 30, nomtrips/components/_card--location.scss */
+/* line 34, nomtrips/components/_card--location.scss */
 .card--location--icon-bar {
-  font-size: 0.875rem;
-  border: 1px solid rgba(43, 62, 80, 0.3);
-  width: auto; }
-  /* line 35, nomtrips/components/_card--location.scss */
+  display: inline-block;
+  width: auto;
+  margin-top: 0.3125rem;
+  font-size: 0.75rem;
+  border: 1px solid rgba(43, 62, 80, 0.3); }
+  /* line 41, nomtrips/components/_card--location.scss */
   .card--location--icon-bar i {
     border-right: 1px solid rgba(43, 62, 80, 0.3);
     padding: 0.3125rem; }
-    /* line 39, nomtrips/components/_card--location.scss */
+    /* line 45, nomtrips/components/_card--location.scss */
     .card--location--icon-bar i:last-child {
       border-right: none; }
 
-/* line 45, nomtrips/components/_card--location.scss */
+/* line 51, nomtrips/components/_card--location.scss */
 .card--location--rating {
   position: absolute;
   top: 10px;
@@ -10268,7 +10508,7 @@ nav ul {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  font-size: 0.875rem; }
+  font-size: 0.75rem; }
   /* line 14, nomtrips/components/_card--restaurant.scss */
   .card--restaurant--address:before,
   .card--restaurant--phone:before,
@@ -10434,8 +10674,8 @@ nav ul {
 /* line 1, nomtrips/components/_map-overlay-list.scss */
 .map-overlay-list {
   position: absolute;
-  max-width: 100%;
-  margin: auto;
+  width: 100%;
+  margin: 0;
   left: 0;
   bottom: 1.25rem;
   z-index: 99999; }
@@ -10461,8 +10701,8 @@ nav ul {
   /* line 25, nomtrips/components/_map-overlay-list.scss */
   .map-overlay-list--slides li {
     margin-right: 2.5rem; } }
-/* line 1, nomtrips/components/_card-overlay.scss */
-.card-overlay {
+/* line 1, nomtrips/components/_card--map-overlay.scss */
+.card--map-overlay {
   position: absolute;
   z-index: 999999;
   width: 90%;
@@ -10474,13 +10714,10 @@ nav ul {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   /* tablet */ }
-  /* line 8, nomtrips/components/_card-overlay.scss */
-  .card-overlay .card, .card-overlay .card--guides-featured--item, .card-overlay .card--list-select, .card-overlay .card--location, .card-overlay .card--restaurant, .card-overlay .card--dish {
-    background: white; }
   @media only screen and (min-width: 48rem) {
-    /* line 1, nomtrips/components/_card-overlay.scss */
-    .card-overlay {
-      width: 24rem;
+    /* line 1, nomtrips/components/_card--map-overlay.scss */
+    .card--map-overlay {
+      width: 20rem;
       top: 2.5rem;
       left: 2.5rem;
       transform: none; } }
@@ -10695,12 +10932,20 @@ nav ul {
   -moz-justify-content: space-between;
   justify-content: space-between;
   padding: 0.625rem; }
+  /* line 6, nomtrips/components/_dropdown-trigger.scss */
+  .card--map-overlay .dropdown-trigger {
+    margin-bottom: 1.25rem;
+    -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 5px; }
 
-/* line 7, nomtrips/components/_dropdown-trigger.scss */
+/* line 14, nomtrips/components/_dropdown-trigger.scss */
 .dropdown-trigger--title {
   font-family: "Open Sans Extra Bold", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-/* line 11, nomtrips/components/_dropdown-trigger.scss */
+/* line 18, nomtrips/components/_dropdown-trigger.scss */
 .dropdown-trigger--menu-icon:after {
   display: inline-block;
   content: "";
@@ -10712,22 +10957,22 @@ nav ul {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-/* line 15, nomtrips/components/_dropdown-trigger.scss */
+/* line 22, nomtrips/components/_dropdown-trigger.scss */
 .dropdown-pane {
   width: 100%;
   /* desktop */ }
-  /* line 18, nomtrips/components/_dropdown-trigger.scss */
+  /* line 25, nomtrips/components/_dropdown-trigger.scss */
   .nav--logged-in .dropdown-pane {
     -webkit-box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.1);
     box-shadow: 10px 10px 3px 3px rgba(0, 0, 0, 0.1);
     /* tablet */ }
     @media only screen and (min-width: 48rem) {
-      /* line 18, nomtrips/components/_dropdown-trigger.scss */
+      /* line 25, nomtrips/components/_dropdown-trigger.scss */
       .nav--logged-in .dropdown-pane {
         width: 35%; } }
   @media only screen and (min-width: 62rem) {
-    /* line 15, nomtrips/components/_dropdown-trigger.scss */
+    /* line 22, nomtrips/components/_dropdown-trigger.scss */
     .dropdown-pane {
       width: auto; } }
 
@@ -10741,7 +10986,7 @@ nav ul {
   line-height: 0;
   text-align: center;
   background: #4db6ac;
-  border-radius: 3px; }
+  border-radius: 5px; }
 
 /* line 14, nomtrips/components/_indicator-likes.scss */
 .indicator-likes--map, .indicator-likes--sm {
@@ -10899,7 +11144,7 @@ nav ul {
   color: #2b3e50; }
   /* line 9, nomtrips/components/_breadcrumbs.scss */
   .breadcrumb--item a {
-    color: #4db6ac; }
+    color: #418aca; }
 
 /* line 14, nomtrips/components/_breadcrumbs.scss */
 .breadcrumb--divider {

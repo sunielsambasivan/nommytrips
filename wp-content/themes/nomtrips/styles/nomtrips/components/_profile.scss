@@ -13,7 +13,7 @@
 }
 
 .profile--name {
-  padding: 0 $base-padding/2 4px;
+  padding: 0 0 4px $base-padding/2;
 }
 
 .profile--name--white {
@@ -71,14 +71,14 @@
   .menu--logged-in-items {
     padding: $base-padding $base-padding 0;
     top: 63px !important; //data-v-offset option is not working
-    right: 9px !important;
+    right: rem_calc($base-padding) !important;
     left: auto !important;
     border: none;
 
     &:before {
       position: absolute;
       top: -5px;
-      right: 5px;
+      right: rem_calc($base-padding /2);
       content: "";
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;

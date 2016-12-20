@@ -1,24 +1,91 @@
 .icon-bar {
-  padding: rem_calc($base-padding/2);
-  
+  @include card-shadow();
+  margin-bottom: rem_calc($base-margin);
+  background: white;
+  border-radius: $border-radius;
+
   i {
-    font-size: $font-size-xl;
+    font-size: $font-size-lg;
   }
-  .menu {
+
+  .icon-bar--add-location {
+    font-size: $font-size-xxxs;
+  }
+
+  > .menu {
     @include flexbox();
-    @include justify-content(space-around);
-    
+    @include justify-content(space-between);
+    padding: 0;
+
     li {
       @include flex(0 0 auto);
       width: auto;
-      padding: 0;
+      padding: rem_calc($base-padding/2);
       margin: 0;
       border: none;
-      
+
+      &.is-active, &:hover {
+        > a, i {
+          color: white;
+        }
+
+        a::after {
+          border-color: white transparent transparent !important;
+        }
+      }
+
       a {
+        @include flexbox();
+        @include align-items(center);
         padding: rem_calc(2px);
+        text-decoration: none;
       }
     }
   }
-  
+
+  li li:hover a:hover {
+    color: $color-blue;
+  }
+
+  .is-dropdown-submenu {
+    margin-top: 2px;
+    border: none;
+    border-radius: 0 0 $border-radius $border-radius;
+    @include card-shadow();
+  }
+
+
+}
+
+.icon-bar--item {
+}
+
+.icon-bar--item--blue {
+  &.is-active, &:hover {
+    background-color: $color-blue;
+  }
+}
+
+.icon-bar--item--teal {
+  &.is-active, &:hover {
+    background-color: $color-teal;
+  }
+}
+
+.icon-bar--item--red {
+  &.is-active, &:hover {
+    background-color: $color-red;
+  }
+}
+
+.icon-bar--item--green {
+  &.is-active, &:hover {
+    background-color: $color-green;
+  }
+}
+
+.icon-bar--item--orange {
+  &.is-active, &:hover {
+    background-color: $color-orange;
+  }
 }
