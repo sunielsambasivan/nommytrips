@@ -29,7 +29,8 @@ class Nomlist
     //array of objects
     $nomlist = new array();
 
-    //dbquery/tax query
+    //dbquery/post query...
+
     return $nomlist;
   }
 
