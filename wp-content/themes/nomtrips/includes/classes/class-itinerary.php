@@ -9,8 +9,10 @@
 
 class Itinerary {
   public $city_id;
+  public $restaurant_list;
+  public $start_date;
+  public $end_date;
   public $error;
-  public $restaurants;
 
   private $user_id;
 
@@ -33,7 +35,7 @@ class Itinerary {
       throw new Exception($this->error);
     }
 
-    $this->restaurants = array();
+    $this->restaurant_list = array();
   }
 
   /**
@@ -78,7 +80,7 @@ class Itinerary {
   public function addRestaurantToItinerary( $rest_id = false ) {
     if( $rest_id ) {
         $restaurant = new Restaurant( $rest_id );
-        $this->restaurants[] = $restaurant;
+        $this->restaurant_list[] = $restaurant;
         $this->saveRestaurantToItinerary();
     }
   }

@@ -20,6 +20,7 @@ require_once ( NT_INCLUDE_PATH . 'classes/class-restaurant.php' );
 require_once ( NT_INCLUDE_PATH . 'classes/class-carousel.php' );
 require_once ( NT_INCLUDE_PATH . 'classes/class-nomtrip-post.php' );
 require_once ( NT_INCLUDE_PATH . 'classes/class-itinerary.php' );
+require_once ( NT_INCLUDE_PATH . 'classes/class-nomlist.php' );
 
 /* menus */
 require_once ( NT_INCLUDE_PATH . 'functions/nt-menus.php' );
