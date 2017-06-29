@@ -11,3 +11,7 @@
     @include align-self(center);
   }
 }
+
+.section--dropdown {
+  margin: rem_calc($base-padding/2) 0;
+}

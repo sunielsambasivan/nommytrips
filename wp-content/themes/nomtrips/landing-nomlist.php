@@ -25,7 +25,7 @@ if( $user->ID) {
   $user_city = get_the_author_meta('nt_usr_city', $user->data->ID);
   $user_link = get_edit_user_link($user->data->ID);
   //new york
-  $nomlist = new Nomlist(1, $user->ID);
+  //$nomlist = new Nomlist(1, $user->ID);
   $city_list = NomList::get_city_list($user->ID);
   //nt_debug($city_list);
 }
@@ -56,7 +56,19 @@ if( array_intersect( $allowed_roles, $user->roles ) ) { ?>
 
         <div class="section--heading">
           <h2><?php the_title() ?></h2>
-          <a class="button small green">New Itinerary</a>
+        </div>
+
+        <div class="section--dropdown">
+            <?php
+            if($city_list) {
+              echo '<select>';
+              foreach($city_list as $c) {
+                echo '<option value="'.$c->CityID.'">'.$c->CityName.'</option>';
+              }
+              echo '</select>';
+            }
+            ?>
+          </select>
         </div>
 
         <div class="card--list-select">
