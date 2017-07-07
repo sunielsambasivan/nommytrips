@@ -6,10 +6,6 @@ if ( !defined('ABSPATH')) exit;
 /* load settings */
 require_once ( get_stylesheet_directory() . '/includes/global-variables.php' );
 
-/* custom functions */
-require_once ( NT_INCLUDE_PATH . '/functions/nt-functions.php' );
-require_once ( NT_INCLUDE_PATH . '/functions/nt-actions.php' );
-
 /* load classes */
 require_once ( NT_INCLUDE_PATH . 'classes/class-custom-post-type.php' );
 require_once ( NT_INCLUDE_PATH . 'classes/class-custom-metadata-form.php' );
@@ -21,6 +17,11 @@ require_once ( NT_INCLUDE_PATH . 'classes/class-carousel.php' );
 require_once ( NT_INCLUDE_PATH . 'classes/class-nomtrip-post.php' );
 require_once ( NT_INCLUDE_PATH . 'classes/class-itinerary.php' );
 require_once ( NT_INCLUDE_PATH . 'classes/class-nomlist.php' );
+
+/* custom functions */
+require_once ( NT_INCLUDE_PATH . '/functions/nt-functions.php' );
+require_once ( NT_INCLUDE_PATH . '/functions/nt-actions.php' );
+require_once ( NT_INCLUDE_PATH . '/functions/nt-register-endpoints.php' );
 
 /* menus */
 require_once ( NT_INCLUDE_PATH . 'functions/nt-menus.php' );

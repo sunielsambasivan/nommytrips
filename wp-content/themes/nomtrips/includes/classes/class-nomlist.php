@@ -21,7 +21,8 @@ class Nomlist
       $this->city_id = $city_id;
     }
 
-    $valid_user = $this->is_user_valid();
+    //$valid_user = $this->is_user_valid();
+    $valid_user = $user_id; //not validating for now
     if($valid_user > 0) {
       $this->user_id = $user_id;
       $this->is_valid_user = true;

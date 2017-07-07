@@ -25,9 +25,10 @@ if( $user->ID) {
   $user_city = get_the_author_meta('nt_usr_city', $user->data->ID);
   $user_link = get_edit_user_link($user->data->ID);
   //new york
-  //$nomlist = new Nomlist(1, $user->ID);
+  //$nomlist = new Nomlist(4, 2);
   $city_list = NomList::get_city_list($user->ID);
-  //nt_debug($city_list);
+  //nt_debug($nomlist);
+  //nt_debug(wp_create_nonce('wp_rest'));
 }
 ?>
 
@@ -58,19 +59,23 @@ if( array_intersect( $allowed_roles, $user->roles ) ) { ?>
           <h2><?php the_title() ?></h2>
         </div>
 
-        <div class="section--dropdown">
+        <form class="section--dropdown large-6 medium-8 small-12">
             <?php
             if($city_list) {
-              echo '<select>';
+              echo '<select id="nomlistCitySelect">';
               foreach($city_list as $c) {
+                echo '<option>Choose City</option>';
                 echo '<option value="'.$c->CityID.'">'.$c->CityName.'</option>';
               }
               echo '</select>';
             }
             ?>
           </select>
-        </div>
+        </form>
 
+        <div class="card--list-select" id="nomlistItems"></div>
+
+        <!--
         <div class="card--list-select">
           <div class="card--list-select--item">
             <div class="card--list-select--title">

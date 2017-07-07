@@ -43,10 +43,34 @@ $rewrite = array(
 $args = array(
   'description' => 'City',
   'rewrite' => $rewrite,
-  'query_var' => 'city'
+  'query_var' => 'city',
+  'show_in_rest' => true,
+  'rest_base' => 'city'
 );
 
 $city = new Custom_Taxonomy( 'City', array('restaurant', 'post'), $args, $capabilities, $labels );
+
+/*register custom taxonomy fields to wp-rest */
+add_action( 'rest_api_init', 'register_rest_field_for_custom_taxonomy_city' );
+function register_rest_field_for_custom_taxonomy_city() {
+    register_rest_field( 'city', 'nt_state-prov', array('get_callback'    => 'city_get_term_meta_field', 'update_callback' => 'city_update_term_meta_field', 'schema' => null));
+    register_rest_field( 'city', 'nt_city_img', array('get_callback'    => 'city_get_term_meta_field', 'update_callback' => 'city_update_term_meta_field', 'schema' => null));
+    register_rest_field( 'city', 'nt_feat_city', array('get_callback'    => 'city_get_term_meta_field', 'update_callback' => 'city_update_term_meta_field', 'schema' => null));
+}
+
+//WRITE
+function city_update_term_meta_field( $value, $object, $field_name ) {
+    if ( ! $value || ! is_string( $value ) ) {
+        return;
+    }
+    return update_term_meta( $object->ID, $field_name, $value );
+}
+
+//READ
+function city_get_term_meta_field( $object, $field_name, $request ) {
+    return get_term_meta( $object[ 'id' ], $field_name, true );
+}
+//end rest_api_init
 
 /**
 Declare Cuisine Type
@@ -75,6 +99,8 @@ $rewrite = array(
 $args = array(
   'description' => 'Genre of food eg. Italian, Indian, Seafood, etc',
   'rewrite' => $rewrite,
+  'show_in_rest' => true,
+  'rest_base' => 'cuisine'
 );
 
 $cuisine = new Custom_Taxonomy( 'Cuisine', array('restaurant', 'post'), $args, $capabilities, $labels );
@@ -106,6 +132,8 @@ $rewrite = array(
 $args = array(
   'description' => 'Restaurant type as in Breakfast, Dinner, Pub, Fine Dining',
   'rewrite' => $rewrite,
+  'show_in_rest' => true,
+  'rest_base' => 'meal-type'
 );
 
 $restaurant_type = new Custom_Taxonomy( 'Restaurant Type', array('restaurant', 'post'), $args, $capabilities, $labels );
@@ -137,6 +165,8 @@ $rewrite = array(
 $args = array(
   'description' => 'Section of city locals are familiar with like burrough, ward, district, etc. example: Brooklyn, West End, Downtown, Chinatown, etc.',
   'rewrite' => $rewrite,
+  'show_in_rest' => true,
+  'rest_base' => 'neighboorhood'
 );
 
 $restaurant_type = new Custom_Taxonomy( 'Neighborhood', array('restaurant'), $args, $capabilities, $labels );

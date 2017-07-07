@@ -44,6 +44,8 @@ $args = array(
   'has_archive'   => false,
   'rewrite' => array( 'slug' => '/restaurants/%city%', 'with_front' => false ),
   'exclude_from_search' => false,
+  'show_in_rest' => true,
+  'rest_base' => 'restaurant-api'
 );
 
 $roles = array(
@@ -68,3 +70,37 @@ add_action( 'init', function() {
 */
 
 $restaurant = new Custom_Post_Type( 'Restaurant', $args, $roles, $capabilities, $permissions, $labels );
+
+/*
+  register custom fields to wp-rest api
+*/
+add_action( 'rest_api_init', 'register_restaurant_fields' );
+function register_restaurant_fields() {
+  register_rest_field( 'restaurant', 'nt_cpt_main_ph', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_main_email', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_website', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_main_ph', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_twitter', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_facebook', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_instagram', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_building_no', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_street', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_suite_no', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_zip', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_cost', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_rating', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_rest_menu', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_rest_hrs_m_f', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_rest_hrs_s_s', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_rest_hrs_mon', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_rest_hrs_tue', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_rest_hrs_wed', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_rest_hrs_thu', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_rest_hrs_fri', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_rest_hrs_sat', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_rest_hrs_sun', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_rest_hrs_holidays', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+}
+function nt_rest_register_field_callback( $object, $field_name, $request ) {
+    return get_post_meta( $object[ 'id' ], $field_name, true );
+}

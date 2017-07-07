@@ -13,6 +13,9 @@ function nt_add_js() {
   wp_enqueue_script( 'jquery');
   wp_enqueue_script( 'jquery-ui');
 
+  //ajax
+  wp_enqueue_script( 'nt-ajax-lists', NT_JS_PATH . 'nomtrips/ajax/nt_ajax_lists.js', array('jquery'), '', true );
+
   //foundation framework js
   wp_enqueue_script( 'foundation', NT_JS_PATH . 'vendor/foundation/foundation.js', array('jquery'), '', true );
   wp_enqueue_script( 'foundation-app', NT_JS_PATH . 'vendor/foundation/app.js', array('jquery'), '', true );
@@ -29,6 +32,17 @@ function nt_add_js() {
 
   //nomtrip scripts
   wp_enqueue_script( 'nt-script', NT_JS_PATH . 'nomtrips/nt_script.js', array('jquery'), '', true );
+
+  //wp-api nonce
+  wp_localize_script( 'nt-ajax-lists', 'wpApiSettings',
+  array(
+    'root' => esc_url_raw( rest_url() ),
+    'nonce' => wp_create_nonce( 'wp_rest' ),
+    'current_user_id' => get_current_user_id(),
+    'success' => __( 'Positive!', 'nomtrips' ),
+    'failure' => __( 'Negative', 'nomtrips' )
+    )
+  );
 }
 
 
