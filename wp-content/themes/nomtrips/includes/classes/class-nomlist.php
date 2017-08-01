@@ -5,6 +5,7 @@
 
 class Nomlist
 {
+  public $nomlist_id;
   public $city_id;
   public $user_id;
   public $restaurant_list;
@@ -19,61 +20,85 @@ class Nomlist
 
     else {
       $this->city_id = $city_id;
+      $this->user_id = $user_id;
     }
 
-    //$valid_user = $this->is_user_valid();
-    $valid_user = $user_id; //not validating for now
-    if($valid_user > 0) {
-      $this->user_id = $user_id;
-      $this->is_valid_user = true;
-      $this->restaurant_list = $this->get_nomlist();
+    $valid_user = $this->is_user_valid();
+    if($valid_user) {      
+      $this->createNomlist();
     } else {
       $this->error = 'Invalid User';
       throw new Exception($this->error);
     }
   }
-
+  
   /**
-    * save itinerary to db
+    * create nomlist in db
   **/
-  private function saveNomlist() {
+  private function createNomlist() {
+    //adds to db if not user doesnt already have a nomlist for city
+    global $wpdb;
+    $sql = "Select * 
+    From nt_nomlists 
+    Where city_id = %d 
+    And user_id = %d";
+    $nomlists = $wpdb->get_results( $wpdb->prepare($sql, $this->city_id, $this->user_id ));
+    if($nomlists) {
+      $this->restaurant_list = $this->get_nomlist();
+    }
+    else {
+      //insert record
+      $nomlist = $wpdb->insert( 
+	    'nt_nomlists', 
+        array( 
+          'city_id' => $this->city_id, 
+          'user_id' => $this->user_id 
+        ), 
+        array( 
+          '%d', 
+          '%d' 
+        ) 
+      );
 
+      if(!$nomlist) {
+        $this->error = 'Couldnt save nomlist';
+        throw new Exception($this->error);
+      } 
+    }
   }
 
   /**
-    * update itinerary in db
-  **/
-  private function updateNomlist() {
-
-  }
-
-  /**
-    * delete itinerary in db
+    * delete nomlist in db
   **/
   private function deleteNomlist() {
 
   }
 
   /**
-    * save restaurant to itinerary in db
+    * save restaurant to nomlist in db
   **/
-  private function saveRestaurantToNomlist() {
-
+  private function addRestaurantToNomlist($rest_id) {
+    global $wpdb;
+    $sql = "
+    INSERT into nt_nomlist_item
+    (user_id, restaurant_id)
+    VALUES ()";
   }
 
   /**
-    * delete restaurant from itinerary in db
+    * delete restaurant from nomlist in db
   **/
-  private function deleteRestaurantFromNomlist() {
+  private function removeRestaurantFromNomlist($rest_id) {
 
   }
 
   private function is_user_valid() {
-    $user_id = get_current_user_id();
-    if($user_id == 0) {
+    $user = get_user_by('ID', $this->user_id);
+
+    if(!$user) {
       return 0;
     } else {
-      return $user_id;
+      return 1;
     }
   }
 
@@ -87,6 +112,28 @@ class Nomlist
       $this->error = 'Restaurant ID missing';
       throw new Exception($this->error);
     }
+  }
+
+  public function getNomlistID($user_id = false, $city_id = false) {
+    $city_id = !$city_id ? $this->city_id : $city_id;
+    $user_id = !$user_id ? $this->user_id : $user_id;
+    
+    if($city_id && $user_id) {
+      global $wpdb;
+      $select = "
+        Select nomlist_id 
+        From nt_nomlists
+        Where city_id = %d
+        AND user_id = %d";
+      $nomlist_id = $wpdb->get_row( $wpdb->prepare($select, $this->city_id, $this->user_id ) );      
+      $this->nomlist_id = $nomlist_id;      
+    } 
+    else {
+      $this->nomlist_id = null;
+      $this->error = 'Couldnt Find nomlist id';
+    }
+
+    return $nomlist_id;
   }
 
   public function get_nomlist() {
@@ -137,6 +184,4 @@ class Nomlist
       return 0;
     }
   }
-
-
 }

@@ -31,13 +31,14 @@ function showNomLists(items){
     $.ajax({
       dataType: "json",
       url: wpApiSettings.root + 'wp/v2/restaurant-api/'+item.RestaurantID,
+      beforeSend: function ( xhr ) {
+        xhr.setRequestHeader( 'X-WP-Nonce', wpApiSettings.nonce );
+      },
       success: function(response) {
         var city = false;
-
         if(response.city.length > 0) {
           getCityById(response.city[0], response);
         }
-
 
       },
       fail: function(response){
@@ -66,6 +67,9 @@ function getCityById(city_id, restaurant) {
   $.ajax({
     dataType: "json",
     url: wpApiSettings.root + 'wp/v2/city/'+city_id,
+    beforeSend: function ( xhr ) {
+        xhr.setRequestHeader( 'X-WP-Nonce', wpApiSettings.nonce );
+      },
     success: function(response) {
       showRestaurant(response, restaurant)
     },

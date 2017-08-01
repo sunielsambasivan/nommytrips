@@ -6,7 +6,7 @@ if ( !defined('ABSPATH')) exit;
 /**
  * My Noms Template
  * Template Name: landing-nomlist
- * Description: page where a signed up user can see their profile card, nomtrips and itineraries
+ * Description: page where a signed up user can see their nomlists and 
  * @file           index.php
  * @package        NotTrips
  * @author         Suniel Sambasivan
@@ -25,9 +25,10 @@ if( $user->ID) {
   $user_city = get_the_author_meta('nt_usr_city', $user->data->ID);
   $user_link = get_edit_user_link($user->data->ID);
   //new york
-  //$nomlist = new Nomlist(4, 2);
+  $nomlist = new Nomlist(4, $user->ID);
+  //$nomlist->getNomlistID(4,2);
   $city_list = NomList::get_city_list($user->ID);
-  //nt_debug($nomlist);
+  nt_debug($nomlist);
   //nt_debug(wp_create_nonce('wp_rest'));
 }
 ?>

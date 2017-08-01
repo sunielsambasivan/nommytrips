@@ -158,3 +158,7 @@ npm-debug.log
 
 # CodeKit #
 .sass-cache
+
+# visual studio
+.vscode/launch.json
+.vscode/settings.json
