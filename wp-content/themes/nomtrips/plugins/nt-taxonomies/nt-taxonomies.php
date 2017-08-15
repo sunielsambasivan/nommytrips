@@ -17,7 +17,7 @@ Declare City
 */
 
 $capabilities = array (
-  'assign_terms' => 'edit_restaurant'
+  'assign_terms' => 'edit_restaurant',
 );
 
  $labels = array(
@@ -45,10 +45,11 @@ $args = array(
   'rewrite' => $rewrite,
   'query_var' => 'city',
   'show_in_rest' => true,
-  'rest_base' => 'city'
+  'rest_base' => 'city',
+  'show_ui' => false
 );
 
-$city = new Custom_Taxonomy( 'City', array('restaurant', 'post'), $args, $capabilities, $labels );
+$city = new Custom_Taxonomy( 'City', array('restaurant', 'post', 'nomlist'), $args, $capabilities, $labels );
 
 /*register custom taxonomy fields to wp-rest */
 add_action( 'rest_api_init', 'register_rest_field_for_custom_taxonomy_city' );

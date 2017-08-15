@@ -9,6 +9,21 @@
   License: GPL2
 */
 
+//uncomment to refresh perms and permalink rules
+/* add_action( 'init', function() {
+  flush_rewrite_rules();
+  global $wp_post_types;
+    if ( isset( $wp_post_types[ 'nomlist' ] ) ) {
+      unset( $wp_post_types[ 'nomlist' ] );
+        return true;
+    }
+    return false;
+}, 0 ); */
+
+require_once( 'nt-nomlist-fields.php' );
+
+global $wp_roles; 
+
 /**
 Declare Nomlist custom content type
 */
@@ -27,46 +42,39 @@ $labels = array(
 );
 
 $capabilities = array(
-  'edit_post' => 'edit_nomlist',
-  'read_post' => 'read_nomlist',
-  'delete_post' => 'delete_nomlist',
-  'publish_post' => 'publish_nomlist'
+  'edit_others_posts' => 'edit_others_nomlists',
+  'delete_others_posts' => 'delete_others_nomlists'
 );
+
+$roles = array('subscriber');
+
+$permissions = array('edit_others_nomlists', 'delete_others_nomlists');
 
 $args = array(
   'description'   => 'Nomlist',
   'menu_position' => 8,
-  'supports'      => array( 'title','thumbnail', 'revisions', 'editor', 'custom-fields', 'author' ), //turns off the text-editor and the excerpts
+  'supports'      => array( 'title'), //turns off the text-editor and the excerpts
   'has_archive'   => false,
-  'rewrite' => array( 'slug' => '/nomlists/%city%', 'with_front' => false ),
-  'exclude_from_search' => false,
+  'rewrite' => array( 'slug' => '/%user%/nomlists/%city%', 'with_front' => false ),
   'show_in_rest' => true,
-  'rest_base' => 'nomlist-api'
+  'rest_base' => 'nomlist-api',
+  'show_in_nav_menus' => false,
+  'publicly_queryable' => false,
+  'exclude_from_search' => true,
+  'has_archive' => false,
+  'capability_type' => 'nomlist'
 );
-
-$roles = array(
-  'administrator',
-  'editor',
-  'author',
-  'subscriber'
-);
-
-$permissions = array('read');
-
-//uncomment to refresh perms and permalink rules
-/*
-add_action( 'init', function() {
-  flush_rewrite_rules();
-  global $wp_post_types;
-    if ( isset( $wp_post_types[ 'nomlist' ] ) ) {
-      unset( $wp_post_types[ 'nomlist' ] );
-        return true;
-    }
-    return false;
-}, 0 );
-*/
 
 $nomlist = new Custom_Post_Type( 'Nomlist', $args, $roles, $capabilities, $permissions, $labels );
+
+function nt_nomlist_add_theme_caps() {
+  // gets the administrator role
+  $admins = get_role( 'subscriber' );    
+  $admins->remove_cap('edit_others_nomlists');
+  $admins->remove_cap('delete_others_nomlists'); 
+  
+}
+add_action( 'admin_init', 'nt_nomlist_add_theme_caps');
 
 /*
   register custom fields to wp-rest api
