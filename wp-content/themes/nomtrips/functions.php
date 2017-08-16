@@ -38,6 +38,7 @@ require_once ( NT_INCLUDE_PATH . '/fields/nt-fields-contact.php' );
 require_once ( NT_INCLUDE_PATH . '/fields/nt-fields-social.php' );
 require_once ( NT_PLUGIN_PATH_REL . '/nt-cpt-restaurant/nt-cpt-restaurant.php' );
 require_once ( NT_PLUGIN_PATH_REL . '/nt-cpt-nomlist/nt-cpt-nomlist.php' );
+require_once ( NT_PLUGIN_PATH_REL . '/nt-cpt-itinerary/nt-cpt-itinerary.php' );
 require_once ( NT_PLUGIN_PATH_REL . '/nt-taxonomies/nt-taxonomies.php' );
 
 /*stylesheets & scripts*/

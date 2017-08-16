@@ -10,7 +10,7 @@
 */
 
 //uncomment to refresh perms and permalink rules
-/* add_action( 'init', function() {
+add_action( 'init', function() {
   flush_rewrite_rules();
   global $wp_post_types;
     if ( isset( $wp_post_types[ 'nomlist' ] ) ) {
@@ -18,7 +18,7 @@
         return true;
     }
     return false;
-}, 0 ); */
+}, 0 );
 
 require_once( 'nt-nomlist-fields.php' );
 
@@ -42,18 +42,52 @@ $labels = array(
 );
 
 $capabilities = array(
+  'edit_post'		 => "edit_nomlist",
+	'read_post'		 => "read_nomlist",
+	'delete_post	'	 => "delete_nomlist",
+  'edit_posts' => 'edit_nomlists',
   'edit_others_posts' => 'edit_others_nomlists',
-  'delete_others_posts' => 'delete_others_nomlists'
+  'publish_posts' => 'publish_nomlists',
+  'read_private_posts' => 'read_private_nomlists',
+  'read' => 'read',
+  'delete_posts' => 'delete_nomlists',
+  'delete_private_posts' => 'delete_private_nomlists',
+  'delete_published_posts' => 'delete_published_nomlists',
+  'delete_others_posts' => 'delete_others_nomlists',
+  'edit_private_posts' => 'edit_private_nomlists',
+  'edit_published_posts' => 'edit_published_nomlists',
+  'create_posts' => 'create_nomlists',
 );
 
-$roles = array('subscriber');
+$roles = array(
+  'administrator',
+  'editor',
+  'author',
+  'subscriber'
+);
 
-$permissions = array('edit_others_nomlists', 'delete_others_nomlists');
+$permissions = array(
+  'edit_nomlist',
+  'read_nomlist',
+  'delete_nomlist',
+  'edit_nomlists',
+  'edit_others_nomlists',
+  'publish_nomlists',
+  'read_private_nomlists',
+  'read',
+  'delete_nomlists',
+	'delete_private_nomlists',
+	'delete_published_nomlists',
+	'delete_others_nomlists',
+	'edit_private_nomlists',
+	'edit_published_nomlists',
+	'create_nomlists'
+);
 
 $args = array(
   'description'   => 'Nomlist',
   'menu_position' => 8,
-  'supports'      => array( 'title'), //turns off the text-editor and the excerpts
+  'supports'      => array( 'title', 'author'), //turns off the text-editor and the excerpts
   'has_archive'   => false,
   'rewrite' => array( 'slug' => '/%user%/nomlists/%city%', 'with_front' => false ),
   'show_in_rest' => true,
@@ -62,17 +96,21 @@ $args = array(
   'publicly_queryable' => false,
   'exclude_from_search' => true,
   'has_archive' => false,
-  'capability_type' => 'nomlist'
+  'capability_type' => array('nomlist', 'nomlists'),
+  'map_meta_cap' => true
 );
 
 $nomlist = new Custom_Post_Type( 'Nomlist', $args, $roles, $capabilities, $permissions, $labels );
 
 function nt_nomlist_add_theme_caps() {
-  // gets the administrator role
-  $admins = get_role( 'subscriber' );    
+  $admins = get_role( 'subscriber' );
   $admins->remove_cap('edit_others_nomlists');
   $admins->remove_cap('delete_others_nomlists'); 
-  
+  $admins->remove_cap('read_private_nomlists');
+  $admins->remove_cap('edit_private_nomlists');
+  $admins->remove_cap('delete_private_nomlists');
+  $admins->remove_cap('read');
+  $admins->remove_cap('read_nomlist');
 }
 add_action( 'admin_init', 'nt_nomlist_add_theme_caps');
 
