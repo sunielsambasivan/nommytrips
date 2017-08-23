@@ -12,3 +12,6 @@ define( 'NT_COMPONENTS_PATH', NT_INCLUDE_PATH_REL . 'components/' );
 //Oath
 define( 'CLIENT_KEY', 'EBuxrdTuFrEU');
 define( 'CLIENT_SECRET', 'phuj5NmwP3P0YD9Cx347wweAdUojXK1lF9ehtKybGsqNktzM' );
+
+//Google Map API
+define( 'API_KEY_GOOGLE_MAPS', 'AIzaSyC8rGeV0GX0XfHVSmfEFAjd9FDkdmNCbUU' );

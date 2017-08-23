@@ -1,4 +1,4 @@
-var $ = jQuery;
+/*var $ = jQuery;
 $(document).ready(function() {
 console.log(oauthRequest);
 var form = new FormData();
@@ -29,18 +29,15 @@ $.ajax(settings).done(function (response) {
   console.log(response);
 });
 });
+*/
 
-/**
- * 
- * 
- 
 var form = new FormData();
 form.append("oauth_consumer_key", oauthRequest.oauth_consumer_key);
 form.append("oauth_signature_method", oauthRequest.oauth_signature_method);
 form.append("oauth_timestamp", oauthRequest.oauth_timestamp);
 form.append("oauth_nonce", oauthRequest.oauth_nonce);
 form.append("oauth_version", oauthRequest.oauth_version);
-form.append("oauth_signature", oauthRequest.oauth_signature);
+form.append("oauth_signature", oauthRequest.oauth_signature + "=");
 /* 
 var xhr = new XMLHttpRequest();
 xhr.withCredentials = true;
@@ -59,15 +56,15 @@ console.log(data);
 xhr.send(data);
  */
 
-/*
+
 var settings = {
     "async": true,
     "crossDomain": true,
     "url": oauthRequest.base_string,
     "method": "GET",
     "headers": {
-      "cache-control": "no-cache",
-      "postman-token": "e6854631-a02f-9ace-f063-05a0c2602303"
+      "cache-control": "no-cache"
+      //"postman-token": "e6854631-a02f-9ace-f063-05a0c2602303"
     },
     "processData": false,
     "contentType": false,
@@ -79,4 +76,4 @@ var settings = {
     console.log(response);
   });
 
- */
+ 
