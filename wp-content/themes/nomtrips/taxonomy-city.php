@@ -95,5 +95,7 @@ function initMap() {
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ81efbEIFdgwhEpO3rShce8gtN-9ahQA&callback=initMap" async defer></script>
-
+<!-- <div class="new-map">
+  <?php  // require get_template_directory()."/map-app/index.php";  ?>
+</div> -->
 <?php get_footer(); ?>

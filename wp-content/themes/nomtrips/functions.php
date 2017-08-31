@@ -21,6 +21,7 @@ require_once ( NT_INCLUDE_PATH . 'classes/class-nomlist.php' );
 /* custom functions */
 require_once ( NT_INCLUDE_PATH . '/functions/nt-functions.php' );
 require_once ( NT_INCLUDE_PATH . '/functions/nt-actions.php' );
+require_once ( NT_INCLUDE_PATH . '/functions/nt-auth.php' );
 require_once ( NT_INCLUDE_PATH . '/functions/nt-register-endpoints.php' );
 
 /* menus */

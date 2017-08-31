@@ -46,7 +46,7 @@ $args = array(
   'query_var' => 'city',
   'show_in_rest' => true,
   'rest_base' => 'city',
-  'show_ui' => false
+  'show_ui' => true
 );
 
 $city = new Custom_Taxonomy( 'City', array('restaurant', 'post', 'nomlist'), $args, $capabilities, $labels );

@@ -11,7 +11,6 @@ function nt_add_tags_to_attachments() {
 }
 add_action( 'init' , 'nt_add_tags_to_attachments' );
 
-
 /**
  * rewrite url filter restaurants, put city name in front
 */

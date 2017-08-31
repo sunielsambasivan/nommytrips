@@ -2,7 +2,7 @@
 
 // Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
-
+header("Access-Control-Allow-Origin: *");
 /**
  * Header template
  *
@@ -53,6 +53,9 @@ if ( !defined('ABSPATH')) exit;
    */
   wp_head();
 ?>
+<!-- <script>
+  System.import('app').catch(function(err) { console.error(err); });
+</script> -->
 </head>
 
 <?php

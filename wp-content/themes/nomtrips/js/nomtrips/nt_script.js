@@ -91,7 +91,7 @@ jQuery(document).ready( function( $ ) {
     // Add the <style> element to the page
     document.head.appendChild(style);
 
-    console.log(style.sheet.cssRules); // length is 0, and no rules
+    // console.log(style.sheet.cssRules); // length is 0, and no rules
 
     return style.sheet;
   })();
@@ -101,7 +101,7 @@ jQuery(document).ready( function( $ ) {
    *  Tooltips - overrides/adds foundation tooltip
    */
   function setToolTipColors() {
-    console.log("ss");
+    // console.log("ss");
     $(".has-tip").each(function(){
       if($(this).data("match-bg")) {
         var color = $(this).children(".fa").css("color");
@@ -113,5 +113,5 @@ jQuery(document).ready( function( $ ) {
   }
 
   //timeout - wait for foundation js to its thang first
-  setTimeout(setToolTipColors, 1000);
+  //setTimeout(setToolTipColors, 1000);
 });
