@@ -3,13 +3,13 @@ import { Restaurant } from '../restaurant';
 import { RestaurantsService } from '../restaurants.service';
 
 @Component({
-  selector: 'app-restaurant-list',
-  templateUrl: './restaurant-list.component.html',
-  styleUrls: ['./restaurant-list.component.css'],
+  selector: 'app-restaurant-list-carousel',
+  templateUrl: './restaurant-list-carousel.component.html',
+  styleUrls: ['./restaurant-list-carousel.component.css'],
   providers: [RestaurantsService]
 })
-export class RestaurantListComponent implements OnInit {
-
+export class RestaurantListCarouselComponent implements OnInit {
+  
   restaurants: Restaurant[];
   @Input() cityid: any;
 

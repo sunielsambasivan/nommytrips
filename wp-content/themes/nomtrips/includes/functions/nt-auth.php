@@ -18,6 +18,19 @@ function nt_set_oauth_user_token_cookie() {
 add_action( 'init', 'nt_set_oauth_user_token_cookie' );
 
 /**
+ * Get access_token from db 
+**/
+function nt_get_oauth_user_token_cookie($user_id) {
+  $user_id = isset($user_id) ? $user_id : get_current_user_id();
+  $auth_token = get_user_meta( $user_id, 'wordpress_access_token', true);
+  if(!empty($auth_token) && $user_id > 0) {
+    return $auth_token;
+  } else {
+    return null;
+  }
+}
+
+/**
  * Delete access_token cookie when logging out
 **/
 function nt_delete_oauth_user_token_cookie() {
@@ -54,5 +67,5 @@ function display_user_token() {
   $user_id = get_current_user_id();
   $auth_token = get_user_meta( $user_id, 'wordpress_access_token', true);
   /* uncomment this to show */
-  //nt_debug($auth_token);
+  nt_debug($auth_token);
 }

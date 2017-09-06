@@ -86,4 +86,13 @@ class Carousel
    } //display type
   } //end function
 
+  public function get_restaurant_objects() {
+    $this->get_posts();
+    $restaurants = array();
+    foreach($this->posts->posts as $p) {      
+      array_push($restaurants, new Restaurant($p->ID));
+    }
+    return $restaurants;
+  }
+
 }

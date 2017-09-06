@@ -12,14 +12,14 @@ import { Restaurant } from './restaurant';
 @Injectable()
 export class RestaurantsService {
 
-  private postsUrl = environment.baseUrl + "/wp-json/wp/v2/";
+  private postsUrl = environment.baseUrl + "wp-json/restaurant-api/restaurant-list/city";
   private wpApiSettings;
   
   constructor(private http: Http) { }
   
-  getPosts(): Observable<Restaurant[]> { 
+  getPosts(cityId): Observable<Restaurant[]> { 
       return this.http
-        .get(this.postsUrl + 'posts')
+        .get(this.postsUrl + '/' + cityId)
         .map((res: Response) => res.json());
   
   }

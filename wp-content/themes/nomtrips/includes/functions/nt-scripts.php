@@ -32,19 +32,19 @@ function nt_add_js() {
 
   //ajax
   wp_enqueue_script( 'nt-ajax-lists', NT_JS_PATH . 'nomtrips/ajax/nt_ajax_lists.js', array('jquery'), '', true );
-  wp_enqueue_script( 'nt-login-request', NT_JS_PATH . 'nomtrips/login/request.js', array('jquery'), '', true );
+  // wp_enqueue_script( 'nt-login-request', NT_JS_PATH . 'nomtrips/login/request.js', array('jquery'), '', true );
 
   //nomtrip scripts
   wp_enqueue_script( 'nt-script', NT_JS_PATH . 'nomtrips/nt_script.js', array('jquery'), '', true );
 
 //if a city page load angular 2 files
-/* if(is_tax( 'city' )) {
+if(is_tax( 'city' )) {
   wp_enqueue_script( 'map-app-bundle-inline', MAP_APP . 'dist/inline.bundle.js', array(), '', true );
   wp_enqueue_script( 'map-app-bundle-polyfills', MAP_APP . 'dist/polyfills.bundle.js', array(), '', true );
   wp_enqueue_script( 'map-app-bundle-styles', MAP_APP . 'dist/styles.bundle.js', array(), '', true );
   wp_enqueue_script( 'map-app-bundle-vendor', MAP_APP . 'dist/vendor.bundle.js', array(), '', true );
   wp_enqueue_script( 'map-app-bundle-main', MAP_APP . 'dist/main.bundle.js', array(), '', true );
-} */ 
+} 
 
 //wp-api nonce
   wp_localize_script( 'nt-ajax-lists', 'wpApiSettings',

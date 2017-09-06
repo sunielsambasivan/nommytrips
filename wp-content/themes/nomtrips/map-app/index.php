@@ -1,1 +1,1 @@
-<app-root>Loading...</app-root>
+<app-root id="map" class="map"></app-root>

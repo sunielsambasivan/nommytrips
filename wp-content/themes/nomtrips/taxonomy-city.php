@@ -16,8 +16,9 @@ if ( !defined('ABSPATH')) exit;
 get_header();
 $city = new City(); //nt_debug($city);
 $address = $city->name .', '. $city->state;
-
 ?>
+
+<?php  require get_template_directory()."/map-app/index.php";  ?>
 
 <div class="card--map-overlay">
   <div class="dropdown-trigger" type="button" data-toggle="city-info">
@@ -65,11 +66,11 @@ $address = $city->name .', '. $city->state;
 /**
  * show the carousel of restuarants of this city
 **/
-$carousel = new Carousel( 'restaurant', 10, 'city', array($city->slug) );
-$carousel->show_posts('map-overlay');
+//$carousel = new Carousel( 'restaurant', 10, 'city', array($city->slug) );
+//$carousel->show_posts('map-overlay');
 ?>
 
-<div id="map" class="map"></div>
+<!-- <div id="map" class="map"></div> -->
 <script>
 var map;
 function initMap() {
@@ -94,8 +95,8 @@ function initMap() {
 }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ81efbEIFdgwhEpO3rShce8gtN-9ahQA&callback=initMap" async defer></script>
-<!-- <div class="new-map">
-  <?php  // require get_template_directory()."/map-app/index.php";  ?>
-</div> -->
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ81efbEIFdgwhEpO3rShce8gtN-9ahQA&callback=initMap" async defer></script> -->
+
+<?php  require get_template_directory()."/map-app/index.php";  ?>
+
 <?php get_footer(); ?>

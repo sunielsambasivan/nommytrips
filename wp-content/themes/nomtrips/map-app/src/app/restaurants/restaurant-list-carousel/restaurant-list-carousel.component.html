@@ -1,0 +1,91 @@
+<script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+<script src="https://unpkg.com/slick-carousel@1.6.0/slick/slick.js"></script>
+<div class="map-overlay-list">
+  <div class="cards--carousel cards--carousel--map-overlay" data-carousel-init="cardsCarouselPageMap">
+    
+    
+
+    <!-- <ul class="cards--carousel--container"> -->
+      <!-- <li *ngFor="let restaurant of restaurants" class="cards--carousel--slide">
+        <div class="card--location" data-url="restaurant.restaurant_url">
+          <div class="card--location--rating">
+            <div class="indicator-likes--map">5</div>
+          </div>
+          <div class="card--location--title"><a [href]="restaurant.restaurant_url">{{restaurant.restaurant_name}}</a></div>
+          <ul class="card--location--address">
+            <li>{{restaurant.restaurant_address_string}}</li>
+            <li class="card--restaurant--cuisine">
+              <?php
+              if( $restaurant->restaurant_cuisines->terms ) {
+                $cuisine_urls = array();
+                foreach( $restaurant->restaurant_cuisines->urls as $u) {
+                  $cuisine_urls[] = '<a href="' . esc_url( $u[1]) .'">' . esc_html( $u[0] ) . '</a>';
+                }
+                $cuisine_urls = implode( ',&nbsp;', $cuisine_urls );
+                echo $cuisine_urls;
+              }
+              ?> 
+              <span *ngFor="let cuisine of restaurant.restaurant_cuisines.urls">
+                <a href="{{cuisine[1]}}">{{cuisine[0]}}</a>&nbsp;
+              </span>
+            </li>
+            <li>
+              <span class="card--location--icon-bar">
+                <i class="fa fa-map-o"></i>
+                <i class="fa fa-list-ul"></i>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </li> -->
+    <!-- </ul> -->
+    <div class="map-overlay-list">
+    <ngx-slick class="carousel cards--carousel cards--carousel--map-overlay" #slickModal="slick-modal" [config]="slideConfig" (afterChange)="afterChange($event)">
+      <!--arrow buttons-->
+      <div class="cards--carousel--btn"> <button type="button" data-role="none" class="slick-prev--images slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button> </div>
+      <div class="cards--carousel--container">  
+        <div ngxSlickItem *ngFor="let restaurant of restaurants" class="slide">
+            
+          <div class="card--location" data-url="restaurant.restaurant_url">
+              <div class="card--location--rating">
+                <div class="indicator-likes--map">5</div>
+              </div>
+              <div class="card--location--title"><a [href]="restaurant.restaurant_url">{{restaurant.restaurant_name}}</a></div>
+              <ul class="card--location--address">
+                <li>{{restaurant.restaurant_address_string}}</li>
+                <li class="card--restaurant--cuisine">
+                  <!-- <?php
+                  if( $restaurant->restaurant_cuisines->terms ) {
+                    $cuisine_urls = array();
+                    foreach( $restaurant->restaurant_cuisines->urls as $u) {
+                      $cuisine_urls[] = '<a href="' . esc_url( $u[1]) .'">' . esc_html( $u[0] ) . '</a>';
+                    }
+                    $cuisine_urls = implode( ',&nbsp;', $cuisine_urls );
+                    echo $cuisine_urls;
+                  }
+                  ?> -->
+                  <span *ngFor="let cuisine of restaurant.restaurant_cuisines.urls">
+                    <a href="{{cuisine[1]}}">{{cuisine[0]}}</a>&nbsp;
+                  </span>
+                </li>
+                <li>
+                  <span class="card--location--icon-bar">
+                    <i class="fa fa-map-o"></i>
+                    <i class="fa fa-list-ul"></i>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <!--arrow buttons-->
+      <div class="cards--carousel--btn"> <button type="button" data-role="none" class="slick-next--images slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button> </div>
+    </ngx-slick>
+  </div>
+
+    
+
+  </div>
+</div>
