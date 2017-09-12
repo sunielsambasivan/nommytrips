@@ -1,0 +1,17 @@
+.section--heading {
+  @include flexbox();
+  @include justify-content(space-between);
+  @include align-content(center);
+  margin: rem_calc($base-margin/2) 0;
+
+  > h2 {
+    font-family: $base-font-family;
+    font-size: rem_calc($font-size-lg);
+    margin-bottom: 0;
+    @include align-self(center);
+  }
+}
+
+.section--dropdown {
+  margin: rem_calc($base-padding/2) 0;
+}

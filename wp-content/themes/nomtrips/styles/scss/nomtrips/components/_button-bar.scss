@@ -1,0 +1,58 @@
+.button-bar {
+  @include inline-flex ();
+  @include align-items(stretch);
+  line-height: initial;
+  background-color: #fff;
+  border: $border-light;
+  border-radius: $border-radius;
+  @include card-shadow();
+}
+
+.button-bar--btn {
+  @include inline-flex();
+  @include align-items(center);
+  @include flex(1 0 auto);
+  margin: 0;
+  padding: rem_calc(2.5px) rem_calc(10px);
+  background-color: transparent;
+  border: none;
+  border-right: $border;
+  box-shadow: none;
+  font-size: $font-size-sm;
+  line-height: rem_calc(30px);
+  color: $color-blue;
+
+  @include respond-to(tablet) {
+    @include flex(0 1 auto);
+    font-size: $font-size-md;
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+
+  &:hover, a:hover,
+  &:active, a:active {
+    text-decoration: none;
+  }
+}
+
+.button-bar--nt-icon {
+  line-height: 1rem;
+  font-size: $font-size-lg;
+
+  @include respond-to(tablet) {
+    font-size: $font-size-xxl;
+  }
+}
+
+.button-bar--label {
+  font-family: $base-font-family;
+  font-size: $font-size-xs;
+  font-weight: bold;
+  padding: 0 rem_calc(5px);
+
+  @include respond-to(tablet) {
+    font-size: $font-size-sm;
+  }
+}

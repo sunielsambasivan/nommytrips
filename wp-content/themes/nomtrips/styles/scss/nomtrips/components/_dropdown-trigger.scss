@@ -1,0 +1,36 @@
+.dropdown-trigger {
+  @include flexbox();
+  @include justify-content(space-between);
+  padding: rem_calc($base-padding/2);
+
+  .card--map-overlay & {
+    margin-bottom: rem_calc($base-margin);
+    @include card-shadow();
+    background: white;
+    border-radius: $border-radius;
+  }
+}
+
+.dropdown-trigger--title {
+  font-family: $heading-font-family;
+}
+
+.dropdown-trigger--menu-icon:after {
+  @include icon-font-fa($fa-var-chevron-down);
+}
+
+.dropdown-pane {
+  width: 100%;
+
+  .nav--logged-in & {
+    @include  button-shadow( 10px, 10px, 3px, 3px, rgba(0,0,0,0.1) );
+
+    @include respond-to(tablet) {
+      width: 35%;
+    }
+  }
+
+  @include respond-to(desktop) {
+    width: auto;
+  }
+}

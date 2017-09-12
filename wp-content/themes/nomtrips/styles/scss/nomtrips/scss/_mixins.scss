@@ -1,0 +1,218 @@
+﻿/**
+    Custom mixins (functions)
+    **/
+
+//ie compatibility
+@mixin ie($version) {
+    /* IE10-specific styles go here */
+    @if $version == ie10 {
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            @content;
+        }
+    }
+    /* IE9 and IE10 rule sets go here */
+    @else if $version == ie9-10 {
+        @media screen and (min-width:0\0) {
+            @content;
+        }
+    }
+    /* <= IE9 or browsers that dont support flexbox */
+    @else if $version == ie9 {
+        .no-flexbox {
+            @content;
+        }
+    }
+
+    @else if $version == edge {
+        _:-ms-fullscreen, :root {
+            @content;
+        }
+    }
+}
+
+/* border radius */
+@mixin border-curve($tl, $tr: $tl, $br: $tl, $bl: $tl) {
+    -webkit-border-top-left-radius: $tl;
+    -webkit-border-top-right-radius: $tr;
+    -webkit-border-bottom-right-radius: $br;
+    -webkit-border-bottom-left-radius: $bl;
+    -moz-border-radius-topleft: $tl;
+    -moz-border-radius-topright: $tr;
+    -moz-border-radius-bottomright: $br;
+    -moz-border-radius-bottomleft: $bl;
+    border-top-left-radius: $tl;
+    border-top-right-radius: $tr;
+    border-bottom-right-radius: $br;
+    border-bottom-left-radius: $bl;
+}
+
+/* icon font */
+
+@mixin icon-font-fa($glyph, $fsize: inherit, $color: $color-dark-blue) {
+    display: inline-block;
+    content: $glyph;
+    color: $color;
+    font-family: 'FontAwesome';
+    font-size: $fsize;
+    font-style: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* center content vertically */
+@mixin center-vertically( $top: 50%, $translateY: -50%, $position: absolute ) {
+    position: $position;
+    top: $top;
+    -moz-transform: translateY( $translateY );
+    -ms-transform: translateY( $translateY );
+    -webkit-transform: translateY( $translateY );
+    transform: translateY( $translateY );
+}
+
+@mixin center-horizontally( $left: 50%, $translateX: -50%, $position: absolute ) {
+    position: $position;
+    left: $left;
+    -moz-transform: translateX( $translateX );
+    -ms-transform: translateX( $translateX );
+    -webkit-transform: translateX( $translateX );
+    transform: translateX( $translateX );
+}
+
+@mixin outline($color: white, $thickness: 1px, $line: solid, $keep-bg: no) {
+    border: $thickness $line $color;
+    color: $color;
+
+    @if $keep-bg == no {
+        background-color: none;
+    }
+
+    &:hover {
+        color: white;
+        border-color: initial;
+        background-color: $color;
+        opacity: 1;
+    }
+}
+
+@mixin solid($bg: $charcoal, $text: white, $border: no, $border-color: $bg, $thickness: 0, $line: solid) {
+    background: $bg;
+    color: $text;
+
+    @if $border == yes {
+        border: $border-color $thickness $line;
+    }
+}
+
+@mixin border($color: $jet, $thickness: 1px, $type: solid) {
+    border: $color $thickness $type;
+}
+
+@mixin card-shadow() {
+  -webkit-box-shadow: $card-shadow;
+  -moz-box-shadow: $card-shadow;
+  box-shadow: $card-shadow;
+}
+
+@mixin text-shadow() {
+  -webkit-text-shadow: $text-shadow;
+  -moz-text-shadow: $text-shadow;
+  text-shadow: $text-shadow;
+}
+
+@mixin button-shadow($hshadow: 2px, $vshadow: 2px, $blur: 5px, $spread: 1px, $rgba: rgba(0,0,0,0.1)) {
+  -webkit-box-shadow: $hshadow $vshadow $blur $spread $rgba;
+  -moz-box-shadow: $hshadow $vshadow $blur $spread $rgba;
+  box-shadow: $hshadow $vshadow $blur $spread $rgba;
+}
+
+@mixin circle-border($size: 10px, $color: white, $bsize: 1px, $fsize: 1rem) {
+    @include border-curve(50%);
+    display: inline-block;
+    width: $size;
+    height: $size;
+    border: $bsize solid $color;
+    text-align: center;
+
+    > * {
+        font-size: $fsize;
+        line-height: 1rem;
+        @include center-vertically();
+    }
+}
+
+@mixin heading-font($size: $font-size-xxl, $color: $jet) {
+    @extend %heading-font;
+    font-size: $size;
+    letter-spacing: .5px;
+    text-shadow: none;
+}
+
+@mixin base-font($size: $base-font-size, $color: $jet) {
+    font-family: $base-font-family;
+    font-size: $size;
+    color: $color;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+/** css transitions **/
+@mixin rotate($degrees...) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+}
+
+@mixin transform-origin($origin...) {
+    -moz-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+@mixin transform($transform...) {
+    -moz-transform: $transform;
+    -webkit-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    -ms-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transition-property($property...) {
+    -moz-transition-property: $property;
+    -o-transition-property: $property;
+    -webkit-transition-property: $property;
+    transition-property: $property;
+}
+
+@mixin padding-x($padding: $base-padding) {
+    padding-left: $padding;
+    padding-right: $padding;
+}
+
+@mixin margin-x($margin: $base-margin) {
+    margin-left: $margin;
+    margin-right: $margin;
+}
+
+@mixin remove-appearance() {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+
+    &::-ms-expand {
+        display: none;
+    }
+}

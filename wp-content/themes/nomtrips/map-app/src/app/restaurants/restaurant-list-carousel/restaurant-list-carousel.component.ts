@@ -16,7 +16,7 @@ export class RestaurantListCarouselComponent implements OnInit {
   constructor(private restaurantsService: RestaurantsService) { }
 
   getPosts(cityId){
-    console.log(cityId);
+    //console.log(cityId);
     this.restaurantsService
       .getPosts(cityId)
       .subscribe(res => {
@@ -26,6 +26,53 @@ export class RestaurantListCarouselComponent implements OnInit {
 
   ngOnInit() {    
     this.getPosts(this.cityid);
+  }
+
+  slideConfig = {
+    dots: true,
+    infinite: false,
+    speed: 300,
+    mobileFirst: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1366,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          dots: true
+        }
+      }      
+    ]
+  };  
+
+  afterChange(e) {
+    console.log('afterChange');
   }
 
 }

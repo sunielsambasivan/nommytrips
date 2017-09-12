@@ -1,0 +1,11 @@
+.card {
+  margin-bottom: rem_calc($base-margin);
+  border: $border-light;
+  @include card-shadow();
+  border-radius: $border-radius;
+  background: white;
+
+  @include respond-to(desktop) {
+     margin-bottom: rem_calc($base-margin/2);
+  }
+}

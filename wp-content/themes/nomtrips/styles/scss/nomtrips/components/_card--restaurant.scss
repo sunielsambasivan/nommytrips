@@ -1,0 +1,70 @@
+.card--restaurant {
+  @extend .card;
+  padding: rem_calc($base-margin/2);
+}
+
+.card--restaurant--address,
+.card--restaurant--phone,
+.card--restaurant--price-category,
+.card--restaurant--cuisine,
+.card--restaurant--hours {
+  @include flexbox();
+  font-size: $font-size-xs;
+
+  &:before {
+    @include flex(0 0 10%);
+    @include flex-wrap(wrap);
+    padding-right: 2px;
+    font-size: $font-size-md;
+    text-align: center;
+  }
+}
+
+.card--restaurant--map {
+  height: 200px;
+
+  @include respond-to(tablet) {
+    height: 350px;
+  }
+
+  @include respond-to(desktop) {
+    height: 200px;
+  }
+}
+
+.card--restaurant--address {
+  padding-top: rem_calc($base-padding/2);
+  line-height: $font-size-md-lg;
+}
+
+.card--restaurant--address:before {
+  @include icon-font-fa($fa-var-map-marker);
+}
+
+.card--restaurant--phone:before {
+  @include icon-font-fa($fa-var-mobile-phone);
+}
+
+.card--restaurant--price-category:before {
+  @include icon-font-fa($fa-var-money);
+}
+
+.card--restaurant--cuisine {
+  @include flex-wrap(wrap);
+
+  &:before {
+    @include icon-font-fa($fa-var-cutlery);
+  }
+}
+
+.card--restaurant--hours {
+  line-height: $font-size-md-lg;
+
+  ul {
+    margin: 0;
+  }
+}
+
+.card--restaurant--hours:before {
+  @include icon-font-fa($fa-var-clock-o);
+}

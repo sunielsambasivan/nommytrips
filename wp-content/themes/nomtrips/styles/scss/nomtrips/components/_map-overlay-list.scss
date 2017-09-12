@@ -1,0 +1,31 @@
+.map-overlay-list {
+  position: absolute;
+  width: 88%;
+  margin: 0;
+  left: auto;
+  right: auto;
+  bottom: rem_calc($base-padding);
+  z-index: 99999;
+  @include center-horizontally();
+}
+
+.map-overlay-list--slides {
+  @include flexbox();
+
+  li {
+    list-style-type: none;
+    margin-right: rem_calc(10px);
+  }
+}
+
+@include respond-to(tablet) {
+  .map-overlay-list {
+    /* padding: rem_calc($base-padding); */
+  }
+
+  .map-overlay-list--slides {
+    li {
+      margin-right: rem_calc(40px);
+    }
+  }
+}

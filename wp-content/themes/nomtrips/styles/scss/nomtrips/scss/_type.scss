@@ -1,0 +1,147 @@
+﻿/**
+    Typography
+    **/
+
+%heading-font {
+  font-family: $heading-font-family;
+
+   @include ie(ie9-10) {
+     font-family: $heading-font-family-ie;
+   }
+}
+
+.heading-font {
+  @extend %heading-font;
+}
+
+.smoothing {
+  -moz-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  zoom: 1;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: oblique;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.center, .text-center {
+  text-align: center;
+}
+
+.font-size-xxxl {
+  font-size: $font-size-xxxl ; //3rem 48px
+}
+
+.font-size-xxl {
+  font-size: $font-size-xxl; //2rem 32px
+}
+
+.font-size-xl {
+  font-size: $font-size-xl; //1.5rem 24px
+}
+
+.font-size-lg {
+  font-size: $font-size-lg; //1.25rem 20px
+}
+
+.font-size-md-lg {
+  font-size: $font-size-md-lg; //1.125rem 18px
+}
+
+.font-size-md {
+  font-size: $font-size-md; //1rem 16
+}
+
+.font-size-sm-md {
+  font-size: $font-size-sm-md; //.915rem 14.64px
+}
+
+.font-size-sm {
+  font-size: $font-size-sm; //.875rem 14px
+}
+
+.font-size-xs {
+  font-size: $font-size-xs; //.75rem 12px
+}
+
+.font-size-xxs {
+  font-size: $font-size-xxs; //.65rem 10.4
+}
+
+.font-size-xxxs, .micetype {
+  font-size: $font-size-xxxs; //.6rem 9.6px
+}
+
+/**
+* force (!important)
+**/
+
+.font-size-xxxl-strict {
+  font-size: $font-size-xxxl !important; //3rem 48px
+}
+
+.font-size-xxl-strict {
+  font-size: $font-size-xxl !important; //2rem 32px
+}
+
+.font-size-xl-strict {
+  font-size: $font-size-xl !important; //1.5rem 24px
+}
+
+.font-size-lg-strict {
+  font-size: $font-size-lg !important; //1.25rem 20px
+}
+
+.font-size-md-lg-strict {
+  font-size: $font-size-md-lg !important; //1.125rem 18px
+}
+
+.font-size-md-strict {
+  font-size: $font-size-md !important; //1rem 16
+}
+
+.font-size-sm-md-strict {
+  font-size: $font-size-sm-md !important; //.915rem 14.64px
+}
+
+.font-size-sm-strict {
+  font-size: $font-size-sm !important; //.875rem 14px
+}
+
+.font-size-xs-strict {
+  font-size: $font-size-xs !important; //.75rem 12px
+}
+
+.font-size-xxs-strict {
+  font-size: $font-size-xxs !important; //.65rem 10.4
+}
+
+.font-size-xxxs-strict, .micetype-strict {
+  font-size: $font-size-xxxs !important; //.6rem 9.6px
+}

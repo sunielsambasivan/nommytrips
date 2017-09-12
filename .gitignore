@@ -162,3 +162,7 @@ npm-debug.log
 # visual studio
 .vscode/launch.json
 .vscode/settings.json
+
+#npm
+package-lock.json
+map-app/package-lock.json

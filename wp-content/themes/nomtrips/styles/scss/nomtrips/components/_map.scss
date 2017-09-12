@@ -1,0 +1,10 @@
+#map {
+  @include flex(1 1 auto);
+  height: 100%;
+}
+
+ngui-map {
+  #map & {
+    height: 100%;
+  }
+}

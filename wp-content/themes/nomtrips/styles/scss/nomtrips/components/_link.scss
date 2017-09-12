@@ -1,0 +1,17 @@
+.link {
+  color: $color-teal;
+  text-decoration: none;
+  font-size: inherit;
+
+  &:active, &:hover {
+    color: $color-blue;
+    text-decoration: underline;
+  }
+}
+
+.link--more {
+  &:after {
+   @include icon-font-fa($fa-var-caret-down);
+   padding-left: rem_calc(5px);
+  }
+}

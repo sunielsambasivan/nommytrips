@@ -1,0 +1,23 @@
+﻿/**
+    Target IE specific browsers
+**/
+
+/* IE11 */
+ _:-ms-fullscreen, :root {
+  
+ }
+
+/* IE10-specific styles go here */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+  
+}
+
+/* IE9 and IE10 rule sets go here */
+@media screen and (min-width:0\0) {
+  
+}
+
+/* <= IE9 or browsers that dont support flexbox */
+.no-flexbox {
+
+}
