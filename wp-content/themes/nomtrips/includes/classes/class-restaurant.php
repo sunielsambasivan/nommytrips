@@ -15,6 +15,8 @@ class Restaurant {
   public $restaurant_name;
   public $restaurant_slug;
   public $restaurant_url;
+  public $latitude;
+  public $longitude;
   public $restaurant_location;
   public $restaurant_address_string;
   public $restaurant_contact_info;
@@ -25,6 +27,7 @@ class Restaurant {
   public $restaurant_hours;
   public $restaurant_dining_type;
   public $restaurant_status;
+  public $restaurant_featured_img;
   public $error;
 
   private $post_obj;
@@ -83,6 +86,7 @@ class Restaurant {
       $this->restaurant_cuisines = $this->get_cuisines();
       $this->restaurant_hours = $this->get_hours();
       $this->restaurant_dining_type = $this->get_dining_type();
+      $this->restaurant_featured_img = $this->get_featured_img();
     }
 
   }// end constructor
@@ -95,6 +99,10 @@ class Restaurant {
     $location = new stdClass();
     $location->address = new stdClass();
 
+    //address coordinates
+    $this->latitude =  isset( $this->custom_fields['nt_cpt_latitude'][0] ) ? $this->custom_fields['nt_cpt_latitude'][0] : false;
+    $this->longitude =  isset( $this->custom_fields['nt_cpt_longitude'][0] ) ? $this->custom_fields['nt_cpt_longitude'][0] : false;
+    
     //city (taxonomy)
     $cities = get_the_terms( $this->restaurant_id, 'city' );
     $location->city = isset( $cities[0]->term_id ) ? $cities[0] : false;
@@ -104,7 +112,7 @@ class Restaurant {
     $location->state = $location->city ? get_term_meta( $location->city->term_id, 'nt_state-prov', true ) :  false;
 
     //neighborhood (taxonomy)
-    $neighborhoods = get_the_terms( get_the_id(), 'neighborhood' );
+    $neighborhoods = get_the_terms( $this->restaurant_id, 'neighborhood' );
     $location->neighborhood = isset( $neighborhoods[0]->term_id ) ? $neighborhoods[0] : false;
 
     //address
@@ -290,6 +298,14 @@ class Restaurant {
     }
 
     return $dining_types;
+  }
+
+
+  /**
+   * return featured image as object
+  **/
+  public function get_featured_img() {
+    return nt_get_featured_images_sizes_for_post( $this->restaurant_id );
   }
 
 } //end class

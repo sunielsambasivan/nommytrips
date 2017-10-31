@@ -2,10 +2,14 @@
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" />
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" />
 <script src="https://unpkg.com/slick-carousel@1.6.0/slick/slick.js"></script>
+<span class="card--location--message" [ngClass]="{'active': restaurantClicked}">
+  <input class="form-control" [(ngModel)]="addedMessage">
+</span>
+<span class="card--location--error"></span>
 <ngx-slick class="carousel cards--carousel cards--carousel--map-overlay" #slickModal="slick-modal" [config]="slideConfig"
   (afterChange)="afterChange($event)">
   <div ngxSlickItem *ngFor="let restaurant of restaurants" class="slide">
-    <div class="cards--carousel--container">
+    <div class="cards--carousel--container">      
       <div class="card--location" data-url="restaurant.restaurant_url">
         <div class="card--location--rating">
           <div class="indicator-likes--map">5</div>
@@ -22,10 +26,12 @@
             <span class="card--location--icon-bar">
             <i class="fa fa-map-o"></i>
             <i class="fa fa-list-ul"></i>
+            <i class="fa fa-plus" (click)="addRestaurant(restaurant)"></i>
+            <input [(ngModel)]="restaurant.onNomList" class="cards--carousel--indicator" />
           </span>
           </li>
         </ul>
-      </div>
+      </div>      
     </div>
   </div>
 </ngx-slick>

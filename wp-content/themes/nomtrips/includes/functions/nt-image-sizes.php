@@ -14,13 +14,14 @@ function nt_image_sizes_init() {
   add_image_size( 'banner-small', 640 );      //mobile
   
   //thumbs/cards
-  add_image_size( 'thumb-card', 610 );        //images for cards
-  add_image_size( 'thumb-card-vert', 768, 805, true ); //images for cards (vertical)
-  add_image_size( 'thumb-nomtrips', 120 );    //food images for nom-trips list (circles)
-  add_image_size( 'thumb-nomtrips', 150 );    //profile images (circles)
-  add_image_size( 'thumb-food', 260 );        //food review thumb
-  add_image_size( 'thumb-food-sq', 260, 260, true );  //food review thumb
-  add_image_size( 'thumb-rest', 180 );        //restaurant page food thumbs
+  add_image_size( 'thumb-card', 610 );                  //images for cards
+  add_image_size( 'thumb-card-vert', 768, 805, true );  //images for cards (vertical)
+  add_image_size( 'thumb-nomtrips', 120 );              //food images for nom-trips list (circles)
+  add_image_size( 'thumb-nomtrips', 150 );              //profile images (circles)
+  add_image_size( 'thumb-food', 260 );                  //food review thumb
+  add_image_size( 'thumb-food-sq', 260, 260, true );    //food review thumb
+  add_image_size( 'thumb-rest', 180 );                  //restaurant page food thumbs
+  add_image_size( 'thumb-marker', 90, 90, true );       //thumb image on marker
 }
 
 /** 
@@ -45,3 +46,28 @@ function nt_custom_sizes_choose( $sizes ) {
 /**
   Helpers
 **/
+
+/**
+ * returns array of featured image objects for each image size definitions
+ * **/
+function nt_get_featured_images_sizes_for_post($id) {
+  $sizes = get_intermediate_image_sizes();
+  $images = array();
+  foreach ( $sizes as $size ) {
+      $images[$size] = nt_get_featured_image_object( $id, $size );
+  }
+  return $images;
+}
+
+/**
+ * returns all image sizes defined
+ * **/
+function nt_get_featured_image_object($post_id, $size = false) {
+  //get thumbnail id of post
+  $thumb_id = get_post_thumbnail_id($post_id);
+    
+  if($thumb_id != '') {
+    $size = $size ? $size : 'medium';
+    return wp_get_attachment_image_src($thumb_id, $size);
+  }
+}

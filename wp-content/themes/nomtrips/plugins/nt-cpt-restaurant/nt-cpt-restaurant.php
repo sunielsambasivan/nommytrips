@@ -76,6 +76,8 @@ $restaurant = new Custom_Post_Type( 'Restaurant', $args, $roles, $capabilities, 
 */
 add_action( 'rest_api_init', 'register_restaurant_fields' );
 function register_restaurant_fields() {
+  register_rest_field( 'restaurant', 'nt_cpt_latitude', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
+  register_rest_field( 'restaurant', 'nt_cpt_longitude', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
   register_rest_field( 'restaurant', 'nt_cpt_main_ph', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
   register_rest_field( 'restaurant', 'nt_cpt_main_email', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));
   register_rest_field( 'restaurant', 'nt_cpt_website', array('get_callback' => 'nt_rest_register_field_callback', 'update_callback' => null, 'schema' => null));

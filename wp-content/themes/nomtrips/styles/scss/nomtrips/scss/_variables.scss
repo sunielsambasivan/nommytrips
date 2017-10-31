@@ -46,9 +46,11 @@ $desktop-large: 1280px;
 $header-large: 1366px;
 
 //layout
-$grid-gutter-width: 20px; //bootstrap override (bso)
-$base-padding: 20px;
-$base-margin: 20px;
+$base-spacing: 20px;
+$grid-gutter-width: $base-spacing; //bootstrap override (bso)
+$base-padding: $base-spacing;
+$base-margin: $base-spacing;
+ 
 
 //containers
 $container-tablet:             ($screen-sm - $grid-gutter-width);

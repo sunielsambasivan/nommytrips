@@ -5,12 +5,17 @@
 
 class Nomlist
 {
+  public $nomlist;
   public $nomlist_id;
   public $city_id;
   public $user_id;
   public $restaurant_list;
   public $is_valid_user;
   public $error;
+  public $message;
+  public $query;
+  public $num_of_nomlists;
+  public $last_rest_added;
 
   public function __construct( $city_id = false, $user_id = false ) {
     if(!$city_id || !$user_id) {
@@ -25,7 +30,7 @@ class Nomlist
 
     $valid_user = $this->is_user_valid();
     if($valid_user) {      
-      $this->createNomlist();
+      $this->update_nomlist_id();
     } else {
       $this->error = 'Invalid User';
       throw new Exception($this->error);
@@ -35,36 +40,21 @@ class Nomlist
   /**
     * create nomlist in db
   **/
-  private function createNomlist() {
-    //adds to db if not user doesnt already have a nomlist for city
-    global $wpdb;
-    $sql = "Select * 
-    From nt_nomlists 
-    Where city_id = %d 
-    And user_id = %d";
-    $nomlists = $wpdb->get_results( $wpdb->prepare($sql, $this->city_id, $this->user_id ));
-    if($nomlists) {
-      $this->restaurant_list = $this->get_nomlist();
-    }
-    else {
-      //insert record
-      $nomlist = $wpdb->insert( 
-	    'nt_nomlists', 
-        array( 
-          'city_id' => $this->city_id, 
-          'user_id' => $this->user_id 
-        ), 
-        array( 
-          '%d', 
-          '%d' 
-        ) 
-      );
-
+  private function update_nomlist_id() {
+    if ($this->city_id && $this->user_id) {
+      $nomlist = $this->get_nomlist();
       if(!$nomlist) {
-        $this->error = 'Couldnt save nomlist';
-        throw new Exception($this->error);
-      } 
+        $this->nomlist_id = 0;
+      }
+      
     }
+
+    else {
+      $this->error = 'Invalid User or city id';
+      throw new Exception($this->error);
+    }
+    //adds to db if not user doesnt already have a nomlist for city
+    
   }
 
   /**
@@ -77,12 +67,45 @@ class Nomlist
   /**
     * save restaurant to nomlist in db
   **/
-  private function addRestaurantToNomlist($rest_id) {
-    global $wpdb;
-    $sql = "
-    INSERT into nt_nomlist_item
-    (user_id, restaurant_id)
-    VALUES ()";
+  public function add_restaurant_to_nomlist($rest_id = 0) {
+    /* $wpdb->insert( $table, $data, $format ); */
+    if($rest_id) {
+      $rest = get_post($rest_id);
+      if($rest !== null) {
+        //don't add if rest already on nomlist for this user
+        if($this->nomlist_id) {
+          $items = $this->getRestFromNomlist($this->user_id, $this->nomlist_id, $rest_id);
+          if(empty($items)) {
+            //nt_debug($items); die;
+            global $wpdb;
+            $insert = $wpdb->insert( 
+              'nt_nomlist_item', 
+              array( 
+                'user_id' => $this->user_id, 
+                'restaurant_id' => $rest_id,
+                'nomlist_id' => $this->nomlist_id
+              ), 
+              array('%d', '%d', '%d')
+            );
+            
+            if($insert) {
+              $this->last_rest_added = $insert;      
+              $this->message = "restaurant successfully added";      
+            }
+
+            else {
+              $this->error = 'You need a city id and a user id';
+              $this->message = 'You need a city id and a user id';
+            }
+          }
+
+          else {
+            $this->message = "Already added!";
+          }
+          return $this;
+        }
+      }
+    }
   }
 
   /**
@@ -102,38 +125,35 @@ class Nomlist
     }
   }
 
-  private function add_to_nomlist( $rest_id) {
-    if( $rest_id ) {
-        $restaurant = new Restaurant( $rest_id );
-        $this->restaurant_list[] = $restaurant;
-        $this->saveRestaurantToItinerary();
-    }
-    else {
-      $this->error = 'Restaurant ID missing';
-      throw new Exception($this->error);
-    }
-  }
-
   public function getNomlistID($user_id = false, $city_id = false) {
     $city_id = !$city_id ? $this->city_id : $city_id;
     $user_id = !$user_id ? $this->user_id : $user_id;
     
     if($city_id && $user_id) {
-      global $wpdb;
-      $select = "
-        Select nomlist_id 
-        From nt_nomlists
-        Where city_id = %d
-        AND user_id = %d";
-      $nomlist_id = $wpdb->get_row( $wpdb->prepare($select, $this->city_id, $this->user_id ) );      
-      $this->nomlist_id = $nomlist_id;      
+      $this->get_nomlist();
     } 
     else {
-      $this->nomlist_id = null;
+      $this->nomlist_id = 0;
       $this->error = 'Couldnt Find nomlist id';
     }
 
-    return $nomlist_id;
+    return $this->nomlist_id;
+  }
+
+  public function getRestFromNomlist($user_id = false, $nomlist_id = false, $rest_id = false) {    
+    $user_id = !$user_id ? $this->user_id : $user_id;
+    $nomlist_id = !$nomlist_id ? $this->nomlist_id : $nomlist_id;
+    $items = false;
+    if($user_id && $nomlist_id && $rest_id) {
+      global $wpdb;
+      $select = "
+        SELECT  restaurant_id, item_id FROM nt_nomlist_item
+        WHERE restaurant_id = %d and nomlist_id = %d and user_id = %d";
+
+      $items = $wpdb->get_results( $wpdb->prepare($select, $rest_id, $nomlist_id, $user_id ) );
+    }
+
+    return $items;
   }
 
   public function get_nomlist() {
@@ -142,24 +162,33 @@ class Nomlist
     **/
     //array of objects
     $nomlist = array();
-    global $wpdb;
 
-    //dbquery/post query...
-    $select = "
-      SELECT
-      a.restaurant_id as RestaurantID,
-      c.post_name as RestaurantName,
-      b.city_id as CityID,
-      d.slug as CityName
-      FROM nt_nomlist_item a
-      INNER JOIN nt_nomlists b ON a.nomlist_id = b.nomlist_id
-      INNER JOIN wp_posts c ON a.restaurant_id = c.ID
-      INNER JOIN wp_terms d ON b.city_id = d.term_id
-      WHERE
-      b.user_id = %d AND
-      b.city_id = %d";
-    $nomlist = $wpdb->get_results( $wpdb->prepare($select, $this->user_id, $this->city_id ) );
-    return $nomlist;
+    $q_args = array(
+      'author' => $this->user_id,
+      'orderby' => 'post_date',
+      'order' => 'DESC',
+      'posts_per_page' => 1,
+      'post_type' => 'nomlist',
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'city',
+          'field' => 'id',
+          'terms' => $this->city_id
+        )
+      )
+    );
+
+    $query = new WP_Query( $q_args );
+    $this->query = json_decode(json_encode($query), true);
+    $this->num_of_nomlists = $query->found_posts;
+    if ($this->num_of_nomlists < 1) {
+      $this->nomlist_id = 0;
+      $this->error = 'No nomlists';      
+    } else {
+      $this->nomlist = json_decode(json_encode($query->get_posts()));
+      $this->nomlist_id = $this->nomlist[0]->ID;
+    }
+    return $this->nomlist_id;
   }
 
   //Get cities for user where there's a nomlist
@@ -184,4 +213,28 @@ class Nomlist
       return 0;
     }
   }
+
+  /**
+   * return list of restuarants in nomlist
+   **/
+  public function get_restaurants_in_nomlist_by_id($nomlist_id = false) {
+    if($nomlist_id) {
+      global $wpdb;
+      $items = false;
+      $select = "
+      SELECT  a.nomlist_id, a.user_id, a.restaurant_id, b.post_title, b.post_name, b.post_content
+      FROM nt_nomlist_item as a
+      INNER JOIN wp_posts as b
+      ON a.restaurant_id = b.ID
+      WHERE nomlist_id = %d";
+      $items = $wpdb->get_results( $wpdb->prepare($select, $nomlist_id ) );
+      return $items;
+    }
+
+    else {
+      $this->error = 'Couldnt Find nomlist id';
+      return false;
+    }
+  }
 }
+

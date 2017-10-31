@@ -11,6 +11,32 @@ add_action( 'custom_metadata_manager_init_metadata', function() {
   $rest_form = new Custom_Metadata_Form( 'rest-form', $post_types );
 
   $rest_form->set_form_item( array(
+    'name' => 'nt_cpt_restaurant_map_info',
+    'item_type' => 'metabox',
+    'fields' => array(
+      'label' => 'Map Info',
+      )
+  ) );
+
+  $rest_form->set_form_item( array(
+    'name' => 'nt_cpt_latitude',
+    'item_type' => 'field',
+    'fields' => array(
+      'group' => 'nt_cpt_restaurant_map_info',
+      'label' => 'Latitude',
+    )
+  ) );
+  
+  $rest_form->set_form_item( array(
+    'name' => 'nt_cpt_longitude',
+    'item_type' => 'field',
+    'fields' => array(
+      'group' => 'nt_cpt_restaurant_map_info',
+      'label' => 'Longitude',
+    )
+  ) );  
+
+  $rest_form->set_form_item( array(
     'name' => 'nt_cpt_restaurant_info',
     'item_type' => 'metabox',
     'fields' => array(

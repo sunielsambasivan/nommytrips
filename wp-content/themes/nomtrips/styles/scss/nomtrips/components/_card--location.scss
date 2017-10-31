@@ -1,3 +1,9 @@
+@import "../scss/variables";
+@import "../scss/theme";
+@import "../scss/mixins";
+@import "../scss/mixins_flexbox_prefixed";
+@import "../scss/mixins_grid";
+
 .card--location {
   @extend .card;
   display: block;
@@ -6,6 +12,10 @@
   padding: rem_calc($base-padding /2);
   background: white;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 
   ul {
     margin: 0;
@@ -52,4 +62,35 @@
   position: absolute;
   top: $base-margin/2;
   right: $base-margin/2;
+}
+
+.card--location--message {
+  input {
+    /*default*/
+    padding: $base-spacing /2;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 250ms, transform 250ms;
+    text-align: center;    
+    border-radius: $border-radius;
+  }
+
+  &.active {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+
+      input {
+        border: none;
+        outline: none;
+        background: map-get($foundation-palette, nt_green);
+        color: white;
+        transform: scale(1);
+        opacity: 1;
+      }
+  }
 }

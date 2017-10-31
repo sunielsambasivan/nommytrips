@@ -6,5 +6,9 @@
 export const environment = {
   production: false,
   baseUrl: "http://localhost:8888/nomtrips/",
-  wpApiSettings: {}
+  wpApiSettings: {},
+  localized_access_token: {},
+  dom: {
+    window: window    
+  }
 };

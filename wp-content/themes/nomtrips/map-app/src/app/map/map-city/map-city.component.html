@@ -1,4 +1,17 @@
-<p>
-  map-city works!
-</p>
-<ngui-map center="New York, New York"></ngui-map>
+<ngui-map center="New York City, New York">
+  <marker *ngFor = "let pos of positions" [position] = "pos" 
+  [icon]="{
+    url: path + 'wp-content/themes/nomtrips/images/nt_marker.png',
+    anchor: [16,22],
+    size: [32,44],
+    scaledSize: [32,44]
+  }">
+    
+  </marker>
+  <!-- <info-window id="iw">
+    <div *ngIf="marker.display">
+      lat: {{ marker.lat }}, lng: {{ marker.lng }}
+    </div>
+    <button (click)="hideMarkerInfo()">Hide Info</button>
+  </info-window> -->
+</ngui-map>

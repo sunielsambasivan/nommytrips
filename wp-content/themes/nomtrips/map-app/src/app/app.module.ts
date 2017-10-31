@@ -10,6 +10,8 @@ import { PostListComponent } from './posts/post-list/post-list.component';
 import { RestaurantListComponent } from './restaurants/restaurant-list/restaurant-list.component';
 import { RestaurantListCarouselComponent } from './restaurants/restaurant-list-carousel/restaurant-list-carousel.component';
 import { MapCityComponent } from './map/map-city/map-city.component';
+import { NomlistCityComponent } from './nomlists/nomlist-city/nomlist-city.component';
+import { NomlistMapComponent } from './nomlists/nomlist-map/nomlist-map.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { MapCityComponent } from './map/map-city/map-city.component';
     PostListComponent,
     RestaurantListComponent,
     RestaurantListCarouselComponent,
-    MapCityComponent
+    MapCityComponent,
+    NomlistCityComponent,
+    NomlistMapComponent
   ],
   imports: [
     BrowserModule,

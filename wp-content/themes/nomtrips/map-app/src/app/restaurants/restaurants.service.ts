@@ -12,7 +12,17 @@ import { Restaurant } from './restaurant';
 @Injectable()
 export class RestaurantsService {
 
+  /* 
+    * registered endpoints 
+  */
+
+  //get all restuarants for a city
   private postsUrl = environment.baseUrl + "wp-json/restaurant-api/restaurant-list/city";
+  
+  //add restaurant to a users nomlist
+  private addRestaurantToNomlistUrl = environment.baseUrl + "wp-json/nomtrips/nomlist/city";
+  
+  //Php available vars (if needed)
   private wpApiSettings;
   
   constructor(private http: Http) { }
@@ -22,5 +32,11 @@ export class RestaurantsService {
         .get(this.postsUrl + '/' + cityId)
         .map((res: Response) => res.json());
   
+  }
+
+  addRestaurantToNomlist(cityId, restId, localizedObject): Observable<Restaurant[]> {
+    return this.http
+      .put(this.addRestaurantToNomlistUrl + '/' + cityId + '/user/' + localizedObject.localized_access_token.user_id + '/restaurant/' + restId + '/add/access_token=' + localizedObject.localized_access_token.access_token, JSON.stringify(restId))
+      .map((res: Response) => res.json());
   }
 }

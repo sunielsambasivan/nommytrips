@@ -59,6 +59,27 @@ if(is_tax( 'city' )) {
 }
 
 /**
+ * localize script for access token  
+**/
+function nt_localize_access_token_script() {
+  $user_id = get_current_user_id();
+  $auth_token = get_user_meta( $user_id, 'wordpress_access_token', true);  
+  $city = get_term_by('slug', get_query_var( 'city', '' ), 'city');
+  
+  if(!empty($auth_token) && $user_id > 0) {
+    wp_localize_script( 'map-app-bundle-inline', 'localized_access_token', array(
+      'access_token' => $auth_token,
+      'user_id' => $user_id,
+      'city' => $city
+    ));
+  } else {
+    wp_localize_script( 'map-app-bundle-inline', 'localized_access_token', array('access_token' => false) );
+  }
+}
+add_action( 'wp_enqueue_scripts', 'nt_localize_access_token_script' );
+
+
+/**
 * admin section
 **/
 

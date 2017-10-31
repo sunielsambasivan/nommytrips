@@ -12,8 +12,8 @@ import { Map } from './map';
 @Injectable()
 export class MapService {
 
-  /* private postsUrl = "http://maps.googleapis.com/maps/api/js?key=AIzaSyCZ81efbEIFdgwhEpO3rShce8gtN-9ahQA"; */
-  private postsUrl = "/maps/api/js?key=AIzaSyCZ81efbEIFdgwhEpO3rShce8gtN-9ahQA";
+  private postsUrl = "http://maps.googleapis.com/maps/api/js?key=AIzaSyCZ81efbEIFdgwhEpO3rShce8gtN-9ahQA";
+  /* private postsUrl = "/maps/api/js?key=AIzaSyCZ81efbEIFdgwhEpO3rShce8gtN-9ahQA"; */
 
   constructor(private http: Http) { }
 
